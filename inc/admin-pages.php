@@ -16,11 +16,21 @@ function cc_page_shape($kind) {
         unset($shape['seo']);
         return $shape + ['seo' => $seo];
     }
+    if ($kind === 'info') {
+        return [
+            'banner'     => ['title' => '', 'kicker' => '', 'lead' => '', 'image' => '', 'quote_label' => ''],
+            'breadcrumb' => ['home' => '', 'parent' => '', 'parent_link' => '', 'current' => ''],
+            'blocks'     => [['layout' => '', 'id' => '', 'title' => '', 'description' => '', 'paragraphs' => [''], 'items' => [['id' => '', 'title' => '', 'meta' => '', 'description' => '', 'lines' => [''], 'link' => '']], 'points' => ['']]],
+            'related'    => ['title' => '', 'links' => [['label' => '', 'link' => '']]],
+            'seo'        => ['title' => '', 'description' => '', 'og_title' => '', 'og_description' => '', 'schema_about' => '', 'page_type' => ''],
+        ];
+    }
     return [
         'banner'       => ['title' => '', 'kicker' => '', 'lead' => '', 'image' => '', 'quote_label' => '', 'call_label' => ''],
         'breadcrumb'   => ['home' => '', 'parent' => '', 'parent_link' => '', 'current' => ''],
         'overview'     => ['title' => '', 'paragraphs' => [''], 'image' => '', 'image_alt' => ''],
         'equipment'    => ['title' => '', 'description' => '', 'items' => [['title' => '', 'icon' => '', 'image' => '', 'description' => '', 'items' => ['']]]],
+        'lineup'       => ['title' => '', 'points' => ['']],
         'applications' => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
         'trust'        => ['title' => '', 'paragraphs' => [''], 'points' => [''], 'button_label' => ''],
         'process'      => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
@@ -87,6 +97,7 @@ add_action('save_post_page', function ($post_id) {
 
 add_filter('display_post_states', function ($states, $post) {
     if (cc_page_kind($post) === 'category') $states['cc_category'] = 'Category Page';
+    if (cc_page_kind($post) === 'info') $states['cc_info'] = 'Info Page';
     return $states;
 }, 10, 2);
 

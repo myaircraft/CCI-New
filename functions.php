@@ -6,6 +6,8 @@ require_once __DIR__ . '/inc/data.php';
 require_once __DIR__ . '/inc/helpers.php';
 require_once __DIR__ . '/inc/pages.php';
 require_once __DIR__ . '/inc/category-page.php';
+require_once __DIR__ . '/inc/pages-data.php';
+require_once __DIR__ . '/inc/contact.php';
 if (is_admin()) {
     require_once __DIR__ . '/inc/admin-fields.php';
     require_once __DIR__ . '/inc/admin-content.php';
@@ -91,15 +93,6 @@ add_action('wp_head', function () {
     echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
     if (cc_is_category_page()) cc_category_schema();
 }, 1);
-
-// The original site has no /products/ page; the parent page only exists to build the category URL.
-add_action('template_redirect', function () {
-    if (is_page('products')) {
-        global $wp_query;
-        $wp_query->set_404();
-        status_header(404);
-    }
-});
 
 /** Creates the pages and reading/permalink settings the theme expects. Safe to run repeatedly. */
 function cc_setup_site() {

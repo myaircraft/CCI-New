@@ -9,12 +9,14 @@
 if (!defined('ABSPATH')) exit;
 
 const CC_CATEGORY_TEMPLATE = 'template-category.php';
+const CC_INFO_TEMPLATE = 'template-info.php';
 
 function cc_page_kind($post) {
     $post = get_post($post);
     if (!$post || $post->post_type !== 'page') return null;
     if ((int) get_option('page_on_front') === $post->ID) return 'home';
     if (get_page_template_slug($post) === CC_CATEGORY_TEMPLATE) return 'category';
+    if (get_page_template_slug($post) === CC_INFO_TEMPLATE) return 'info';
     return null;
 }
 
@@ -28,8 +30,11 @@ function cc_page_seed() {
 function cc_page_defaults($kind, $slug = '') {
     $seed = cc_page_seed();
     if ($kind === 'home') return $seed['home'];
-    if ($kind !== 'category') return [];
+    if ($kind !== 'category' && $kind !== 'info') return [];
     if ($slug !== '' && $slug !== 'home' && isset($seed[$slug])) return $seed[$slug];
+    $pages = cc_pages_data();
+    if ($slug !== '' && isset($pages[$slug])) return cc_page_build($pages[$slug]);
+    if ($kind === 'info') return ['banner' => ['kicker' => '', 'quote_label' => ''], 'breadcrumb' => ['home' => 'Home'], 'blocks' => []];
     return [
         'banner'     => ['kicker' => 'PRODUCTS & SUPPLIES', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
         'breadcrumb' => ['home' => 'Home', 'parent' => 'Products & Supplies', 'parent_link' => 'link:products'],

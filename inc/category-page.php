@@ -7,7 +7,7 @@
 if (!defined('ABSPATH')) exit;
 
 function cc_is_category_page() {
-    return is_page() && cc_page_kind(get_queried_object_id()) === 'category';
+    return is_page() && in_array(cc_page_kind(get_queried_object_id()), ['category', 'info'], true);
 }
 
 /** Organization and WebSite nodes shared by the page's structured data. */
@@ -39,7 +39,7 @@ function cc_category_schema() {
     [$org, $website, $org_id] = cc_site_schema_nodes();
     $about = cc_page('seo.schema_about') ?: get_the_title();
     $page = [
-        '@type' => 'CollectionPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => $meta['title'], 'description' => $meta['description'], 'inLanguage' => 'en-US',
+        '@type' => cc_page('seo.page_type') ?: (cc_page_kind(get_queried_object_id()) === 'info' ? 'WebPage' : 'CollectionPage'), '@id' => $url . '#webpage', 'url' => $url, 'name' => $meta['title'], 'description' => $meta['description'], 'inLanguage' => 'en-US',
         'isPartOf' => ['@id' => $website['@id']], 'about' => ['@type' => 'Thing', 'name' => $about], 'publisher' => ['@id' => $org_id],
         'breadcrumb' => ['@id' => $url . '#breadcrumb'],
         'datePublished' => get_the_date('c', get_queried_object_id()), 'dateModified' => get_the_modified_date('c', get_queried_object_id()),

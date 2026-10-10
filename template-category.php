@@ -45,6 +45,13 @@ $banner_image = cc_page('banner.image');
     </section>
     <?php endif; ?>
 
+    <?php if (cc_page_has('lineup.points')) : ?>
+    <section class="category-section category-trust" aria-labelledby="lineup-title">
+      <div class="category-section-heading"><h2 id="lineup-title"><?php cc_page_e('lineup.title'); ?></h2></div>
+      <ul class="trust-points"><?php foreach (cc_page_list('lineup.points') as $point) : ?><li><?php echo cc_icon('check'); ?><?php echo esc_html($point); ?></li><?php endforeach; ?></ul>
+    </section>
+    <?php endif; ?>
+
     <?php if (cc_page_has('applications.items')) : ?>
     <section class="category-section" aria-labelledby="applications-title">
       <div class="category-section-heading"><h2 id="applications-title"><?php cc_page_e('applications.title'); ?></h2><p><?php cc_page_e('applications.description'); ?></p></div>

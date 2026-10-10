@@ -27,7 +27,8 @@ function cc_social_links() {
 
 /** A destination from the links.* rows, e.g. cc_url('contact'). */
 function cc_url($name) {
-    return cc_content('links.' . $name);
+    $value = (string) cc_content('links.' . $name);
+    return strpos($value, '/') === 0 ? home_url($value) : $value;
 }
 
 /** Product or service destination: a local page when the entry has a path, otherwise its tab on the company site. */
