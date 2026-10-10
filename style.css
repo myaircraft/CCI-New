@@ -142,3 +142,19 @@ h1, h2, h3, h4 { text-wrap: balance; }
     .category-page .category-related .mt-12 { justify-content: flex-start; }
     .category-page .category-actions a { justify-content: center; text-align: center; }
 }
+
+/* Section title highlight, four-up service cards, header sizing */
+.hl { text-decoration: underline; text-decoration-color: var(--primary); text-decoration-thickness: 4px; text-underline-offset: 6px; text-decoration-skip-ink: none; }
+.equipment-grid.is-four { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--text-gap-large); max-width: 1240px; }
+.equipment-grid.is-four .equipment-item { padding: var(--text-gap-large) var(--text-gap); }
+.equipment-grid.is-four .equipment-item h3 { font-size: var(--fs-body); line-height: var(--title-leading); }
+.equipment-grid.is-four .equipment-item p { font-size: 14px; line-height: var(--text-leading); }
+@media (max-width: 1100px) { .equipment-grid.is-four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) { .equipment-grid.is-four { grid-template-columns: 1fr; max-width: 620px; } .equipment-grid.is-four .equipment-item p { font-size: var(--fs-body); } }
+.nav-control { font-size: calc(var(--fs-caption) + 1px); }
+@media (min-width: 768px) and (max-width: 1350px) { .nav-control { font-size: calc(var(--fs-micro) + 1px); } }
+.mega-links a { font-size: calc(var(--fs-caption) + 1px); }
+.header-brand-logo { width: 252px; height: 46.2px; }
+.main-header[data-scrolled=true] .header-brand-logo { height: 33.6px; }
+@media (min-width: 768px) and (max-width: 1350px) { .header-brand-logo { width: 210px; } }
+@media (max-width: 767px) { .header-brand-logo { width: 218.4px; } }

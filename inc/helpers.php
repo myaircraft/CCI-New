@@ -15,6 +15,11 @@ function cc_img($file) {
     return get_template_directory_uri() . '/assets/images/' . $file;
 }
 
+/** Escaped heading text where {{words}} are marked with a yellow underline. */
+function cc_hl($text) {
+    return preg_replace('/\{\{(.+?)\}\}/', '<span class="hl">$1</span>', esc_html((string) $text));
+}
+
 /** Same class output as the original cva() button variants merged with tailwind-merge. */
 function cc_btn($variant = 'default', $size = 'default', $extra = '') {
     $variants = [

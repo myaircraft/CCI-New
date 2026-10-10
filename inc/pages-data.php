@@ -27,7 +27,7 @@ function cc_pages_data() {
 function cc_page_shared($group) {
     $points = ['Serving buyers since 2003', 'Based in Houston, Texas', 'Nationwide sourcing', 'GSA MAS, TIPS and BuyBoard contract vehicles', 'WOSB certification'];
     $trust = [
-        'title'        => $group === 'service' ? 'Why organizations work with Competitive Choice' : 'Why buyers source through Competitive Choice',
+        'title'        => $group === 'service' ? 'Why organizations choose to work with Competitive Choice' : 'Why buyers source through Competitive Choice',
         'paragraphs'   => [
             'Competitive Choice has supported government, commercial and institutional buyers since 2003. Our strategic sourcing and procurement experience helps you handle your requirements without chasing multiple suppliers.',
             'Public-sector buyers can ask about our contract vehicles and certifications, including GSA MAS, TIPS, BuyBoard and WOSB, when they submit a requirement. We confirm which vehicles apply to each purchase.',
