@@ -23,7 +23,7 @@
             </div></div>
           <?php endforeach; ?>
         </nav>
-        <a href="<?php echo esc_url(cc_url('shop')); ?>" class="<?php echo cc_btn('shop', 'default', 'desktop-quote'); ?>"><?php echo cc_icon('shopping-cart'); ?><?php cc_e('header.shop_label'); ?></a>
+        <a href="<?php echo esc_url(cc_url('shop')); ?>" class="<?php echo cc_btn('shop', 'default', 'desktop-quote cc-shop-btn'); ?>"><?php echo cc_icon('shopping-cart'); ?><?php cc_e('header.shop_label'); ?></a>
       </div>
     </div></div>
     <nav class="mobile-navigation" id="mobile-navigation" aria-label="Mobile navigation" hidden>
@@ -38,7 +38,7 @@
         </div>
       <?php endforeach; ?>
       <div class="mobile-menu-actions">
-        <a href="<?php echo esc_url(cc_url('shop')); ?>" class="<?php echo cc_btn('shop', 'default', 'mobile-shop'); ?>"><?php echo cc_icon('shopping-cart'); ?><?php cc_e('header.shop_label'); ?></a>
+        <a href="<?php echo esc_url(cc_url('shop')); ?>" class="<?php echo cc_btn('shop', 'default', 'mobile-shop cc-shop-btn'); ?>"><?php echo cc_icon('shopping-cart'); ?><?php cc_e('header.shop_label'); ?></a>
         <a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>" class="<?php echo cc_btn('call'); ?>"><?php echo cc_icon('phone'); ?><?php cc_e('company.phone'); ?></a>
         <a href="mailto:<?php echo esc_attr(cc_content('company.email')); ?>" class="<?php echo cc_btn('outline', 'default', 'mobile-email'); ?>"><?php echo cc_icon('mail'); ?><?php cc_e('company.email'); ?></a>
         <a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_e('header.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a>

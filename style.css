@@ -11,3 +11,20 @@ Text Domain: competitive-choice
 .admin-bar .site-header { top: 32px; }
 @media screen and (max-width: 782px) { .admin-bar .site-header { top: 46px; } }
 @media screen and (max-width: 600px) { .admin-bar .site-header { top: 0; } }
+
+/* SHOP NOW button: the cart rolls in and out every few seconds, and drives off and back on hover. */
+.cc-shop-btn svg { transform-origin: 50% 80%; animation: cc-cart-roll 3.2s ease-in-out infinite; }
+.cc-shop-btn:hover svg, .cc-shop-btn:focus-visible svg { animation: cc-cart-drive 0.9s ease-in-out infinite; }
+@keyframes cc-cart-roll {
+    0%, 55%, 100% { transform: translateX(0) rotate(0); }
+    65% { transform: translateX(-3px) rotate(-8deg); }
+    78% { transform: translateX(4px) rotate(5deg); }
+    90% { transform: translateX(-1px) rotate(-2deg); }
+}
+@keyframes cc-cart-drive {
+    0% { transform: translateX(0); opacity: 1; }
+    45% { transform: translateX(14px); opacity: 0; }
+    46% { transform: translateX(-14px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .cc-shop-btn svg, .cc-shop-btn:hover svg { animation: none; } }
