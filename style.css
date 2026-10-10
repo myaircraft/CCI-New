@@ -186,3 +186,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 
 /* Home: product boxes 5% wider than the content column */
 #products-supplies .product-grid { width: 105%; margin-inline: -2.5%; }
+
+/* Home services: hairline arrow drawn as SVG so mobile never swaps in an emoji glyph */
+.service-list .service-arrow { display: inline-flex; flex: none; line-height: 0; }
+.service-list .service-arrow svg { width: 24px; height: 24px; display: block; }

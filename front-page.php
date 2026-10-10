@@ -47,7 +47,7 @@ $first = $products[0] ?? ['name' => '', 'hero_line' => ''];
     <img class="band-photo" src="<?php echo esc_url(cc_img(cc_page('services.image'))); ?>" alt="<?php echo esc_attr(cc_page('services.image_alt')); ?>" width="1920" height="768" loading="lazy">
     <div class="site-container band-content">
       <?php cc_section_title(cc_page('services.topic'), cc_page('services.heading'), cc_page('services.description')); ?>
-      <div class="service-list"><?php foreach (cc_services() as $service) : ?><a href="<?php echo esc_url(cc_category_destination($service['name'], 'service')); ?>"><?php echo esc_html($service['name']); ?><span aria-hidden="true">↗</span></a><?php endforeach; ?></div>
+      <div class="service-list"><?php foreach (cc_services() as $service) : ?><a href="<?php echo esc_url(cc_category_destination($service['name'], 'service')); ?>"><?php echo esc_html($service['name']); ?><span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 18 18 6M8 6h10v10"/></svg></span></a><?php endforeach; ?></div>
       <div class="section-actions"><a href="<?php echo esc_url(cc_url('services')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('services.button_label'); ?></a></div>
     </div>
   </section>
