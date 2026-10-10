@@ -34,7 +34,7 @@ $banner_image = cc_page('banner.image');
     <section class="category-overview" aria-labelledby="overview-title">
       <h2 id="overview-title"><?php cc_page_e('overview.title'); ?></h2>
       <?php foreach (cc_page_list('overview.paragraphs') as $paragraph) : ?><p><?php echo esc_html($paragraph); ?></p><?php endforeach; ?>
-      <?php if (cc_page_has('overview.image')) : ?><div class="category-figure"><img src="<?php echo esc_url(cc_img(cc_page('overview.image'))); ?>" alt="<?php echo esc_attr(cc_page('overview.image_alt')); ?>" width="1536" height="1024" loading="lazy"></div><?php endif; ?>
+      <?php if (cc_page_has('overview.image')) : ?><div class="category-figure"><img src="<?php echo esc_url(cc_img(cc_page('overview.image'))); ?>" alt="<?php echo esc_attr(cc_page('overview.image_alt')); ?>" width="1536" height="1024" loading="lazy" decoding="async"></div><?php endif; ?>
     </section>
     <?php endif; ?>
 
@@ -45,10 +45,25 @@ $banner_image = cc_page('banner.image');
     </section>
     <?php endif; ?>
 
+    <?php if (cc_page_has('guide.items')) : ?>
+    <section class="category-section" aria-labelledby="guide-title">
+      <div class="category-section-heading"><h2 id="guide-title"><?php cc_page_e('guide.title'); ?></h2><p><?php cc_page_e('guide.description'); ?></p></div>
+      <div class="category-projects"><?php foreach (cc_page_list('guide.items') as $g) : ?><div><h3><?php echo esc_html($g['title'] ?? ''); ?></h3><p><?php echo esc_html($g['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
+    </section>
+    <?php endif; ?>
+
     <?php if (cc_page_has('applications.items')) : ?>
     <section class="category-section" aria-labelledby="applications-title">
       <div class="category-section-heading"><h2 id="applications-title"><?php cc_page_e('applications.title'); ?></h2><p><?php cc_page_e('applications.description'); ?></p></div>
       <div class="category-projects"><?php foreach (cc_page_list('applications.items') as $a) : ?><div><h3><?php echo esc_html($a['title'] ?? ''); ?></h3><p><?php echo esc_html($a['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
+    </section>
+    <?php endif; ?>
+
+    <?php if (cc_page_has('trust.title')) : ?>
+    <section class="category-section category-trust" aria-labelledby="trust-title">
+      <div class="category-section-heading"><h2 id="trust-title"><?php cc_page_e('trust.title'); ?></h2><?php foreach (cc_page_list('trust.paragraphs') as $paragraph) : ?><p><?php echo esc_html($paragraph); ?></p><?php endforeach; ?></div>
+      <?php if (cc_page_has('trust.points')) : ?><ul class="trust-points"><?php foreach (cc_page_list('trust.points') as $point) : ?><li><?php echo cc_icon('check'); ?><?php echo esc_html($point); ?></li><?php endforeach; ?></ul><?php endif; ?>
+      <?php if (cc_page_has('trust.button_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contracts')); ?>" class="<?php echo cc_btn('outline'); ?>"><?php cc_page_e('trust.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
     </section>
     <?php endif; ?>
 

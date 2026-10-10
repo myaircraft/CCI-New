@@ -21,11 +21,13 @@ function cc_page_shape($kind) {
         'breadcrumb'   => ['home' => '', 'parent' => '', 'parent_link' => '', 'current' => ''],
         'overview'     => ['title' => '', 'paragraphs' => [''], 'image' => '', 'image_alt' => ''],
         'equipment'    => ['title' => '', 'description' => '', 'items' => [['title' => '', 'icon' => '', 'description' => '', 'items' => ['']]]],
+        'guide'        => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
         'applications' => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
+        'trust'        => ['title' => '', 'paragraphs' => [''], 'points' => [''], 'button_label' => ''],
         'inquiry'      => ['title' => '', 'paragraphs' => [''], 'checklist_title' => '', 'items' => [['title' => '', 'description' => '']], 'button_label' => ''],
         'faq'          => ['title' => '', 'description' => '', 'items' => [['question' => '', 'answer' => '']]],
         'related'      => ['title' => '', 'links' => [['label' => '', 'link' => '']]],
-        'seo'          => ['title' => '', 'description' => '', 'schema_about' => ''],
+        'seo'          => ['title' => '', 'description' => '', 'og_title' => '', 'og_description' => '', 'schema_about' => ''],
     ];
 }
 
@@ -118,7 +120,7 @@ add_action('admin_action_cc_duplicate_page', function () {
     $data['banner']['title'] = '';
     $data['breadcrumb']['current'] = '';
     $data['faq']['title'] = '';
-    $data['seo'] = ['title' => '', 'description' => '', 'schema_about' => ''];
+    $data['seo'] = ['title' => '', 'description' => '', 'og_title' => '', 'og_description' => '', 'schema_about' => ''];
     update_post_meta($new_id, '_cc_content', wp_slash($data));
     wp_safe_redirect(admin_url('post.php?action=edit&post=' . $new_id));
     exit;

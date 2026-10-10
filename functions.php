@@ -36,7 +36,6 @@ add_action('wp_enqueue_scripts', function () {
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('wp_head', 'wp_generator');
-remove_filter('wp_robots', 'wp_robots_max_image_preview_large');
 add_filter('show_recent_comments_widget_style', '__return_false');
 
 /** Page metadata from the page's own SEO fields, falling back to its title and the Site Content SEO fallback. */
@@ -54,7 +53,8 @@ function cc_page_meta() {
     if (cc_is_category_page()) {
         $t = cc_page('seo.title') ?: $page_title;
         $d = cc_page('seo.description') ?: (cc_page('banner.lead') ?: cc_content('seo.default.description'));
-        return ['title' => $t, 'description' => $d, 'og_title' => $t, 'og_desc' => $d, 'url' => get_permalink(get_queried_object_id()), 'twitter' => true];
+        $img = cc_page('banner.image');
+        return ['title' => $t, 'description' => $d, 'og_title' => cc_page('seo.og_title') ?: $t, 'og_desc' => cc_page('seo.og_description') ?: $d, 'url' => get_permalink(get_queried_object_id()), 'twitter' => true, 'image' => $img ? cc_img($img) : '', 'image_alt' => cc_page('banner.title') ?: get_the_title()];
     }
     return [
         'title'       => is_404() ? $site_title : $page_title,
@@ -73,11 +73,18 @@ add_action('wp_head', function () {
     if (!empty($m['og_title'])) echo '<meta property="og:title" content="' . esc_attr($m['og_title']) . '">' . "\n";
     if (!empty($m['og_desc'])) echo '<meta property="og:description" content="' . esc_attr($m['og_desc']) . '">' . "\n";
     echo '<meta property="og:type" content="website">' . "\n";
+    echo '<meta property="og:site_name" content="' . esc_attr(cc_content('company.name')) . '">' . "\n";
+    echo '<meta property="og:locale" content="en_US">' . "\n";
+    if (!empty($m['image'])) {
+        echo '<meta property="og:image" content="' . esc_url($m['image']) . '">' . "\n";
+        echo '<meta property="og:image:alt" content="' . esc_attr($m['image_alt'] ?? '') . '">' . "\n";
+    }
     if (!empty($m['url'])) echo '<meta property="og:url" content="' . esc_url($m['url']) . '">' . "\n";
     echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
     if (!empty($m['twitter'])) {
         echo '<meta name="twitter:title" content="' . esc_attr($m['og_title']) . '">' . "\n";
         echo '<meta name="twitter:description" content="' . esc_attr($m['og_desc']) . '">' . "\n";
+        if (!empty($m['image'])) echo '<meta name="twitter:image" content="' . esc_url($m['image']) . '">' . "\n";
     }
     echo '<link rel="icon" href="' . esc_url(cc_img(cc_content('assets.favicon'))) . '" type="image/png">' . "\n";
     echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";

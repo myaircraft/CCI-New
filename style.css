@@ -45,3 +45,9 @@ Text Domain: competitive-choice
     .quote-checklist > div::before { top: 26px; left: 22px; }
 }
 @media (prefers-reduced-motion: reduce) { .quote-checklist > div, .quote-checklist > div::after { transition: none; } }
+
+/* Trust section: credentials as a centered row of tick chips. */
+.trust-points { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 880px; margin: 0 auto; padding: 0; list-style: none; }
+.trust-points li { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid var(--border); color: var(--foreground); font-size: 15px; font-weight: 700; }
+.trust-points svg { width: 18px; height: 18px; color: var(--brand); }
+.category-trust .category-actions { display: flex; justify-content: center; margin-top: 28px; }
