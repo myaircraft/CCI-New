@@ -168,3 +168,4 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .mobile-category-links a + a { border-top: 1px solid #efefef; }
 .mobile-category-toggle { padding-inline: var(--text-gap); }
 .mobile-category-toggle[aria-expanded="true"], .mobile-category-toggle[aria-expanded="true"]:hover { background: #fff4c2; }
+.mobile-category-links a { padding-block: 11.45px; }
