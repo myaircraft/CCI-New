@@ -41,7 +41,7 @@ $banner_image = cc_page('banner.image');
     <?php if (cc_page_has('equipment.items')) : ?>
     <section class="category-section" aria-labelledby="equipment-title">
       <div class="category-section-heading"><h2 id="equipment-title"><?php cc_page_e('equipment.title'); ?></h2><p><?php cc_page_e('equipment.description'); ?></p></div>
-      <div class="equipment-grid"><?php foreach (cc_page_list('equipment.items') as $e) : ?><article class="equipment-item"><?php if (!empty($e['image'])) : ?><img class="equipment-thumb" src="<?php echo esc_url(cc_img($e['image'])); ?>" alt="" width="70" height="30" loading="lazy" decoding="async"><?php else : echo cc_icon($e['icon'] ?? ''); endif; ?><h3><?php echo esc_html($e['title'] ?? ''); ?></h3><p><?php echo esc_html($e['description'] ?? ''); ?></p><ul><?php foreach ((array) ($e['items'] ?? []) as $item) : ?><li><?php echo esc_html($item); ?></li><?php endforeach; ?></ul></article><?php endforeach; ?></div>
+      <div class="equipment-grid"><?php foreach (cc_page_list('equipment.items') as $e) : ?><article class="equipment-item"><?php if (!empty($e['image'])) : ?><img class="equipment-thumb" src="<?php echo esc_url(cc_img($e['image'])); ?>" alt="" width="280" height="120" loading="lazy" decoding="async"><?php else : echo cc_icon($e['icon'] ?? ''); endif; ?><h3><?php echo esc_html($e['title'] ?? ''); ?></h3><p><?php echo esc_html($e['description'] ?? ''); ?></p><ul><?php foreach ((array) ($e['items'] ?? []) as $item) : ?><li><?php echo esc_html($item); ?></li><?php endforeach; ?></ul></article><?php endforeach; ?></div>
     </section>
     <?php endif; ?>
 
