@@ -30,7 +30,7 @@ Text Domain: competitive-choice
 @media (prefers-reduced-motion: reduce) { .cc-shop-btn svg, .cc-shop-btn:hover svg { animation: none; } }
 
 /* Inquiry checklist: a joined 2x2 panel with hairline dividers, a tick on each cell and a gold top rule on hover. */
-.category-section-heading + h3 { display: flex; align-items: center; justify-content: center; gap: 16px; box-sizing: border-box; width: 100%; max-width: 880px; margin: 40px auto 0; padding: 0; color: var(--brand); font-size: 17px; line-height: 1.25; font-weight: 800; letter-spacing: .14em; text-align: center; text-transform: uppercase; }
+.category-section-heading + h3 { display: flex; align-items: center; justify-content: center; gap: 16px; box-sizing: border-box; width: 100%; max-width: 740px; margin: 40px auto 0; padding: 0; color: var(--brand); font-size: 17px; line-height: 1.25; font-weight: 800; letter-spacing: .14em; text-align: center; text-transform: uppercase; }
 .category-section-heading + h3::before, .category-section-heading + h3::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 .quote-checklist { gap: 1px; margin-top: 18px; background: var(--border); border: 1px solid var(--border); }
 .quote-checklist > div { position: relative; text-align: left; padding: 32px 32px 34px 76px; background: var(--background); transition: background-color .25s ease; }
