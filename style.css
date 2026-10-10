@@ -162,3 +162,9 @@ h1, h2, h3, h4 { text-wrap: balance; }
 @media (max-width: 767px) { .header-brand-logo { width: 251.2px; height: 53.1px; } .main-header[data-scrolled=true] .header-brand-logo { height: 38.6px; } }
 @media (max-width: 359px) { .header-brand-logo { width: 218.4px; height: 46.2px; } .main-header[data-scrolled=true] .header-brand-logo { height: 33.6px; } }
 .mega-links a { padding-block: 11.65px; }
+
+/* Mobile menu: regular-weight sub links, light dividers, highlighted open category */
+.mobile-category-links a { font-weight: 400; }
+.mobile-category-links a + a { border-top: 1px solid #efefef; }
+.mobile-category-toggle { padding-inline: var(--text-gap); }
+.mobile-category-toggle[aria-expanded="true"], .mobile-category-toggle[aria-expanded="true"]:hover { background: #fff4c2; }
