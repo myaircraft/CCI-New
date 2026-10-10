@@ -21,7 +21,6 @@ function cc_page_shape($kind) {
         'breadcrumb'   => ['home' => '', 'parent' => '', 'parent_link' => '', 'current' => ''],
         'overview'     => ['title' => '', 'paragraphs' => [''], 'image' => '', 'image_alt' => ''],
         'equipment'    => ['title' => '', 'description' => '', 'items' => [['title' => '', 'icon' => '', 'description' => '', 'items' => ['']]]],
-        'guide'        => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
         'applications' => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
         'trust'        => ['title' => '', 'paragraphs' => [''], 'points' => [''], 'button_label' => ''],
         'process'      => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],

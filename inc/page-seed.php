@@ -98,7 +98,7 @@ return [
         ],
         'overview' => [
             'title' => 'Power distribution equipment and transformers for critical infrastructure',
-            'paragraphs' => ['Competitive Choice supplies power distribution equipment, including distribution and power transformers, switchgear, panelboards, load centers, circuit breakers and fuses, for organizations that cannot afford unplanned downtime. Whether you are modernizing an electrical system, expanding capacity or equipping a new build, the equipment has to match your voltage, load and installation environment.', 'We serve utilities, hospitals, data centers, water plants, schools, government facilities and infrastructure contractors from Houston, Texas, and source for customers nationwide. Bring us your project specifications and we will help you move from an identified requirement to a clear procurement conversation, with product suitability, availability and delivery confirmed during your inquiry.', 'Not sure where to start? The selection guide below covers the main decisions, and our team can talk them through with your project engineer.'],
+            'paragraphs' => ['Competitive Choice supplies power distribution equipment, including distribution and power transformers, switchgear, panelboards, load centers, circuit breakers and fuses, for organizations that cannot afford unplanned downtime. Whether you are modernizing an electrical system, expanding capacity or equipping a new build, the equipment has to match your voltage, load and installation environment.', 'We serve utilities, hospitals, data centers, water plants, schools, government facilities and infrastructure contractors from Houston, Texas, and source for customers nationwide. Bring us your project specifications and we will help you move from an identified requirement to a clear procurement conversation, with product suitability, availability and delivery confirmed during your inquiry.'],
             'image' => 'power-distribution-equipment.jpg',
             'image_alt' => 'Dry-type transformer cabinets and electrical switchgear in a dedicated power distribution room',
         ],
@@ -123,36 +123,6 @@ return [
                     'icon' => 'shield-check',
                     'description' => 'Protective components for electrical distribution systems. Share the specified ratings and application so we can review your requirement.',
                     'items' => ['Circuit breakers', 'Fuses'],
-                ],
-            ],
-        ],
-        'guide' => [
-            'title' => 'How to choose power distribution equipment',
-            'description' => 'Six decisions shape most transformer and switchgear purchases. Your project engineer should confirm the final selection against the specification.',
-            'items' => [
-                [
-                    'title' => 'Transformer type',
-                    'description' => 'Dry-type transformers suit many indoor installations, while liquid-filled units are often used for higher capacities and outdoor locations. Fire codes, ventilation, location and environmental rules usually decide the choice.',
-                ],
-                [
-                    'title' => 'Voltage, phase and kVA',
-                    'description' => 'Match primary and secondary voltage, phase and frequency to your system, then size kVA to the connected load, demand and planned growth. Undersizing risks overheating, while oversizing adds cost and losses.',
-                ],
-                [
-                    'title' => 'Switchgear or panelboard',
-                    'description' => 'Switchgear sits at major distribution points and provides switching, protection and isolation at higher fault levels. Panelboards and load centers feed branch circuits closer to the load.',
-                ],
-                [
-                    'title' => 'Protection ratings',
-                    'description' => 'Circuit breakers and fuses must carry the load current and have an interrupting rating at or above the available fault current. Confirm voltage, poles and compatibility with existing equipment.',
-                ],
-                [
-                    'title' => 'Enclosure and environment',
-                    'description' => 'Indoor, outdoor, damp, dusty or corrosive locations call for the right enclosure rating, such as a suitable NEMA type, along with proper ventilation and working clearances.',
-                ],
-                [
-                    'title' => 'Standards and documentation',
-                    'description' => 'State the ANSI, IEEE, NEMA or UL requirements that apply, plus any submittals, test reports and drawings, so your quote covers everything the project needs.',
                 ],
             ],
         ],

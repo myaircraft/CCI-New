@@ -59,7 +59,7 @@ function cc_label($name) {
         'image_alt' => 'Image description (alt text)', 'topic' => 'Section label', 'card_link_label' => 'Card link text',
         'button_label' => 'Button text', 'breadcrumb' => 'Breadcrumb', 'home' => 'Home link text', 'parent' => 'Parent link text',
         'parent_link' => 'Parent link', 'current' => 'Current page text (empty = page title)', 'overview' => 'Introduction',
-        'paragraphs' => 'Paragraphs', 'equipment' => 'Equipment cards', 'applications' => 'Applications', 'guide' => 'Selection guide', 'process' => 'How it works', 'trust' => 'Why us (trust)', 'inquiry' => 'Quote checklist',
+        'paragraphs' => 'Paragraphs', 'equipment' => 'Equipment cards', 'applications' => 'Applications', 'process' => 'How it works', 'trust' => 'Why us (trust)', 'inquiry' => 'Quote checklist',
         'checklist_title' => 'Checklist heading', 'faq' => 'FAQs', 'related' => 'Related links', 'links' => 'Links',
         'hero' => 'Hero slideshow', 'markets' => 'Markets strip', 'difference' => 'Why us', 'contracting' => 'Government & contracting',
         'credentials' => 'Credentials', 'points' => 'Points', 'hero_line' => 'Slideshow line', 'contracts_label' => 'Contracts button text',

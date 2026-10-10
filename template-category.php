@@ -45,13 +45,6 @@ $banner_image = cc_page('banner.image');
     </section>
     <?php endif; ?>
 
-    <?php if (cc_page_has('guide.items')) : ?>
-    <section class="category-section" aria-labelledby="guide-title">
-      <div class="category-section-heading"><h2 id="guide-title"><?php cc_page_e('guide.title'); ?></h2><p><?php cc_page_e('guide.description'); ?></p></div>
-      <div class="category-projects"><?php foreach (cc_page_list('guide.items') as $g) : ?><div><h3><?php echo esc_html($g['title'] ?? ''); ?></h3><p><?php echo esc_html($g['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
-    </section>
-    <?php endif; ?>
-
     <?php if (cc_page_has('applications.items')) : ?>
     <section class="category-section" aria-labelledby="applications-title">
       <div class="category-section-heading"><h2 id="applications-title"><?php cc_page_e('applications.title'); ?></h2><p><?php cc_page_e('applications.description'); ?></p></div>
