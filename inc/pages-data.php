@@ -17,6 +17,7 @@ function cc_pages_data() {
         $pages = array_merge(
             require __DIR__ . '/pages-data/products.php',
             require __DIR__ . '/pages-data/services.php',
+            require __DIR__ . '/pages-data/industries.php',
             require __DIR__ . '/pages-data/info.php'
         );
     }
@@ -68,7 +69,7 @@ function cc_page_shared($group) {
             ],
         ];
     }
-    $process['button_label'] = $group === 'service' ? 'REQUEST A QUOTE' : 'REQUEST A PROJECT QUOTE';
+    $process['button_label'] = $group === 'product' ? 'REQUEST A PROJECT QUOTE' : 'REQUEST A QUOTE';
     $shared = ['trust' => $trust, 'process' => $process];
     if ($group === 'service') $shared['inquiry'] = $inquiry; // product pages have no inquiry checklist
     return $shared;
@@ -79,9 +80,12 @@ function cc_page_build($def) {
     $c = $def['content'];
     if (($def['template'] ?? 'category') === 'category') {
         $group = $def['group'] ?? 'product';
-        $c += cc_page_shared($group);
-        $c['banner'] = ($c['banner'] ?? []) + ['kicker' => $group === 'service' ? 'SERVICES' : 'PRODUCTS & SUPPLIES', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'];
-        $c['breadcrumb'] = ($c['breadcrumb'] ?? []) + ['home' => 'Home', 'parent' => $group === 'service' ? 'Services' : 'Products & Supplies', 'parent_link' => $group === 'service' ? 'link:services' : 'link:products', 'current' => $def['title']];
+        foreach (cc_page_shared($group) as $key => $shared_block) {
+            // Page values win; shared values fill whatever the page leaves out.
+            $c[$key] = isset($c[$key]) && is_array($c[$key]) ? $c[$key] + $shared_block : ($c[$key] ?? $shared_block);
+        }
+        $c['banner'] = ($c['banner'] ?? []) + ['kicker' => ['service' => 'SERVICES', 'industry' => 'INDUSTRIES'][$group] ?? 'PRODUCTS & SUPPLIES', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'];
+        $c['breadcrumb'] = ($c['breadcrumb'] ?? []) + ['home' => 'Home', 'parent' => ['service' => 'Services', 'industry' => 'Industries'][$group] ?? 'Products & Supplies', 'parent_link' => ['service' => 'link:services', 'industry' => 'link:industries'][$group] ?? 'link:products', 'current' => $def['title']];
         $c['related'] = $c['related'] ?? ['title' => 'Related supply requirements', 'links' => [['label' => 'All Products & Supplies', 'link' => 'link:products']]];
         $c['faq'] = ($c['faq'] ?? []) + ['title' => $def['title'] . ' FAQs', 'description' => 'Answers to common selection, specification and sourcing questions.'];
     } else {

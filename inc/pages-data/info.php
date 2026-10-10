@@ -61,6 +61,34 @@ return [
         ],
     ],
 
+    'industries' => [
+        'title' => 'Industries We Serve', 'parent' => '', 'template' => 'info', 'order' => 40,
+        'content' => [
+            'seo' => [
+                'title' => 'Industries We Serve | MRO Supplies & Services | Competitive Choice',
+                'description' => 'Competitive Choice supports federal and local government, education, healthcare, water and wastewater, energy, commercial and construction customers.',
+                'og_title' => 'Industries We Serve | Competitive Choice',
+                'og_description' => 'A customer-centric partner for the organizations that keep communities running. Find your industry.',
+                'schema_about' => 'Industries served by Competitive Choice', 'page_type' => 'CollectionPage',
+            ],
+            'banner' => ['kicker' => 'INDUSTRIES', 'title' => 'Industries We Serve', 'lead' => 'Everything we do is built around partnership. We take the time to understand your business and respond with agility and purpose.', 'quote_label' => 'REQUEST A QUOTE'],
+            'breadcrumb' => ['home' => 'Home', 'current' => 'Industries'],
+            'blocks' => [
+                ['layout' => 'cards', 'id' => 'industries', 'title' => 'One dependable partner across eight sectors.', 'description' => 'Choose your industry to see how we support your operation.', 'items' => [
+                    ['title' => 'Federal Government', 'description' => 'GSA and AbilityOne contract channels, TAA-compliant safety supplies, tools and lighting.', 'link' => '/industries/federal-government/'],
+                    ['title' => 'State & Local Government', 'description' => 'One-stop maintenance, repair and operational supplies for public agencies.', 'link' => '/industries/state-local-government/'],
+                    ['title' => 'Education / SLED', 'description' => 'Custodial, odor control, drain care and maintenance support for campuses.', 'link' => '/industries/education-sled/'],
+                    ['title' => 'Healthcare', 'description' => 'Med/surge supplies, wheelchair parts, drain care and odor control.', 'link' => '/industries/healthcare/'],
+                    ['title' => 'Water & Wastewater', 'description' => 'Treatment chemicals, odor control and drain care for plants and systems.', 'link' => '/industries/water-wastewater/'],
+                    ['title' => 'Energy & Utilities', 'description' => 'Electrical, valves, pipe, chemicals and safety supplies for energy operations.', 'link' => '/industries/energy-utilities/'],
+                    ['title' => 'Commercial & Industrial', 'description' => 'Safety supplies, tools, equipment, shelving and lighting for facilities.', 'link' => '/industries/commercial-industrial/'],
+                    ['title' => 'Construction & MEP', 'description' => 'Mechanical, electrical and plumbing supplies with delivery scheduling.', 'link' => '/industries/construction-mep/'],
+                ]],
+            ],
+            'related' => ['title' => 'Related pages', 'links' => [['label' => 'Products & Supplies', 'link' => 'link:products'], ['label' => 'Services', 'link' => 'link:services'], ['label' => 'Contact Our Team', 'link' => 'link:contact']]],
+        ],
+    ],
+
     'who-we-serve' => [
         'title' => 'Who We Serve', 'parent' => '', 'template' => 'info', 'order' => 30,
         'content' => [
