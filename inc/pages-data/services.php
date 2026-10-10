@@ -9,43 +9,55 @@ return [
         'content' => [
             'seo' => [
                 'title' => 'Logistics & Procurement Services | Competitive Choice',
-                'description' => 'Warehousing, distribution, strategic sourcing and eProcurement for facilities and critical infrastructure, from our Houston warehouse. Request a quote.',
+                'description' => 'Supply chain coordination, Houston warehousing and distribution, strategic sourcing, eProcurement and contract support for facilities and critical infrastructure.',
                 'og_title' => 'Logistics & Procurement Services | Competitive Choice',
                 'og_description' => 'A nimble logistics and procurement partner for organizations that support critical infrastructure. Tell us what you need.',
                 'schema_about' => 'Logistics, warehousing and procurement services',
             ],
             'banner' => ['image' => '', 'title' => 'Strategic Logistics & Procurement for Infrastructure-Driven Operations',
-                'lead' => 'A nimble, hands-on partner for facility operations, regulatory compliance and rapid response, backed by a centrally located Houston warehouse.'],
+                'lead' => 'When a part, a pump or a pallet of supplies arrives late, the whole operation feels it. We make sure it does not, with a hands-on team and a centrally located Houston warehouse.'],
             'overview' => [
                 'title' => 'A trusted logistics and procurement partner for critical infrastructure',
                 'paragraphs' => [
-                    'Competitive Choice is a nimble and trusted logistics and procurement partner for organizations that support critical infrastructure. With a single, centrally located warehouse and a hands-on team, we offer responsive, dependable solutions built around facility operations, regulatory compliance and rapid response.',
-                    'We combine practical experience with scalable systems to help reduce risk, control costs and maintain operational readiness, even under pressure.',
+                    'Competitive Choice is a woman-owned distributor based in Houston, Texas, serving government, commercial and institutional buyers since 2003. Our logistics and procurement services extend what we already do well, sourcing and supplying the products that keep facilities running, into a complete support service.',
+                    'With a single, centrally located warehouse and a hands-on team, we offer responsive, dependable solutions built around facility operations, regulatory compliance and rapid response. We combine practical experience with scalable systems to help reduce risk, control costs and maintain operational readiness, even under pressure.',
                     'We may be small in footprint, but we work with a big-picture mindset. Our team delivers reliable, flexible solutions and scales alongside our strategic partners as their needs evolve.',
+                ],
+            ],
+            'problems' => [
+                'title' => 'The problems this service solves', 'description' => 'The supply challenges that slow down facility operations, and how we address each one.',
+                'items' => [
+                    ['title' => 'Delays that stall operations', 'description' => 'Late or fragmented deliveries leave maintenance and project teams waiting. Coordinated inventory, storage and transportation keep orders moving to your timeline.'],
+                    ['title' => 'No visibility into stock', 'description' => 'Not knowing what is on hand or in transit makes planning difficult. Real-time inventory visibility from our Houston warehouse gives you a clear picture.'],
+                    ['title' => 'Urgent needs with no buffer', 'description' => 'Emergency repairs and rapid-response work cannot wait on long lead times. Our agile warehouse and team are set up for urgent requests.'],
+                    ['title' => 'Too many suppliers to manage', 'description' => 'Chasing vendors for quotes, quality and compliance consumes staff time. We manage supplier relationships to meet your performance, compliance and budget requirements.'],
+                    ['title' => 'Heavy purchasing paperwork', 'description' => 'Manual order workflows and scattered records add administrative burden. Our eProcurement platform simplifies purchasing and makes spending easier to track.'],
+                    ['title' => 'Contract risk and weak accountability', 'description' => 'Unmanaged terms and performance create exposure. We help track contract terms and delivery so you maximize value and mitigate risk.'],
                 ],
             ],
             'equipment' => [
                 'title' => 'What our logistics and procurement services include', 'description' => 'Two connected service lines that turn supply chain challenges into strengths.',
                 'items' => [
-                    ['title' => 'Supply Chain Coordination', 'icon' => '', 'image' => '', 'description' => 'From demand planning to final delivery, streamlined support across inventory, storage and transportation, with team expertise and technology tools to improve fulfillment and reduce delays.', 'items' => []],
-                    ['title' => 'Warehousing & Distribution', 'icon' => '', 'image' => '', 'description' => 'Our Houston-based warehouse offers secure storage, real-time inventory visibility and responsive distribution for routine maintenance orders and urgent project needs.', 'items' => []],
+                    ['title' => 'Supply Chain Coordination', 'icon' => '', 'image' => '', 'description' => 'From demand planning to final delivery, we provide streamlined support across inventory, storage and transportation. While compact in scale, our operations are built to adapt, using our team’s expertise and technology tools to improve fulfillment and reduce delays.', 'items' => []],
+                    ['title' => 'Warehousing & Distribution', 'icon' => '', 'image' => '', 'description' => 'Our Houston-based warehouse offers secure storage, real-time inventory visibility and responsive distribution. Whether fulfilling routine maintenance orders or urgent project needs, we maintain the agility and precision to meet your timelines.', 'items' => []],
                     ['title' => 'Strategic Sourcing & Supplier Support', 'icon' => '', 'image' => '', 'description' => 'We work closely with trusted suppliers to source quality products at competitive prices, managing vendor relationships to meet performance, compliance and budget requirements.', 'items' => []],
-                    ['title' => 'eProcurement & Contract Support', 'icon' => '', 'image' => '', 'description' => 'An integrated eProcurement platform streamlines order workflows and spend tracking, and we help manage contract terms and performance so you maximize value and limit risk.', 'items' => []],
+                    ['title' => 'Simplified Purchasing & Contract Support', 'icon' => '', 'image' => '', 'description' => 'Through our integrated eProcurement platform, you can streamline order workflows, track spending and gain better visibility while easing the administrative burden on your teams. We also help manage contract terms, track performance and keep suppliers accountable.', 'items' => []],
                 ],
             ],
             'applications' => [
                 'title' => 'Who we support', 'description' => 'Organizations that keep essential services running.',
                 'items' => [
-                    ['title' => 'Facility operations teams', 'description' => 'Dependable fulfillment of routine maintenance orders and urgent needs.'],
-                    ['title' => 'Public-sector buyers', 'description' => 'Compliance-minded procurement with contract support and clear visibility.'],
-                    ['title' => 'Project and construction teams', 'description' => 'Timely materials staged and delivered to match project milestones.'],
+                    ['title' => 'Facility operations teams', 'description' => 'Dependable fulfillment of routine maintenance orders and urgent needs, with the readiness to keep sites running.'],
+                    ['title' => 'Public-sector buyers', 'description' => 'Compliance-minded procurement with contract support, organized records and clear visibility.'],
+                    ['title' => 'Critical infrastructure operators', 'description' => 'A responsive partner for water, wastewater, utility and institutional facilities where downtime is costly.'],
                 ],
             ],
             'faq' => ['items' => [
-                ['question' => 'What logistics services does Competitive Choice offer?', 'answer' => 'We offer supply chain coordination, warehousing and distribution from our Houston warehouse, with real-time inventory visibility and responsive delivery.'],
+                ['question' => 'What logistics services does Competitive Choice offer?', 'answer' => 'We offer supply chain coordination, covering inventory, storage and transportation, plus warehousing and distribution from our centrally located Houston warehouse, with real-time inventory visibility and responsive delivery.'],
                 ['question' => 'What do your procurement services cover?', 'answer' => 'Strategic sourcing and supplier support, simplified purchasing through an integrated eProcurement platform, and contract support that tracks terms and performance.'],
                 ['question' => 'Can you support urgent orders?', 'answer' => 'Yes. Our warehouse and hands-on team are set up to respond to urgent project and maintenance needs. Timing is confirmed for each request.'],
-                ['question' => 'How do I start?', 'answer' => 'Contact our team with your requirement, locations and timing. We will scope a plan that fits your operation.'],
+                ['question' => 'Do you only work with large organizations?', 'answer' => 'No. We are a small business with the systems and mindset to support large-scale infrastructure operations, and we scale alongside our partners as their needs evolve.'],
+                ['question' => 'How do I start?', 'answer' => 'Contact our team with your requirement, locations and timing. We will scope a plan that fits your operation and confirm scope, schedule and pricing in a proposal.'],
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Program & Scheduling Services', 'link' => '/services/program-scheduling/'],
