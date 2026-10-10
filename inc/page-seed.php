@@ -99,28 +99,31 @@ return [
         'overview' => [
             'title' => 'Power distribution equipment and transformers for critical infrastructure',
             'paragraphs' => ['Competitive Choice supplies power distribution equipment, including distribution and power transformers, switchgear, panelboards, load centers, circuit breakers and fuses, for organizations that cannot afford unplanned downtime. Whether you are modernizing an electrical system, expanding capacity or equipping a new build, the equipment has to match your voltage, load and installation environment.', 'We serve utilities, hospitals, data centers, water plants, schools, government facilities and infrastructure contractors from Houston, Texas, and source for customers nationwide. Bring us your project specifications and we will help you move from an identified requirement to a clear procurement conversation, with product suitability, availability and delivery confirmed during your inquiry.'],
-            'image' => 'power-distribution-equipment.jpg',
-            'image_alt' => 'Dry-type transformer cabinets and electrical switchgear in a dedicated power distribution room',
+            'image' => '',
+            'image_alt' => '',
         ],
         'equipment' => [
             'title' => 'Power distribution products we supply',
             'description' => 'A focused range of power distribution equipment for facility upgrades, infrastructure projects and essential operations.',
             'items' => [
                 [
-                    'title' => 'Distribution & power transformers',
+                    'title' => 'Distribution & Power Transformers',
                     'icon' => 'zap',
+                    'image' => 'equip-transformers.jpg',
                     'description' => 'Transformer products for electrical distribution and power infrastructure. Discuss your voltage, kVA capacity and installation requirements with our team.',
                     'items' => ['Distribution transformers', 'Power transformers'],
                 ],
                 [
-                    'title' => 'Switchgear & distribution equipment',
+                    'title' => 'Switchgear & Distribution Equipment',
                     'icon' => 'circuit-board',
+                    'image' => 'equip-switchgear.jpg',
                     'description' => 'Equipment to distribute electrical power across facilities and critical systems, supporting modernization and capacity expansion projects.',
                     'items' => ['Switchgear and distribution panels', 'Load centers and panelboards'],
                 ],
                 [
-                    'title' => 'Circuit protection',
+                    'title' => 'Circuit Protection',
                     'icon' => 'shield-check',
+                    'image' => 'equip-protection.jpg',
                     'description' => 'Protective components for electrical distribution systems. Share the specified ratings and application so we can review your requirement.',
                     'items' => ['Circuit breakers', 'Fuses'],
                 ],

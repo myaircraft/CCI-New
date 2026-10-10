@@ -20,7 +20,7 @@ function cc_page_shape($kind) {
         'banner'       => ['title' => '', 'kicker' => '', 'lead' => '', 'image' => '', 'quote_label' => '', 'call_label' => ''],
         'breadcrumb'   => ['home' => '', 'parent' => '', 'parent_link' => '', 'current' => ''],
         'overview'     => ['title' => '', 'paragraphs' => [''], 'image' => '', 'image_alt' => ''],
-        'equipment'    => ['title' => '', 'description' => '', 'items' => [['title' => '', 'icon' => '', 'description' => '', 'items' => ['']]]],
+        'equipment'    => ['title' => '', 'description' => '', 'items' => [['title' => '', 'icon' => '', 'image' => '', 'description' => '', 'items' => ['']]]],
         'applications' => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
         'trust'        => ['title' => '', 'paragraphs' => [''], 'points' => [''], 'button_label' => ''],
         'process'      => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],

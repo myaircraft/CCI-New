@@ -85,3 +85,6 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .process-steps p { margin: 0; color: var(--muted-foreground); font-size: var(--fs-body); line-height: var(--text-leading); }
 @media (max-width: 900px) { .process-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 720px) { .process-steps { grid-template-columns: 1fr; } }
+
+/* Equipment cards: a 70 x 30 px photo in place of the icon. */
+.equipment-item .equipment-thumb { display: block; width: 70px; height: 30px; margin: 0 auto var(--text-gap); object-fit: cover; }
