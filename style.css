@@ -169,3 +169,10 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .mobile-category-toggle { padding-inline: var(--text-gap); }
 .mobile-category-toggle[aria-expanded="true"], .mobile-category-toggle[aria-expanded="true"]:hover { background: #fff4c2; }
 .mobile-category-links a { padding-block: 11.45px; }
+
+/* Mobile footer text, 2px larger */
+@media (max-width: 767px) {
+    .footer-tagline { font-size: calc(var(--fs-card-title) + 2px); }
+    .footer-grid h3, .footer-grid a, .footer-grid p, .footer-contact .footer-email, .footer-contact .footer-contact-button, .footer-bottom { font-size: calc(var(--fs-caption) + 2px); }
+    .footer-contact .footer-phone { font-size: calc(var(--fs-body) + 2px); }
+}
