@@ -11,8 +11,8 @@ Text Domain: competitive-choice
    Line height: body 1.618 (phi), headings 1.272. Spacing: 8.74px stepped by phi (8.74, 14.15, 22.9, 37, 59.9, 96.9). Heading-to-text gap is 0.382 of the heading size; paragraph gap is 1em. */
 :root {
     --phi: 1.618; --phi-root: 1.272;
-    --fs-micro: 11.12px; --fs-caption: 14.15px; --fs-small: 14.15px; --fs-body: 18px; --fs-card-title: 22.9px; --fs-subtitle: 29.1px;
-    --fs-topic: 37px; --fs-display: 47.1px; --fs-hero: 59.9px; --fs-mega: 76.2px;
+    --fs-micro: 9.12px; --fs-caption: 12.15px; --fs-small: 12.15px; --fs-body: 16px; --fs-card-title: 20.9px; --fs-subtitle: 27.1px;
+    --fs-topic: 35px; --fs-display: 45.1px; --fs-hero: 57.9px; --fs-mega: 74.2px;
     --text-leading: 1.618; --title-leading: 1.272;
     --text-xs: var(--fs-micro); --text-sm: var(--fs-caption); --text-base: var(--fs-body); --text-lg: var(--fs-body); --text-xl: var(--fs-card-title); --text-7xl: var(--fs-hero);
     --text-xs--line-height: 1.618; --text-sm--line-height: 1.618; --text-base--line-height: 1.618; --text-lg--line-height: 1.618; --text-xl--line-height: 1.272; --text-7xl--line-height: 1.272;
@@ -69,13 +69,13 @@ Text Domain: competitive-choice
 body { line-height: var(--text-leading); }
 h1, h2, h3, h4, h5, h6 { line-height: var(--title-leading); }
 h1, h2, h3, h4 { text-wrap: balance; }
-.category-page p + p { margin-top: var(--fs-body); }
-.category-banner h1 { font-size: clamp(29.1px, 4.4vw + 12px, var(--fs-display)); }
+.category-page p + p { margin-top: 18px; }
+.category-banner h1 { font-size: clamp(27.1px, 4.4vw + 10px, var(--fs-display)); }
 .category-page h2 { font-size: var(--fs-topic); }
 .category-page h3 { font-size: var(--fs-card-title); }
 @media (max-width: 720px) { .category-page h2 { font-size: var(--fs-subtitle); } }
 .category-section-heading h2 + p, .category-overview h2 + p { margin-top: var(--text-gap); }
-.category-section-heading p + p { margin-top: var(--fs-body); }
+.category-section-heading p + p { margin-top: 18px; }
 
 /* Sourcing steps. */
 .process-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--text-gap-large); max-width: 1060px; margin: 0 auto; padding: 0; list-style: none; counter-reset: ps; }
@@ -113,7 +113,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .contact-card { align-self: start; padding: var(--topic-gap); border: 1px solid var(--border); border-top: 3px solid var(--primary); }
 .contact-card h3 { margin: 0 0 var(--text-gap); }
 .contact-card p { margin: 0; color: var(--muted-foreground); font-size: var(--fs-body); line-height: var(--text-leading); }
-.contact-card p + p { margin-top: var(--fs-body); }
+.contact-card p + p { margin-top: 18px; }
 .contact-card a { color: var(--brand); font-weight: 700; }
 .contact-form { display: grid; gap: var(--text-gap-large); }
 .contact-form label { display: grid; gap: var(--text-gap-small); color: var(--foreground); font-size: var(--fs-caption); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
