@@ -183,3 +183,6 @@ h1, h2, h3, h4 { text-wrap: balance; }
     .footer-top .brand-logo { margin-inline: auto; }
     .breadcrumbs { font-size: calc(var(--fs-micro) + 2px); }
 }
+
+/* Home: product boxes 5% wider than the content column */
+#products-supplies .product-grid { width: 105%; margin-inline: -2.5%; }
