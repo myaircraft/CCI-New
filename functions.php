@@ -21,7 +21,7 @@ add_action('wp_enqueue_scripts', function () {
     $dir = get_template_directory();
     wp_enqueue_style('cc-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap', [], null);
     wp_enqueue_style('cc-app', get_template_directory_uri() . '/assets/css/app.css', [], $ver . '.' . filemtime($dir . '/assets/css/app.css'));
-    wp_enqueue_style('cc-theme', get_stylesheet_uri(), ['cc-app'], $ver);
+    wp_enqueue_style('cc-theme', get_stylesheet_uri(), ['cc-app'], $ver . '.' . filemtime(get_stylesheet_directory() . '/style.css'));
     wp_enqueue_script('cc-site', get_template_directory_uri() . '/assets/js/site.js', [], $ver . '.' . filemtime($dir . '/assets/js/site.js'), ['in_footer' => true, 'strategy' => 'defer']);
 
     // The designed templates render no block content, so drop core block styles that would alter them.
