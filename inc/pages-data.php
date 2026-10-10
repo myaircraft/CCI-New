@@ -101,13 +101,15 @@ function cc_page_build($def) {
 
 /**
  * Creates every defined page (parents first) with its template and starting content. Pages that already
- * have saved content are left alone unless $force is true. Returns a log of what was done.
+ * have saved content are left alone unless $force is true. Pass a list of slugs in $only to limit the run.
+ * Returns a log of what was done.
  */
-function cc_install_pages($force = false) {
+function cc_install_pages($force = false, $only = null) {
     $log = [];
     $defs = cc_pages_data();
     uasort($defs, fn($a, $b) => ($a['order'] ?? 0) <=> ($b['order'] ?? 0));
     foreach ($defs as $slug => $def) {
+        if ($only !== null && !in_array($slug, $only, true)) continue;
         $parent_id = 0;
         $path = $slug;
         if (!empty($def['parent'])) {

@@ -99,7 +99,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Logistics & Procurement Services', 'link' => '/services/logistics-procurement/'],
-                ['label' => 'Electrical, Lighting & Cable', 'link' => '/products/electrical-lighting-cable/'],
+                ['label' => 'Electrical, Lighting & Cable', 'link' => '/products-and-materials/electrical-lighting-cable/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -151,7 +151,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
-                ['label' => 'Plumbing Supplies', 'link' => '/products/plumbing-supplies/'],
+                ['label' => 'Plumbing Supplies', 'link' => '/products-and-materials/plumbing-supplies/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -202,7 +202,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
-                ['label' => 'HVAC & HVAC Package Units', 'link' => '/products/hvac-package-units/'],
+                ['label' => 'HVAC & HVAC Package Units', 'link' => '/products-and-materials/hvac-package-units/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -253,7 +253,7 @@ return [
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Air Scenting Services', 'link' => '/services/air-scenting-services/'],
                 ['label' => 'Drain Services', 'link' => '/services/drain-services/'],
-                ['label' => 'Specialty Maintenance Chemicals', 'link' => '/products/specialty-maintenance-chemicals/'],
+                ['label' => 'Specialty Maintenance Chemicals', 'link' => '/products-and-materials/specialty-maintenance-chemicals/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -303,7 +303,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Logistics & Procurement Services', 'link' => '/services/logistics-procurement/'],
-                ['label' => 'Facility Maintenance, MRO & Tools', 'link' => '/products/facility-maintenance-mro-tools/'],
+                ['label' => 'Facility Maintenance, MRO & Tools', 'link' => '/products-and-materials/facility-maintenance-mro-tools/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],

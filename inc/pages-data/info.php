@@ -4,8 +4,8 @@
 if (!defined('ABSPATH')) exit;
 
 return [
-    'products' => [
-        'title' => 'Products & Supplies', 'parent' => '', 'template' => 'info', 'order' => 1,
+    'products-and-materials' => [
+        'title' => 'Products & Materials', 'parent' => '', 'template' => 'info', 'order' => 1,
         'content' => [
             'seo' => [
                 'title' => 'Products & Supplies for Critical Infrastructure | Competitive Choice',
@@ -18,16 +18,16 @@ return [
             'breadcrumb' => ['home' => 'Home', 'current' => 'Products & Supplies'],
             'blocks' => [
                 ['layout' => 'cards', 'id' => 'categories', 'title' => 'Ten categories. One reliable source.', 'description' => 'We specialize in essential materials, from facility and custodial maintenance supplies to electrical components and emergency response products, so you have what you need when you need it.', 'items' => [
-                    ['title' => 'Power Distribution & Transformers', 'description' => 'Switchgear, panelboards, breakers, fuses and transformers for critical infrastructure.', 'link' => '/products/power-distribution-transformers/'],
-                    ['title' => 'Water & Wastewater Treatment', 'description' => 'Maintenance chemicals and cleaning products for plants, lift stations and sewer lines.', 'link' => '/products/water-wastewater-treatment/'],
-                    ['title' => 'Fire & Safety', 'description' => 'Lithium-ion battery fire protection and added layers of safety for facilities.', 'link' => '/products/fire-safety/'],
-                    ['title' => 'HVAC & HVAC Package Units', 'description' => 'Coil cleaners, corrosion inhibitors and treatments that protect HVAC performance.', 'link' => '/products/hvac-package-units/'],
-                    ['title' => 'Plumbing Supplies', 'description' => 'Drain openers, odor control, sealers and bio-enzymatic maintenance products.', 'link' => '/products/plumbing-supplies/'],
-                    ['title' => 'Electrical, Lighting & Cable', 'description' => 'Cable, conduit, panels, controls and commercial lighting for complex projects.', 'link' => '/products/electrical-lighting-cable/'],
-                    ['title' => 'Safety & Security', 'description' => 'PPE, first aid, spill control, locks, alarms and emergency communications.', 'link' => '/products/safety-security/'],
-                    ['title' => 'Specialty Maintenance Chemicals', 'description' => 'High-performance chemicals that extend equipment life and cut downtime.', 'link' => '/products/specialty-maintenance-chemicals/'],
-                    ['title' => 'Facility Maintenance, MRO & Tools', 'description' => 'Tools, fasteners, adhesives and everyday MRO supplies for frontline teams.', 'link' => '/products/facility-maintenance-mro-tools/'],
-                    ['title' => 'Custodial, Janitorial & Sanitation', 'description' => 'Cleaners, disinfectants, paper goods and dispensing for inspection-ready facilities.', 'link' => '/products/custodial-janitorial-sanitation/'],
+                    ['title' => 'Power Distribution & Transformers', 'description' => 'Switchgear, panelboards, breakers, fuses and transformers for critical infrastructure.', 'link' => '/products-and-materials/power-distribution-transformers/'],
+                    ['title' => 'Water & Wastewater Treatment', 'description' => 'Maintenance chemicals and cleaning products for plants, lift stations and sewer lines.', 'link' => '/products-and-materials/water-wastewater-treatment/'],
+                    ['title' => 'Fire & Safety', 'description' => 'Lithium-ion battery fire protection and added layers of safety for facilities.', 'link' => '/products-and-materials/fire-safety/'],
+                    ['title' => 'HVAC & HVAC Package Units', 'description' => 'Coil cleaners, corrosion inhibitors and treatments that protect HVAC performance.', 'link' => '/products-and-materials/hvac-package-units/'],
+                    ['title' => 'Plumbing Supplies', 'description' => 'Drain openers, odor control, sealers and bio-enzymatic maintenance products.', 'link' => '/products-and-materials/plumbing-supplies/'],
+                    ['title' => 'Electrical, Lighting & Cable', 'description' => 'Cable, conduit, panels, controls and commercial lighting for complex projects.', 'link' => '/products-and-materials/electrical-lighting-cable/'],
+                    ['title' => 'Safety & Security', 'description' => 'PPE, first aid, spill control, locks, alarms and emergency communications.', 'link' => '/products-and-materials/safety-security/'],
+                    ['title' => 'Specialty Maintenance Chemicals', 'description' => 'High-performance chemicals that extend equipment life and cut downtime.', 'link' => '/products-and-materials/specialty-maintenance-chemicals/'],
+                    ['title' => 'Facility Maintenance, MRO & Tools', 'description' => 'Tools, fasteners, adhesives and everyday MRO supplies for frontline teams.', 'link' => '/products-and-materials/facility-maintenance-mro-tools/'],
+                    ['title' => 'Custodial, Janitorial & Sanitation', 'description' => 'Cleaners, disinfectants, paper goods and dispensing for inspection-ready facilities.', 'link' => '/products-and-materials/custodial-janitorial-sanitation/'],
                 ]],
                 ['layout' => 'text', 'id' => 'about-supply', 'title' => 'Can’t find what you need?', 'paragraphs' => ['Tell us what your project or facility requires. Our team can source what you need, and we work with contract vehicles that make public-sector purchasing simple.']],
             ],
