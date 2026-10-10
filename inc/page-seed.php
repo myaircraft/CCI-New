@@ -156,41 +156,6 @@ return [
                 ],
             ],
         ],
-        'compare' => [
-            'title' => 'Dry-type vs liquid-filled transformers',
-            'description' => 'Two common transformer types, compared on the points that usually decide the choice. Your project engineer makes the final call.',
-            'head_factor' => 'Factor',
-            'head_a' => 'Dry-type',
-            'head_b' => 'Liquid-filled',
-            'items' => [
-                [
-                    'factor' => 'Insulation and cooling',
-                    'a' => 'Air and solid insulation',
-                    'b' => 'Insulating liquid, such as mineral oil or other approved fluids',
-                ],
-                [
-                    'factor' => 'Typical installation',
-                    'a' => 'Indoor, including buildings where fire risk is a concern',
-                    'b' => 'Outdoor pads, vaults and utility settings, and indoors where codes allow',
-                ],
-                [
-                    'factor' => 'Capacity',
-                    'a' => 'Commonly used for low to medium capacities',
-                    'b' => 'Available across a wide range, including the largest capacities',
-                ],
-                [
-                    'factor' => 'Fire and environment',
-                    'a' => 'No liquid to contain or leak, which lowers the fire load',
-                    'b' => 'Needs containment and fire-safety measures that meet local code',
-                ],
-                [
-                    'factor' => 'Maintenance',
-                    'a' => 'Generally lighter, with regular inspection and cleaning',
-                    'b' => 'Includes periodic fluid checks and testing',
-                ],
-            ],
-            'note' => 'General guidance only. Confirm the type against the project specification, local codes and the authority having jurisdiction.',
-        ],
         'applications' => [
             'title' => 'Power distribution equipment for essential operations.',
             'description' => 'Different facilities have different electrical demands. Start with the application, then define the equipment your project requires.',
@@ -308,36 +273,6 @@ return [
                 [
                     'question' => 'What is the difference between a panelboard and a load center?',
                     'answer' => 'Both distribute power to branch circuits. Load centers are typically lighter-duty units for residential and light commercial use, while panelboards are built for commercial and industrial loads with higher ratings and more configuration options. Your engineer should specify the right type.',
-                ],
-            ],
-        ],
-        'glossary' => [
-            'title' => 'Power distribution glossary',
-            'description' => 'Quick definitions for terms you will see on a specification or quote.',
-            'items' => [
-                [
-                    'title' => 'kVA',
-                    'description' => 'Kilovolt-amperes, the unit used to rate transformer capacity. It describes the apparent power a transformer can supply.',
-                ],
-                [
-                    'title' => 'Primary and secondary voltage',
-                    'description' => 'The input and output voltages of a transformer. The primary connects to the source and the secondary feeds the load.',
-                ],
-                [
-                    'title' => 'Phase',
-                    'description' => 'Whether the system is single-phase or three-phase. It must match the supply and the connected equipment.',
-                ],
-                [
-                    'title' => 'Fault current',
-                    'description' => 'The very high current that flows during a short circuit. Protective devices must be rated to handle it.',
-                ],
-                [
-                    'title' => 'Interrupting rating',
-                    'description' => 'The maximum fault current a breaker or fuse can safely interrupt. It must meet or exceed the available fault current.',
-                ],
-                [
-                    'title' => 'NEMA enclosure type',
-                    'description' => 'A rating for how well an enclosure protects its contents from conditions such as dust, water or corrosion, indoors and outdoors.',
                 ],
             ],
         ],

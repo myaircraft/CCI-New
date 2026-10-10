@@ -52,17 +52,6 @@ $banner_image = cc_page('banner.image');
     </section>
     <?php endif; ?>
 
-    <?php if (cc_page_has('compare.items')) : ?>
-    <section class="category-section" aria-labelledby="compare-title">
-      <div class="category-section-heading"><h2 id="compare-title"><?php cc_page_e('compare.title'); ?></h2><p><?php cc_page_e('compare.description'); ?></p></div>
-      <div class="compare-wrap"><table class="compare-table">
-        <thead><tr><th scope="col"><?php cc_page_e('compare.head_factor'); ?></th><th scope="col"><?php cc_page_e('compare.head_a'); ?></th><th scope="col"><?php cc_page_e('compare.head_b'); ?></th></tr></thead>
-        <tbody><?php foreach (cc_page_list('compare.items') as $row) : ?><tr><th scope="row"><?php echo esc_html($row['factor'] ?? ''); ?></th><td><?php echo esc_html($row['a'] ?? ''); ?></td><td><?php echo esc_html($row['b'] ?? ''); ?></td></tr><?php endforeach; ?></tbody>
-      </table></div>
-      <?php if (cc_page_has('compare.note')) : ?><p class="compare-note"><?php cc_page_e('compare.note'); ?></p><?php endif; ?>
-    </section>
-    <?php endif; ?>
-
     <?php if (cc_page_has('applications.items')) : ?>
     <section class="category-section" aria-labelledby="applications-title">
       <div class="category-section-heading"><h2 id="applications-title"><?php cc_page_e('applications.title'); ?></h2><p><?php cc_page_e('applications.description'); ?></p></div>
@@ -107,13 +96,6 @@ $banner_image = cc_page('banner.image');
           </div>
         <?php endforeach; ?>
       </div>
-    </section>
-    <?php endif; ?>
-
-    <?php if (cc_page_has('glossary.items')) : ?>
-    <section class="category-section" aria-labelledby="glossary-title">
-      <div class="category-section-heading"><h2 id="glossary-title"><?php cc_page_e('glossary.title'); ?></h2><p><?php cc_page_e('glossary.description'); ?></p></div>
-      <dl class="glossary"><?php foreach (cc_page_list('glossary.items') as $term) : ?><div><dt><?php echo esc_html($term['title'] ?? ''); ?></dt><dd><?php echo esc_html($term['description'] ?? ''); ?></dd></div><?php endforeach; ?></dl>
     </section>
     <?php endif; ?>
 
