@@ -127,3 +127,4 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .contact-form button { justify-self: start; }
 @media (max-width: 900px) { .info-cards, .info-people { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 720px) { .info-cards, .info-people, .contact-layout, .form-grid { grid-template-columns: 1fr; } .info-row { grid-template-columns: 1fr; gap: var(--text-gap); } }
+.process-steps + .category-actions { display: flex; justify-content: center; margin-top: var(--topic-gap); }

@@ -33,7 +33,7 @@ function cc_page_shape($kind) {
         'lineup'       => ['title' => '', 'points' => ['']],
         'applications' => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
         'trust'        => ['title' => '', 'paragraphs' => [''], 'points' => [''], 'button_label' => ''],
-        'process'      => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
+        'process'      => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']], 'button_label' => ''],
         'inquiry'      => ['title' => '', 'paragraphs' => [''], 'checklist_title' => '', 'items' => [['title' => '', 'description' => '']], 'button_label' => ''],
         'faq'          => ['title' => '', 'description' => '', 'items' => [['question' => '', 'answer' => '']]],
         'related'      => ['title' => '', 'links' => [['label' => '', 'link' => '']]],

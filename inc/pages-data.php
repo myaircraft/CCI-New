@@ -68,6 +68,7 @@ function cc_page_shared($group) {
             ],
         ];
     }
+    $process['button_label'] = $group === 'service' ? 'REQUEST A QUOTE' : 'REQUEST A PROJECT QUOTE';
     $shared = ['trust' => $trust, 'process' => $process];
     if ($group === 'service') $shared['inquiry'] = $inquiry; // product pages have no inquiry checklist
     return $shared;

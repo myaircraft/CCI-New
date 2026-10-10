@@ -71,6 +71,7 @@ $banner_image = cc_page('banner.image');
     <section class="category-section" aria-labelledby="process-title">
       <div class="category-section-heading"><h2 id="process-title"><?php cc_page_e('process.title'); ?></h2><p><?php cc_page_e('process.description'); ?></p></div>
       <ol class="process-steps"><?php foreach (cc_page_list('process.items') as $step) : ?><li><h3><?php echo esc_html($step['title'] ?? ''); ?></h3><p><?php echo esc_html($step['description'] ?? ''); ?></p></li><?php endforeach; ?></ol>
+      <?php if (cc_page_has('process.button_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('process.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
     </section>
     <?php endif; ?>
 
