@@ -1,0 +1,13 @@
+/*
+Theme Name: Competitive Choice
+Description: Pixel-matched WordPress port of the Competitive Choice website (homepage and category pages). Design styles live in assets/css/app.css, compiled from the original site.
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Text Domain: competitive-choice
+*/
+
+/* Keep the sticky header below the WordPress admin bar when logged in. */
+.admin-bar .site-header { top: 32px; }
+@media screen and (max-width: 782px) { .admin-bar .site-header { top: 46px; } }
+@media screen and (max-width: 600px) { .admin-bar .site-header { top: 0; } }

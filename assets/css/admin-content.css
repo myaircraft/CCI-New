@@ -1,0 +1,13 @@
+/* Site Content screen and Page content box. */
+.cc-content .cc-section { background: #fff; border: 1px solid #dcdcde; padding: 4px 20px 16px; margin: 20px 0; max-width: 1000px; }
+#cc-page-content .cc-content .cc-section { max-width: none; margin: 12px 0; }
+.cc-content .cc-section > h2, .cc-content .cc-section > h3 { font-size: 14px; margin: 14px 0 8px; }
+.cc-content .cc-field { margin: 12px 0; }
+.cc-content .cc-label { display: block; font-weight: 600; margin-bottom: 4px; }
+.cc-content .cc-group { border-left: 3px solid #dcdcde; padding-left: 12px; }
+.cc-content .cc-item { position: relative; background: #f6f7f7; border: 1px solid #dcdcde; border-radius: 4px; padding: 10px 12px; margin-bottom: 8px; }
+.cc-content .cc-item .cc-item { background: #fff; }
+.cc-content .cc-item-tools { display: flex; gap: 12px; justify-content: flex-end; }
+.cc-content .cc-item-tools .button-link { text-decoration: none; }
+.cc-content .cc-image { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cc-content .cc-preview { width: 160px; height: 90px; object-fit: cover; background: #f0f0f1; border: 1px solid #dcdcde; border-radius: 4px; }
