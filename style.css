@@ -176,3 +176,10 @@ h1, h2, h3, h4 { text-wrap: balance; }
     .footer-grid h3, .footer-grid a, .footer-grid p, .footer-contact .footer-email, .footer-contact .footer-contact-button, .footer-bottom { font-size: calc(var(--fs-caption) + 2px); }
     .footer-contact .footer-phone { font-size: calc(var(--fs-body) + 2px); }
 }
+
+/* Mobile: centered footer logo, larger breadcrumbs */
+@media (max-width: 767px) {
+    .footer-top > a { display: flex; justify-content: center; width: 100%; }
+    .footer-top .brand-logo { margin-inline: auto; }
+    .breadcrumbs { font-size: calc(var(--fs-micro) + 2px); }
+}
