@@ -61,26 +61,16 @@ function cc_page_shared($group) {
         $process = [
             'title' => 'How sourcing works with Competitive Choice', 'description' => 'A simple path from requirement to delivery.',
             'items' => [
-                ['title' => 'Send your requirement', 'description' => 'Share your specification, equipment schedule or bill of materials, along with the details listed below.'],
+                ['title' => 'Send your requirement', 'description' => 'Share your specification, equipment schedule or bill of materials.'],
                 ['title' => 'We review and source', 'description' => 'Our team checks your ratings, standards and timing, then looks for suitable equipment.'],
                 ['title' => 'Receive your quote', 'description' => 'You get a clear quotation, with availability and delivery timing confirmed.'],
                 ['title' => 'Order and delivery', 'description' => 'Once you approve, we support the purchase and coordinate delivery to your location.'],
             ],
         ];
-        $inquiry = [
-            'title' => 'Let’s define the right supply requirement.',
-            'paragraphs' => ['Send your product list, specification or bill of materials. Our team can discuss your needs and the next steps for sourcing.', 'Include the details below where available. Product suitability, availability and delivery requirements should be confirmed during your inquiry.'],
-            'checklist_title' => 'Details to include with your inquiry',
-            'items' => [
-                ['title' => 'Product specifications', 'description' => 'Product type, brand or specification, sizes, ratings or concentrations, and any data sheets or standards.'],
-                ['title' => 'Application & environment', 'description' => 'Facility type, how the product will be used, and any safety or regulatory requirements.'],
-                ['title' => 'Quantity & documentation', 'description' => 'Required quantities, safety data sheets, certifications and any documentation your organization needs.'],
-                ['title' => 'Project timing & delivery', 'description' => 'Delivery location, requested date and any site access or receiving requirements.'],
-            ],
-            'button_label' => 'DISCUSS YOUR REQUIREMENT',
-        ];
     }
-    return ['trust' => $trust, 'process' => $process, 'inquiry' => $inquiry];
+    $shared = ['trust' => $trust, 'process' => $process];
+    if ($group === 'service') $shared['inquiry'] = $inquiry; // product pages have no inquiry checklist
+    return $shared;
 }
 
 /** Final content for a definition: its own content plus the shared blocks and defaults. */
