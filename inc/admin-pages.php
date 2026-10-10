@@ -22,10 +22,13 @@ function cc_page_shape($kind) {
         'overview'     => ['title' => '', 'paragraphs' => [''], 'image' => '', 'image_alt' => ''],
         'equipment'    => ['title' => '', 'description' => '', 'items' => [['title' => '', 'icon' => '', 'description' => '', 'items' => ['']]]],
         'guide'        => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
+        'compare'      => ['title' => '', 'description' => '', 'head_factor' => '', 'head_a' => '', 'head_b' => '', 'items' => [['factor' => '', 'a' => '', 'b' => '']], 'note' => ''],
         'applications' => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
         'trust'        => ['title' => '', 'paragraphs' => [''], 'points' => [''], 'button_label' => ''],
+        'process'      => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
         'inquiry'      => ['title' => '', 'paragraphs' => [''], 'checklist_title' => '', 'items' => [['title' => '', 'description' => '']], 'button_label' => ''],
         'faq'          => ['title' => '', 'description' => '', 'items' => [['question' => '', 'answer' => '']]],
+        'glossary'     => ['title' => '', 'description' => '', 'items' => [['title' => '', 'description' => '']]],
         'related'      => ['title' => '', 'links' => [['label' => '', 'link' => '']]],
         'seo'          => ['title' => '', 'description' => '', 'og_title' => '', 'og_description' => '', 'schema_about' => ''],
     ];
