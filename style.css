@@ -278,7 +278,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 
 /* About Us banner motion: slow zoom, typewriter tagline, hand-drawn year underline */
 .category-banner.is-zoom .category-banner-photo { transform-origin: 50% 40%; animation: cc-slow-zoom 28s ease-out forwards; }
-@keyframes cc-slow-zoom { from { transform: scale(1); } to { transform: scale(1.14); } }
+@keyframes cc-slow-zoom { from { transform: scale(var(--zs, 1)); } to { transform: scale(var(--ze, 1.14)); } }
 .type-caret { display: inline-block; width: 3px; height: .95em; margin-left: 4px; background: var(--primary); vertical-align: -.1em; animation: cc-caret 1s steps(1) infinite; }
 .type-caret.is-done { animation: cc-caret-out 1.2s ease forwards; }
 @keyframes cc-caret { 50% { opacity: 0; } }
@@ -360,3 +360,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-article strong { color: var(--foreground); font-weight: 800; }
 .info-article .hl { text-decoration-thickness: 3px; text-underline-offset: 5px; }
 @media (max-width: 720px) { .info-article .info-kicker, .info-article h2, .info-article p.is-lead { text-align: left; } .info-article .info-kicker { font-size: var(--fs-subtitle); } }
+
+/* Lighter blue layer over banner photography (65% opacity) */
+:root { --hero-overlay: oklch(25.8% .061 244 / .65); }
+.category-banner:after { background: oklch(38% .115 248 / .65); }
