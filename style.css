@@ -733,3 +733,6 @@ html { scroll-behavior: smooth; }
 .site-footer .footer-grid h3 a { display: inline-block; padding-bottom: 3px; background: linear-gradient(var(--primary), var(--primary)) left bottom / 0 3px no-repeat; transition: background-size .35s ease, transform .3s ease, color .2s ease; }
 .site-footer .footer-grid h3 a:hover, .site-footer .footer-grid h3 a:focus-visible { background-size: 100% 3px; transform: translateX(6px); color: var(--foreground); }
 @media (prefers-reduced-motion: reduce) { .site-footer .footer-grid h3 a { transition: none; } .site-footer .footer-grid h3 a:hover { transform: none; } }
+
+/* Banner buttons share one height (matches the Shop Now button) */
+.hero-actions > a, .category-actions > a { min-height: 56px; padding-block: 9px; }
