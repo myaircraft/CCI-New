@@ -235,7 +235,7 @@ return [
                         '23-7457 - Maintenance, Repair, and Operation (MRO) Equipment, Supplies, Materials, and Services',
                         '25-7522 - Medical Supplies, Equipment, and Related Services (Supplemental)',
                     ]],
-                    ['image' => $img('choicepartners.png'), 'title' => 'Choice Partners', 'description' => 'Through partnership with Choice Partners, we can provide our customers with easy access to pre-negotiated contracts and the highest quality products and services.', 'lines' => [
+                    ['image' => $img('coop-choicepartners-v2.png'), 'title' => 'Choice Partners', 'description' => 'Through partnership with Choice Partners, we can provide our customers with easy access to pre-negotiated contracts and the highest quality products and services.', 'lines' => [
                         '24/023TC-06 - Maintenance, Repair & Operations (MRO) Parts, Equipment and Related Services',
                     ]],
                 ]],
@@ -265,7 +265,7 @@ return [
                     ]],
                 ]],
                 ['layout' => 'coops', 'id' => 'federal', 'tint' => true, 'title' => 'Federal', 'items' => [
-                    ['image' => $img('gsa.png'), 'title' => 'GSA', 'description' => 'CONTRACT #: 47QSEA20D005G. Competitive Choice is proud to be an industry partner of the General Services Administration (GSA). Through this partnership, we can meet the high standards and regulatory demands of federal organizations through a full range of supplies ranging from hospitality and cleaning equipment to foodservice and chemicals to our government customers. Great value and convenience are of importance when purchasing for a large agency, and with GSA Advantage, Competitive Choice can help get the job done.', 'link' => 'https://www.gsaadvantage.gov/advantage/ws/search/advantage_search?q=0:247QSEA20D005G%20&q=10:5ABILITY%20ONE&searchType=1&db=0', 'link_label' => 'SHOP GSA'],
+                    ['image' => $img('coop-gsa-v2.png'), 'title' => 'GSA', 'description' => 'CONTRACT #: 47QSEA20D005G. Competitive Choice is proud to be an industry partner of the General Services Administration (GSA). Through this partnership, we can meet the high standards and regulatory demands of federal organizations through a full range of supplies ranging from hospitality and cleaning equipment to foodservice and chemicals to our government customers. Great value and convenience are of importance when purchasing for a large agency, and with GSA Advantage, Competitive Choice can help get the job done.', 'link' => 'https://www.gsaadvantage.gov/advantage/ws/search/advantage_search?q=0:247QSEA20D005G%20&q=10:5ABILITY%20ONE&searchType=1&db=0', 'link_label' => 'SHOP GSA'],
                     ['image' => $img('abilityone.png'), 'title' => 'AbilityOne', 'description' => 'As one of the nation’s leading employers for those who are blind or have significant disabilities, The AbilityOne® Program provides high-quality products and services for businesses across the country. Together with the GSA and Ability One, Competitive Choice is pleased to offer AbilityOne products as well as our MAS schedules for industrial and facility products, as well as office supplies to our government customers.', 'link' => 'https://www.abilityone.gov/', 'link_label' => 'LEARN MORE'],
                 ]],
                 ['layout' => 'centered', 'id' => 'closing', 'paragraphs' => [
