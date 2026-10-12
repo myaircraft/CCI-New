@@ -11,12 +11,12 @@ $title = cc_page('banner.title') ?: get_the_title();
 ?>
 <main class="category-page info-page">
 
-  <section class="category-banner" aria-labelledby="category-title">
+  <section class="category-banner<?php echo cc_page_has('banner.zoom') ? ' is-zoom' : ''; ?>" aria-labelledby="category-title">
     <?php if (cc_page_has('banner.image')) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.image'))); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="high"><?php endif; ?>
     <div class="site-container category-banner-content">
       <?php if (cc_page_has('banner.kicker')) : ?><p class="category-kicker"><?php cc_page_e('banner.kicker'); ?></p><?php endif; ?>
       <h1 id="category-title"><?php echo esc_html($title); ?></h1>
-      <?php if (cc_page_has('banner.tagline')) : ?><p class="category-tagline"><?php echo nl2br(esc_html(cc_page('banner.tagline'))); ?></p><?php endif; ?>
+      <?php if (cc_page_has('banner.tagline')) : ?><p class="category-tagline" data-typewriter><?php echo nl2br(esc_html(cc_page('banner.tagline'))); ?></p><?php endif; ?>
       <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead"><?php cc_page_e('banner.lead'); ?></p><?php endif; ?>
       <?php if (cc_page_has('banner.quote_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
     </div>
@@ -85,7 +85,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php endif; ?>
 
       <?php if ($layout === 'intro') : ?>
-      <div class="info-intro"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div>
+      <div class="info-intro"><?php foreach ($paragraphs as $p) : ?><p><?php echo preg_replace('/\{\{(.+?)\}\}/', '<span class="hl-draw">$1</span>', esc_html($p)); ?></p><?php endforeach; ?></div>
       <?php endif; ?>
 
       <?php if ($layout === 'centered') : ?>

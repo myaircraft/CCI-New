@@ -30,11 +30,12 @@ return [
                 'og_description' => 'Fostering long-term value for the people and institutions that power our communities.',
                 'schema_about' => 'Mission, vision and values of Competitive Choice', 'page_type' => 'AboutPage',
             ],
-            'banner' => ['title' => 'ABOUT US', 'tagline' => "Guided by Purpose\nDriven by Vision", 'lead' => 'People who deliver. Partners you can count on. Since 2003.', 'image' => 'wp-content/themes/competitive-choice/assets/images/about-header.jpg'],
+            'banner' => ['zoom' => true, 'title' => 'ABOUT US', 'tagline' => "Guided by Purpose\nDriven by Vision", 'lead' => 'People who deliver. Partners you can count on. Since 2003.', 'image' => 'wp-content/themes/competitive-choice/assets/images/about-header.jpg'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'About Us'],
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
-                    'Competitive Choice started in Houston in 2003, selling specialty chemicals to a handful of customers who trusted us to get it right. Today we are a woman-owned supplier and logistics partner for the schools, cities, hospitals and plants that keep our communities running. The idea behind us has not changed: show up, do the work well, and treat every customer like a partner.',
+                    'Competitive Choice started in Houston in {{2003}}, selling specialty chemicals to a handful of customers who trusted us to get it right.',
+                    'Today we are a woman-owned supplier and logistics partner for the schools, cities, hospitals and plants that keep our communities running. The idea behind us has not changed: show up, do the work well, and treat every customer like a partner.',
                 ]],
                 ['layout' => 'centered', 'id' => 'mission', 'kicker' => 'OUR MISSION', 'title' => 'Long-term value for the people who power our communities', 'paragraphs' => [
                     'Since 2003, our mission has been rooted in fostering long-term value for the people and institutions that power our communities: our customers, employees and suppliers.',

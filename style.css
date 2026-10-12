@@ -275,3 +275,15 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-centered .info-kicker { margin: 0 0 var(--text-gap); font-size: var(--fs-topic); font-weight: 900; line-height: var(--title-leading); letter-spacing: .04em; }
 .info-centered h2 { margin: 0 0 var(--text-gap-large); font-size: var(--fs-card-title); font-weight: 800; }
 @media (max-width: 720px) { .info-centered .info-kicker { font-size: var(--fs-subtitle); } }
+
+/* About Us banner motion: slow zoom, typewriter tagline, hand-drawn year underline */
+.category-banner.is-zoom .category-banner-photo { transform-origin: 50% 40%; animation: cc-slow-zoom 28s ease-out forwards; }
+@keyframes cc-slow-zoom { from { transform: scale(1); } to { transform: scale(1.14); } }
+.type-caret { display: inline-block; width: 3px; height: .95em; margin-left: 4px; background: var(--primary); vertical-align: -.1em; animation: cc-caret 1s steps(1) infinite; }
+.type-caret.is-done { animation: cc-caret-out 1.2s ease forwards; }
+@keyframes cc-caret { 50% { opacity: 0; } }
+@keyframes cc-caret-out { to { opacity: 0; } }
+.hl-draw { padding-bottom: 3px; background: linear-gradient(var(--primary), var(--primary)) no-repeat 0 100% / 100% 4px; }
+.hl-draw.is-armed { background-size: 0 4px; transition: background-size 1.8s ease-out; }
+.hl-draw.is-armed.is-drawn { background-size: 100% 4px; }
+@media (prefers-reduced-motion: reduce) { .category-banner.is-zoom .category-banner-photo { animation: none; } .type-caret { animation: none; } .hl-draw.is-armed { transition: none; } }
