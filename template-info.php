@@ -37,7 +37,7 @@ $title = cc_page('banner.title') ?: get_the_title();
     <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?><?php echo !empty($b['tint']) ? ' is-tinted' : ''; ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
       <?php if (!in_array($layout, ['split', 'statement', 'intro', 'centered', 'article', 'video'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
       <div class="category-section-heading">
-        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
+        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
         <?php if (($b['description'] ?? '') !== '') : ?><p><?php echo esc_html($b['description']); ?></p><?php endif; ?>
         <?php if ($layout === 'text') : foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; endif; ?>
       </div>
@@ -87,7 +87,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php if ($layout === 'article') : ?>
       <div class="info-article">
         <?php if (($b['kicker'] ?? '') !== '') : ?><p class="info-kicker"><?php echo esc_html($b['kicker']); ?></p><?php endif; ?>
-        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
+        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
         <?php foreach ($paragraphs as $n => $p) : $text = preg_replace(['/\{\{(.+?)\}\}/', '/\*\*(.+?)\*\*/'], ['<span class="hl">$1</span>', '<strong>$1</strong>'], esc_html($p)); ?><p<?php echo $n === 0 ? ' class="is-lead"' : ''; ?>><?php echo $text; ?></p><?php endforeach; ?>
       </div>
       <?php endif; ?>
@@ -103,7 +103,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php if ($layout === 'centered') : ?>
       <div class="info-centered">
         <?php if (($b['kicker'] ?? '') !== '') : ?><p class="info-kicker"><?php echo esc_html($b['kicker']); ?></p><?php endif; ?>
-        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
+        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
         <?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?>
       </div>
       <?php endif; ?>
@@ -112,7 +112,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <div class="info-split<?php echo !empty($b['reverse']) ? ' is-reverse' : ''; ?><?php echo !empty($b['person']) ? ' is-person' : ''; ?>">
         <div class="info-split-text">
           <?php if (($b['kicker'] ?? '') !== '') : ?><p class="info-kicker"><?php echo esc_html($b['kicker']); ?></p><?php endif; ?>
-          <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
+          <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
           <?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?>
         </div>
         <?php if (!empty($b['image'])) : ?><figure class="info-split-media"><img src="<?php echo esc_url(cc_img($b['image'])); ?>" alt="<?php echo esc_attr($b['image_alt'] ?? ''); ?>" width="1000" height="618" loading="lazy" decoding="async"></figure><?php endif; ?>
@@ -178,7 +178,7 @@ $title = cc_page('banner.title') ?: get_the_title();
 
     <?php if (cc_page_has('related.links')) : ?>
     <section class="category-section category-related" aria-labelledby="related-title">
-      <h2 id="related-title"><?php echo esc_html(cc_page('related.title') ?: 'Related pages'); ?></h2>
+      <h2 id="related-title"><?php echo esc_html(cc_tc(cc_page('related.title') ?: 'Related pages')); ?></h2>
       <div class="category-related-links"><?php foreach (cc_page_list('related.links') as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'] ?? '')); ?>"><?php echo esc_html($link['label'] ?? ''); ?><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?></div>
     </section>
     <?php endif; ?>

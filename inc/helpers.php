@@ -74,9 +74,29 @@ function cc_icon($name, $class = '') {
     return '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="' . esc_attr($cls) . '" aria-hidden="true">' . $icons[$name] . '</svg>';
 }
 
+/** Title Case for section headings: small joining words stay lower case, everything else gets a capital. */
+function cc_tc($text) {
+    $text = (string) $text;
+    $minor = ['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'nor', 'of', 'on', 'or', 'per', 'the', 'to', 'up', 'via', 'vs'];
+    if (!preg_match_all('/[\p{L}\p{N}][\p{L}\p{N}\'’]*/u', $text, $m, PREG_OFFSET_CAPTURE)) return $text;
+    $words = $m[0];
+    $last = count($words) - 1;
+    $out = '';
+    $pos = 0;
+    foreach ($words as $i => [$word, $offset]) {
+        $out .= substr($text, $pos, $offset - $pos);
+        $pos = $offset + strlen($word);
+        $isMinor = $i !== 0 && $i !== $last && in_array(strtolower($word), $minor, true);
+        $prev = $offset > 0 ? $text[$offset - 1] : '';
+        $afterHyphen = $prev === '-';
+        $out .= ($isMinor && !$afterHyphen) ? $word : mb_strtoupper(mb_substr($word, 0, 1)) . mb_substr($word, 1);
+    }
+    return $out . substr($text, $pos);
+}
+
 /** Section intro block used across the homepage. */
 function cc_section_title($title, $subtitle, $description = '') {
-    echo '<div class="section-intro"><h2 class="section-topic">' . esc_html($title) . '</h2><p class="section-heading">' . esc_html($subtitle) . '</p>';
+    echo '<div class="section-intro"><h2 class="section-topic">' . esc_html(cc_tc($title)) . '</h2><p class="section-heading">' . esc_html(cc_tc($subtitle)) . '</p>';
     if ($description) echo '<p class="section-description">' . esc_html($description) . '</p>';
     echo '</div>';
 }

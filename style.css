@@ -368,3 +368,5 @@ h1, h2, h3, h4 { text-wrap: balance; }
 /* Banner sized to its photo's own proportions so the whole picture shows before the zoom begins */
 .category-banner.is-fit { min-height: clamp(450px, 37.9vw, 700px); }
 .category-banner.is-fit .category-banner-photo { object-position: center top; }
+.info-article p:not(.info-kicker):not(.is-lead) + p:not(.info-kicker) { margin-top: calc(var(--text-gap-large) * 1.272); }
+.info-people.is-team h3 { font-size: calc(var(--fs-body) * 1.2); }

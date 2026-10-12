@@ -71,7 +71,7 @@ $first = $products[0] ?? ['name' => '', 'hero_line' => ''];
 
   <section id="about" class="about-section section-space">
     <div class="site-container about-layout"><img class="about-team-photo" src="<?php echo esc_url(cc_img(cc_page('about.image'))); ?>" alt="<?php echo esc_attr(cc_page('about.image_alt')); ?>" width="1024" height="693" loading="lazy">
-    <div class="about-copy"><h2 class="section-topic"><?php cc_page_e('about.topic'); ?></h2><p class="section-heading"><?php cc_page_e('about.heading'); ?></p><?php foreach (cc_page_list('about.paragraphs') as $paragraph) : ?><p><?php echo esc_html($paragraph); ?></p><?php endforeach; ?><div class="section-actions"><a href="<?php echo esc_url(cc_url('about')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('about.button_label'); ?></a></div></div></div>
+    <div class="about-copy"><h2 class="section-topic"><?php echo esc_html(cc_tc(cc_page('about.topic'))); ?></h2><p class="section-heading"><?php echo esc_html(cc_tc(cc_page('about.heading'))); ?></p><?php foreach (cc_page_list('about.paragraphs') as $paragraph) : ?><p><?php echo esc_html($paragraph); ?></p><?php endforeach; ?><div class="section-actions"><a href="<?php echo esc_url(cc_url('about')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('about.button_label'); ?></a></div></div></div>
   </section>
 </main>
 <?php get_footer();
