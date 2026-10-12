@@ -33,7 +33,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       $items = (array) ($b['items'] ?? []);
       $paragraphs = (array) ($b['paragraphs'] ?? []);
     ?>
-    <section class="category-section info-block info-<?php echo esc_attr($layout); ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
+    <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
       <?php if (!in_array($layout, ['split', 'statement'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
       <div class="category-section-heading">
         <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
@@ -104,6 +104,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php if ($layout === 'logos' && $items) : ?>
       <ul class="info-logos"><?php foreach ($items as $it) : ?>
         <li class="info-logo"><span class="info-logo-frame"><img src="<?php echo esc_url(cc_img($it['image'] ?? '')); ?>" alt="<?php echo esc_attr($it['title'] ?? ''); ?>" width="250" height="150" loading="lazy" decoding="async"></span>
+          <span class="info-logo-name"><?php echo esc_html($it['title'] ?? ''); ?></span>
           <?php if (($it['meta'] ?? '') !== '') : ?><span class="info-logo-meta"><?php echo esc_html($it['meta']); ?></span><?php endif; ?></li>
       <?php endforeach; ?></ul>
       <?php endif; ?>
