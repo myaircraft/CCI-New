@@ -248,9 +248,9 @@
     Array.prototype.forEach.call(marks, function (m) { m.classList.add('is-armed'); io.observe(m); });
   }
 
+  initTypewriter();
+  initUnderlines();
   initHeader();
   initSlideshow();
   initAccordions();
-  initTypewriter();
-  initUnderlines();
 })();
