@@ -11,7 +11,7 @@ $title = cc_page('banner.title') ?: get_the_title();
 ?>
 <main class="category-page info-page">
 
-  <section class="category-banner<?php echo cc_page_has('banner.zoom') ? ' is-zoom' : ''; ?><?php echo cc_page('banner.zoom') === 'fit' ? ' is-fit' : ''; ?>"<?php echo cc_page('banner.zoom') === 'tight' ? ' style="--zs:1.2;--ze:1.38"' : (cc_page('banner.zoom') === 'fit' ? ' style="--zs:1;--ze:1.32"' : ''); ?> aria-labelledby="category-title">
+  <section class="category-banner<?php echo cc_page_has('banner.zoom') ? ' is-zoom' : ''; ?><?php echo cc_page('banner.zoom') === 'fit' ? ' is-fit' : ''; ?><?php echo cc_page_has('banner.plain') ? ' is-plain' : ''; ?>"<?php echo cc_page('banner.zoom') === 'tight' ? ' style="--zs:1.2;--ze:1.38"' : (cc_page('banner.zoom') === 'fit' ? ' style="--zs:1;--ze:1.32"' : ''); ?> aria-labelledby="category-title">
     <?php if (cc_page_has('banner.video')) : ?><video class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.video'))); ?>" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
     <?php elseif (cc_page_has('banner.image')) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.image'))); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="high"<?php echo cc_page_has('banner.position') ? ' style="object-position:' . esc_attr(cc_page('banner.position')) . '"' : ''; ?>><?php endif; ?>
     <div class="site-container category-banner-content">
@@ -185,15 +185,22 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php endforeach; ?></div>
       <?php endif; ?>
 
-      <?php if ($layout === 'contact') : ?>
+      <?php if ($layout === 'contact') :
+        $maps_q = rawurlencode(cc_content('company.address_line1') . ', ' . cc_content('company.address_line2'));
+      ?>
       <div class="contact-layout">
-        <div class="contact-card">
-          <h3><?php echo esc_html(cc_content('company.legal_name')); ?></h3>
-          <p><?php cc_e('company.address_line1'); ?><br><?php cc_e('company.address_line2'); ?></p>
-          <p><a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>"><?php cc_e('company.phone'); ?></a><br><a href="mailto:<?php echo esc_attr(cc_content('company.email')); ?>"><?php cc_e('company.email'); ?></a></p>
-          <p><?php echo esc_html(cc_content('company.hours_days') . ', ' . cc_content('company.hours_time')); ?></p>
+        <div class="contact-details">
+          <p class="info-kicker">Reach our team</p>
+          <ul class="contact-tiles">
+            <li><span class="contact-icon"><?php echo cc_icon('map-pin'); ?></span><div><h3>Visit us</h3><p><a href="https://www.google.com/maps/search/?api=1&amp;query=<?php echo $maps_q; ?>" target="_blank" rel="noopener"><?php echo esc_html(cc_content('company.legal_name')); ?><br><?php cc_e('company.address_line1'); ?><br><?php cc_e('company.address_line2'); ?></a></p></div></li>
+            <li><span class="contact-icon"><?php echo cc_icon('phone'); ?></span><div><h3>Call us</h3><p><a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>"><?php cc_e('company.phone'); ?></a></p></div></li>
+            <li><span class="contact-icon"><?php echo cc_icon('mail'); ?></span><div><h3>Email us</h3><p><a href="mailto:<?php echo esc_attr(cc_content('company.email')); ?>"><?php cc_e('company.email'); ?></a></p></div></li>
+            <li><span class="contact-icon"><?php echo cc_icon('clock'); ?></span><div><h3>Business hours</h3><p><?php echo esc_html(cc_content('company.hours_days')); ?><br><?php echo esc_html(cc_content('company.hours_time')); ?> Central</p></div></li>
+          </ul>
         </div>
-        <form class="contact-form" id="contact-form" method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+        <form class="contact-form contact-form-card" id="contact-form" method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+          <h3>Send us your requirement</h3>
+          <p class="contact-form-note">Tell us what you need and our team will get back to you.</p>
           <?php if (isset($_GET['sent'])) : ?><p class="form-notice is-success" role="status">Thank you. Your message has been sent and our team will be in touch.</p><?php endif; ?>
           <?php if (isset($_GET['error'])) : ?><p class="form-notice is-error" role="alert">Your message could not be sent. Please check the highlighted details and try again, or call us.</p><?php endif; ?>
           <input type="hidden" name="action" value="cc_contact">
@@ -209,6 +216,7 @@ $title = cc_page('banner.title') ?: get_the_title();
           <button type="submit" class="<?php echo cc_btn(); ?>">SEND MESSAGE<?php echo cc_icon('arrow-right'); ?></button>
         </form>
       </div>
+      <?php if (!empty($b['map'])) : ?><div class="contact-map"><iframe title="Map to Competitive Choice, <?php echo esc_attr(cc_content('company.address_line1')); ?>" src="https://www.google.com/maps?q=<?php echo $maps_q; ?>&amp;output=embed" width="1060" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><?php endif; ?>
       <?php endif; ?>
 
       <?php if (!in_array($layout, ['text', 'split', 'statement', 'intro', 'centered', 'article', 'video', 'stat'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>

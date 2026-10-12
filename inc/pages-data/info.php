@@ -109,10 +109,10 @@ return [
                 'og_description' => 'Want to know more? Reach out to our Houston team.',
                 'schema_about' => 'Contact and quote requests for Competitive Choice', 'page_type' => 'ContactPage',
             ],
-            'banner' => ['kicker' => 'CONTACT US', 'title' => 'Want to Know More? Reach Out to Us', 'lead' => 'Tell us what you need. Our team will help identify the right products, services and procurement solution.'],
+            'banner' => ['plain' => true, 'video' => 'wp-content/themes/competitive-choice/assets/video/contact-header.mp4', 'title' => 'CONTACT US', 'lead' => 'One conversation is all it takes to put your operation back in motion.'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Contact Us'],
             'blocks' => [
-                ['layout' => 'contact', 'id' => 'contact', 'title' => 'We’re here to help', 'description' => 'Send us your requirement, or call or email our team.'],
+                ['layout' => 'contact', 'id' => 'contact', 'map' => true, 'title' => 'We’re Here to Help', 'description' => 'Send us your requirement, or call or email our team.'],
             ],
             'related' => ['title' => 'Related pages', 'links' => [['label' => 'Products & Supplies', 'link' => 'link:products'], ['label' => 'Services', 'link' => 'link:services'], ['label' => 'Co-Ops & Contract Vehicles', 'link' => 'link:contracts']]],
         ],
