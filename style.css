@@ -596,3 +596,6 @@ html { scroll-behavior: smooth; }
 /* Contact banner line: no backdrop, deeper blue with a soft light halo for legibility */
 .category-banner.is-plain .category-lead.is-boxed { padding: 0; background: none; box-shadow: none; color: #1f7bff; text-shadow: 0 0 10px rgba(255, 255, 255, .85), 0 0 22px rgba(255, 255, 255, .6); }
 .category-banner.is-plain .category-lead.is-boxed .type-caret { background: #1f7bff; }
+
+/* Contact submit button: 20% shorter, 10% wider */
+.info-layout-contact .contact-form .contact-submit { min-height: 45px; height: 45px; padding-block: 0; padding-inline: 25px; min-width: 192px; justify-content: center; }

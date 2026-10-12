@@ -213,7 +213,7 @@ $title = cc_page('banner.title') ?: get_the_title();
             <label><span class="sr-only">Company or organization</span><input type="text" name="cc_company" autocomplete="organization" placeholder="Company or organization"></label>
           </div>
           <label><span class="sr-only">How can we help?</span><textarea name="cc_message" rows="5" required placeholder="How can we help? Tell us what you are looking for, such as products or services, quantities, delivery location and timing."></textarea></label>
-          <button type="submit" class="<?php echo cc_btn('shop', 'default', 'contact-submit'); ?>">SEND MESSAGE<?php echo cc_icon('arrow-right'); ?></button>
+          <button type="submit" class="<?php echo cc_btn('shop', 'default', 'contact-submit'); ?>">REQUEST A CALL BACK<?php echo cc_icon('arrow-right'); ?></button>
         </form>
       </div>
       <?php if (!empty($b['map'])) : ?><div class="contact-map"><iframe title="Map to Competitive Choice, <?php echo esc_attr(cc_content('company.address_line1')); ?>" src="https://www.google.com/maps?q=<?php echo $maps_q; ?>&amp;output=embed" width="1060" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><?php endif; ?>
