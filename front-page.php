@@ -6,7 +6,7 @@ $first = $products[0] ?? ['name' => '', 'hero_line' => ''];
 <main>
   <section class="hero product-slideshow" aria-labelledby="hero-title" aria-roledescription="carousel" data-slideshow data-slides="<?php echo esc_attr(wp_json_encode(array_map(fn($p) => ['name' => $p['name'], 'heroLine' => $p['hero_line'], 'url' => cc_category_destination($p['name'], 'product')], $products))); ?>">
     <?php foreach ($products as $i => $product) : ?>
-      <img class="hero-photo slideshow-photo" data-active="<?php echo $i === 0 ? 'true' : 'false'; ?>" src="<?php echo esc_url(cc_img($product['image'])); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="<?php echo $i === 0 ? 'high' : 'auto'; ?>" loading="<?php echo $i === 0 ? 'eager' : 'lazy'; ?>">
+      <?php if (!empty($product['mobile_image'])) : ?><picture><source media="(max-width: 767px)" srcset="<?php echo esc_url(cc_img($product['mobile_image'])); ?>"><?php endif; ?><img class="hero-photo slideshow-photo" data-active="<?php echo $i === 0 ? 'true' : 'false'; ?>" src="<?php echo esc_url(cc_img($product['image'])); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="<?php echo $i === 0 ? 'high' : 'auto'; ?>" loading="<?php echo $i === 0 ? 'eager' : 'lazy'; ?>"><?php if (!empty($product['mobile_image'])) : ?></picture><?php endif; ?>
     <?php endforeach; ?>
     <div class="slide-arrow-rail" data-side="start">
       <button type="button" class="<?php echo cc_btn('ghost', 'icon', 'slide-arrow'); ?>" aria-label="Previous slide" title="Previous slide" data-slide-prev><?php echo cc_icon('arrow-left'); ?></button>
