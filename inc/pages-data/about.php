@@ -16,7 +16,7 @@ $related = function ($self) use ($about_links, $about_slugs) {
     foreach ($about_links as $i => $l) {
         if ($about_slugs[$i] !== $self) $links[] = ['label' => $l[0], 'link' => $l[1]];
     }
-    return ['title' => 'Explore more of About Us', 'links' => $links];
+    return ['title' => 'More About Us', 'links' => $links];
 };
 
 return [
@@ -194,7 +194,7 @@ return [
                 'og_description' => 'Pre-negotiated cooperative contracts and federal schedules for public-sector buyers.',
                 'schema_about' => 'Cooperative purchasing contracts and federal schedules', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Co-Ops & Schedules', 'tagline' => 'Empowering your Procurement Experience', 'lead' => 'Multiple cooperative contracts give public-sector customers access to high-quality products and services with cost savings and efficiency.'],
+            'banner' => ['zoom' => true, 'image' => 'wp-content/themes/competitive-choice/assets/images/about-coops-header.jpg', 'kicker' => 'ABOUT US', 'title' => 'Co-Ops & Schedules', 'tagline' => 'Empowering your Procurement Experience', 'lead' => 'Multiple cooperative contracts give public-sector customers access to high-quality products and services with cost savings and efficiency.'],
             'breadcrumb' => $crumb('Co-Ops & Schedules'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
@@ -287,7 +287,7 @@ return [
                 'og_description' => 'Federal and construction projects supplied by Competitive Choice.',
                 'schema_about' => 'Past performance and project experience', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Past Performances', 'lead' => 'Federal contracts and major construction projects supplied by our team.'],
+            'banner' => ['zoom' => true, 'image' => 'wp-content/themes/competitive-choice/assets/images/about-past-header.jpg', 'kicker' => 'ABOUT US', 'title' => 'Past Performances', 'lead' => 'Federal contracts and major construction projects supplied by our team.'],
             'breadcrumb' => $crumb('Past Performances'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
