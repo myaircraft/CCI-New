@@ -67,6 +67,10 @@
           document.getElementById(other.getAttribute('aria-controls')).hidden = !on;
           swapIcon(other, on ? 'minus' : 'plus');
         });
+        // Collapsing the previous category shifts the list, so bring the opened one back to the top of the menu.
+        if (opening) window.requestAnimationFrame(function () {
+          mobileNav.scrollTop += btn.getBoundingClientRect().top - mobileNav.getBoundingClientRect().top - 8;
+        });
       });
     });
 
