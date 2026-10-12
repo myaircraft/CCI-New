@@ -572,3 +572,5 @@ h1, h2, h3, h4 { text-wrap: balance; }
 #contact-form { scroll-margin-top: 140px; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.category-banner .category-tagline.is-sentence ~ .category-lead { max-width: 62ch; margin-inline: auto; text-align: center; }

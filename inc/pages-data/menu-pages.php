@@ -21,7 +21,7 @@ return [
                 'og_description' => 'FCL-X penetrates the battery, cools and neutralizes, and helps prevent re-ignition.',
                 'schema_about' => 'Lithium-ion battery fire suppression products', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['zoom' => 'fit', 'image' => $fire('firehero_image.jpg'), 'title' => 'FIRE SUPPRESSION', 'tagline' => 'Innovative, water-based lithium-ion battery fire extinguishing agent engineered to cool, neutralize and help prevent re-ignitions.', 'tagline_speed' => 40],
+            'banner' => ['zoom' => 'fit', 'image' => $fire('firehero_image.jpg'), 'title' => 'FIRE SUPPRESSION', 'tagline' => 'Innovative, water-based lithium-ion battery fire extinguishing agent engineered to cool, neutralize and help prevent re-ignitions.', 'tagline_speed' => 40, 'lead' => 'When a lithium-ion battery fails, seconds decide everything. FCL-X is a PFAS-free, water-based suppressant built to go where water alone cannot: deep into the cell, cooling the heat at its source, neutralizing hazardous off-gases and standing guard against re-ignition. Extinguishers, refills and concentrate for the facilities, fleets and first responders who cannot afford to guess.'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Fire Suppression'],
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
