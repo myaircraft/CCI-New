@@ -69,6 +69,7 @@ $banner_image = cc_page('banner.image');
     <?php if (cc_page_has('trust.title')) : ?>
     <section class="category-section category-trust" aria-labelledby="trust-title">
       <div class="category-section-heading"><h2 id="trust-title"><?php echo esc_html(cc_tc(cc_page('trust.title'))); ?></h2><?php foreach (cc_page_list('trust.paragraphs') as $paragraph) : ?><p><?php echo esc_html($paragraph); ?></p><?php endforeach; ?></div>
+      <?php if (cc_page_has('trust.stats')) : ?><div class="trust-stats"><?php foreach (cc_page_list('trust.stats') as $stat) : ?><div><strong><?php echo esc_html($stat[0] ?? ''); ?></strong><span><?php echo esc_html($stat[1] ?? ''); ?></span></div><?php endforeach; ?></div><?php endif; ?>
       <?php if (cc_page_has('trust.points')) : ?><ul class="trust-points"><?php foreach (cc_page_list('trust.points') as $point) : ?><li><?php echo cc_icon('check'); ?><?php echo esc_html($point); ?></li><?php endforeach; ?></ul><?php endif; ?>
       <?php if (cc_page_has('trust.button_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contracts')); ?>" class="<?php echo cc_btn('outline'); ?>"><?php cc_page_e('trust.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
     </section>

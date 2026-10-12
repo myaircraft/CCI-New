@@ -427,3 +427,11 @@ h1, h2, h3, h4 { text-wrap: balance; }
 
 /* Sentence-style typewriter tagline (light weight, wide measure) */
 .category-banner .category-tagline.is-sentence { max-width: 62ch; margin-inline: auto; text-align: center; font-weight: 300; font-size: var(--fs-card-title); line-height: var(--text-leading); }
+
+/* Why buyers source: credibility stats */
+.trust-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--text-gap-large); max-width: 980px; margin: var(--topic-gap) auto var(--topic-gap); }
+.trust-stats div { padding: var(--text-gap-large) var(--text-gap); border: 1px solid var(--border); border-top: 3px solid var(--primary); background: #fff; text-align: center; transition: border-color .25s, transform .25s; }
+.trust-stats div:hover { border-color: var(--primary); transform: translateY(-3px); }
+.trust-stats strong { display: block; color: var(--brand); font-size: var(--fs-subtitle); font-weight: 900; line-height: 1; letter-spacing: .01em; }
+.trust-stats span { display: block; margin-top: var(--text-gap-small); color: var(--muted-foreground); font-size: var(--fs-caption); line-height: var(--text-leading); }
+@media (max-width: 900px) { .trust-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

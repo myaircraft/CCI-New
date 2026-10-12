@@ -29,13 +29,25 @@ function cc_pages_data() {
 
 /** Blocks every product or service page shows after its own content. */
 function cc_page_shared($group) {
-    $points = ['Serving buyers since 2003', 'Based in Houston, Texas', 'Nationwide sourcing', 'GSA MAS, TIPS and BuyBoard contract vehicles', 'WOSB certification'];
+    $stats = [['2003', 'Serving buyers since'], ['50', 'States reached nationwide'], ['WOSB', 'Certified woman-owned business'], ['4', 'Levels of certification: national, state, local and federal']];
+    $points = ['GSA MAS, TIPS, BuyBoard, Good Buy and Choice Partners contract vehicles', 'SBA WOSB / EDWOSB, DBE, MBE, SBE and WBE certified', 'Centrally located Houston warehouse', 'Hands-on team that knows your account'];
+    if ($group === 'service') {
+        $trust_paragraphs = [
+            'Since 2003, Competitive Choice has grown from a small Houston business selling specialty chemicals into a trusted partner for government, healthcare, education, utility and commercial organizations. We still work the way we started: with a hands-on team that listens first, answers the phone and treats your facility like our own.',
+            'Our services are backed by credentials your procurement office can verify. We are a certified woman-owned business, recognized at the national, state, local and federal levels, and we hold cooperative and federal contract vehicles, so buying from us is already competitively vetted.',
+            'Behind every service is a centrally located Houston warehouse, an extensive vendor network and a team that has spent two decades earning repeat business one reliable delivery at a time.',
+        ];
+    } else {
+        $trust_paragraphs = [
+            'Since 2003, Competitive Choice has grown from a small Houston business selling specialty chemicals into a comprehensive supplier trusted by government, healthcare, education, utility and commercial buyers. We still run it the way we started: with a team that answers the phone, knows your account and gets the details right.',
+            'That reliability is backed by credentials your procurement office can verify. We are a certified woman-owned business with national, state, local and federal recognition, and we hold contract vehicles including GSA MAS, TIPS, BuyBoard, Good Buy, Choice Partners and AbilityOne, so competitive purchasing is already done for you.',
+            'Behind every order is a centrally located Houston warehouse, vendor channels that reach all 50 states and a team that treats your deadline as its own.',
+        ];
+    }
     $trust = [
         'title'        => $group === 'service' ? 'Why organizations choose to work with Competitive Choice' : 'Why buyers source through Competitive Choice',
-        'paragraphs'   => [
-            'Competitive Choice has supported government, commercial and institutional buyers since 2003. Our strategic sourcing and procurement experience helps you handle your requirements without chasing multiple suppliers.',
-            'Public-sector buyers can ask about our contract vehicles and certifications, including GSA MAS, TIPS, BuyBoard and WOSB, when they submit a requirement. We confirm which vehicles apply to each purchase.',
-        ],
+        'paragraphs'   => $trust_paragraphs,
+        'stats'        => $stats,
         'points'       => $points,
         'button_label' => 'CO-OPS & CONTRACT VEHICLES',
     ];
@@ -79,10 +91,13 @@ function cc_page_shared($group) {
 }
 
 /** Final content for a definition: its own content plus the shared blocks and defaults. */
-function cc_page_build($def) {
+function cc_page_build($def, $slug = '') {
     $c = $def['content'];
     if (($def['template'] ?? 'category') === 'category') {
         $group = $def['group'] ?? 'product';
+        static $steps = null;
+        if ($steps === null) $steps = require __DIR__ . '/pages-data/process.php';
+        if ($group !== 'service' && !isset($c['process']) && isset($steps[$slug])) $c['process'] = $steps[$slug];
         foreach (cc_page_shared($group) as $key => $shared_block) {
             // Page values win; shared values fill whatever the page leaves out.
             $c[$key] = isset($c[$key]) && is_array($c[$key]) ? $c[$key] + $shared_block : ($c[$key] ?? $shared_block);
@@ -122,7 +137,7 @@ function cc_install_pages($force = false, $only = null) {
         update_post_meta($id, '_wp_page_template', ($def['template'] ?? 'category') === 'info' ? CC_INFO_TEMPLATE : CC_CATEGORY_TEMPLATE);
         $existing = get_post_meta($id, '_cc_content', true);
         if ($force || !is_array($existing) || !$existing) {
-            update_post_meta($id, '_cc_content', wp_slash(cc_page_build($def)));
+            update_post_meta($id, '_cc_content', wp_slash(cc_page_build($def, $slug)));
             $log[] = ($page ? 'updated ' : 'created ') . $path;
         } else {
             $log[] = 'kept ' . $path;

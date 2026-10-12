@@ -33,7 +33,7 @@ function cc_page_defaults($kind, $slug = '') {
     if ($kind !== 'category' && $kind !== 'info') return [];
     if ($slug !== '' && $slug !== 'home' && isset($seed[$slug])) return $seed[$slug];
     $pages = cc_pages_data();
-    if ($slug !== '' && isset($pages[$slug])) return cc_page_build($pages[$slug]);
+    if ($slug !== '' && isset($pages[$slug])) return cc_page_build($pages[$slug], $slug);
     if ($kind === 'info') return ['banner' => ['kicker' => '', 'quote_label' => ''], 'breadcrumb' => ['home' => 'Home'], 'blocks' => []];
     return [
         'banner'     => ['kicker' => 'PRODUCTS & SUPPLIES', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
