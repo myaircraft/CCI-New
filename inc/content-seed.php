@@ -33,7 +33,7 @@ return [
     'links.shop'           => 'https://shopcompetitivechoice.net/',
     'links.products'       => 'https://competitivechoice.net/cci-services-materials-supplies',
     'links.services'       => 'https://competitivechoice.net/cci-services-services',
-    'links.industries'     => 'https://competitivechoice.net/who-we-serve',
+    'links.industries'     => '/who-we-serve/',
     'links.work'           => 'https://competitivechoice.net/cci-past-performances',
     'links.about'          => 'https://competitivechoice.net/mission-vision',
     'links.contracts'      => 'https://competitivechoice.net/cci-co-ops-and-schedules',

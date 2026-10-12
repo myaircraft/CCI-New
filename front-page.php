@@ -51,7 +51,7 @@ $first = $products[0] ?? ['name' => '', 'hero_line' => ''];
 
   <section id="industries" class="section-space"><div class="site-container">
     <?php cc_section_title(cc_page('industries.topic'), cc_page('industries.heading'), cc_page('industries.description')); ?>
-    <div class="industry-list"><?php foreach (cc_industries() as $industry) : ?><a href="<?php echo esc_url(cc_url('industries')); ?>"><?php echo esc_html($industry); ?><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?></div>
+    <div class="industry-list"><?php foreach (cc_industries() as $industry) : ?><p class="industry-item"><?php echo esc_html($industry); ?></p><?php endforeach; ?></div>
     <div class="section-actions"><a href="<?php echo esc_url(cc_url('industries')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('industries.button_label'); ?></a></div>
   </div></section>
 

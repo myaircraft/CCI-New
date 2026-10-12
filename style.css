@@ -658,3 +658,18 @@ html { scroll-behavior: smooth; }
 .info-cards.has-learn .card-learn { align-self: center; margin-top: var(--text-gap-large); padding: 10.5px 17px; gap: 8.74px; }
 .info-cards.has-learn .info-card p { margin-bottom: 0; }
 .info-cards.has-learn .card-learn { margin-top: calc(var(--text-gap-large) + 10px); }
+
+/* Home industries: plain boxes, no links */
+.industry-list .industry-item { display: flex; align-items: center; margin: 0; padding: 22.9px; border: 1px solid var(--border); font-size: var(--fs-body); font-weight: 700; cursor: default; }
+
+/* Home products: smaller photos, roomier white area, wider cards, single-line sub-categories */
+#products-supplies .group-grid { max-width: 1260px; gap: var(--topic-gap); }
+#products-supplies .group-media { aspect-ratio: 1.9; }
+#products-supplies .group-card h3 { padding: 37px 37px 14.15px; }
+#products-supplies .group-links { padding: 0 37px 47px; column-gap: 37px; }
+#products-supplies .group-links li { border-bottom: 0; }
+#products-supplies .group-links a { white-space: nowrap; padding: 12px 12px; margin-bottom: 4px; border-radius: 4px; transition: background-color .2s, color .2s; }
+#products-supplies .group-links a:hover, #products-supplies .group-links a:focus-visible { background: var(--primary); color: var(--foreground); padding-left: 12px; }
+#products-supplies .group-links a:hover svg, #products-supplies .group-links a:focus-visible svg { color: var(--foreground); }
+@media (max-width: 1100px) { #products-supplies .group-grid { max-width: 640px; } #products-supplies .group-links a { white-space: normal; } }
+@media (max-width: 560px) { #products-supplies .group-card h3 { padding: 28px 22.9px 12px; } #products-supplies .group-links { padding: 0 22.9px 32px; } }
