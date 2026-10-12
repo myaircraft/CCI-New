@@ -101,7 +101,7 @@ return [
                 'og_description' => 'National, state, local and federal certifications that support supplier diversity goals.',
                 'schema_about' => 'Business certifications held by Competitive Choice', 'page_type' => 'AboutPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'CERTIFICATIONS', 'tagline' => 'Recognized at the national, state, local and federal levels', 'image' => $img('women6.jpg')],
+            'banner' => ['kicker' => 'ABOUT US', 'title' => 'CERTIFIED FOR SUCCESS', 'tagline' => 'Recognized at the national, state, local and federal levels', 'image' => $img('women6.jpg')],
             'breadcrumb' => $crumb('Certifications'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
