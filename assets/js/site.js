@@ -260,6 +260,20 @@
     Array.prototype.forEach.call(videos, function (v) { io.observe(v); });
   }
 
+  function initDemos() {
+    Array.prototype.forEach.call(document.querySelectorAll('.demo-play'), function (btn) {
+      btn.addEventListener('click', function () {
+        var img = btn.querySelector('img');
+        var label = btn.querySelector('.demo-play-label');
+        img.src = btn.getAttribute('data-gif');
+        if (label) label.remove();
+        btn.disabled = true;
+        btn.style.cursor = 'default';
+      }, { once: true });
+    });
+  }
+
+  initDemos();
   initVideos();
   initTypewriter();
   initUnderlines();

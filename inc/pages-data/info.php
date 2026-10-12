@@ -89,33 +89,6 @@ return [
         ],
     ],
 
-    'who-we-serve' => [
-        'title' => 'Who We Serve', 'parent' => '', 'template' => 'info', 'order' => 30,
-        'content' => [
-            'seo' => [
-                'title' => 'MRO Supplier for Government, Healthcare & Energy | Competitive Choice',
-                'description' => 'Competitive Choice supports SLED, federal, healthcare, energy, commercial and construction customers with MRO supplies and services.',
-                'og_title' => 'Who We Serve | Competitive Choice',
-                'og_description' => 'A customer-centric partner for local and state government, federal agencies, healthcare, energy, commercial and construction teams.',
-                'schema_about' => 'Industries served by Competitive Choice',
-            ],
-            'banner' => ['kicker' => 'WHO WE SERVE', 'title' => 'Our Reach and Impact', 'lead' => 'Everything we do is built around one principle: partnership. We take the time to understand your business and respond with agility and purpose.', 'quote_label' => 'REQUEST A QUOTE'],
-            'breadcrumb' => ['home' => 'Home', 'current' => 'Who We Serve'],
-            'blocks' => [
-                ['layout' => 'text', 'id' => 'partnership', 'title' => 'Who benefits from our services', 'paragraphs' => ['Our customer-centric model means a dedicated team that tailors solutions to your operational priorities, with exceptional service, transparent communication and continuous improvement.', 'From day-to-day orders to long-term contracts, we deliver results and build relationships that last.']],
-                ['layout' => 'cards', 'id' => 'industries', 'title' => 'Industries we support', 'description' => 'Six sectors, one dependable partner.', 'items' => [
-                    ['id' => 'sled', 'title' => 'State, Local & Education (SLED)', 'description' => 'We have been awarded numerous contracts, from specific product awards and commodity contracts to full catalog agreements. We are your one-stop shop for maintenance, repair and operational needs for local, state and education facilities.'],
-                    ['id' => 'federal', 'title' => 'Federal', 'description' => 'Through our partnerships with the General Services Administration and AbilityOne, we offer quality products through competitively bid contracts and streamlined procurement channels, including TAA-compliant safety supplies, material handling, tools, lighting and AbilityOne items.', 'lines' => ['GSA Advantage', 'AbilityOne']],
-                    ['id' => 'healthcare', 'title' => 'Healthcare', 'description' => 'A well-organized, fully stocked facility is vital. We help solve day-to-day challenges with med/surge and safety products, wheelchairs and wheelchair repair parts, and thousands of other medical supplies.'],
-                    ['id' => 'energy', 'title' => 'Energy', 'description' => 'Our chemicals help facilities worldwide get it clean and keep it green. We meet drilling, completion, production and midstream requirements with electrical, datacomm, valves, pipe, fittings, structural steel, tools, gauges, rod pumps, production equipment and safety supplies.'],
-                    ['id' => 'commercial', 'title' => 'Commercial', 'description' => 'Failure to procure essential MRO products can stall a production line. We are your source for commercial safety supplies, tools, equipment, shelving, lighting, vacuums, carpet cleaners and other items needed to complete commercial projects.'],
-                    ['id' => 'construction', 'title' => 'Construction', 'description' => 'Choose us for your construction and MEP supply requirements. We can source what your project needs, from building wire, thermometers and smoke detectors to pipe supports, across mechanical, electrical and plumbing supplies.'],
-                ]],
-            ],
-            'related' => ['title' => 'Related pages', 'links' => [['label' => 'Co-Ops & Contract Vehicles', 'link' => 'link:contracts'], ['label' => 'Past Performances', 'link' => 'link:work'], ['label' => 'Certifications', 'link' => 'link:certifications']]],
-        ],
-    ],
-
     'contact-us' => [
         'title' => 'Contact Us', 'parent' => '', 'template' => 'info', 'order' => 38,
         'content' => [

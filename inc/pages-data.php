@@ -19,6 +19,7 @@ function cc_pages_data() {
             require __DIR__ . '/pages-data/services.php',
             require __DIR__ . '/pages-data/industries.php',
             require __DIR__ . '/pages-data/about.php',
+            require __DIR__ . '/pages-data/menu-pages.php',
             require __DIR__ . '/pages-data/info.php'
         );
     }

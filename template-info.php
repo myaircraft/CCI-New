@@ -12,7 +12,8 @@ $title = cc_page('banner.title') ?: get_the_title();
 <main class="category-page info-page">
 
   <section class="category-banner<?php echo cc_page_has('banner.zoom') ? ' is-zoom' : ''; ?><?php echo cc_page('banner.zoom') === 'fit' ? ' is-fit' : ''; ?>"<?php echo cc_page('banner.zoom') === 'tight' ? ' style="--zs:1.2;--ze:1.38"' : (cc_page('banner.zoom') === 'fit' ? ' style="--zs:1;--ze:1.32"' : ''); ?> aria-labelledby="category-title">
-    <?php if (cc_page_has('banner.image')) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.image'))); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="high"<?php echo cc_page_has('banner.position') ? ' style="object-position:' . esc_attr(cc_page('banner.position')) . '"' : ''; ?>><?php endif; ?>
+    <?php if (cc_page_has('banner.video')) : ?><video class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.video'))); ?>" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <?php elseif (cc_page_has('banner.image')) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.image'))); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="high"<?php echo cc_page_has('banner.position') ? ' style="object-position:' . esc_attr(cc_page('banner.position')) . '"' : ''; ?>><?php endif; ?>
     <div class="site-container category-banner-content">
       <?php if (cc_page_has('banner.kicker')) : ?><p class="category-kicker"><?php cc_page_e('banner.kicker'); ?></p><?php endif; ?>
       <h1 id="category-title"><?php echo esc_html($title); ?></h1>
@@ -35,7 +36,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       $paragraphs = (array) ($b['paragraphs'] ?? []);
     ?>
     <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?><?php echo !empty($b['tint']) ? ' is-tinted' : ''; ?><?php echo !empty($b['flush']) ? ' is-flush' : ''; ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
-      <?php if (!in_array($layout, ['split', 'statement', 'intro', 'centered', 'article', 'video'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
+      <?php if (!in_array($layout, ['split', 'statement', 'intro', 'centered', 'article', 'video', 'stat'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
       <div class="category-section-heading">
         <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
         <?php if (($b['description'] ?? '') !== '') : ?><p><?php echo esc_html($b['description']); ?></p><?php endif; ?>
@@ -44,13 +45,14 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php endif; ?>
 
       <?php if ($layout === 'cards' && $items) : ?>
-      <div class="info-cards<?php echo !empty($b['icons']) ? ' is-icons' : ''; ?><?php echo !empty($b['wide']) ? ' is-wide' : ''; ?>"><?php foreach ($items as $it) :
+      <div class="info-cards<?php echo !empty($b['icons']) ? ' is-icons' : ''; ?><?php echo !empty($b['wide']) ? ' is-wide' : ''; ?><?php echo !empty($b['size']) ? ' is-' . esc_attr($b['size']) : ''; ?><?php echo !empty($b['caps']) ? ' is-caps' : ''; ?>"><?php foreach ($items as $it) :
         $link = ($it['link'] ?? '') !== '' ? cc_link($it['link']) : ''; $heading = esc_html($it['title'] ?? ''); ?>
         <article class="info-card<?php echo $link ? ' is-link' : ''; ?><?php echo !empty($it['image']) ? ' has-media' : ''; ?>"<?php echo !empty($it['id']) ? ' id="' . esc_attr($it['id']) . '"' : ''; ?>>
           <?php if (!empty($it['image'])) : ?><img class="info-card-media" src="<?php echo esc_url(cc_img($it['image'])); ?>" alt="" width="540" height="334" loading="lazy" decoding="async"><?php endif; ?>
           <h3><?php echo $link ? '<a href="' . esc_url($link) . '">' . $heading . '</a>' : $heading; ?></h3>
           <?php if (($it['description'] ?? '') !== '') : ?><p><?php echo esc_html($it['description']); ?></p><?php endif; ?>
           <?php if (!empty($it['lines'])) : ?><ul><?php foreach ((array) $it['lines'] as $line) : ?><li><?php echo esc_html($line); ?></li><?php endforeach; ?></ul><?php endif; ?>
+          <?php if (!empty($it['url'])) : ?><a class="info-card-button <?php echo cc_btn(); ?>" href="<?php echo esc_url($it['url']); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($it['button_label'] ?? 'SHOP NOW'); ?></a><?php endif; ?>
         </article>
       <?php endforeach; ?></div>
       <?php endif; ?>
@@ -96,6 +98,23 @@ $title = cc_page('banner.title') ?: get_the_title();
       <figure class="info-video"><video src="<?php echo esc_url(cc_img($b['video'])); ?>" muted loop playsinline controls preload="metadata" data-lazy-play aria-label="<?php echo esc_attr($b['video_label'] ?? 'Competitive Choice film'); ?>"></video></figure>
       <?php endif; ?>
 
+      <?php if ($layout === 'steps' && $items) : ?>
+      <ol class="info-steps"><?php foreach ($items as $it) : ?>
+        <li><?php if (!empty($it['image'])) : ?><img src="<?php echo esc_url(cc_img($it['image'])); ?>" alt="" width="167" height="167" loading="lazy" decoding="async"><?php endif; ?>
+          <h3><?php echo esc_html($it['title'] ?? ''); ?></h3>
+          <?php if (($it['description'] ?? '') !== '') : ?><p><?php echo esc_html($it['description']); ?></p><?php endif; ?></li>
+      <?php endforeach; ?></ol>
+      <?php endif; ?>
+
+      <?php if ($layout === 'stat') : ?>
+      <div class="info-stat">
+        <?php if (($b['kicker'] ?? '') !== '') : ?><p class="info-kicker"><?php echo esc_html($b['kicker']); ?></p><?php endif; ?>
+        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
+        <?php foreach ($paragraphs as $p) : ?><p class="info-stat-text"><?php echo esc_html($p); ?></p><?php endforeach; ?>
+        <p class="info-stat-figure"><strong><?php echo esc_html($b['number'] ?? ''); ?></strong><span><?php echo esc_html($b['number_label'] ?? ''); ?></span></p>
+      </div>
+      <?php endif; ?>
+
       <?php if ($layout === 'intro') : ?>
       <div class="info-intro"><?php foreach ($paragraphs as $p) : ?><p><?php echo preg_replace('/\{\{(.+?)\}\}/', '<span class="hl-draw">$1</span>', esc_html($p)); ?></p><?php endforeach; ?></div>
       <?php endif; ?>
@@ -114,8 +133,10 @@ $title = cc_page('banner.title') ?: get_the_title();
           <?php if (($b['kicker'] ?? '') !== '') : ?><p class="info-kicker"><?php echo esc_html($b['kicker']); ?></p><?php endif; ?>
           <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
           <?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?>
+          <?php if (!empty($b['lines'])) : ?><ul class="info-split-points"><?php foreach ((array) $b['lines'] as $line) : ?><li><?php echo cc_icon('check'); ?><?php echo esc_html($line); ?></li><?php endforeach; ?></ul><?php endif; ?>
         </div>
-        <?php if (!empty($b['image'])) : ?><figure class="info-split-media"><img src="<?php echo esc_url(cc_img($b['image'])); ?>" alt="<?php echo esc_attr($b['image_alt'] ?? ''); ?>" width="1000" height="618" loading="lazy" decoding="async"></figure><?php endif; ?>
+        <?php if (!empty($b['gif'])) : ?><figure class="info-split-media is-demo"><button type="button" class="demo-play" data-gif="<?php echo esc_url(cc_img($b['gif'])); ?>" aria-label="Play the demonstration"><img src="<?php echo esc_url(cc_img($b['image'])); ?>" alt="<?php echo esc_attr($b['image_alt'] ?? ''); ?>" width="400" height="225" loading="lazy" decoding="async"><span class="demo-play-label"><?php echo cc_icon('arrow-right'); ?>PLAY DEMO</span></button></figure>
+        <?php elseif (!empty($b['image'])) : ?><figure class="info-split-media"><img src="<?php echo esc_url(cc_img($b['image'])); ?>" alt="<?php echo esc_attr($b['image_alt'] ?? ''); ?>" width="1000" height="618" loading="lazy" decoding="async"></figure><?php endif; ?>
       </div>
       <?php endif; ?>
 
@@ -172,7 +193,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       </div>
       <?php endif; ?>
 
-      <?php if (!in_array($layout, ['text', 'split', 'statement', 'intro', 'centered', 'article', 'video'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>
+      <?php if (!in_array($layout, ['text', 'split', 'statement', 'intro', 'centered', 'article', 'video', 'stat'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>
     </section>
     <?php endforeach; ?>
 
