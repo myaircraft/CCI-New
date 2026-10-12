@@ -16,6 +16,7 @@ $title = cc_page('banner.title') ?: get_the_title();
     <div class="site-container category-banner-content">
       <?php if (cc_page_has('banner.kicker')) : ?><p class="category-kicker"><?php cc_page_e('banner.kicker'); ?></p><?php endif; ?>
       <h1 id="category-title"><?php echo esc_html($title); ?></h1>
+      <?php if (cc_page_has('banner.tagline')) : ?><p class="category-tagline"><?php echo nl2br(esc_html(cc_page('banner.tagline'))); ?></p><?php endif; ?>
       <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead"><?php cc_page_e('banner.lead'); ?></p><?php endif; ?>
       <?php if (cc_page_has('banner.quote_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
     </div>

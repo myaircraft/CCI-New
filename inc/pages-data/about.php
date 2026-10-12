@@ -26,7 +26,7 @@ return [
                 'og_description' => 'Fostering long-term value for the people and institutions that power our communities.',
                 'schema_about' => 'Mission, vision and values of Competitive Choice', 'page_type' => 'AboutPage',
             ],
-            'banner' => ['title' => 'ABOUT US', 'lead' => 'People who deliver. Partners you can count on. Since 2003.', 'image' => 'wp-content/themes/competitive-choice/assets/images/about-header.jpg'],
+            'banner' => ['title' => 'ABOUT US', 'tagline' => "Guided by Purpose\nDriven by Vision", 'lead' => 'People who deliver. Partners you can count on. Since 2003.', 'image' => 'wp-content/themes/competitive-choice/assets/images/about-header.jpg'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'About Us'],
             'blocks' => [
                 ['layout' => 'split', 'id' => 'mission', 'kicker' => 'OUR MISSION', 'title' => 'Long-term value for the people who power our communities', 'paragraphs' => [
