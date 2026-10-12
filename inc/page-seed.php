@@ -22,7 +22,7 @@ return [
             'explore_label' => 'EXPLORE CATEGORY',
         ],
         'markets' => [
-            'label' => 'Supporting the government, commercial, industrial, construction and facility organizations that keep the world moving.',
+            'label' => 'Supporting the government, commercial, industrial, construction and facility organizations with supplies and services since 2003.',
             'items' => [],
         ],
         'products' => [

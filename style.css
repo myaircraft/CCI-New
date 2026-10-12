@@ -609,3 +609,6 @@ html { scroll-behavior: smooth; }
     .category-page .info-logo-frame img { object-position: center; margin-left: auto; margin-right: auto; }
     .category-page .info-split-media, .category-page .info-person, .category-page .info-logo-item { text-align: center; }
 }
+
+.market-strip .market-label { font-size: 19px; }
+@media (max-width: 767px) { .market-strip .market-label { font-size: 16.8px; } }
