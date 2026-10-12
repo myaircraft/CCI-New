@@ -18,7 +18,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php if (cc_page_has('banner.kicker')) : ?><p class="category-kicker"><?php cc_page_e('banner.kicker'); ?></p><?php endif; ?>
       <h1 id="category-title"><?php echo esc_html($title); ?></h1>
       <?php if (cc_page_has('banner.tagline')) : ?><p class="category-tagline<?php echo cc_page_has('banner.tagline_speed') ? ' is-sentence' : ''; ?>" data-typewriter<?php echo cc_page_has('banner.tagline_speed') ? ' data-speed="' . (int) cc_page('banner.tagline_speed') . '"' : ''; ?>><?php echo nl2br(esc_html(cc_page('banner.tagline'))); ?></p><?php endif; ?>
-      <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead"><?php cc_page_e('banner.lead'); ?></p><?php endif; ?>
+      <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead<?php echo cc_page_has('banner.type_lead') ? ' is-boxed' : ''; ?>"<?php echo cc_page_has('banner.type_lead') ? ' data-typewriter data-speed="' . (int) cc_page('banner.type_lead') . '"' : ''; ?>><?php cc_page_e('banner.lead'); ?></p><?php endif; ?>
       <?php if (cc_page_has('banner.quote_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a><?php if (cc_page_has('banner.call_label')) : ?><a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>" class="<?php echo cc_btn('outline', 'default', 'category-secondary'); ?>"><?php echo esc_html(trim(cc_page('banner.call_label') . ' ' . cc_content('company.phone'))); ?></a><?php endif; ?></div><?php endif; ?>
     </div>
   </section>
@@ -207,13 +207,13 @@ $title = cc_page('banner.title') ?: get_the_title();
           <?php wp_nonce_field('cc_contact', 'cc_contact_nonce'); ?>
           <div class="form-trap" aria-hidden="true"><label>Website<input type="text" name="cc_website" tabindex="-1" autocomplete="off"></label></div>
           <div class="form-grid">
-            <label>Name<input type="text" name="cc_name" required autocomplete="name"></label>
-            <label>Email<input type="email" name="cc_email" required autocomplete="email"></label>
-            <label>Phone<input type="tel" name="cc_phone" autocomplete="tel"></label>
-            <label>Company or organization<input type="text" name="cc_company" autocomplete="organization"></label>
+            <label><span class="sr-only">Name</span><input type="text" name="cc_name" required autocomplete="name" placeholder="Name"></label>
+            <label><span class="sr-only">Email</span><input type="email" name="cc_email" required autocomplete="email" placeholder="Email"></label>
+            <label><span class="sr-only">Phone number</span><input type="tel" name="cc_phone" autocomplete="tel" placeholder="Phone number"></label>
+            <label><span class="sr-only">Company or organization</span><input type="text" name="cc_company" autocomplete="organization" placeholder="Company or organization"></label>
           </div>
-          <label>What do you need?<textarea name="cc_message" rows="6" required></textarea></label>
-          <button type="submit" class="<?php echo cc_btn(); ?>">SEND MESSAGE<?php echo cc_icon('arrow-right'); ?></button>
+          <label><span class="sr-only">How can we help?</span><textarea name="cc_message" rows="5" required placeholder="How can we help? Tell us what you are looking for, such as products or services, quantities, delivery location and timing."></textarea></label>
+          <button type="submit" class="<?php echo cc_btn('shop', 'default', 'contact-submit'); ?>">SEND MESSAGE<?php echo cc_icon('arrow-right'); ?></button>
         </form>
       </div>
       <?php if (!empty($b['map'])) : ?><div class="contact-map"><iframe title="Map to Competitive Choice, <?php echo esc_attr(cc_content('company.address_line1')); ?>" src="https://www.google.com/maps?q=<?php echo $maps_q; ?>&amp;output=embed" width="1060" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><?php endif; ?>

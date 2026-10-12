@@ -109,7 +109,7 @@ return [
                 'og_description' => 'Want to know more? Reach out to our Houston team.',
                 'schema_about' => 'Contact and quote requests for Competitive Choice', 'page_type' => 'ContactPage',
             ],
-            'banner' => ['plain' => true, 'video' => 'wp-content/themes/competitive-choice/assets/video/contact-header.mp4', 'title' => 'CONTACT US', 'lead' => 'One conversation is all it takes to put your operation back in motion.'],
+            'banner' => ['plain' => true, 'video' => 'wp-content/themes/competitive-choice/assets/video/contact-header.mp4', 'title' => 'CONTACT US', 'type_lead' => 45, 'lead' => 'One conversation is all it takes to put your operation back in motion.'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Contact Us'],
             'blocks' => [
                 ['layout' => 'centered', 'id' => 'lets-source', 'raw_title' => true, 'title' => "Let’s source what\nyour operation needs.", 'paragraphs' => ['Tell us what you need. Our team will help identify the right products, services and procurement solution.']],

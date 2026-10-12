@@ -32,7 +32,7 @@
     function setActive(id) {
       active = id;
       controls.forEach(function (c) {
-        var on = c.getAttribute('data-menu') === id;
+        var on = !!id && c.getAttribute('data-menu') === id;
         c.setAttribute('data-active', on ? 'true' : 'false');
         c.setAttribute('aria-expanded', on ? 'true' : 'false');
       });
