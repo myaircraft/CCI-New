@@ -740,3 +740,6 @@ html { scroll-behavior: smooth; }
 /* Banner buttons: same 46px height as the header Shop Now button */
 .hero-actions > a, .category-actions > a { min-height: 46px; height: 46px; padding-block: 0; }
 .hero-actions > a.hero-explore { min-height: 46px; height: 46px; }
+
+/* Problem and application topics: yellow underline */
+.category-projects h3 { text-decoration: underline; text-decoration-color: var(--primary); text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-skip-ink: none; }
