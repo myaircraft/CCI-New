@@ -414,3 +414,9 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-stat-figure span { color: var(--foreground); font-size: var(--fs-caption); font-weight: 800; letter-spacing: .14em; }
 .mobile-category-link { display: flex; align-items: center; min-height: 64px; padding: 14.15px var(--text-gap); color: var(--mobile-menu-ink); font-size: var(--fs-body); font-weight: 900; line-height: var(--title-leading); text-transform: uppercase; }
 @media (max-width: 900px) { .info-steps { grid-template-columns: 1fr; max-width: 520px; } }
+
+/* Services dropdown: two columns with group titles */
+.mega-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--section-gap); }
+.mega-column-title { margin: 0 0 var(--text-gap-small); padding: 0 14.15px 8px; border-bottom: 3px solid var(--primary); color: var(--brand); font-size: var(--fs-caption); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.mobile-group-title { margin: 0; padding: 12px var(--text-gap) 6px; background: #fafafa; color: var(--brand); font-size: var(--fs-micro); font-weight: 800; letter-spacing: .1em; text-transform: uppercase; border-top: 1px solid #efefef; }
+.mobile-category-links .mobile-group-title:first-child { border-top: 0; }

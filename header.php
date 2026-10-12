@@ -21,7 +21,11 @@
           <?php endforeach; ?>
           <?php foreach (cc_navigation() as $item) : if (empty($item['items'])) continue; ?>
             <div class="mega-menu" id="desktop-navigation-menu-<?php echo esc_attr($item['id']); ?>" data-menu-panel="<?php echo esc_attr($item['id']); ?>" hidden><div class="mega-inner">
+              <?php if (!empty($item['groups'])) : ?>
+              <div class="mega-columns"><?php foreach ($item['groups'] as $col) : ?><div class="mega-column"><p class="mega-column-title"><?php echo esc_html($col['title']); ?></p><div class="mega-links"><?php foreach ($col['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><span><?php echo esc_html($link['label']); ?></span><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?></div></div><?php endforeach; ?></div>
+              <?php else : ?>
               <div class="mega-links"><?php foreach ($item['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><span><?php echo esc_html($link['label']); ?></span><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?></div>
+              <?php endif; ?>
             </div></div>
           <?php endforeach; ?>
         </nav>
@@ -37,7 +41,7 @@
             <span><?php echo esc_html($group['label']); ?></span><?php echo cc_icon('plus'); ?>
           </button>
           <div class="mobile-category-links" id="mobile-category-<?php echo esc_attr($group['id']); ?>" hidden>
-            <?php foreach ($group['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><?php echo esc_html($link['label']); ?><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?>
+            <?php if (!empty($group['groups'])) : foreach ($group['groups'] as $col) : ?><p class="mobile-group-title"><?php echo esc_html($col['title']); ?></p><?php foreach ($col['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><?php echo esc_html($link['label']); ?><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; endforeach; else : foreach ($group['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><?php echo esc_html($link['label']); ?><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; endif; ?>
           </div>
         </div>
       <?php endforeach; ?>

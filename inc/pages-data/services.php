@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) exit;
 
 return [
     'logistics-procurement' => [
-        'title' => 'Logistics & Procurement Services', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 21,
+        'title' => 'Logistics & Procurement', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 21,
         'content' => [
             'seo' => [
                 'title' => 'Logistics & Procurement Services | Competitive Choice',
@@ -14,7 +14,7 @@ return [
                 'og_description' => 'A nimble logistics and procurement partner for organizations that support critical infrastructure. Tell us what you need.',
                 'schema_about' => 'Logistics, warehousing and procurement services',
             ],
-            'banner' => ['image' => 'svc-logistics-banner.jpg', 'title' => 'Strategic Logistics & Procurement for Infrastructure-Driven Operations',
+            'banner' => ['image' => 'svc-logistics-banner-v2.jpg', 'title' => 'Strategic Logistics & Procurement for Infrastructure-Driven Operations',
                 'lead' => 'When a part, a pump or a pallet of supplies arrives late, the whole operation feels it. We make sure it does not, with a hands-on team and a centrally located Houston warehouse.'],
             'overview' => [
                 'title' => 'A trusted logistics and procurement partner for critical infrastructure',
@@ -78,7 +78,7 @@ return [
     ],
 
     'program-scheduling' => [
-        'title' => 'Program & Scheduling Services', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 22,
+        'title' => 'Program Scheduling & Management', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 22,
         'content' => [
             'seo' => [
                 'title' => 'Program & Scheduling Services for MEP Teams | Competitive Choice',
@@ -87,7 +87,7 @@ return [
                 'og_description' => 'Responsive scheduling and delivery coordination for MEP and general contractors. Tell us about your project.',
                 'schema_about' => 'Construction program management and scheduling services',
             ],
-            'banner' => ['image' => 'svc-program-banner.jpg', 'title' => 'End-to-End Program Management',
+            'banner' => ['image' => 'svc-program-banner-v2.jpg', 'title' => 'End-to-End Program Management',
                 'lead' => 'Personalized scheduling and delivery coordination that keeps MEP and general contractor teams on time, every time.'],
             'overview' => [
                 'title' => 'Programs and scheduling built around your construction milestones',
@@ -150,7 +150,7 @@ return [
     ],
 
     'drain-services' => [
-        'title' => 'Drain Services', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 23,
+        'title' => 'Drain Maintenance', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 23,
         'content' => [
             'seo' => [
                 'title' => 'Drain Care Services: Wastewater, Kitchen & Dialysis | Competitive Choice',
@@ -159,7 +159,7 @@ return [
                 'og_description' => 'Preventive, eco-conscious drain maintenance for healthcare, education, government and food service.',
                 'schema_about' => 'Drain care and wastewater maintenance services',
             ],
-            'banner' => ['image' => 'svc-drain-banner.jpg', 'title' => 'Wastewater, Kitchen and Dialysis Drain Services',
+            'banner' => ['image' => 'svc-drain-banner-v2.jpg', 'title' => 'Wastewater, Kitchen and Dialysis Drain Services',
                 'lead' => 'Preventive, eco-conscious drain care that keeps systems clean, free-flowing and compliant.'],
             'overview' => [
                 'title' => 'Total Drain Care that protects your facility',
@@ -170,7 +170,7 @@ return [
                 ],
             ],
             'problems' => [
-                'title' => 'The problems our Drain services solve', 'description' => 'The challenges that slow down facility operations, and how we address each one.',
+                'title' => 'The problems our Drain Maintenance services solve', 'description' => 'The challenges that slow down facility operations, and how we address each one.',
                 'items' => [
                     ['title' => 'Clogs and backups', 'description' => 'Fats, oils, grease and organic matter build up in high-use lines. Biological treatments break them down before they block.'],
                     ['title' => 'Foul drain odors', 'description' => 'Odor-causing bacteria thrive in neglected drains. Regular treatment removes the source of the smell.'],
@@ -223,7 +223,7 @@ return [
     ],
 
     'air-scenting-services' => [
-        'title' => 'Air Scenting Services', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 24,
+        'title' => 'Air Scenting', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 24,
         'content' => [
             'seo' => [
                 'title' => 'Commercial Air Scenting Services | Competitive Choice',
@@ -232,7 +232,7 @@ return [
                 'og_description' => 'Create a signature scent experience in lobbies, restrooms and breakrooms with turnkey installation and service.',
                 'schema_about' => 'Commercial air scenting services',
             ],
-            'banner' => ['image' => 'svc-scenting-banner.jpg', 'title' => 'Enhance Your Facility’s Environment',
+            'banner' => ['image' => 'svc-scenting-banner-v2.jpg', 'title' => 'Enhance Your Facility’s Environment',
                 'lead' => 'Advanced air scenting that supports health, comfort and brand experience, with turnkey installation and service.'],
             'overview' => [
                 'title' => 'Air scenting that elevates the atmosphere of your facility',
@@ -304,7 +304,7 @@ return [
                 'og_description' => 'Eliminate odors at the source in the most challenging environments. Tell us where you need it.',
                 'schema_about' => 'Odor control solutions for institutional and industrial facilities',
             ],
-            'banner' => ['image' => 'svc-odor-banner.jpg', 'title' => 'Targeted Odor Control for Essential Environments',
+            'banner' => ['image' => 'svc-odor-banner-v2.jpg', 'title' => 'Targeted Odor Control for Essential Environments',
                 'lead' => 'Eliminate odors at the source in schools, treatment plants, healthcare centers and commercial buildings.'],
             'overview' => [
                 'title' => 'Odor control that protects hygiene, safety and reputation',
@@ -368,7 +368,7 @@ return [
     ],
 
     'work-order-request-call-center' => [
-        'title' => 'Work Order Request Call Center', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 26,
+        'title' => 'Facility Call Center and Service Request', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 26,
         'content' => [
             'seo' => [
                 'title' => 'Facility Work Order Request Call Center | Competitive Choice',
@@ -377,7 +377,7 @@ return [
                 'og_description' => 'Streamlined service ticket management for facility managers, with real-time visibility and reporting.',
                 'schema_about' => 'Facility work order call center services',
             ],
-            'banner' => ['image' => 'svc-callcenter-banner.jpg', 'title' => 'Streamlined Service Ticket Management',
+            'banner' => ['image' => 'svc-callcenter-banner-v2.jpg', 'title' => 'Streamlined Service Ticket Management',
                 'lead' => 'A dedicated call center that takes in, tracks and follows up on facility work orders so your staff can focus on core work.'],
             'overview' => [
                 'title' => 'A central hub for facility service requests',
@@ -434,6 +434,151 @@ return [
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Logistics & Procurement Services', 'link' => '/services/logistics-procurement/'],
                 ['label' => 'Facility Maintenance, MRO & Tools', 'link' => '/products-and-materials/facility-maintenance-mro-tools/'],
+                ['label' => 'All Services', 'link' => 'link:services'],
+            ]],
+        ],
+    ],
+    'chemical-supply-program' => [
+        'title' => 'Chemical Supply Program', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 27,
+        'content' => [
+            'seo' => [
+                'title' => 'Chemical Supply Program for Facilities | Competitive Choice',
+                'description' => 'A managed janitorial and sanitation chemical supply program: right-sized products, scheduled replenishment, safety documentation and consistent results for facilities. Request a quote.',
+                'og_title' => 'Chemical Supply Program | Competitive Choice',
+                'og_description' => 'Reliable, compliant chemical supply for facilities, with the right products at the right time.',
+                'schema_about' => 'Facility chemical supply program',
+            ],
+            'banner' => ['image' => 'svc-chemical-banner-v2.jpg', 'title' => 'A Chemical Supply Program Built Around Your Facility',
+                'lead' => 'The right products, the right quantities and the right paperwork, delivered on a schedule so your teams never run short.'],
+            'overview' => [
+                'title' => 'Dependable chemical supply, without the guesswork',
+                'paragraphs' => [
+                    'Running out of a key cleaner, or storing far more than you need, are two sides of the same problem. Our Chemical Supply Program takes that burden off your team by matching products to your facility, your surfaces and your standards, then keeping them stocked.',
+                    'Competitive Choice has supplied government, commercial and institutional buyers from Houston since 2003. We source from trusted manufacturers, confirm that products fit your use, and provide the documentation your safety and compliance teams expect.',
+                    'The result is consistent cleaning performance, simpler purchasing and fewer surprises, whether you operate a single building or a portfolio of sites.',
+                ],
+            ],
+            'problems' => [
+                'title' => 'The problems our Chemical Supply Program solves', 'description' => 'The chemical purchasing challenges that slow down facility operations, and how we address each one.',
+                'items' => [
+                    ['title' => 'Stock-outs that stop work', 'description' => 'Running out of a cleaner or disinfectant halts routine tasks. Scheduled replenishment keeps essentials on the shelf.'],
+                    ['title' => 'Too many products, too little consistency', 'description' => 'Overlapping products and brands confuse crews. We streamline your lineup to what each task needs.'],
+                    ['title' => 'Overstocking and waste', 'description' => 'Excess inventory ties up cash and storage. Right-sized quantities reduce waste and expiration.'],
+                    ['title' => 'Safety and compliance paperwork', 'description' => 'Safety data sheets and labeling must be current and on hand. We help keep documentation organized and accessible.'],
+                    ['title' => 'Uneven results across sites', 'description' => 'Different products at each site produce different outcomes. A standard program delivers consistent results.'],
+                    ['title' => 'Time lost on reordering', 'description' => 'Chasing quotes and orders pulls teams from their work. We manage ordering so you do not have to.'],
+                ],
+            ],
+            'equipment' => [
+                'title' => 'What our {{Chemical Supply Program}} includes', 'description' => 'A practical program that keeps your facility stocked and compliant.',
+                'items' => [
+                    ['title' => 'Product Selection', 'icon' => '', 'image' => '', 'description' => 'Cleaners, disinfectants, degreasers and specialty chemicals matched to your surfaces, standards and budget.', 'items' => []],
+                    ['title' => 'Scheduled Replenishment', 'icon' => '', 'image' => '', 'description' => 'Deliveries planned around your usage so supplies arrive before they run out.', 'items' => []],
+                    ['title' => 'Safety Documentation', 'icon' => '', 'image' => '', 'description' => 'Safety data sheets and product information organized for your safety and compliance teams.', 'items' => []],
+                    ['title' => 'Program Review', 'icon' => '', 'image' => '', 'description' => 'Regular check-ins to adjust products and quantities as your facility changes.', 'items' => []],
+                ],
+            ],
+            'applications' => [
+                'title' => 'Where our chemical supply program fits', 'description' => 'Facilities that depend on consistent, compliant cleaning.',
+                'items' => [
+                    ['title' => 'Healthcare & education', 'description' => 'High-touch environments where cleaning standards and documentation matter.'],
+                    ['title' => 'Government & municipal', 'description' => 'Multi-site buildings that need standard products and organized records.'],
+                    ['title' => 'Commercial & hospitality', 'description' => 'Busy properties that need dependable supply and consistent results.'],
+                ],
+            ],
+            'process' => [
+                'title' => 'How our Chemical Supply Program works', 'description' => 'From a quick review of your needs to dependable ongoing supply.',
+                'items' => [
+                    ['title' => 'Tell us what you use', 'description' => 'Share your current products, quantities, sites and any standards you must meet.'],
+                    ['title' => 'We recommend a program', 'description' => 'We propose a streamlined product lineup and right-sized quantities for your facility.'],
+                    ['title' => 'Scheduled delivery', 'description' => 'Products are replenished on a schedule that follows your actual usage.'],
+                    ['title' => 'Review and adjust', 'description' => 'We check in regularly and adjust the program as your needs change.'],
+                ],
+                'button_label' => 'REQUEST A QUOTE',
+            ],
+            'faq' => ['items' => [
+                ['question' => 'What is the Chemical Supply Program?', 'answer' => 'A managed program that selects, supplies and replenishes the janitorial and sanitation chemicals your facility uses, with the documentation your teams need.'],
+                ['question' => 'Can the program cover multiple sites?', 'answer' => 'Yes. A standard product lineup across sites helps deliver consistent results and simpler purchasing.'],
+                ['question' => 'Do you provide safety data sheets?', 'answer' => 'Yes. We help keep product safety documentation organized and available to your team.'],
+                ['question' => 'Does it work with dispensing equipment?', 'answer' => 'Yes. It pairs well with our dispensing systems, which help control dosing and reduce waste.'],
+                ['question' => 'How do I get started?', 'answer' => 'Contact our team with your products, sites and timing. We will recommend a program and confirm scope and pricing in a proposal.'],
+            ]],
+            'related' => ['title' => 'Related services and pages', 'links' => [
+                ['label' => 'Dispensing Systems', 'link' => '/services/dispensing-systems/'],
+                ['label' => 'Janitorial & Sanitation Supplies', 'link' => 'link:products'],
+                ['label' => 'All Services', 'link' => 'link:services'],
+            ]],
+        ],
+    ],
+
+    'dispensing-systems' => [
+        'title' => 'Dispensing Systems', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 28,
+        'content' => [
+            'seo' => [
+                'title' => 'Chemical Dispensing Systems for Facilities | Competitive Choice',
+                'description' => 'Wall-mounted and proportioning chemical dispensing systems with installation, training and service support. Accurate dosing, less waste and safer handling. Request a quote.',
+                'og_title' => 'Dispensing Systems | Competitive Choice',
+                'og_description' => 'Accurate dosing, safer handling and less waste with professionally installed dispensing systems.',
+                'schema_about' => 'Chemical dispensing system installation and service',
+            ],
+            'banner' => ['image' => 'svc-dispensing-banner-v2.jpg', 'title' => 'Dispensing Systems That Dose It Right, Every Time',
+                'lead' => 'Accurate dilution, safer handling and less waste, installed, calibrated and supported by our team.'],
+            'overview' => [
+                'title' => 'Precise dosing that protects your people and your budget',
+                'paragraphs' => [
+                    'Pouring concentrates by hand leads to over-use, spills and inconsistent results. Properly installed dispensing systems deliver the right dilution every time, which protects your crews, your surfaces and your budget.',
+                    'Competitive Choice supplies and supports dispensing systems for facilities of every size. We help select the right equipment, install it, train your staff and keep it running, so the benefits last well beyond day one.',
+                    'Paired with our Chemical Supply Program, dispensing systems give you a simple, repeatable way to clean well and control cost.',
+                ],
+            ],
+            'problems' => [
+                'title' => 'The problems our Dispensing Systems solve', 'description' => 'The handling and dosing challenges that slow down facility operations, and how we address each one.',
+                'items' => [
+                    ['title' => 'Over-use of concentrates', 'description' => 'Eyeballing dilution wastes product. Metered dispensing uses only what the task needs.'],
+                    ['title' => 'Inconsistent cleaning results', 'description' => 'Varying dilution changes performance. Accurate dosing makes results repeatable.'],
+                    ['title' => 'Spills and unsafe handling', 'description' => 'Pouring and mixing by hand exposes staff to risk. Closed dispensing reduces contact and spills.'],
+                    ['title' => 'Training gaps', 'description' => 'New staff need simple routines. Clear setups and training make correct use easy.'],
+                    ['title' => 'Equipment downtime', 'description' => 'Dispensers that fail leave crews without options. We provide service support to keep them running.'],
+                    ['title' => 'Unclear chemical costs', 'description' => 'Hand dosing hides true usage. Metered systems make costs easier to see and control.'],
+                ],
+            ],
+            'equipment' => [
+                'title' => 'What our {{dispensing system services}} include', 'description' => 'Equipment, setup and support working together.',
+                'items' => [
+                    ['title' => 'Equipment Selection', 'icon' => '', 'image' => '', 'description' => 'Wall-mounted and proportioning dispensers matched to your products, water supply and space.', 'items' => []],
+                    ['title' => 'Installation & Calibration', 'icon' => '', 'image' => '', 'description' => 'Professional setup and calibration so every dispenser delivers the correct dilution.', 'items' => []],
+                    ['title' => 'Staff Training', 'icon' => '', 'image' => '', 'description' => 'Simple, practical instruction so crews use equipment correctly and safely.', 'items' => []],
+                    ['title' => 'Service & Support', 'icon' => '', 'image' => '', 'description' => 'Responsive support to keep dispensers working and your teams productive.', 'items' => []],
+                ],
+            ],
+            'applications' => [
+                'title' => 'Where dispensing systems matter most', 'description' => 'Facilities that clean at scale and need control.',
+                'items' => [
+                    ['title' => 'Healthcare & education', 'description' => 'Consistent disinfection and clear usage routines across many rooms.'],
+                    ['title' => 'Kitchens & food service', 'description' => 'Reliable dilution for sanitizers and degreasers, with safer handling.'],
+                    ['title' => 'Government & commercial buildings', 'description' => 'Standard setups across janitorial closets and multiple sites.'],
+                ],
+            ],
+            'process' => [
+                'title' => 'How our Dispensing Systems program works', 'description' => 'From assessment to a dependable, supported setup.',
+                'items' => [
+                    ['title' => 'Assess your needs', 'description' => 'Share your products, sites and how your crews clean today.'],
+                    ['title' => 'We recommend equipment', 'description' => 'We propose dispensers and a layout that fit your products and space.'],
+                    ['title' => 'Install and train', 'description' => 'Equipment is installed and calibrated, and your staff is trained to use it.'],
+                    ['title' => 'Support and adjust', 'description' => 'We keep systems running and adjust as your facility changes.'],
+                ],
+                'button_label' => 'REQUEST A QUOTE',
+            ],
+            'faq' => ['items' => [
+                ['question' => 'What are dispensing systems?', 'answer' => 'Equipment that mixes and delivers chemicals at the correct dilution, replacing hand pouring and measuring.'],
+                ['question' => 'Do you install the equipment?', 'answer' => 'Yes. We help select, install and calibrate dispensers, and train your staff on correct use.'],
+                ['question' => 'Can systems support multiple sites?', 'answer' => 'Yes. Standard setups across sites keep results consistent and simplify training.'],
+                ['question' => 'What if a dispenser stops working?', 'answer' => 'Contact our team. We provide service support to get equipment back in operation. Response timing is confirmed in your proposal.'],
+                ['question' => 'How do I get started?', 'answer' => 'Contact our team with your products, sites and timing. We will recommend equipment and confirm scope and pricing in a proposal.'],
+            ]],
+            'related' => ['title' => 'Related services and pages', 'links' => [
+                ['label' => 'Chemical Supply Program', 'link' => '/services/chemical-supply-program/'],
+                ['label' => 'Drain Maintenance', 'link' => '/services/drain-services/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
