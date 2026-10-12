@@ -136,7 +136,7 @@ return [
         ],
     ],
     'fire-safety' => [
-        'title' => 'Fire & Safety',
+        'title' => 'Fire Suppression',
         'parent' => 'products-and-materials',
         'template' => 'category',
         'group' => 'product',
@@ -259,7 +259,7 @@ return [
         ],
     ],
     'hvac-package-units' => [
-        'title' => 'HVAC & HVAC Package Units',
+        'title' => 'Package Units & HVAC',
         'parent' => 'products-and-materials',
         'template' => 'category',
         'group' => 'product',
@@ -390,7 +390,7 @@ return [
         ],
     ],
     'plumbing-supplies' => [
-        'title' => 'Plumbing Supplies',
+        'title' => 'Plumbing & PVF',
         'parent' => 'products-and-materials',
         'template' => 'category',
         'group' => 'product',
@@ -517,7 +517,7 @@ return [
         ],
     ],
     'electrical-lighting-cable' => [
-        'title' => 'Electrical, Lighting & Cable',
+        'title' => 'Electrical, Lighting & Cable Wire',
         'parent' => 'products-and-materials',
         'template' => 'category',
         'group' => 'product',
@@ -640,7 +640,7 @@ return [
         ],
     ],
     'safety-security' => [
-        'title' => 'Safety & Security',
+        'title' => 'Safety',
         'parent' => 'products-and-materials',
         'template' => 'category',
         'group' => 'product',
@@ -1025,7 +1025,7 @@ return [
         ],
     ],
     'custodial-janitorial-sanitation' => [
-        'title' => 'Custodial, Janitorial & Sanitation',
+        'title' => 'Cleaning & Sanitation',
         'parent' => 'products-and-materials',
         'template' => 'category',
         'group' => 'product',
@@ -1039,7 +1039,7 @@ return [
                 'schema_about' => 'Custodial, janitorial and sanitation supplies',
             ],
             'banner' => [
-                'image' => 'jan-banner.jpg',
+                'image' => 'chem-cleaning-banner.jpg',
                 'title' => 'Custodial & Jan/San Supplies for Operational Excellence',
                 'lead' => 'Janitorial and sanitation products built for high-traffic, high-compliance settings.',
             ],

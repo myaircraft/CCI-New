@@ -16,6 +16,7 @@ function cc_pages_data() {
     if ($pages === null) {
         $pages = array_merge(
             require __DIR__ . '/pages-data/products.php',
+            require __DIR__ . '/pages-data/chemical-supplies.php',
             require __DIR__ . '/pages-data/services.php',
             require __DIR__ . '/pages-data/industries.php',
             require __DIR__ . '/pages-data/about.php',
