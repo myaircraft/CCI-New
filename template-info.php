@@ -88,7 +88,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <div class="info-article">
         <?php if (($b['kicker'] ?? '') !== '') : ?><p class="info-kicker"><?php echo esc_html($b['kicker']); ?></p><?php endif; ?>
         <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
-        <?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?>
+        <?php foreach ($paragraphs as $n => $p) : $text = preg_replace(['/\{\{(.+?)\}\}/', '/\*\*(.+?)\*\*/'], ['<span class="hl">$1</span>', '<strong>$1</strong>'], esc_html($p)); ?><p<?php echo $n === 0 ? ' class="is-lead"' : ''; ?>><?php echo $text; ?></p><?php endforeach; ?>
       </div>
       <?php endif; ?>
 
