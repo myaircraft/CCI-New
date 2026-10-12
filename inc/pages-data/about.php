@@ -201,7 +201,7 @@ return [
                     'Competitive Choice has been awarded multiple cooperative contracts, so our customers can reach a wide range of high-quality products and services through pre-negotiated, competitively priced agreements.',
                 ]],
                 ['layout' => 'coops', 'id' => 'cooperative', 'title' => 'Cooperative contracts', 'description' => 'Open a card to see the contract numbers awarded to Competitive Choice.', 'items' => [
-                    ['image' => $img('tips.png'), 'title' => 'TIPS', 'description' => 'As a recipient of the Texas Interlocal Purchasing System (TIPS) contract, we are able to serve public entities in Texas with a wide array of procurement solutions. This contract allows us to offer competitive pricing and efficient procurement services to our Texas-based customers.', 'lines' => [
+                    ['image' => $img('coop-tips-v2.png'), 'title' => 'TIPS', 'description' => 'As a recipient of the Texas Interlocal Purchasing System (TIPS) contract, we are able to serve public entities in Texas with a wide array of procurement solutions. This contract allows us to offer competitive pricing and efficient procurement services to our Texas-based customers.', 'lines' => [
                         '230903 - Industrial and Facility Equipment, Chemicals, Supplies, and Services',
                         '23100201 - Energy and Water Efficiency Goods and Services Non-JOC',
                         '240102 - Emergency Responder Supplies, Equipment and Services',
@@ -217,7 +217,7 @@ return [
                         '747-24 - Custodial Supplies and Equipment',
                         '790-26 - Energy-Saving Lighting Products',
                     ]],
-                    ['image' => $img('goood.png'), 'title' => 'Good Buy', 'description' => 'Our inclusion in the Good Buy cooperative contract further strengthens our commitment to serving public entities in Texas. Through this contract, we ensure that our customers have access to reliable products and services that meet their specific needs.', 'lines' => [
+                    ['image' => $img('coop-goodbuy-v2.png'), 'title' => 'Good Buy', 'description' => 'Our inclusion in the Good Buy cooperative contract further strengthens our commitment to serving public entities in Texas. Through this contract, we ensure that our customers have access to reliable products and services that meet their specific needs.', 'lines' => [
                         '25-26 6D000 - Office: Supplies/Equipment',
                         '26 7N000 - Facility Services: Building / Equipment Maintenance / Repair',
                         '26-27 2B000 - Custodial / Janitorial: Cleaning Supplies / Equipment',
@@ -231,7 +231,7 @@ return [
                         'OD-400-23 - Office Supplies and Related Items',
                         'OD-414-24 - Custodial Supplies, Equipment, and Related Items',
                     ]],
-                    ['image' => $img('allied.png'), 'title' => 'Allied States', 'description' => 'We are honored to be part of the Allied State Cooperative contract, which allows us to serve public entities in various states across the nation. This cooperative agreement ensures that our customers outside of Texas can benefit from our procurement solutions, accessing a wide array of products and services while enjoying cost savings and efficiency.', 'lines' => [
+                    ['image' => $img('coop-allied-v2.png'), 'title' => 'Allied States', 'description' => 'We are honored to be part of the Allied State Cooperative contract, which allows us to serve public entities in various states across the nation. This cooperative agreement ensures that our customers outside of Texas can benefit from our procurement solutions, accessing a wide array of products and services while enjoying cost savings and efficiency.', 'lines' => [
                         '23-7457 - Maintenance, Repair, and Operation (MRO) Equipment, Supplies, Materials, and Services',
                         '25-7522 - Medical Supplies, Equipment, and Related Services (Supplemental)',
                     ]],
