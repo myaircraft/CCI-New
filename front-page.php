@@ -32,7 +32,7 @@ $first = $products[0] ?? ['name' => '', 'hero_line' => ''];
     </nav>
   </section>
 
-  <section class="market-strip" aria-label="Markets served"><div class="site-container market-inner"><p class="market-label"><?php echo cc_html(cc_page('markets.label')); ?></p><div class="market-names"><?php foreach (cc_page_list('markets.items') as $market) : ?><p class="market-name"><?php echo esc_html($market); ?></p><?php endforeach; ?></div></div></section>
+  <section class="market-strip" aria-label="Markets served"><div class="site-container market-inner"><p class="market-label"><?php echo cc_html(cc_page('markets.label')); ?></p><?php if (cc_page_has('markets.items')) : ?><div class="market-names"><?php foreach (cc_page_list('markets.items') as $market) : ?><p class="market-name"><?php echo esc_html($market); ?></p><?php endforeach; ?></div><?php endif; ?></div></section>
 
   <section id="products-supplies" class="section-space"><div class="site-container">
     <?php cc_section_title(cc_page('products.topic'), cc_page('products.heading'), cc_page('products.description')); ?>

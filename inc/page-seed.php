@@ -22,8 +22,8 @@ return [
             'explore_label' => 'EXPLORE CATEGORY',
         ],
         'markets' => [
-            'label' => 'Supporting the organizations<br>that keep the world moving.',
-            'items' => ['GOVERNMENT', 'COMMERCIAL', 'INDUSTRIAL', 'CONSTRUCTION', 'FACILITIES'],
+            'label' => 'Supporting the government, commercial, industrial, construction and facility organizations that keep the world moving.',
+            'items' => [],
         ],
         'products' => [
             'topic'           => 'PRODUCTS & SUPPLIES',
