@@ -435,3 +435,9 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .trust-stats strong { display: block; color: var(--brand); font-size: var(--fs-subtitle); font-weight: 900; line-height: 1; letter-spacing: .01em; }
 .trust-stats span { display: block; margin-top: var(--text-gap-small); color: var(--muted-foreground); font-size: var(--fs-caption); line-height: var(--text-leading); }
 @media (max-width: 900px) { .trust-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Process steps: calmer type scale, clear title/description separation */
+.category-page .process-steps h3 { margin: 0 0 var(--text-gap); font-size: calc(var(--fs-card-title) - 1px); }
+.process-steps p { font-size: calc(var(--fs-body) - 1px); line-height: 1.5; }
+.process-steps p::before { content: ""; display: block; width: 28px; height: 2px; margin: 0 auto var(--text-gap); background: var(--primary); }
+@media (max-width: 767px) { .category-page .process-steps p::before { margin-left: 0; } }
