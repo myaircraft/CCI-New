@@ -718,3 +718,8 @@ html { scroll-behavior: smooth; }
 #products-supplies .group-links a, #services .group-links a { padding-block: 11.3px; }
 
 .industry-list .industry-item { padding-block: 8.5px; }
+
+/* Overall site width: one content column for header, sections, banners and footer */
+:root { --site-width: 1240px; }
+@media (min-width: 1351px) { .site-container { width: min(var(--site-width), 100% - 96px); } }
+@media (min-width: 768px) and (max-width: 1350px) { .site-container { width: min(var(--site-width), 100% - 56px); } }
