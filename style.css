@@ -657,3 +657,4 @@ html { scroll-behavior: smooth; }
 .info-cards.has-learn .info-card { padding-block: 47px; padding-inline: var(--text-gap-large); }
 .info-cards.has-learn .card-learn { align-self: center; margin-top: var(--text-gap-large); padding: 10.5px 17px; gap: 8.74px; }
 .info-cards.has-learn .info-card p { margin-bottom: 0; }
+.info-cards.has-learn .card-learn { margin-top: calc(var(--text-gap-large) + 10px); }
