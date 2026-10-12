@@ -17,7 +17,7 @@ return [
         ],
         'hero' => [
             'eyebrow'       => 'PROCUREMENT / PRODUCTS / SERVICES / SOLUTIONS',
-            'title'         => 'Your single source for critical supplies.<br><span>Services & solutions.</span>',
+            'title'         => 'Your single source for Critical Supplies, Services & Solutions.',
             'quote_label'   => 'REQUEST A QUOTE',
             'explore_label' => 'EXPLORE CATEGORY',
         ],
