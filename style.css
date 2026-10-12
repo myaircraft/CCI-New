@@ -477,3 +477,29 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .footer-grid h3 a { display: inline; margin: 0; color: inherit; font-size: inherit; font-weight: inherit; }
 .footer-grid h3 + h3 { margin-top: var(--text-gap-large); }
 @media (max-width: 767px) { .footer-grid .footer-sub { font-size: calc(var(--fs-micro) + 2px); } }
+
+/* Contact page: bolder banner line, calmer scale */
+.category-banner.is-plain .category-lead { max-width: 24ch; font-size: clamp(22px, 3.2vw, 32.5px); font-weight: 800; line-height: var(--title-leading); }
+.info-layout-contact .info-kicker { font-size: var(--fs-micro); margin-bottom: var(--text-gap); }
+.info-layout-contact .contact-layout { max-width: 960px; gap: var(--topic-gap); }
+.info-layout-contact .contact-tiles { gap: var(--text-gap); }
+.info-layout-contact .contact-tiles li { grid-template-columns: 44px minmax(0, 1fr); gap: var(--text-gap); padding-bottom: var(--text-gap); }
+.info-layout-contact .contact-icon { width: 44px; height: 44px; }
+.info-layout-contact .contact-icon svg { width: 20px; height: 20px; }
+.info-layout-contact .contact-tiles h3 { font-size: var(--fs-micro); letter-spacing: .12em; }
+.info-layout-contact .contact-tiles p { font-size: 14px; line-height: 1.5; }
+.info-layout-contact .contact-form-card { padding: var(--text-gap-large) var(--topic-gap); gap: var(--text-gap); }
+.info-layout-contact .contact-form-card > h3 { font-size: 18px; }
+.info-layout-contact .contact-form-note { font-size: 14px; }
+.info-layout-contact .contact-form label { gap: 6px; font-size: var(--fs-micro); }
+.info-layout-contact .contact-form .form-grid { gap: var(--text-gap); }
+.info-layout-contact .contact-form input, .info-layout-contact .contact-form textarea { padding: 9px 12px; font-size: 14px; line-height: 1.5; }
+.info-layout-contact .contact-form textarea { min-height: 110px; }
+.info-layout-contact .contact-form button { font-size: var(--fs-caption); }
+.info-layout-contact .contact-map { max-width: 960px; margin-top: var(--topic-gap); }
+.info-layout-contact .contact-map iframe { height: 300px; }
+.info-layout-centered#lets-source { padding-block: var(--topic-gap) 0; }
+.info-layout-centered#lets-source .info-centered h2 { font-size: var(--fs-subtitle); }
+.info-layout-centered#lets-source .info-centered p { font-size: 14px; max-width: 56ch; margin-inline: auto; }
+.final-cta.is-photo-only { min-height: 420px; }
+.final-cta.is-photo-only:before { background: none; }

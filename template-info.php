@@ -140,7 +140,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php if ($layout === 'centered') : ?>
       <div class="info-centered">
         <?php if (($b['kicker'] ?? '') !== '') : ?><p class="info-kicker"><?php echo esc_html($b['kicker']); ?></p><?php endif; ?>
-        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
+        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo !empty($b['raw_title']) ? nl2br(esc_html($b['title'])) : esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
         <?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?>
       </div>
       <?php endif; ?>

@@ -4,14 +4,17 @@ $phone_href = cc_content('company.phone_href');
 $email = cc_content('company.email');
 ?>
 <footer>
-  <section class="final-cta photo-band section-space" aria-labelledby="footer-cta-title">
+  <?php $photo_only = is_page('contact-us'); ?>
+  <section class="final-cta photo-band section-space<?php echo $photo_only ? ' is-photo-only' : ''; ?>"<?php echo $photo_only ? ' aria-hidden="true"' : ' aria-labelledby="footer-cta-title"'; ?>>
     <img class="band-photo" src="<?php echo esc_url(cc_img(cc_content('footer.cta_image'))); ?>" alt="<?php echo esc_attr(cc_content('footer.cta_image_alt')); ?>" width="1920" height="1024" loading="lazy">
+    <?php if (!$photo_only) : ?>
     <div class="site-container final-layout band-content">
       <h2 id="footer-cta-title"><?php echo cc_html(cc_content('footer.cta_title')); ?></h2>
       <p><?php cc_e('footer.cta_text'); ?></p>
       <div class="final-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn('default', 'lg'); ?>"><?php cc_e('footer.cta_primary_label'); ?></a><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn('default', 'lg'); ?>"><?php cc_e('footer.cta_secondary_label'); ?></a></div>
       <div class="contact-details"><div><a href="<?php echo esc_attr($phone_href); ?>"><?php echo esc_html($phone); ?></a><p><?php echo esc_html(cc_content('company.hours_days') . ' · ' . cc_content('company.hours_time')); ?></p></div><a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a></div>
     </div>
+    <?php endif; ?>
   </section>
   <div class="site-footer"><div class="site-container">
     <div class="footer-top"><a href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php echo esc_attr(cc_content('company.name') . ' home'); ?>"><img class="brand-logo" src="<?php echo esc_url(cc_img(cc_content('assets.logo'))); ?>" alt="<?php echo esc_attr(cc_content('company.name')); ?>" width="1920" height="240" loading="lazy"></a><p class="footer-tagline"><?php cc_e('company.tagline'); ?></p></div>
