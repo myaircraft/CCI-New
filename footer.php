@@ -38,7 +38,7 @@ $email = cc_content('company.email');
         <div class="footer-col<?php echo $wide ? ' is-wide' : ''; ?>">
           <?php foreach ($col['direct'] as $d) : ?><h3><a href="<?php echo esc_url(cc_link($d['link'])); ?>"><?php echo esc_html($d['label']); ?></a></h3><?php endforeach; ?>
           <?php if ($ni) : ?>
-          <h3><?php if (isset($landing[$ni['id'] ?? ''])) : ?><a href="<?php echo esc_url(cc_link($landing[$ni['id']])); ?>"><?php echo esc_html($ni['label']); ?></a><?php else : echo esc_html($ni['label']); endif; ?></h3>
+          <h3><?php if (in_array($ni['id'] ?? '', ['about'], true)) : ?><a href="<?php echo esc_url(cc_link($landing[$ni['id']])); ?>"><?php echo esc_html($ni['label']); ?></a><?php else : echo esc_html($ni['label']); endif; ?></h3>
           <?php if (!empty($ni['groups'])) : ?>
             <div class="<?php echo $wide ? 'footer-subcols' : 'footer-substack'; ?>">
             <?php foreach ($ni['groups'] as $g) : ?><div><p class="footer-sub"><?php echo esc_html($g['title']); ?></p><?php $link_list($g['items']); ?></div><?php endforeach; ?>

@@ -538,3 +538,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .category-page .info-layout-contact .contact-tiles li p, .category-page .info-layout-contact .contact-tiles li a { font-size: 13px; line-height: 1.45; font-weight: 500; }
 .category-page .info-layout-contact .contact-tiles li a { font-weight: 600; }
 @media (max-width: 767px) { .category-page .info-layout-contact .contact-tiles li p, .category-page .info-layout-contact .contact-tiles li a { font-size: 14px; } }
+
+/* Footer headings that are labels, not links */
+.site-footer .footer-grid h3:not(:has(a)) { cursor: default; }
+.site-footer .footer-grid h3:not(:has(a)):hover { font-weight: 800; }
