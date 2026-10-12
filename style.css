@@ -704,3 +704,7 @@ html { scroll-behavior: smooth; }
 #products-supplies .group-links a, #services .group-links a { padding-inline: 0; }
 #products-supplies .group-links a:hover, #products-supplies .group-links a:focus-visible,
 #services .group-links a:hover, #services .group-links a:focus-visible { padding-left: 0; box-shadow: -14.15px 0 0 var(--primary), 14.15px 0 0 var(--primary); }
+
+/* Home sections: heavier headings, tighter group titles (the font stops at 800, so a hairline stroke adds weight) */
+#products-supplies .section-topic, #services .section-topic { font-weight: 900; -webkit-text-stroke: .7px currentColor; }
+#products-supplies .group-card h3, #services .group-card h3 { font-weight: 900; letter-spacing: .01em; -webkit-text-stroke: .45px currentColor; }
