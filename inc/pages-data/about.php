@@ -101,18 +101,18 @@ return [
                 'og_description' => 'National, state, local and federal certifications that support supplier diversity goals.',
                 'schema_about' => 'Business certifications held by Competitive Choice', 'page_type' => 'AboutPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Certifications', 'lead' => 'Recognized at the national, state, local and federal levels.', 'image' => $img('women6.jpg')],
+            'banner' => ['kicker' => 'ABOUT US', 'title' => 'CERTIFICATIONS', 'tagline' => 'Recognized at the national, state, local and federal levels', 'image' => $img('women6.jpg')],
             'breadcrumb' => $crumb('Certifications'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
                     'Competitive Choice is recognized at the national, state, local and federal levels. These certifications reflect how we run our business, and they help our customers meet their supplier diversity goals.',
                 ]],
-                ['layout' => 'logos', 'id' => 'national', 'title' => 'National certifications', 'items' => [
+                ['layout' => 'logos', 'id' => 'national', 'title' => 'National Certifications', 'items' => [
                     ['image' => $img('wbenc2.png'), 'title' => 'WBENC'],
                     ['image' => $img('minority2.png'), 'title' => 'HMSDC'],
                     ['image' => $img('chicagocertifications.png'), 'title' => 'Chicago certifications'],
                 ]],
-                ['layout' => 'logos', 'id' => 'state-local', 'tint' => true, 'title' => 'State & local certifications', 'items' => [
+                ['layout' => 'logos', 'id' => 'state-local', 'tint' => true, 'title' => 'State & Local Certifications', 'items' => [
                     ['image' => $img('sctrca_2026.png'), 'title' => 'SCTRCA', 'meta' => 'Austin & San Antonio Area'],
                     ['image' => $img('nctrca_2026.png'), 'title' => 'NCTRCA', 'meta' => 'Dallas & Fort Worth Area'],
                     ['image' => $img('hisd_20266.png'), 'title' => 'Houston ISD'],
@@ -121,7 +121,7 @@ return [
                     ['image' => $img('cityofaustin_2026.png'), 'title' => 'City of Austin', 'meta' => 'MBE, SBE, WBE'],
                     ['image' => $img('port_houston.png'), 'title' => 'Port Houston'],
                 ]],
-                ['layout' => 'logos', 'id' => 'federal', 'title' => 'Federal certifications', 'items' => [
+                ['layout' => 'logos', 'id' => 'federal', 'title' => 'Federal Certifications', 'items' => [
                     ['image' => $img('federal_dbe.png'), 'title' => 'DBE', 'meta' => 'Texas, Oklahoma, Illinois and Louisiana'],
                     ['image' => $img('combined_sba.png'), 'title' => 'SBA WOSB / EDWOSB'],
                 ]],
