@@ -364,3 +364,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 /* Lighter blue layer over banner photography (65% opacity) */
 :root { --hero-overlay: oklch(25.8% .061 244 / .65); }
 .category-banner:after { background: oklch(38% .115 248 / .65); }
+
+/* Banner sized to its photo's own proportions so the whole picture shows before the zoom begins */
+.category-banner.is-fit { min-height: clamp(450px, 37.9vw, 700px); }
+.category-banner.is-fit .category-banner-photo { object-position: center top; }
