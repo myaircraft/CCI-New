@@ -714,3 +714,5 @@ html { scroll-behavior: smooth; }
 #products-supplies .group-links, #services .group-links { columns: 1; column-gap: 0; }
 #products-supplies .group-links a, #services .group-links a { white-space: nowrap; }
 @media (max-width: 1100px) { #products-supplies .group-grid, #services .group-grid { max-width: 640px; } }
+
+#products-supplies .group-links a, #services .group-links a { padding-block: 11.3px; }
