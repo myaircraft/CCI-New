@@ -35,7 +35,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       $items = (array) ($b['items'] ?? []);
       $paragraphs = (array) ($b['paragraphs'] ?? []);
     ?>
-    <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?><?php echo !empty($b['tint']) ? ' is-tinted' : ''; ?><?php echo !empty($b['flush']) ? ' is-flush' : ''; ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
+    <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?><?php echo $layout === 'faq' ? ' category-faq' : ''; ?><?php echo !empty($b['tint']) ? ' is-tinted' : ''; ?><?php echo !empty($b['flush']) ? ' is-flush' : ''; ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
       <?php if (!in_array($layout, ['split', 'statement', 'intro', 'centered', 'article', 'video', 'stat'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
       <div class="category-section-heading">
         <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
@@ -112,6 +112,24 @@ $title = cc_page('banner.title') ?: get_the_title();
         <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>
         <?php foreach ($paragraphs as $p) : ?><p class="info-stat-text"><?php echo esc_html($p); ?></p><?php endforeach; ?>
         <p class="info-stat-figure"><strong><?php echo esc_html($b['number'] ?? ''); ?></strong><span><?php echo esc_html($b['number_label'] ?? ''); ?></span></p>
+      </div>
+      <?php endif; ?>
+
+      <?php if ($layout === 'trust') : ?>
+      <div class="info-trust-copy"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div>
+      <?php if (!empty($b['stats'])) : ?><div class="trust-stats"><?php foreach ((array) $b['stats'] as $stat) : ?><div><strong><?php echo esc_html($stat[0] ?? ''); ?></strong><span><?php echo esc_html($stat[1] ?? ''); ?></span></div><?php endforeach; ?></div><?php endif; ?>
+      <?php if (!empty($b['image'])) : ?><figure class="info-trust-photo"><img src="<?php echo esc_url(cc_img($b['image'])); ?>" alt="<?php echo esc_attr($b['image_alt'] ?? ''); ?>" width="2000" height="757" loading="lazy" decoding="async"></figure><?php endif; ?>
+      <?php if (!empty($b['points'])) : ?><ul class="trust-points"><?php foreach ((array) $b['points'] as $point) : ?><li><?php echo cc_icon('check'); ?><?php echo esc_html($point); ?></li><?php endforeach; ?></ul><?php endif; ?>
+      <?php endif; ?>
+
+      <?php if ($layout === 'faq' && $items) : ?>
+      <div class="category-faq-list" data-orientation="vertical" data-accordion>
+        <?php foreach ($items as $fi => $faq) : ?>
+          <div data-state="closed" data-orientation="vertical" class="border-b">
+            <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-expanded="false" data-state="closed" data-orientation="vertical" id="<?php echo esc_attr($bid); ?>-trigger-<?php echo $fi; ?>" aria-controls="<?php echo esc_attr($bid); ?>-panel-<?php echo $fi; ?>" class="flex flex-1 items-center justify-between py-4 text-sm font-medium cursor-pointer transition-all hover:underline text-left [&amp;[data-state=open]&gt;svg]:rotate-180 category-faq-trigger"><span class="category-faq-question"><span class="category-faq-number"><?php echo $fi + 1; ?>.</span><span><?php echo esc_html($faq['question'] ?? ''); ?></span></span><?php echo cc_icon('chevron-down', 'h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200'); ?></button></h3>
+            <div data-state="closed" id="<?php echo esc_attr($bid); ?>-panel-<?php echo $fi; ?>" hidden role="region" aria-labelledby="<?php echo esc_attr($bid); ?>-trigger-<?php echo $fi; ?>" data-orientation="vertical" class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"><div class="pb-4 pt-0 category-faq-answer"><p><?php echo esc_html($faq['answer'] ?? ''); ?></p></div></div>
+          </div>
+        <?php endforeach; ?>
       </div>
       <?php endif; ?>
 

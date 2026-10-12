@@ -441,3 +441,10 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .process-steps p { font-size: calc(var(--fs-body) - 1px); line-height: 1.5; }
 .process-steps p::before { content: ""; display: block; width: 28px; height: 2px; margin: 0 auto var(--text-gap); background: var(--primary); }
 @media (max-width: 767px) { .category-page .process-steps p::before { margin-left: 0; } }
+
+/* Info page: trust section copy and team photo */
+.info-trust-copy { max-width: 820px; margin: 0 auto; text-align: center; }
+.info-trust-copy p { margin: 0 0 var(--text-gap-large); color: var(--muted-foreground); }
+.info-trust-photo { margin: 0 auto var(--topic-gap); max-width: 1060px; border-top: 3px solid var(--primary); overflow: hidden; }
+.info-trust-photo img { display: block; width: 100%; height: auto; }
+@media (max-width: 767px) { .info-trust-copy { text-align: left; } }
