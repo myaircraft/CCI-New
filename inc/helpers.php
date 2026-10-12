@@ -118,7 +118,7 @@ function cc_home_groups($menu_id, $images = []) {
     foreach ($groups as $i => $g) {
         echo '<article class="group-card">';
         if (!empty($images[$i])) echo '<div class="group-media"><img src="' . esc_url(cc_img($images[$i])) . '" alt="' . esc_attr($g['title']) . '" width="1200" height="800" loading="lazy" decoding="async"></div>';
-        echo '<h3>' . esc_html($g['title']) . '</h3><ul class="group-links">';
+        echo '<h3>' . esc_html($g['title']) . '</h3><ul class="group-links' . (count($g['items']) <= 3 ? ' is-single' : '') . '">';
         foreach ($g['items'] as $link) echo '<li><a href="' . esc_url(cc_link($link['link'])) . '"><span>' . esc_html($link['label']) . '</span>' . cc_icon('arrow-right') . '</a></li>';
         echo '</ul></article>';
     }
