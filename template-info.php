@@ -34,8 +34,8 @@ $title = cc_page('banner.title') ?: get_the_title();
       $items = (array) ($b['items'] ?? []);
       $paragraphs = (array) ($b['paragraphs'] ?? []);
     ?>
-    <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
-      <?php if (!in_array($layout, ['split', 'statement'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
+    <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?><?php echo !empty($b['tint']) ? ' is-tinted' : ''; ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
+      <?php if (!in_array($layout, ['split', 'statement', 'intro', 'centered'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
       <div class="category-section-heading">
         <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
         <?php if (($b['description'] ?? '') !== '') : ?><p><?php echo esc_html($b['description']); ?></p><?php endif; ?>
@@ -44,7 +44,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php endif; ?>
 
       <?php if ($layout === 'cards' && $items) : ?>
-      <div class="info-cards"><?php foreach ($items as $it) :
+      <div class="info-cards<?php echo !empty($b['icons']) ? ' is-icons' : ''; ?>"><?php foreach ($items as $it) :
         $link = ($it['link'] ?? '') !== '' ? cc_link($it['link']) : ''; $heading = esc_html($it['title'] ?? ''); ?>
         <article class="info-card<?php echo $link ? ' is-link' : ''; ?><?php echo !empty($it['image']) ? ' has-media' : ''; ?>"<?php echo !empty($it['id']) ? ' id="' . esc_attr($it['id']) . '"' : ''; ?>>
           <?php if (!empty($it['image'])) : ?><img class="info-card-media" src="<?php echo esc_url(cc_img($it['image'])); ?>" alt="" width="540" height="334" loading="lazy" decoding="async"><?php endif; ?>
@@ -82,6 +82,18 @@ $title = cc_page('banner.title') ?: get_the_title();
 
       <?php if ($layout === 'points' && !empty($b['points'])) : ?>
       <ul class="trust-points"><?php foreach ((array) $b['points'] as $point) : ?><li><?php echo cc_icon('check'); ?><?php echo esc_html($point); ?></li><?php endforeach; ?></ul>
+      <?php endif; ?>
+
+      <?php if ($layout === 'intro') : ?>
+      <div class="info-intro"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div>
+      <?php endif; ?>
+
+      <?php if ($layout === 'centered') : ?>
+      <div class="info-centered">
+        <?php if (($b['kicker'] ?? '') !== '') : ?><p class="info-kicker"><?php echo esc_html($b['kicker']); ?></p><?php endif; ?>
+        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
+        <?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?>
+      </div>
       <?php endif; ?>
 
       <?php if ($layout === 'split') : ?>
@@ -148,7 +160,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       </div>
       <?php endif; ?>
 
-      <?php if (!in_array($layout, ['text', 'split', 'statement'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>
+      <?php if (!in_array($layout, ['text', 'split', 'statement', 'intro', 'centered'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>
     </section>
     <?php endforeach; ?>
 

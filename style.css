@@ -257,3 +257,18 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .final-cta .band-photo { object-position: center 62%; }
 .category-banner .category-tagline { margin: var(--text-gap) 0 0; color: var(--on-dark); font-size: var(--fs-subtitle); font-weight: 900; line-height: var(--title-leading); letter-spacing: .01em; }
 .category-banner .category-tagline + .category-lead { margin-top: var(--text-gap-large); }
+
+/* About Us: intro, centered statements, tinted commitments band with 50px icons */
+.info-layout-intro { border-top: 0; padding-block: var(--section-gap) var(--topic-gap); }
+.info-intro { max-width: 800px; margin: 0 auto; }
+.info-intro p { margin: 0; color: var(--foreground); font-size: var(--fs-card-title); line-height: var(--text-leading); }
+.info-intro p + p { margin-top: 18px; }
+.info-centered { max-width: 800px; margin: 0 auto; text-align: center; }
+.info-centered h2 { margin: 0 0 var(--text-gap-large); }
+.info-centered p:not(.info-kicker) { margin: 0; color: var(--muted-foreground); }
+.info-centered p + p { margin-top: 18px; }
+.info-block.is-tinted { position: relative; border-top: 0; background: #f8f8f8; box-shadow: 0 0 0 100vmax #f8f8f8; clip-path: inset(0 -100vmax); }
+.info-block.is-tinted .info-card { background: var(--background); }
+.info-cards.is-icons .info-card-media { height: 50px; width: auto; max-width: 100%; aspect-ratio: auto; object-fit: contain; margin: 0 auto var(--text-gap-large); mix-blend-mode: multiply; }
+.info-cards.is-icons .info-card.has-media { padding: var(--topic-gap) var(--text-gap-large); overflow: visible; }
+.info-cards.is-icons .info-card.has-media > h3, .info-cards.is-icons .info-card.has-media > p { padding-inline: 0; }

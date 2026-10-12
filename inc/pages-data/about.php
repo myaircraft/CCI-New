@@ -8,12 +8,16 @@ if (!defined('ABSPATH')) exit;
 
 $img = fn($file) => 'wp-content/themes/competitive-choice/assets/images/about/' . $file;
 $crumb = fn($current) => ['home' => 'Home', 'parent' => 'About Us', 'parent_link' => 'link:about', 'current' => $current];
-$related = ['title' => 'More about Competitive Choice', 'links' => [
-    ['label' => 'About Us', 'link' => '/about-us/'],
-    ['label' => 'Leadership & Team', 'link' => '/about-us/leadership-team/'],
-    ['label' => 'Certifications', 'link' => '/about-us/certifications/'],
-    ['label' => 'Co-Ops & Schedules', 'link' => '/about-us/co-ops-schedules/'],
-]];
+$about_links = [['About Us', '/about-us/'], ['Community & Culture', '/about-us/community-culture/'], ['Certifications', '/about-us/certifications/'], ['Leadership & Team', '/about-us/leadership-team/'], ['Co-Ops & Schedules', '/about-us/co-ops-schedules/'], ['Past Performances', '/about-us/past-performances/']];
+$about_slugs = ['about-us', 'community-culture', 'certifications', 'leadership-team', 'co-ops-schedules', 'past-performances'];
+/** Links to every other page in the About Us group. */
+$related = function ($self) use ($about_links, $about_slugs) {
+    $links = [];
+    foreach ($about_links as $i => $l) {
+        if ($about_slugs[$i] !== $self) $links[] = ['label' => $l[0], 'link' => $l[1]];
+    }
+    return ['title' => 'Explore more of About Us', 'links' => $links];
+};
 
 return [
     'about-us' => [
@@ -29,27 +33,30 @@ return [
             'banner' => ['title' => 'ABOUT US', 'tagline' => "Guided by Purpose\nDriven by Vision", 'lead' => 'People who deliver. Partners you can count on. Since 2003.', 'image' => 'wp-content/themes/competitive-choice/assets/images/about-header.jpg'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'About Us'],
             'blocks' => [
-                ['layout' => 'split', 'id' => 'mission', 'kicker' => 'OUR MISSION', 'title' => 'Long-term value for the people who power our communities', 'paragraphs' => [
+                ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
+                    'Competitive Choice started in Houston in 2003, selling specialty chemicals to a handful of customers who trusted us to get it right. Today we are a woman-owned supplier and logistics partner for the schools, cities, hospitals and plants that keep our communities running. The idea behind us has not changed: show up, do the work well, and treat every customer like a partner.',
+                ]],
+                ['layout' => 'centered', 'id' => 'mission', 'kicker' => 'OUR MISSION', 'title' => 'Long-term value for the people who power our communities', 'paragraphs' => [
                     'Since 2003, our mission has been rooted in fostering long-term value for the people and institutions that power our communities: our customers, employees and suppliers.',
                     'We are committed to building sustainable relationships and delivering solutions that elevate resilience, reliability and performance across critical sectors.',
-                ], 'image' => $img('rme_9983.jpg'), 'image_alt' => 'Competitive Choice team at work'],
-                ['layout' => 'statement', 'id' => 'vision', 'kicker' => 'OUR VISION', 'paragraphs' => [
+                ]],
+                ['layout' => 'centered', 'id' => 'vision', 'kicker' => 'OUR VISION', 'title' => 'Leading by example', 'paragraphs' => [
                     'To lead by example as a high-performing distributor that champions innovation, operational excellence and inclusive supply chains, and to be the go-to partner for organizations safeguarding the future of infrastructure and essential services.',
                 ]],
-                ['layout' => 'split', 'id' => 'story', 'reverse' => true, 'kicker' => 'OUR STORY', 'title' => 'From specialty chemicals to a trusted logistics partner', 'paragraphs' => [
+                ['layout' => 'centered', 'id' => 'story', 'kicker' => 'OUR STORY', 'title' => 'From specialty chemicals to a trusted logistics partner', 'paragraphs' => [
                     'We began as a specialty chemical supplier, serving customers with targeted solutions for facility maintenance. As our reputation grew, so did our reach. Clients began relying on us for MEP supplies, construction materials, power systems and safety equipment.',
                     'Today, Competitive Choice is a comprehensive supplier and logistics partner trusted by public institutions, infrastructure operators and private sector leaders navigating operational risk and complexity.',
-                ], 'image' => $img('cciteam.jpg'), 'image_alt' => 'The Competitive Choice team'],
-                ['layout' => 'cards', 'id' => 'commitments', 'title' => 'Our commitments', 'description' => 'The principles behind how we work with customers, vendors and communities.', 'items' => [
-                    ['title' => 'Equal Opportunity', 'image' => $img('culture_diversity_icon.jpg'), 'description' => 'Competitive Choice is dedicated to equal employment opportunities. We do not discriminate against any potential applicants or current employees.'],
-                    ['title' => 'Customer Privacy & Data', 'image' => $img('privacy.jpg'), 'description' => 'Trust and privacy are our priorities. Our secure e-commerce platform uses SSL technology and encryption, and adheres to PCI DSS to protect your information.'],
-                    ['title' => 'Vendor Commitment', 'image' => $img('commitment.jpg'), 'description' => 'Our vendors make our customized solutions possible. We build great relationships with all suppliers and value the quality each one brings to our supply chain.'],
-                    ['title' => 'Compliance Is Key', 'image' => $img('compliance.jpg'), 'description' => 'We take full responsibility for the regulations that apply to our government customers, uphold ethics in vendor relations and train our employees regularly.'],
-                    ['title' => 'Environmental Impact', 'image' => $img('environment.jpg'), 'description' => 'We keep searching for sustainable ways to do business. Many items in our product line are free of petroleum solvents and standard detergents, and fully biodegradable.'],
-                    ['title' => 'Continued Growth', 'image' => $img('growth.jpg'), 'description' => 'We work closely with businesses nationwide, and we will keep innovating and diversifying our products and services to meet the needs of our clientele.'],
+                ]],
+                ['layout' => 'cards', 'id' => 'commitments', 'tint' => true, 'icons' => true, 'title' => 'Our Commitments', 'description' => 'The principles behind how we work with customers, vendors and communities.', 'items' => [
+                    ['title' => 'Equal Opportunity', 'image' => $img('commit-equal.png'), 'description' => 'Competitive Choice is dedicated to equal employment opportunities. We do not discriminate against any potential applicants or current employees.'],
+                    ['title' => 'Customer Privacy & Data', 'image' => $img('commit-privacy.png'), 'description' => 'Trust and privacy are our priorities. Our secure e-commerce platform uses SSL technology and encryption, and adheres to PCI DSS to protect your information.'],
+                    ['title' => 'Vendor Commitment', 'image' => $img('commit-vendor.png'), 'description' => 'Our vendors make our customized solutions possible. We build great relationships with all suppliers and value the quality each one brings to our supply chain.'],
+                    ['title' => 'Compliance Is Key', 'image' => $img('commit-compliance.png'), 'description' => 'We take full responsibility for the regulations that apply to our government customers, uphold ethics in vendor relations and train our employees regularly.'],
+                    ['title' => 'Environmental Impact', 'image' => $img('commit-environment.png'), 'description' => 'We keep searching for sustainable ways to do business. Many items in our product line are free of petroleum solvents and standard detergents, and fully biodegradable.'],
+                    ['title' => 'Continued Growth', 'image' => $img('commit-growth.png'), 'description' => 'We work closely with businesses nationwide, and we will keep innovating and diversifying our products and services to meet the needs of our clientele.'],
                 ]],
             ],
-            'related' => $related,
+            'related' => $related('about-us'),
         ],
     ],
 
@@ -79,7 +86,7 @@ return [
                     ['title' => 'Empowering Others', 'image' => $img('charity3.jpg'), 'description' => 'As we grow, our social responsibility grows. Giving has been part of our culture since our founding, including our partnership with the No Excuses Foundation and other charities.'],
                 ]],
             ],
-            'related' => $related,
+            'related' => $related('community-culture'),
         ],
     ],
 
@@ -115,7 +122,7 @@ return [
                     ['image' => $img('combined_sba.png'), 'title' => 'SBA WOSB / EDWOSB'],
                 ]],
             ],
-            'related' => $related,
+            'related' => $related('certifications'),
         ],
     ],
 
@@ -148,7 +155,7 @@ return [
                     ['title' => 'Amy', 'meta' => 'Supply Chain Manager & Government Compliance', 'image' => $img('amy.png')],
                 ]],
             ],
-            'related' => $related,
+            'related' => $related('leadership-team'),
         ],
     ],
 
@@ -233,7 +240,7 @@ return [
                 ]],
                 ['layout' => 'text', 'id' => 'closing', 'paragraphs' => ['These cooperative contracts reflect our commitment to the best possible procurement experience, with cost-effective solutions, diverse supplier options and streamlined processes. Contact us to learn how they can benefit your organization.']],
             ],
-            'related' => $related,
+            'related' => $related('co-ops-schedules'),
         ],
     ],
 
@@ -273,7 +280,7 @@ return [
                     ['title' => 'Sodium hypochlorite', 'lines' => ['Prairie View A&M University, College Station']],
                 ]],
             ],
-            'related' => $related,
+            'related' => $related('past-performances'),
         ],
     ],
 ];
