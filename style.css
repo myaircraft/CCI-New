@@ -287,3 +287,20 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .hl-draw.is-armed { background-size: 0 4px; transition: background-size 1.8s ease-out; }
 .hl-draw.is-armed.is-drawn { background-size: 100% 4px; }
 @media (prefers-reduced-motion: reduce) { .category-banner.is-zoom .category-banner-photo { animation: none; } .type-caret { animation: none; } .hl-draw.is-armed { transition: none; } }
+
+/* Our Commitments: roomier boxes, smaller body text, yellow border that draws in on hover */
+.info-cards.is-icons { max-width: 1180px; gap: var(--text-gap-large); align-items: stretch; }
+.info-cards.is-icons .info-card.has-media { padding: var(--topic-gap) var(--topic-gap); }
+.info-cards.is-icons .info-card p { font-size: 14px; line-height: var(--text-leading); }
+.info-cards.is-icons .info-card {
+    background-color: var(--background);
+    background-image: linear-gradient(var(--primary), var(--primary)), linear-gradient(var(--primary), var(--primary)), linear-gradient(var(--primary), var(--primary)), linear-gradient(var(--primary), var(--primary));
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+    transition: background-size .55s ease, transform .3s ease;
+}
+.info-cards.is-icons .info-card:hover { background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%; transform: translateY(-3px); }
+.info-block.is-tinted .info-cards.is-icons .info-card { background-color: var(--background); }
+@media (prefers-reduced-motion: reduce) { .info-cards.is-icons .info-card { transition: none; } .info-cards.is-icons .info-card:hover { transform: none; } }
