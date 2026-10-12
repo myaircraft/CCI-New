@@ -248,6 +248,19 @@
     Array.prototype.forEach.call(marks, function (m) { m.classList.add('is-armed'); io.observe(m); });
   }
 
+  function initVideos() {
+    var videos = document.querySelectorAll('video[data-lazy-play]');
+    if (!videos.length || reducedMotion.matches || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var v = entry.target;
+        if (entry.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); }
+      });
+    }, { threshold: 0.4 });
+    Array.prototype.forEach.call(videos, function (v) { io.observe(v); });
+  }
+
+  initVideos();
   initTypewriter();
   initUnderlines();
   initHeader();

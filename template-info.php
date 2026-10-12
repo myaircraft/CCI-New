@@ -35,7 +35,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       $paragraphs = (array) ($b['paragraphs'] ?? []);
     ?>
     <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?><?php echo !empty($b['tint']) ? ' is-tinted' : ''; ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
-      <?php if (!in_array($layout, ['split', 'statement', 'intro', 'centered'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
+      <?php if (!in_array($layout, ['split', 'statement', 'intro', 'centered', 'article', 'video'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
       <div class="category-section-heading">
         <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
         <?php if (($b['description'] ?? '') !== '') : ?><p><?php echo esc_html($b['description']); ?></p><?php endif; ?>
@@ -82,6 +82,18 @@ $title = cc_page('banner.title') ?: get_the_title();
 
       <?php if ($layout === 'points' && !empty($b['points'])) : ?>
       <ul class="trust-points"><?php foreach ((array) $b['points'] as $point) : ?><li><?php echo cc_icon('check'); ?><?php echo esc_html($point); ?></li><?php endforeach; ?></ul>
+      <?php endif; ?>
+
+      <?php if ($layout === 'article') : ?>
+      <div class="info-article">
+        <?php if (($b['kicker'] ?? '') !== '') : ?><p class="info-kicker"><?php echo esc_html($b['kicker']); ?></p><?php endif; ?>
+        <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html($b['title']); ?></h2><?php endif; ?>
+        <?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?>
+      </div>
+      <?php endif; ?>
+
+      <?php if ($layout === 'video' && !empty($b['video'])) : ?>
+      <figure class="info-video"><video src="<?php echo esc_url(cc_img($b['video'])); ?>" muted loop playsinline controls preload="metadata" data-lazy-play aria-label="<?php echo esc_attr($b['video_label'] ?? 'Competitive Choice film'); ?>"></video></figure>
       <?php endif; ?>
 
       <?php if ($layout === 'intro') : ?>
@@ -160,7 +172,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       </div>
       <?php endif; ?>
 
-      <?php if (!in_array($layout, ['text', 'split', 'statement', 'intro', 'centered'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>
+      <?php if (!in_array($layout, ['text', 'split', 'statement', 'intro', 'centered', 'article', 'video'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>
     </section>
     <?php endforeach; ?>
 
