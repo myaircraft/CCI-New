@@ -581,3 +581,14 @@ html { scroll-behavior: smooth; }
 .category-banner .category-tagline.is-sentence ~ .category-lead { color: #fff; }
 
 .category-banner .category-tagline.is-sentence { max-width: 56ch; color: #fff; font-weight: 800; font-size: var(--fs-card-title); line-height: var(--title-leading); }
+
+/* Mobile: banner text centered on every inner page */
+@media (max-width: 767px) {
+    .category-page .category-banner, .category-page .category-banner-content,
+    .category-page .category-banner h1, .category-page .category-banner .category-kicker,
+    .category-page .category-banner .category-lead, .category-page .category-banner .category-tagline { text-align: center; }
+    .category-page .category-banner .category-lead, .category-page .category-banner .category-tagline,
+    .category-page .category-banner .category-tagline.is-sentence ~ .category-lead { margin-left: auto; margin-right: auto; }
+    .category-page .category-banner .category-actions { justify-content: center; align-items: center; }
+    .category-page .category-banner .category-lead.is-boxed { display: inline-block; }
+}
