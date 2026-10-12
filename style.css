@@ -736,3 +736,7 @@ html { scroll-behavior: smooth; }
 
 /* Banner buttons share one height (matches the Shop Now button) */
 .hero-actions > a, .category-actions > a { min-height: 56px; padding-block: 9px; }
+
+/* Banner buttons: same 46px height as the header Shop Now button */
+.hero-actions > a, .category-actions > a { min-height: 46px; height: 46px; padding-block: 0; }
+.hero-actions > a.hero-explore { min-height: 46px; height: 46px; }
