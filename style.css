@@ -689,3 +689,11 @@ html { scroll-behavior: smooth; }
 #services .group-links a:hover svg, #services .group-links a:focus-visible svg { color: var(--foreground); transform: translateX(3px); }
 @media (max-width: 1100px) { #products-supplies .group-grid, #services .group-grid { max-width: 640px; } #products-supplies .group-links a, #services .group-links a { white-space: normal; } }
 @media (max-width: 560px) { #products-supplies .group-card h3, #services .group-card h3 { padding: var(--text-gap-large) var(--text-gap-large) var(--text-gap); } #products-supplies .group-links, #services .group-links { padding: 0 var(--text-gap-large) var(--topic-gap); } }
+
+/* Home category cards: wider gutter between the two sub-category columns */
+#products-supplies .group-grid, #services .group-grid { max-width: none; }
+#products-supplies .group-card h3, #services .group-card h3 { padding-inline: var(--text-gap-large); }
+#products-supplies .group-links, #services .group-links { padding-inline: var(--text-gap-large); column-gap: var(--section-gap); }
+#products-supplies .group-links a, #services .group-links a { white-space: normal; }
+@media (min-width: 1500px) { #products-supplies .group-links a, #services .group-links a { white-space: nowrap; } }
+@media (max-width: 1100px) { #products-supplies .group-grid, #services .group-grid { max-width: 640px; } }
