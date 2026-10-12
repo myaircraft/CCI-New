@@ -16,8 +16,29 @@ $email = cc_content('company.email');
   <div class="site-footer"><div class="site-container">
     <div class="footer-top"><a href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php echo esc_attr(cc_content('company.name') . ' home'); ?>"><img class="brand-logo" src="<?php echo esc_url(cc_img(cc_content('assets.logo'))); ?>" alt="<?php echo esc_attr(cc_content('company.name')); ?>" width="1920" height="240" loading="lazy"></a><p class="footer-tagline"><?php cc_e('company.tagline'); ?></p></div>
     <div class="footer-grid">
-      <?php foreach (cc_list('footer.columns') as $column) : ?>
-        <div><h3><?php echo esc_html($column['title']); ?></h3><?php foreach ($column['links'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><?php echo esc_html($link['label']); ?></a><?php endforeach; ?></div>
+      <?php
+      // Columns mirror the header menu: grouped menus keep their sub-headings; direct-link items share one column.
+      $landing = ['products-supplies' => 'link:products', 'services' => 'link:services', 'about' => '/about-us/'];
+      $footer_cols = [];
+      $direct = [];
+      foreach (cc_navigation() as $nav_item) {
+          if (!empty($nav_item['link']) && empty($nav_item['items'])) { $direct[] = $nav_item; continue; }
+          if ($direct) { $footer_cols[] = ['direct' => $direct]; $direct = []; }
+          $footer_cols[] = ['item' => $nav_item];
+      }
+      if ($direct) $footer_cols[] = ['direct' => $direct];
+      foreach ($footer_cols as $col) : ?>
+        <div>
+        <?php if (isset($col['direct'])) : foreach ($col['direct'] as $d) : ?>
+          <h3><a href="<?php echo esc_url(cc_link($d['link'])); ?>"><?php echo esc_html($d['label']); ?></a></h3>
+        <?php endforeach; else : $ni = $col['item']; ?>
+          <h3><?php if (isset($landing[$ni['id'] ?? ''])) : ?><a href="<?php echo esc_url(cc_link($landing[$ni['id']])); ?>"><?php echo esc_html($ni['label']); ?></a><?php else : echo esc_html($ni['label']); endif; ?></h3>
+          <?php if (!empty($ni['groups'])) : foreach ($ni['groups'] as $g) : ?>
+            <p class="footer-sub"><?php echo esc_html($g['title']); ?></p>
+            <?php foreach ($g['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><?php echo esc_html($link['label']); ?></a><?php endforeach; ?>
+          <?php endforeach; else : foreach ($ni['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><?php echo esc_html($link['label']); ?></a><?php endforeach; endif; ?>
+        <?php endif; ?>
+        </div>
       <?php endforeach; ?>
       <div class="footer-location"><h3><?php cc_e('footer.location_title'); ?></h3><p><?php cc_e('company.address_line1'); ?><br><?php cc_e('company.address_line2'); ?></p><p><?php cc_e('company.hours_days'); ?><br><?php cc_e('company.hours_time'); ?></p></div>
       <div class="footer-contact">
