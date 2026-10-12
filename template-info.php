@@ -220,6 +220,8 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php if (!empty($b['map'])) : ?><div class="contact-map"><iframe title="Map to Competitive Choice, <?php echo esc_attr(cc_content('company.address_line1')); ?>" src="https://www.google.com/maps?q=<?php echo $maps_q; ?>&amp;output=embed" width="1060" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><?php endif; ?>
       <?php endif; ?>
 
+      <?php if (($b['button_label'] ?? '') !== '') : ?><div class="category-actions info-block-actions"><a href="<?php echo esc_url(cc_link($b['button_link'] ?? 'link:contact')); ?>" class="<?php echo cc_btn(); ?>"><?php echo esc_html($b['button_label']); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
+
       <?php if (!in_array($layout, ['text', 'split', 'statement', 'intro', 'centered', 'article', 'video', 'stat'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>
     </section>
     <?php endforeach; ?>

@@ -35,7 +35,7 @@ return [
                     ['title' => 'Fire Suppression', 'description' => 'Lithium-ion battery fire protection and added layers of safety for facilities.', 'link' => '/supplies/fire-safety/'],
                     ['title' => 'Safety', 'description' => 'PPE, first aid, spill control, locks, alarms and emergency communications.', 'link' => '/supplies/safety-security/'],
                 ]],
-                ['layout' => 'text', 'id' => 'about-supply', 'title' => 'Can’t find what you need?', 'paragraphs' => ['Tell us what your project or facility requires. Our team can source what you need, and we work with contract vehicles that make public-sector purchasing simple.']],
+                ['layout' => 'text', 'id' => 'about-supply', 'button_label' => 'CONTACT US', 'button_link' => 'link:contact', 'title' => 'Can’t find what you need?', 'paragraphs' => ['Tell us what your project or facility requires. Our team can source what you need, and we work with contract vehicles that make public-sector purchasing simple.']],
             ],
             'related' => ['title' => 'Related pages', 'links' => [['label' => 'Services', 'link' => 'link:services'], ['label' => 'Co-Ops & Contract Vehicles', 'link' => 'link:contracts'], ['label' => 'Contact Our Team', 'link' => 'link:contact']]],
         ],

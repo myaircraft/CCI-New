@@ -650,3 +650,5 @@ html { scroll-behavior: smooth; }
 .info-cards.has-learn .info-card:active .card-learn svg { transform: translateX(11px); }
 .info-cards.has-learn .info-card:active .card-learn { transform: scale(.97); }
 @media (hover: none) { .info-cards.has-learn .info-card:hover { transform: none; } }
+
+.info-block-actions { display: flex; justify-content: center; margin-top: var(--topic-gap); }
