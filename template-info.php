@@ -44,7 +44,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php endif; ?>
 
       <?php if ($layout === 'cards' && $items) : ?>
-      <div class="info-cards<?php echo !empty($b['icons']) ? ' is-icons' : ''; ?>"><?php foreach ($items as $it) :
+      <div class="info-cards<?php echo !empty($b['icons']) ? ' is-icons' : ''; ?><?php echo !empty($b['wide']) ? ' is-wide' : ''; ?>"><?php foreach ($items as $it) :
         $link = ($it['link'] ?? '') !== '' ? cc_link($it['link']) : ''; $heading = esc_html($it['title'] ?? ''); ?>
         <article class="info-card<?php echo $link ? ' is-link' : ''; ?><?php echo !empty($it['image']) ? ' has-media' : ''; ?>"<?php echo !empty($it['id']) ? ' id="' . esc_attr($it['id']) . '"' : ''; ?>>
           <?php if (!empty($it['image'])) : ?><img class="info-card-media" src="<?php echo esc_url(cc_img($it['image'])); ?>" alt="" width="540" height="334" loading="lazy" decoding="async"><?php endif; ?>
@@ -70,7 +70,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php if ($layout === 'people' && $items) : ?>
       <div class="info-people<?php echo count($items) === 2 ? ' is-pair' : ''; ?><?php echo count($items) > 3 ? ' is-team' : ''; ?>"><?php foreach ($items as $it) :
         $name = $it['title'] ?? ''; $initials = strtoupper(implode('', array_map(fn($w) => mb_substr($w, 0, 1), array_slice(preg_split('/\s+/', trim($name)), 0, 2)))); ?>
-        <article class="info-person">
+        <article class="info-person<?php echo !empty($it['image']) ? ' has-photo' : ''; ?>">
           <?php if (!empty($it['image'])) : ?><span class="info-photo"><img src="<?php echo esc_url(cc_img($it['image'])); ?>" alt="<?php echo esc_attr($name); ?>" width="300" height="300" loading="lazy" decoding="async"></span>
           <?php else : ?><span class="info-monogram" aria-hidden="true"><?php echo esc_html($initials); ?></span><?php endif; ?>
           <h3><?php echo esc_html($name); ?></h3>

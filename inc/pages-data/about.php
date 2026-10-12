@@ -74,17 +74,17 @@ return [
             'banner' => ['kicker' => 'ABOUT US', 'title' => 'Community & Culture', 'lead' => 'A collaborative, innovative culture built on high standards, service and giving back.', 'quote_label' => 'REQUEST A QUOTE'],
             'breadcrumb' => $crumb('Community & Culture'),
             'blocks' => [
-                ['layout' => 'text', 'id' => 'welcome', 'title' => 'Where culture is cherished and connections run deep', 'paragraphs' => [
-                    'At Competitive Choice, Inc., we believe in the power of togetherness and the unique tapestry of traditions that each individual brings. We build a welcoming space where everyone’s voice is valued and celebrated.',
-                    'Through shared experiences and collaborative initiatives, we foster understanding and appreciation for one another, and we invite you to be part of an inclusive community where meaningful relationships grow.',
+                ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
+                    'Culture is not a poster on our wall. It is how we treat one another, our customers and the communities we serve. At Competitive Choice, we believe in the power of togetherness and in the traditions each person brings with them.',
+                    'Everyone’s voice is valued here, and that is how meaningful relationships grow.',
                 ]],
-                ['layout' => 'cards', 'id' => 'culture', 'title' => 'What drives us', 'description' => 'Six ideas that define how we work.', 'items' => [
-                    ['title' => 'Purpose Driven', 'image' => $img('purpose.jpg'), 'description' => 'From our inception in 2003 to today, we strive for excellence in every part of our business. We are the company that performs, your best choice, your Competitive Choice.'],
-                    ['title' => 'Competitive', 'image' => $img('competitive-1.jpg'), 'description' => 'The name Competitive Choice reflects our goal of being better each day. Challenges drive our growth, and competition keeps us creative and relevant.'],
-                    ['title' => 'Culture', 'image' => $img('diversity.jpg'), 'description' => 'A collaborative and innovative culture helps us grow. We are a high-performance organization with a purpose, and our talent and expertise set us apart.'],
-                    ['title' => 'Innovative', 'image' => $img('innovation.jpg'), 'description' => 'We encourage autonomy and originality. We are not afraid to color outside the lines, and we always seek new ideas to accomplish our customers’ goals.'],
-                    ['title' => 'Sustainability', 'image' => $img('sustainability.jpg'), 'description' => 'We take our carbon footprint seriously and are dedicated to programs, policies and solutions that make a difference to our partners and communities.'],
-                    ['title' => 'Empowering Others', 'image' => $img('charity3.jpg'), 'description' => 'As we grow, our social responsibility grows. Giving has been part of our culture since our founding, including our partnership with the No Excuses Foundation and other charities.'],
+                ['layout' => 'cards', 'id' => 'culture', 'tint' => true, 'wide' => true, 'title' => 'What drives us', 'description' => 'Six ideas that shape how we work, and who we are.', 'items' => [
+                    ['title' => 'Purpose Driven', 'image' => $img('purpose.jpg'), 'description' => 'Since 2003, we have held ourselves to high standards of hard work and customer service. We aim to be the company that performs: your best choice, your Competitive Choice.'],
+                    ['title' => 'Competitive', 'image' => $img('competitive-1.jpg'), 'description' => 'We chose the name because we are never done improving. Challenges drive our growth, and healthy competition keeps us creative and relevant.'],
+                    ['title' => 'Culture', 'image' => $img('diversity.jpg'), 'description' => 'A collaborative, innovative culture helps us grow and succeed. We are a high-performance organization with a purpose, and our talent sets us apart as both an employer and a business partner.'],
+                    ['title' => 'Innovative', 'image' => $img('innovation.jpg'), 'description' => 'We encourage autonomy and originality. We are not afraid to color outside the lines, and we are always looking for new ideas to achieve our customers’ goals.'],
+                    ['title' => 'Sustainability', 'image' => $img('sustainability.jpg'), 'description' => 'We take our carbon footprint seriously. Sustainability and responsibility are part of who we are, and we are dedicated to programs and solutions that make a difference to our partners and communities.'],
+                    ['title' => 'Empowering Others', 'image' => $img('charity3.jpg'), 'description' => 'As we grow, our social responsibility grows with us. Giving has been part of our culture since our founding, and we partner with the No Excuses Foundation and other charities to serve communities in need.'],
                 ]],
             ],
             'related' => $related('community-culture'),
@@ -104,12 +104,15 @@ return [
             'banner' => ['kicker' => 'ABOUT US', 'title' => 'Certifications', 'lead' => 'Recognized at the national, state, local and federal levels.', 'quote_label' => 'REQUEST A QUOTE', 'image' => $img('women6.jpg')],
             'breadcrumb' => $crumb('Certifications'),
             'blocks' => [
+                ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
+                    'Competitive Choice is recognized at the national, state, local and federal levels. These certifications reflect how we run our business, and they help our customers meet their supplier diversity goals.',
+                ]],
                 ['layout' => 'logos', 'id' => 'national', 'title' => 'National certifications', 'items' => [
                     ['image' => $img('wbenc2.png'), 'title' => 'WBENC'],
                     ['image' => $img('minority2.png'), 'title' => 'HMSDC'],
                     ['image' => $img('chicagocertifications.png'), 'title' => 'Chicago certifications'],
                 ]],
-                ['layout' => 'logos', 'id' => 'state-local', 'title' => 'State & local certifications', 'items' => [
+                ['layout' => 'logos', 'id' => 'state-local', 'tint' => true, 'title' => 'State & local certifications', 'items' => [
                     ['image' => $img('sctrca_2026.png'), 'title' => 'SCTRCA', 'meta' => 'Austin & San Antonio Area'],
                     ['image' => $img('nctrca_2026.png'), 'title' => 'NCTRCA', 'meta' => 'Dallas & Fort Worth Area'],
                     ['image' => $img('hisd_20266.png'), 'title' => 'Houston ISD'],
@@ -140,13 +143,17 @@ return [
             'banner' => ['kicker' => 'ABOUT US', 'title' => 'Leadership & Team', 'lead' => 'Decades of expertise, deep operational discipline and a focus on the right customers.', 'quote_label' => 'REQUEST A QUOTE', 'image' => $img('cci_team_new_background_20253.jpg')],
             'breadcrumb' => $crumb('Leadership & Team'),
             'blocks' => [
+                ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
+                    'Our products are as diverse as our people. In critical infrastructure supply, experience and discipline matter, and so does working with the right customers. Meet the President & CEO and the team that drives Competitive Choice forward.',
+                ]],
                 ['layout' => 'split', 'id' => 'ceo', 'person' => true, 'kicker' => 'PRESIDENT & CEO', 'title' => 'Aundrea Young', 'paragraphs' => [
-                    'Under the strategic leadership of President and CEO Aundrea Young, Competitive Choice has grown into a market leader in facility maintenance, construction supply and infrastructure resilience, serving critical infrastructure sectors such as water, energy, healthcare and education.',
-                    'Her visionary approach prioritizes innovation, customer success and inclusive growth. Aundrea holds a dual degree in Communication and Construction Management, an Executive MBA from the University of Houston C.T. Bauer College of Business, and is an alumna of the Harvard Business School OPM program.',
+                    'Under Aundrea Young’s leadership, Competitive Choice has grown into a market leader in facility maintenance, construction supply and infrastructure resilience, serving sectors such as water, energy, healthcare and education.',
+                    'Her vision puts innovation, customer success and inclusive growth first, so the company can meet today’s challenges and help shape the infrastructure of tomorrow.',
+                    'Aundrea holds a dual degree in Communication and Construction Management and an Executive MBA from the University of Houston C.T. Bauer College of Business. She is also an alumna of the Harvard Business School OPM program.',
                 ], 'image' => $img('aundrea_photo.jpg'), 'image_alt' => 'Aundrea Young, President and CEO'],
-                ['layout' => 'people', 'id' => 'leaders', 'title' => 'Leadership team', 'description' => 'The leaders driving our business forward.', 'items' => [
-                    ['title' => 'Casey Williams', 'meta' => 'VP of Sales, Strategic Growth', 'image' => $img('casey_photo.jpg'), 'description' => 'Leads strategic growth and business development for national accounts, building a high-performing team focused on results and long-term success.'],
-                    ['title' => 'Jillian Williams', 'meta' => 'Director of Operations', 'image' => $img('jillian.png'), 'description' => 'Brings operations, marketing, customer service and sales expertise to understanding client needs and proactively sourcing new products that fit them.'],
+                ['layout' => 'people', 'id' => 'leaders', 'tint' => true, 'title' => 'Leadership team', 'description' => 'The leaders driving our business forward.', 'items' => [
+                    ['title' => 'Casey Williams', 'meta' => 'VP of Sales, Strategic Growth', 'image' => $img('casey_photo.jpg'), 'description' => 'Casey leads strategic growth and business development for national accounts. He is building a high-performing team focused on results and long-term success, drawing on a strong business foundation from Trevecca University and hands-on sales experience.'],
+                    ['title' => 'Jillian Williams', 'meta' => 'Director of Operations', 'image' => $img('jillian.png'), 'description' => 'Jillian blends operations, marketing, customer service and sales expertise. She works to understand what each client needs and proactively sources new products that fit, and with her degree in Marketing she is always looking for ways to grow and learn.'],
                 ]],
                 ['layout' => 'people', 'id' => 'solutions', 'title' => 'Our solutions team', 'description' => 'The people who keep your orders moving.', 'items' => [
                     ['title' => 'Amanda', 'meta' => 'Marketing Manager / Senior Graphic Designer', 'image' => $img('amanda.png')],
@@ -173,6 +180,9 @@ return [
             'banner' => ['kicker' => 'ABOUT US', 'title' => 'Co-Ops & Schedules', 'lead' => 'Multiple cooperative contracts give public-sector customers access to high-quality products and services with cost savings and efficiency.', 'quote_label' => 'REQUEST A QUOTE'],
             'breadcrumb' => $crumb('Co-Ops & Schedules'),
             'blocks' => [
+                ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
+                    'Competitive Choice has been awarded multiple cooperative contracts, so our customers can reach a wide range of high-quality products and services through pre-negotiated, competitively priced agreements.',
+                ]],
                 ['layout' => 'coops', 'id' => 'cooperative', 'title' => 'Cooperative contracts', 'description' => 'Open a card to see the contract numbers awarded to Competitive Choice.', 'items' => [
                     ['image' => $img('tips.png'), 'title' => 'TIPS', 'description' => 'Texas Interlocal Purchasing System. Serves public entities in Texas with competitive pricing and efficient procurement.', 'lines' => [
                         '230903 - Industrial and Facility Equipment, Chemicals, Supplies, and Services',
@@ -235,11 +245,11 @@ return [
                         'PLUMB2527 - Plumbing Supplies',
                     ]],
                 ]],
-                ['layout' => 'coops', 'id' => 'federal', 'title' => 'Federal schedules', 'description' => 'Meeting the standards and regulatory demands of federal organizations.', 'items' => [
+                ['layout' => 'coops', 'id' => 'federal', 'tint' => true, 'title' => 'Federal schedules', 'description' => 'Meeting the standards and regulatory demands of federal organizations.', 'items' => [
                     ['image' => $img('gsa.png'), 'title' => 'GSA', 'description' => 'Contract # 47QSEA20D005G. As an industry partner of the General Services Administration, we supply a full range of products to government customers, from hospitality and cleaning equipment to foodservice and chemicals, through GSA Advantage.', 'link' => 'https://www.gsaadvantage.gov/advantage/ws/search/advantage_search?q=0:247QSEA20D005G%20&q=10:5ABILITY%20ONE&searchType=1&db=0', 'link_label' => 'SHOP GSA'],
                     ['image' => $img('abilityone.png'), 'title' => 'AbilityOne', 'description' => 'One of the nation’s leading employers of people who are blind or have significant disabilities. Together with GSA and AbilityOne, we offer AbilityOne products and our MAS schedules for industrial and facility products and office supplies.', 'link' => 'https://www.abilityone.gov/', 'link_label' => 'LEARN MORE'],
                 ]],
-                ['layout' => 'text', 'id' => 'closing', 'paragraphs' => ['These cooperative contracts reflect our commitment to the best possible procurement experience, with cost-effective solutions, diverse supplier options and streamlined processes. Contact us to learn how they can benefit your organization.']],
+                ['layout' => 'centered', 'id' => 'closing', 'kicker' => 'WORKING WITH US', 'title' => 'A simpler way to buy', 'paragraphs' => ['These contracts reflect our commitment to the best possible procurement experience: cost-effective solutions, diverse supplier options and streamlined processes. Contact us to learn how they can work for your organization.']],
             ],
             'related' => $related('co-ops-schedules'),
         ],
@@ -258,7 +268,10 @@ return [
             'banner' => ['kicker' => 'ABOUT US', 'title' => 'Past Performances', 'lead' => 'Federal contracts and major construction projects supplied by our team.', 'quote_label' => 'REQUEST A QUOTE'],
             'breadcrumb' => $crumb('Past Performances'),
             'blocks' => [
-                ['layout' => 'rows', 'id' => 'federal', 'title' => 'Past federal performance', 'items' => [
+                ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
+                    'Our work spans federal agencies and some of the largest construction projects in Texas, from NASA’s Johnson Space Center to airport terminals, hospital towers and university campuses.',
+                ]],
+                ['layout' => 'cards', 'id' => 'federal', 'tint' => true, 'wide' => true, 'title' => 'Past federal performance', 'description' => 'Contracts delivered for federal agencies.', 'items' => [
                     ['title' => 'NASA Johnson Space Center, Houston, Texas', 'description' => 'Multiple Award IDIQ for General Construction, Minor Projects at NASA Johnson Space Center, Ellington Field and Sonny Carter Training Facility, Houston, TX and White Sands Test Facility, Las Cruces, NM.', 'lines' => ['Contract amount: $49,000,000', 'Contract No. NNJ09JA19P: $82,578']],
                     ['title' => 'Federal Detention Center, Houston, Texas', 'description' => 'HVAC upgrade.', 'lines' => ['Contract amount: $83,000']],
                     ['title' => 'Army Corps of Engineers, Galveston, Texas', 'description' => 'Renovation and reconstruction of office.', 'lines' => ['Contract amount: $23,000']],

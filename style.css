@@ -304,3 +304,32 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-cards.is-icons .info-card:hover { background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%; transform: translateY(-3px); }
 .info-block.is-tinted .info-cards.is-icons .info-card { background-color: var(--background); }
 @media (prefers-reduced-motion: reduce) { .info-cards.is-icons .info-card { transition: none; } .info-cards.is-icons .info-card:hover { transform: none; } }
+
+/* About pages, round two: rectangular photography, tinted bands, one hover language for every card */
+.info-cards.is-wide { max-width: 1180px; align-items: stretch; }
+.info-cards.is-wide .info-card.has-media { padding: 0 0 var(--topic-gap); }
+.info-cards.is-wide .info-card p { font-size: 14px; }
+.info-cards.is-wide .info-card-media { aspect-ratio: 1.618; margin-bottom: var(--text-gap-large); }
+
+.info-person.has-photo { padding: 0 0 var(--topic-gap); overflow: hidden; }
+.info-person.has-photo .info-photo { width: 100%; height: auto; aspect-ratio: 1 / 1.272; margin: 0 0 var(--text-gap-large); border-radius: 0; background: linear-gradient(165deg, #eaf1f9 0%, #d6e3f2 100%); }
+.info-person.has-photo > :not(.info-photo) { padding-inline: var(--text-gap-large); }
+.info-person.has-photo p:not(.info-role) { font-size: 14px; }
+.info-people.is-pair { max-width: 800px; }
+.info-people.is-team .info-person.has-photo { padding-inline: 0; }
+.info-people.is-team .info-person.has-photo > :not(.info-photo) { padding-inline: var(--text-gap); }
+.info-people.is-team .info-photo { width: 100%; height: auto; }
+.info-people.is-team .info-role { margin-bottom: 0; }
+.info-split.is-person { grid-template-columns: minmax(0, 1.618fr) minmax(0, 1fr); }
+.info-split.is-person .info-split-media img { aspect-ratio: 1 / 1.272; object-fit: cover; object-position: top; }
+.info-split.is-person .info-split-text p + p { margin-top: 18px; }
+.info-block.is-tinted .info-person, .info-block.is-tinted .info-coop, .info-block.is-tinted .info-logo-frame { background-color: var(--background); }
+
+.info-card, .info-person, .info-coop { position: relative; background-repeat: no-repeat; background-origin: border-box; background-position: 0 0, 100% 0, 100% 100%, 0 100%; background-size: 0 3px, 3px 0, 0 3px, 3px 0; transition: background-size .55s ease, transform .3s ease; }
+.info-card, .info-person, .info-coop { background-image: linear-gradient(var(--primary), var(--primary)), linear-gradient(var(--primary), var(--primary)), linear-gradient(var(--primary), var(--primary)), linear-gradient(var(--primary), var(--primary)); }
+.info-card:hover, .info-person:hover, .info-coop:hover { background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%; transform: translateY(-3px); }
+.info-card.is-link:hover { background-color: var(--background); }
+@media (prefers-reduced-motion: reduce) { .info-card, .info-person, .info-coop { transition: none; } .info-card:hover, .info-person:hover, .info-coop:hover { transform: none; } }
+.info-logo-frame { transition: border-top-color .3s ease, box-shadow .3s ease; }
+.info-logo:hover .info-logo-frame { box-shadow: inset 0 0 0 1px var(--primary); }
+.info-layout-centered + .info-layout-centered { border-top: 0; }
