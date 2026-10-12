@@ -268,7 +268,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-centered p:not(.info-kicker) { margin: 0; color: var(--muted-foreground); }
 .info-centered p + p { margin-top: 18px; }
 .info-block.is-tinted { position: relative; border-top: 0; background: #f8f8f8; box-shadow: 0 0 0 100vmax #f8f8f8; clip-path: inset(0 -100vmax); }
-.info-block.is-tinted .info-card { background: var(--background); }
+.info-block.is-tinted .info-card { background-color: var(--background); }
 .info-cards.is-icons .info-card-media { height: 50px; width: auto; max-width: 100%; aspect-ratio: auto; object-fit: contain; margin: 0 auto var(--text-gap-large); mix-blend-mode: multiply; }
 .info-cards.is-icons .info-card.has-media { padding: var(--topic-gap) var(--text-gap-large); overflow: visible; }
 .info-cards.is-icons .info-card.has-media > h3, .info-cards.is-icons .info-card.has-media > p { padding-inline: 0; }
