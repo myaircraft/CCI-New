@@ -36,10 +36,7 @@ $first = $products[0] ?? ['name' => '', 'hero_line' => ''];
 
   <section id="products-supplies" class="section-space"><div class="site-container">
     <?php cc_section_title(cc_page('products.topic'), cc_page('products.heading'), cc_page('products.description')); ?>
-    <div class="product-grid"><?php foreach ($products as $product) : ?><a class="product-item" href="<?php echo esc_url(cc_category_destination($product['name'], 'product')); ?>">
-      <div class="product-image-wrap"><img src="<?php echo esc_url(cc_img($product['image'])); ?>" alt="<?php echo esc_attr($product['name']); ?>" width="1152" height="576" loading="lazy"></div>
-      <div class="product-body"><h3><?php echo esc_html($product['name']); ?></h3><p><?php echo esc_html($product['description']); ?></p><span class="category-link"><?php cc_page_e('products.card_link_label'); ?> <span aria-hidden="true">→</span></span></div>
-    </a><?php endforeach; ?></div>
+    <?php cc_home_groups('products-supplies', cc_page_list('products.group_images')); ?>
     <div class="section-actions"><a href="<?php echo esc_url(cc_url('products')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('products.button_label'); ?></a></div>
   </div></section>
 
@@ -47,7 +44,7 @@ $first = $products[0] ?? ['name' => '', 'hero_line' => ''];
     <img class="band-photo" src="<?php echo esc_url(cc_img(cc_page('services.image'))); ?>" alt="<?php echo esc_attr(cc_page('services.image_alt')); ?>" width="1920" height="768" loading="lazy">
     <div class="site-container band-content">
       <?php cc_section_title(cc_page('services.topic'), cc_page('services.heading'), cc_page('services.description')); ?>
-      <div class="service-list"><?php foreach (cc_services() as $service) : ?><a href="<?php echo esc_url(cc_category_destination($service['name'], 'service')); ?>"><?php echo esc_html($service['name']); ?><span class="service-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 18 18 6M8 6h10v10"/></svg></span></a><?php endforeach; ?></div>
+      <?php cc_home_groups('services', cc_page_list('services.group_images')); ?>
       <div class="section-actions"><a href="<?php echo esc_url(cc_url('services')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('services.button_label'); ?></a></div>
     </div>
   </section>

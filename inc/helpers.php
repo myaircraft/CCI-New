@@ -107,3 +107,20 @@ function cc_section_title($title, $subtitle, $description = '') {
 function cc_shop_materials_cta() {
     echo '<div class="mt-12 flex w-full justify-center"><a href="' . esc_url(cc_url('shop')) . '" target="_blank" rel="noopener noreferrer" class="' . cc_btn('shop', 'lg', 'w-full max-w-2xl rounded-full uppercase tracking-wide') . '">' . cc_icon('shopping-cart') . esc_html(cc_content('category.shop_label')) . cc_icon('arrow-up-right') . '</a></div>';
 }
+
+
+/** Home page category cards built from a header menu's groups: image, group title and links to each sub page. */
+function cc_home_groups($menu_id, $images = []) {
+    $groups = [];
+    foreach (cc_navigation() as $item) if (($item['id'] ?? '') === $menu_id) $groups = $item['groups'] ?? [];
+    if (!$groups) return;
+    echo '<div class="group-grid">';
+    foreach ($groups as $i => $g) {
+        echo '<article class="group-card">';
+        if (!empty($images[$i])) echo '<div class="group-media"><img src="' . esc_url(cc_img($images[$i])) . '" alt="' . esc_attr($g['title']) . '" width="1200" height="800" loading="lazy" decoding="async"></div>';
+        echo '<h3>' . esc_html($g['title']) . '</h3><ul class="group-links">';
+        foreach ($g['items'] as $link) echo '<li><a href="' . esc_url(cc_link($link['link'])) . '"><span>' . esc_html($link['label']) . '</span>' . cc_icon('arrow-right') . '</a></li>';
+        echo '</ul></article>';
+    }
+    echo '</div>';
+}
