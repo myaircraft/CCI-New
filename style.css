@@ -372,3 +372,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-people.is-team h3 { font-size: calc(var(--fs-body) * 1.2); }
 .info-layout-centered:not(:has(.info-kicker)) .info-centered p:not(.info-kicker) { color: var(--foreground); font-size: var(--fs-card-title); line-height: var(--text-leading); }
 .info-coop p { font-size: 14px; }
+
+.info-block.is-flush { border-top: 0; padding-top: var(--topic-gap); }
+.info-block.is-flush .category-section-heading { max-width: 800px; }
+.info-block.is-flush .category-section-heading p { margin: 0; color: var(--foreground); font-size: var(--fs-card-title); }

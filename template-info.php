@@ -34,7 +34,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       $items = (array) ($b['items'] ?? []);
       $paragraphs = (array) ($b['paragraphs'] ?? []);
     ?>
-    <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?><?php echo !empty($b['tint']) ? ' is-tinted' : ''; ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
+    <section class="category-section info-block info-layout-<?php echo esc_attr($layout); ?><?php echo !empty($b['tint']) ? ' is-tinted' : ''; ?><?php echo !empty($b['flush']) ? ' is-flush' : ''; ?>" id="<?php echo esc_attr($bid); ?>" aria-labelledby="<?php echo esc_attr($bid); ?>-title">
       <?php if (!in_array($layout, ['split', 'statement', 'intro', 'centered', 'article', 'video'], true) && (($b['title'] ?? '') !== '' || ($b['description'] ?? '') !== '' || $layout === 'text')) : ?>
       <div class="category-section-heading">
         <?php if (($b['title'] ?? '') !== '') : ?><h2 id="<?php echo esc_attr($bid); ?>-title"><?php echo esc_html(cc_tc($b['title'])); ?></h2><?php endif; ?>

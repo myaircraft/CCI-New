@@ -238,7 +238,9 @@ return [
                     ['image' => $img('choicepartners.png'), 'title' => 'Choice Partners', 'description' => 'Through partnership with Choice Partners, we can provide our customers with easy access to pre-negotiated contracts and the highest quality products and services.', 'lines' => [
                         '24/023TC-06 - Maintenance, Repair & Operations (MRO) Parts, Equipment and Related Services',
                     ]],
-                    ['image' => $img('region5.png'), 'title' => 'Region 5', 'description' => 'Our cooperative contracts with Region 5, 6, and 7 further expand our reach and enable us to serve public entities within these specific regions, ensuring efficient and effective procurement processes.', 'lines' => [
+                ]],
+                ['layout' => 'coops', 'id' => 'regions', 'flush' => true, 'description' => 'Our cooperative contracts with Region 5, 6, and 7 further expand our reach and enable us to serve public entities within these specific regions, ensuring efficient and effective procurement processes.', 'items' => [
+                    ['image' => $img('region5.png'), 'title' => 'Region 5', 'lines' => [
                         '20260103 - Maintenance & Operations Equipment Supplies, Rental Sales and/or Services',
                         '20260202 - Building Materials, Supplies, and Services',
                         '20260403 - Electrical Supplies and/or Services',
@@ -247,7 +249,7 @@ return [
                         '20260605 - Janitorial Equipment, Supplies, and/or Services',
                         '20260608 - Personal Protective Equipment (PPE)',
                     ]],
-                    ['image' => $img('region6.png'), 'title' => 'Region 6', 'description' => 'Our cooperative contracts with Region 5, 6, and 7 further expand our reach and enable us to serve public entities within these specific regions, ensuring efficient and effective procurement processes.', 'lines' => [
+                    ['image' => $img('region6.png'), 'title' => 'Region 6', 'lines' => [
                         '15.25 - Office Supplies',
                         '26.24 - Building Materials, Hardware, Services',
                         '27.25 - Electrical Parts, Equipment, Supplies, Services',
@@ -255,7 +257,7 @@ return [
                         '31.25 - Plumbing Parts, Supplies, Services',
                         '39.25 - MRO of Facilities and Grounds - Supplies, Equipment, Tool Rental, Sales and Services',
                     ]],
-                    ['image' => $img('region7.png'), 'title' => 'Region 7', 'description' => 'Our cooperative contracts with Region 5, 6, and 7 further expand our reach and enable us to serve public entities within these specific regions, ensuring efficient and effective procurement processes.', 'lines' => [
+                    ['image' => $img('region7.png'), 'title' => 'Region 7', 'lines' => [
                         'CUS2628 - Custodial Supplies',
                         'ELEC2626 - Electrical Supplies',
                         'MAIN2527 - Building Maintenance & Safety Supplies',
