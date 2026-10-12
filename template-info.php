@@ -46,13 +46,14 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php endif; ?>
 
       <?php if ($layout === 'cards' && $items) : ?>
-      <div class="info-cards<?php echo !empty($b['icons']) ? ' is-icons' : ''; ?><?php echo !empty($b['wide']) ? ' is-wide' : ''; ?><?php echo !empty($b['size']) ? ' is-' . esc_attr($b['size']) : ''; ?><?php echo !empty($b['caps']) ? ' is-caps' : ''; ?>"><?php foreach ($items as $it) :
+      <div class="info-cards<?php echo !empty($b['icons']) ? ' is-icons' : ''; ?><?php echo !empty($b['wide']) ? ' is-wide' : ''; ?><?php echo !empty($b['size']) ? ' is-' . esc_attr($b['size']) : ''; ?><?php echo !empty($b['caps']) ? ' is-caps' : ''; ?><?php echo !empty($b['learn']) ? ' has-learn' : ''; ?>"><?php foreach ($items as $it) :
         $link = ($it['link'] ?? '') !== '' ? cc_link($it['link']) : ''; $heading = esc_html($it['title'] ?? ''); ?>
         <article class="info-card<?php echo $link ? ' is-link' : ''; ?><?php echo !empty($it['image']) ? ' has-media' : ''; ?>"<?php echo !empty($it['id']) ? ' id="' . esc_attr($it['id']) . '"' : ''; ?>>
           <?php if (!empty($it['image'])) : ?><img class="info-card-media" src="<?php echo esc_url(cc_img($it['image'])); ?>" alt="" width="540" height="334" loading="lazy" decoding="async"><?php endif; ?>
           <h3><?php echo $link ? '<a href="' . esc_url($link) . '">' . $heading . '</a>' : $heading; ?></h3>
           <?php if (($it['description'] ?? '') !== '') : ?><p><?php echo esc_html($it['description']); ?></p><?php endif; ?>
           <?php if (!empty($it['lines'])) : ?><ul><?php foreach ((array) $it['lines'] as $line) : ?><li><?php echo esc_html($line); ?></li><?php endforeach; ?></ul><?php endif; ?>
+          <?php if (!empty($b['learn']) && $link) : ?><span class="card-learn" aria-hidden="true">Learn More<?php echo cc_icon('arrow-right'); ?></span><?php endif; ?>
           <?php if (!empty($it['url'])) : ?><a class="info-card-button <?php echo cc_btn(); ?>" href="<?php echo esc_url($it['url']); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($it['button_label'] ?? 'SHOP NOW'); ?></a><?php endif; ?>
         </article>
       <?php endforeach; ?></div>

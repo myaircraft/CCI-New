@@ -635,3 +635,18 @@ html { scroll-behavior: smooth; }
 #products-supplies .group-grid { width: 100%; margin-inline: auto; }
 @media (max-width: 900px) { .group-grid { grid-template-columns: 1fr; max-width: 640px; } }
 @media (max-width: 560px) { .group-links { columns: 1; } }
+
+/* Linked cards with Learn More: yellow hover, whole card clickable */
+.info-cards.has-learn .info-card { position: relative; display: flex; flex-direction: column; transition: background-color .3s ease, border-color .3s ease, transform .3s ease, box-shadow .3s ease; cursor: pointer; }
+.info-cards.has-learn .info-card h3 a { color: inherit; text-decoration: none; }
+.info-cards.has-learn .info-card h3 a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.info-cards.has-learn .info-card:hover, .info-cards.has-learn .info-card:focus-within { background-color: var(--primary); border-color: var(--primary); transform: translateY(-6px); box-shadow: 0 22px 40px -22px rgba(16, 38, 84, .45); }
+.info-cards.has-learn .info-card:hover h3, .info-cards.has-learn .info-card:hover p, .info-cards.has-learn .info-card:focus-within p { color: var(--foreground); }
+.info-cards.has-learn .info-card p { flex: 1 1 auto; transition: color .3s ease; }
+.card-learn { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; margin-top: var(--text-gap-large); padding: 10px 20px; border: 2px solid var(--brand); border-radius: 999px; background: #fff; color: var(--brand); font-size: var(--fs-caption); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, transform .25s ease; }
+.card-learn svg { width: 17px; height: 17px; transition: transform .25s ease; }
+.info-cards.has-learn .info-card:hover .card-learn, .info-cards.has-learn .info-card:focus-within .card-learn { background: var(--brand); color: #fff; box-shadow: 0 10px 20px -10px rgba(16, 38, 84, .6); }
+.info-cards.has-learn .info-card:hover .card-learn svg { transform: translateX(5px); }
+.info-cards.has-learn .info-card:active .card-learn svg { transform: translateX(11px); }
+.info-cards.has-learn .info-card:active .card-learn { transform: scale(.97); }
+@media (hover: none) { .info-cards.has-learn .info-card:hover { transform: none; } }

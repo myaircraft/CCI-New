@@ -17,7 +17,7 @@ return [
             'banner' => ['kicker' => 'PRODUCTS & SUPPLIES', 'title' => 'Products & Supplies', 'image' => 'banner-supplies.jpg', 'lead' => 'From daily facility needs to complex infrastructure projects, we source the products that keep your operation running.', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Products & Supplies'],
             'blocks' => [
-                ['layout' => 'cards', 'id' => 'chemical', 'title' => 'Chemical Supplies', 'description' => 'Maintenance chemicals and treatments that improve performance, maintain compliance and reduce downtime.', 'items' => [
+                ['layout' => 'cards', 'id' => 'chemical', 'learn' => true, 'title' => 'Chemical Supplies', 'description' => 'Maintenance chemicals and treatments that improve performance, maintain compliance and reduce downtime.', 'items' => [
                     ['title' => 'Enzyme Treatment & Maintainers', 'description' => 'Bio-enzymatic maintainers that digest grease and organic buildup.', 'link' => '/supplies/enzyme-treatment-maintainers/'],
                     ['title' => 'Drain & Wastewater Maintenance', 'description' => 'Digesters, cleaners and treatments for drains, lift stations and sewer lines.', 'link' => '/supplies/drain-wastewater-maintenance/'],
                     ['title' => 'HVAC Maintenance', 'description' => 'Coil cleaners and treatments that protect HVAC efficiency.', 'link' => '/supplies/hvac-maintenance/'],
@@ -27,7 +27,7 @@ return [
                     ['title' => 'Grounds & Seasonal Maintenance', 'description' => 'Weed control, ice melt and seasonal supplies for every property.', 'link' => '/supplies/grounds-seasonal-maintenance/'],
                     ['title' => 'Pool & Water Treatment', 'description' => 'Sanitizers, balancers and testing supplies for safe, clear water.', 'link' => '/supplies/pool-water-treatment/'],
                 ]],
-                ['layout' => 'cards', 'id' => 'systems', 'tint' => true, 'title' => 'Systems & Infrastructure Supplies', 'description' => 'Electrical, mechanical, plumbing and safety supplies for complex facilities and infrastructure projects.', 'items' => [
+                ['layout' => 'cards', 'id' => 'systems', 'learn' => true, 'tint' => true, 'title' => 'Systems & Infrastructure Supplies', 'description' => 'Electrical, mechanical, plumbing and safety supplies for complex facilities and infrastructure projects.', 'items' => [
                     ['title' => 'Power Distribution & Transformers', 'description' => 'Switchgear, panelboards, breakers, fuses and transformers for critical infrastructure.', 'link' => '/supplies/power-distribution-transformers/'],
                     ['title' => 'Electrical, Lighting & Cable Wire', 'description' => 'Cable, conduit, panels, controls and commercial lighting for complex projects.', 'link' => '/supplies/electrical-lighting-cable/'],
                     ['title' => 'Package Units & HVAC', 'description' => 'Package units, HVAC equipment and components for commercial buildings.', 'link' => '/supplies/hvac-package-units/'],
@@ -54,14 +54,14 @@ return [
             'banner' => ['kicker' => 'SERVICES', 'title' => 'Services & Solutions', 'image' => 'banner-services.jpg', 'lead' => 'Beyond product distribution, a suite of value-added services that enhance operational efficiency and continuity.', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Services'],
             'blocks' => [
-                ['layout' => 'cards', 'id' => 'product-services', 'title' => 'Product & Dispenser Services', 'description' => 'Programs and equipment that keep facilities clean, fresh and running.', 'items' => [
+                ['layout' => 'cards', 'id' => 'product-services', 'learn' => true, 'title' => 'Product & Dispenser Services', 'description' => 'Programs and equipment that keep facilities clean, fresh and running.', 'items' => [
                     ['title' => 'Drain Maintenance', 'description' => 'Preventive drain care for wastewater, kitchen and dialysis drains.', 'link' => '/services/drain-services/'],
                     ['title' => 'Odor Control', 'description' => 'Targeted odor control for schools, plants, healthcare centers and commercial buildings.', 'link' => '/services/odor-control/'],
                     ['title' => 'Air Scenting', 'description' => 'HVAC-integrated and standalone scenting with allergy-tested fragrances.', 'link' => '/services/air-scenting-services/'],
                     ['title' => 'Chemical Supply Program', 'description' => 'Right-sized, scheduled chemical supply with the documentation your team needs.', 'link' => '/services/chemical-supply-program/'],
                     ['title' => 'Dispensing Systems', 'description' => 'Installed, calibrated and supported dispensing for accurate dosing.', 'link' => '/services/dispensing-systems/'],
                 ]],
-                ['layout' => 'cards', 'id' => 'operations-services', 'tint' => true, 'title' => 'Facility Operations Support Services', 'description' => 'We help organizations source, manage, deliver and support critical operational requirements.', 'items' => [
+                ['layout' => 'cards', 'id' => 'operations-services', 'learn' => true, 'tint' => true, 'title' => 'Facility Operations Support Services', 'description' => 'We help organizations source, manage, deliver and support critical operational requirements.', 'items' => [
                     ['title' => 'Logistics & Procurement', 'description' => 'Warehousing, distribution, strategic sourcing and eProcurement from our Houston warehouse.', 'link' => '/services/logistics-procurement/'],
                     ['title' => 'Program Scheduling & Management', 'description' => 'Delivery coordination and scheduling for MEP and general contractor teams.', 'link' => '/services/program-scheduling/'],
                     ['title' => 'Facility Call Center and Service Request', 'description' => 'Centralized intake, tracking and follow-up for facility service tickets.', 'link' => '/services/work-order-request-call-center/'],
