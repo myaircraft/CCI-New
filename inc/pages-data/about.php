@@ -194,14 +194,14 @@ return [
                 'og_description' => 'Pre-negotiated cooperative contracts and federal schedules for public-sector buyers.',
                 'schema_about' => 'Cooperative purchasing contracts and federal schedules', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Co-Ops & Schedules', 'lead' => 'Multiple cooperative contracts give public-sector customers access to high-quality products and services with cost savings and efficiency.'],
+            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Co-Ops & Schedules', 'tagline' => 'Empowering your Procurement Experience', 'lead' => 'Multiple cooperative contracts give public-sector customers access to high-quality products and services with cost savings and efficiency.'],
             'breadcrumb' => $crumb('Co-Ops & Schedules'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
                     'Competitive Choice has been awarded multiple cooperative contracts, so our customers can reach a wide range of high-quality products and services through pre-negotiated, competitively priced agreements.',
                 ]],
                 ['layout' => 'coops', 'id' => 'cooperative', 'title' => 'Cooperative contracts', 'description' => 'Open a card to see the contract numbers awarded to Competitive Choice.', 'items' => [
-                    ['image' => $img('tips.png'), 'title' => 'TIPS', 'description' => 'Texas Interlocal Purchasing System. Serves public entities in Texas with competitive pricing and efficient procurement.', 'lines' => [
+                    ['image' => $img('tips.png'), 'title' => 'TIPS', 'description' => 'As a recipient of the Texas Interlocal Purchasing System (TIPS) contract, we are able to serve public entities in Texas with a wide array of procurement solutions. This contract allows us to offer competitive pricing and efficient procurement services to our Texas-based customers.', 'lines' => [
                         '230903 - Industrial and Facility Equipment, Chemicals, Supplies, and Services',
                         '23100201 - Energy and Water Efficiency Goods and Services Non-JOC',
                         '240102 - Emergency Responder Supplies, Equipment and Services',
@@ -210,35 +210,35 @@ return [
                         '25020101 - Renewable Energy and Solar Solutions and Services',
                         '260103 - Janitorial and Sanitation Supplies and Services',
                         '260502 - Electrical and Plumbing Supplies and Equipment',
-                        '260504 - MRO Supplies, Equipment, Tool Rental, Sales and Services',
+                        '260504 - MRO (Maintenance, Repair and Operations of Facilities and Grounds) Supplies, Equipment, Tool Rental, Sales and Services',
                     ]],
-                    ['image' => $img('buyboard.png'), 'title' => 'BuyBoard', 'description' => 'Access to a diverse range of products and services, with cost savings and efficiency.', 'lines' => [
+                    ['image' => $img('buyboard.png'), 'title' => 'BuyBoard', 'description' => 'We are proud to be awarded the Buy Board cooperative contract. This contract allows us to provide our customers with access to a diverse range of products and services while ensuring cost savings and efficiency.', 'lines' => [
                         '715-23 - Automotive Parts, Fluids, Equipment and Maintenance Services',
                         '747-24 - Custodial Supplies and Equipment',
                         '790-26 - Energy-Saving Lighting Products',
                     ]],
-                    ['image' => $img('goood.png'), 'title' => 'Good Buy', 'description' => 'Reliable products and services that meet the specific needs of public entities in Texas.', 'lines' => [
+                    ['image' => $img('goood.png'), 'title' => 'Good Buy', 'description' => 'Our inclusion in the Good Buy cooperative contract further strengthens our commitment to serving public entities in Texas. Through this contract, we ensure that our customers have access to reliable products and services that meet their specific needs.', 'lines' => [
                         '25-26 6D000 - Office: Supplies/Equipment',
                         '26 7N000 - Facility Services: Building / Equipment Maintenance / Repair',
                         '26-27 2B000 - Custodial / Janitorial: Cleaning Supplies / Equipment',
-                        '26-27 6M000 - Lighting: Electrical/Supplies/Installation',
+                        '26-27 6M000 - Lighting - Fluorescent/ Incandescent/ LED: Electrical/Supplies/Installation',
                         '26-27 7A000 - MRO: Maintenance / Repair / Operating Supplies / Equipment',
-                        '26-27 7D000 - HVAC: Supplies / Equipment',
+                        '26-27 7D000 - HVAC: Heating / Ventilation / Air Conditioning Supplies / Equipment',
                         '26-27 7M000 - Electrical: Hardware / Supplies / Control Systems / Equipment',
                     ]],
-                    ['image' => $img('pca.png'), 'title' => 'PCA', 'description' => 'Purchasing Cooperative of America. Extends our solutions to a broader network of public entities and non-profit organizations.', 'lines' => [
+                    ['image' => $img('pca.png'), 'title' => 'PCA', 'description' => 'Our cooperative contract with the Purchasing Cooperative of America (PCA) enables us to extend our procurement solutions to a broader network of public entities and non-profit organizations.', 'lines' => [
                         'OD-396-23 - Janitorial and Custodial Products, Services, and Related Items',
                         'OD-400-23 - Office Supplies and Related Items',
                         'OD-414-24 - Custodial Supplies, Equipment, and Related Items',
                     ]],
-                    ['image' => $img('allied.png'), 'title' => 'Allied States', 'description' => 'Serves public entities in various states across the nation, so customers outside Texas can benefit from our procurement solutions.', 'lines' => [
-                        '23-7457 - MRO Equipment, Supplies, Materials, and Services',
+                    ['image' => $img('allied.png'), 'title' => 'Allied States', 'description' => 'We are honored to be part of the Allied State Cooperative contract, which allows us to serve public entities in various states across the nation. This cooperative agreement ensures that our customers outside of Texas can benefit from our procurement solutions, accessing a wide array of products and services while enjoying cost savings and efficiency.', 'lines' => [
+                        '23-7457 - Maintenance, Repair, and Operation (MRO) Equipment, Supplies, Materials, and Services',
                         '25-7522 - Medical Supplies, Equipment, and Related Services (Supplemental)',
                     ]],
-                    ['image' => $img('choicepartners.png'), 'title' => 'Choice Partners', 'description' => 'Easy access to pre-negotiated contracts and the highest quality products and services.', 'lines' => [
-                        '24/023TC-06 - MRO Parts, Equipment and Related Services',
+                    ['image' => $img('choicepartners.png'), 'title' => 'Choice Partners', 'description' => 'Through partnership with Choice Partners, we can provide our customers with easy access to pre-negotiated contracts and the highest quality products and services.', 'lines' => [
+                        '24/023TC-06 - Maintenance, Repair & Operations (MRO) Parts, Equipment and Related Services',
                     ]],
-                    ['image' => $img('region5.png'), 'title' => 'Region 5', 'description' => 'Serves public entities within Region 5, ensuring efficient and effective procurement.', 'lines' => [
+                    ['image' => $img('region5.png'), 'title' => 'Region 5', 'description' => 'Our cooperative contracts with Region 5, 6, and 7 further expand our reach and enable us to serve public entities within these specific regions, ensuring efficient and effective procurement processes.', 'lines' => [
                         '20260103 - Maintenance & Operations Equipment Supplies, Rental Sales and/or Services',
                         '20260202 - Building Materials, Supplies, and Services',
                         '20260403 - Electrical Supplies and/or Services',
@@ -247,26 +247,29 @@ return [
                         '20260605 - Janitorial Equipment, Supplies, and/or Services',
                         '20260608 - Personal Protective Equipment (PPE)',
                     ]],
-                    ['image' => $img('region6.png'), 'title' => 'Region 6', 'description' => 'Serves public entities within Region 6, ensuring efficient and effective procurement.', 'lines' => [
+                    ['image' => $img('region6.png'), 'title' => 'Region 6', 'description' => 'Our cooperative contracts with Region 5, 6, and 7 further expand our reach and enable us to serve public entities within these specific regions, ensuring efficient and effective procurement processes.', 'lines' => [
                         '15.25 - Office Supplies',
                         '26.24 - Building Materials, Hardware, Services',
                         '27.25 - Electrical Parts, Equipment, Supplies, Services',
                         '29.25 - HVAC Parts, Supplies, Services',
                         '31.25 - Plumbing Parts, Supplies, Services',
-                        '39.25 - MRO of Facilities and Grounds',
+                        '39.25 - MRO of Facilities and Grounds - Supplies, Equipment, Tool Rental, Sales and Services',
                     ]],
-                    ['image' => $img('region7.png'), 'title' => 'Region 7', 'description' => 'Serves public entities within Region 7, ensuring efficient and effective procurement.', 'lines' => [
+                    ['image' => $img('region7.png'), 'title' => 'Region 7', 'description' => 'Our cooperative contracts with Region 5, 6, and 7 further expand our reach and enable us to serve public entities within these specific regions, ensuring efficient and effective procurement processes.', 'lines' => [
                         'CUS2628 - Custodial Supplies',
                         'ELEC2626 - Electrical Supplies',
                         'MAIN2527 - Building Maintenance & Safety Supplies',
                         'PLUMB2527 - Plumbing Supplies',
                     ]],
                 ]],
-                ['layout' => 'coops', 'id' => 'federal', 'tint' => true, 'title' => 'Federal schedules', 'description' => 'Meeting the standards and regulatory demands of federal organizations.', 'items' => [
-                    ['image' => $img('gsa.png'), 'title' => 'GSA', 'description' => 'Contract # 47QSEA20D005G. As an industry partner of the General Services Administration, we supply a full range of products to government customers, from hospitality and cleaning equipment to foodservice and chemicals, through GSA Advantage.', 'link' => 'https://www.gsaadvantage.gov/advantage/ws/search/advantage_search?q=0:247QSEA20D005G%20&q=10:5ABILITY%20ONE&searchType=1&db=0', 'link_label' => 'SHOP GSA'],
-                    ['image' => $img('abilityone.png'), 'title' => 'AbilityOne', 'description' => 'One of the nation’s leading employers of people who are blind or have significant disabilities. Together with GSA and AbilityOne, we offer AbilityOne products and our MAS schedules for industrial and facility products and office supplies.', 'link' => 'https://www.abilityone.gov/', 'link_label' => 'LEARN MORE'],
+                ['layout' => 'coops', 'id' => 'federal', 'tint' => true, 'title' => 'Federal', 'items' => [
+                    ['image' => $img('gsa.png'), 'title' => 'GSA', 'description' => 'CONTRACT #: 47QSEA20D005G. Competitive Choice is proud to be an industry partner of the General Services Administration (GSA). Through this partnership, we can meet the high standards and regulatory demands of federal organizations through a full range of supplies ranging from hospitality and cleaning equipment to foodservice and chemicals to our government customers. Great value and convenience are of importance when purchasing for a large agency, and with GSA Advantage, Competitive Choice can help get the job done.', 'link' => 'https://www.gsaadvantage.gov/advantage/ws/search/advantage_search?q=0:247QSEA20D005G%20&q=10:5ABILITY%20ONE&searchType=1&db=0', 'link_label' => 'SHOP GSA'],
+                    ['image' => $img('abilityone.png'), 'title' => 'AbilityOne', 'description' => 'As one of the nation’s leading employers for those who are blind or have significant disabilities, The AbilityOne® Program provides high-quality products and services for businesses across the country. Together with the GSA and Ability One, Competitive Choice is pleased to offer AbilityOne products as well as our MAS schedules for industrial and facility products, as well as office supplies to our government customers.', 'link' => 'https://www.abilityone.gov/', 'link_label' => 'LEARN MORE'],
                 ]],
-                ['layout' => 'centered', 'id' => 'closing', 'kicker' => 'WORKING WITH US', 'title' => 'A simpler way to buy', 'paragraphs' => ['These contracts reflect our commitment to the best possible procurement experience: cost-effective solutions, diverse supplier options and streamlined processes. Contact us to learn how they can work for your organization.']],
+                ['layout' => 'centered', 'id' => 'closing', 'paragraphs' => [
+                    'At Competitive Choice, Inc., these cooperative contracts signify our commitment to providing our customers with the best procurement experience possible. By leveraging these partnerships, we can offer you cost-effective solutions, diverse supplier options, streamlined procurement processes, and exceptional customer service.',
+                    'We are proud to be associated with these esteemed cooperative organizations, and we look forward to continuing to serve our customers with excellence. Contact us today to learn more about how our award-winning cooperative contracts can benefit your organization’s procurement needs.',
+                ]],
             ],
             'related' => $related('co-ops-schedules'),
         ],
