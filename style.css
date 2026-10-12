@@ -708,3 +708,9 @@ html { scroll-behavior: smooth; }
 /* Home sections: heavier headings, tighter group titles (the font stops at 800, so a hairline stroke adds weight) */
 #products-supplies .section-topic, #services .section-topic { font-weight: 900; -webkit-text-stroke: .7px currentColor; }
 #products-supplies .group-card h3, #services .group-card h3 { font-weight: 900; letter-spacing: .01em; -webkit-text-stroke: .45px currentColor; }
+
+/* Home category boxes: 15% narrower, sub-categories in one column so every name stays on one line */
+#products-supplies .group-grid, #services .group-grid { max-width: 85%; margin-inline: auto; }
+#products-supplies .group-links, #services .group-links { columns: 1; column-gap: 0; }
+#products-supplies .group-links a, #services .group-links a { white-space: nowrap; }
+@media (max-width: 1100px) { #products-supplies .group-grid, #services .group-grid { max-width: 640px; } }
