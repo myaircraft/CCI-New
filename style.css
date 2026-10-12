@@ -426,4 +426,4 @@ h1, h2, h3, h4 { text-wrap: balance; }
 @media (max-width: 1100px) { .mega-menu:has(.mega-columns) .mega-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); } .mega-column-title { white-space: normal; } }
 
 /* Sentence-style typewriter tagline (light weight, wide measure) */
-.category-banner .category-tagline.is-sentence { max-width: 62ch; font-weight: 300; font-size: var(--fs-card-title); line-height: var(--text-leading); }
+.category-banner .category-tagline.is-sentence { max-width: 62ch; margin-inline: auto; text-align: center; font-weight: 300; font-size: var(--fs-card-title); line-height: var(--text-leading); }
