@@ -29,7 +29,7 @@ return [
     'company.website'       => 'https://competitivechoice.net/',
 
     // Destinations on the company's existing site
-    'links.contact'        => 'https://competitivechoice.net/contact-us',
+    'links.contact'        => '/contact-us/#contact-form',
     'links.shop'           => 'https://shopcompetitivechoice.net/',
     'links.products'       => 'https://competitivechoice.net/cci-services-materials-supplies',
     'links.services'       => 'https://competitivechoice.net/cci-services-services',

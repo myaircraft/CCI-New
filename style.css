@@ -567,3 +567,8 @@ h1, h2, h3, h4 { text-wrap: balance; }
 /* Home markets strip: single bold line */
 .market-strip .market-label { max-width: 62ch; color: #1d7fe3; font-size: 17px; font-weight: 700; line-height: 1.45; text-wrap: balance; }
 @media (max-width: 767px) { .market-strip .market-label { font-size: 15px; } }
+
+/* Quote buttons land on the contact form below the sticky header */
+#contact-form { scroll-margin-top: 140px; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
