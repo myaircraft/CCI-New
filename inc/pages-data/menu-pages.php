@@ -69,7 +69,7 @@ return [
                 'og_description' => 'Houston-based. National reach. Industries where infrastructure cannot fail.',
                 'schema_about' => 'Industries served by Competitive Choice', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['video' => 'wp-content/themes/competitive-choice/assets/video/whoweserve.mp4', 'title' => 'WHO WE SERVE'],
+            'banner' => ['video' => 'wp-content/themes/competitive-choice/assets/video/whoweserve.mp4', 'title' => 'OUR REACH & IMPACT', 'lead' => 'From Houston to all 50 states, we keep the facilities communities depend on supplied, serviced and running.', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Who We Serve'],
             'blocks' => [
                 ['layout' => 'cards', 'id' => 'industries', 'icons' => true, 'size' => 'md', 'caps' => true, 'title' => 'Industries We Serve', 'description' => 'CCI serves industries where infrastructure cannot fail and operational discipline is non-negotiable. We ship nationally, and our certifications fit federal, state, municipal, and commercial procurement workflows.', 'items' => [

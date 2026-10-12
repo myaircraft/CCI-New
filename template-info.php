@@ -19,7 +19,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <h1 id="category-title"><?php echo esc_html($title); ?></h1>
       <?php if (cc_page_has('banner.tagline')) : ?><p class="category-tagline<?php echo cc_page_has('banner.tagline_speed') ? ' is-sentence' : ''; ?>" data-typewriter<?php echo cc_page_has('banner.tagline_speed') ? ' data-speed="' . (int) cc_page('banner.tagline_speed') . '"' : ''; ?>><?php echo nl2br(esc_html(cc_page('banner.tagline'))); ?></p><?php endif; ?>
       <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead"><?php cc_page_e('banner.lead'); ?></p><?php endif; ?>
-      <?php if (cc_page_has('banner.quote_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
+      <?php if (cc_page_has('banner.quote_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a><?php if (cc_page_has('banner.call_label')) : ?><a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>" class="<?php echo cc_btn('outline', 'default', 'category-secondary'); ?>"><?php echo esc_html(trim(cc_page('banner.call_label') . ' ' . cc_content('company.phone'))); ?></a><?php endif; ?></div><?php endif; ?>
     </div>
   </section>
   <div class="site-container"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
