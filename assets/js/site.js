@@ -208,6 +208,7 @@
     var lines = el.innerHTML.split(/<br\s*\/?>/i).map(function (l) {
       var d = document.createElement('div'); d.innerHTML = l; return d.textContent.trim();
     });
+    var speed = parseInt(el.getAttribute('data-speed'), 10) || 72;
     el.style.minHeight = el.offsetHeight + 'px';
     el.textContent = '';
     var caret = document.createElement('span');
@@ -221,7 +222,7 @@
       if (line >= lines.length) { setTimeout(function () { caret.classList.add('is-done'); }, 1400); return; }
       if (char < lines[line].length) {
         node.textContent += lines[line].charAt(char++);
-        setTimeout(tick, 72);
+        setTimeout(tick, speed);
       } else {
         line++; char = 0;
         if (line < lines.length) {
