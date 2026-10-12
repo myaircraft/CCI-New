@@ -14,7 +14,7 @@ return [
                 'og_description' => 'Fourteen product categories for facilities, utilities, healthcare, education and construction. Request a quote.',
                 'schema_about' => 'Industrial, facility maintenance and construction supplies', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['kicker' => 'PRODUCTS & SUPPLIES', 'title' => 'Products & Supplies', 'image' => 'banner-supplies.jpg', 'lead' => 'From daily facility needs to complex infrastructure projects, we source the products that keep your operation running.', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
+            'banner' => ['kicker' => 'PRODUCTS & SUPPLIES', 'title' => 'Products & Supplies', 'image' => 'banner-supplies-v3.jpg', 'lead' => 'From daily facility needs to complex infrastructure projects, we source the products that keep your operation running.', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Products & Supplies'],
             'blocks' => [
                 ['layout' => 'cards', 'id' => 'chemical', 'learn' => true, 'title' => 'Chemical Supplies', 'description' => 'Maintenance chemicals and treatments that improve performance, maintain compliance and reduce downtime.', 'items' => [
@@ -51,7 +51,7 @@ return [
                 'og_description' => 'Value-added services that improve operational efficiency and continuity. Tell us what you need.',
                 'schema_about' => 'Logistics, procurement and facility support services', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['kicker' => 'SERVICES', 'title' => 'Services & Solutions', 'image' => 'banner-services.jpg', 'lead' => 'Beyond product distribution, a suite of value-added services that enhance operational efficiency and continuity.', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
+            'banner' => ['kicker' => 'SERVICES', 'title' => 'Services & Solutions', 'image' => 'banner-services-v3.jpg', 'lead' => 'Beyond product distribution, a suite of value-added services that enhance operational efficiency and continuity.', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Services'],
             'blocks' => [
                 ['layout' => 'cards', 'id' => 'product-services', 'learn' => true, 'title' => 'Product & Dispenser Services', 'description' => 'Programs and equipment that keep facilities clean, fresh and running.', 'items' => [

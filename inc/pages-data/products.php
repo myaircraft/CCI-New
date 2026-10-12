@@ -626,7 +626,7 @@ return [
                 'schema_about' => 'Custodial, janitorial and sanitation supplies',
             ],
             'banner' => [
-                'image' => 'chem-cleaning-banner.jpg',
+                'image' => 'chem-cleaning-banner-v3.jpg',
                 'title' => 'Custodial & Jan/San Supplies for Operational Excellence',
                 'lead' => 'Janitorial and sanitation products built for high-traffic, high-compliance settings.',
             ],

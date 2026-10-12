@@ -23,7 +23,7 @@ $cc = fn($slug) => '/supplies/' . $slug . '/';
 
 return [
     'enzyme-treatment-maintainers' => $build('enzyme-treatment-maintainers', 21, [
-        'title' => 'Enzyme Treatment & Maintainers', 'image' => 'chem-enzyme-banner.jpg',
+        'title' => 'Enzyme Treatment & Maintainers', 'image' => 'chem-enzyme-banner-v3.jpg',
         'seo' => 'Bio-enzymatic drain, grease trap and odor maintainers for kitchens, restrooms and facilities. Eco-conscious products that digest organic buildup. Request a quote.',
         'og' => 'Bio-enzymatic maintainers that keep drains and grease traps flowing.',
         'banner' => 'Enzyme Treatment & Maintainers for Cleaner, Freer-Flowing Systems', 'lead' => 'Biological products that digest the grease and organic buildup behind clogs, odors and callouts.',
@@ -38,7 +38,7 @@ return [
     ]),
 
     'drain-wastewater-maintenance' => $build('drain-wastewater-maintenance', 22, [
-        'title' => 'Drain & Wastewater Maintenance', 'image' => 'chem-drain-banner.jpg',
+        'title' => 'Drain & Wastewater Maintenance', 'image' => 'chem-drain-banner-v3.jpg',
         'seo' => 'Drain cleaners, digesters, odor neutralizers and treatment chemicals for drains, lift stations, wet wells and sewer lines. Request a quote.',
         'og' => 'Chemicals and maintenance products for drains and wastewater systems.',
         'banner' => 'Drain & Wastewater Maintenance Supplies', 'lead' => 'Products that keep drains, lift stations and collection systems flowing, safe and compliant.',
@@ -53,7 +53,7 @@ return [
     ]),
 
     'hvac-maintenance' => $build('hvac-maintenance', 23, [
-        'title' => 'HVAC Maintenance', 'image' => 'chem-hvac-banner.jpg',
+        'title' => 'HVAC Maintenance', 'image' => 'chem-hvac-banner-v3.jpg',
         'seo' => 'Coil cleaners, condensate treatments, corrosion inhibitors and filters-care chemicals that protect HVAC efficiency and extend equipment life. Request a quote.',
         'og' => 'HVAC maintenance chemicals that protect performance and equipment life.',
         'banner' => 'HVAC Maintenance Chemicals & Supplies', 'lead' => 'Cleaners and treatments that keep coils, drain pans and systems running efficiently.',
@@ -68,7 +68,7 @@ return [
     ]),
 
     'odor-control-supplies' => $build('odor-control-supplies', 25, [
-        'title' => 'Odor Control', 'image' => 'chem-odor-banner.jpg',
+        'title' => 'Odor Control', 'image' => 'chem-odor-banner-v3.jpg',
         'seo' => 'Odor neutralizers, digesters and deodorizing products for restrooms, plants, kitchens and facilities. Remove odors at the source. Request a quote.',
         'og' => 'Odor control products that remove the source, not just the smell.',
         'banner' => 'Odor Control Products That Remove the Source', 'lead' => 'Neutralizers and digesters for restrooms, plants, kitchens and public buildings.',
@@ -83,7 +83,7 @@ return [
     ]),
 
     'equipment-maintenance' => $build('equipment-maintenance', 26, [
-        'title' => 'Equipment Maintenance', 'image' => 'chem-equipment-banner.jpg',
+        'title' => 'Equipment Maintenance', 'image' => 'chem-equipment-banner-v3.jpg',
         'seo' => 'Lubricants, degreasers, cleaners, rust inhibitors and protective coatings that extend equipment life and cut downtime. Request a quote.',
         'og' => 'Maintenance chemicals that extend equipment life and cut downtime.',
         'banner' => 'Equipment Maintenance Chemicals', 'lead' => 'Lubricants, degreasers and protectants that keep pumps, motors and machinery running.',

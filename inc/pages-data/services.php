@@ -14,7 +14,7 @@ return [
                 'og_description' => 'A nimble logistics and procurement partner for organizations that support critical infrastructure. Tell us what you need.',
                 'schema_about' => 'Logistics, warehousing and procurement services',
             ],
-            'banner' => ['image' => 'svc-logistics-banner-v2.jpg', 'title' => 'Strategic Logistics & Procurement for Infrastructure-Driven Operations',
+            'banner' => ['image' => 'svc-logistics-banner-v3.jpg', 'title' => 'Strategic Logistics & Procurement for Infrastructure-Driven Operations',
                 'lead' => 'When a part, a pump or a pallet of supplies arrives late, the whole operation feels it. We make sure it does not, with a hands-on team and a centrally located Houston warehouse.'],
             'overview' => [
                 'title' => 'A trusted logistics and procurement partner for critical infrastructure',
@@ -87,7 +87,7 @@ return [
                 'og_description' => 'Responsive scheduling and delivery coordination for MEP and general contractors. Tell us about your project.',
                 'schema_about' => 'Construction program management and scheduling services',
             ],
-            'banner' => ['image' => 'svc-program-banner-v2.jpg', 'title' => 'End-to-End Program Management',
+            'banner' => ['image' => 'svc-program-banner-v3.jpg', 'title' => 'End-to-End Program Management',
                 'lead' => 'Personalized scheduling and delivery coordination that keeps MEP and general contractor teams on time, every time.'],
             'overview' => [
                 'title' => 'Programs and scheduling built around your construction milestones',
@@ -159,7 +159,7 @@ return [
                 'og_description' => 'Preventive, eco-conscious drain maintenance for healthcare, education, government and food service.',
                 'schema_about' => 'Drain care and wastewater maintenance services',
             ],
-            'banner' => ['image' => 'svc-drain-banner-v2.jpg', 'title' => 'Wastewater, Kitchen and Dialysis Drain Services',
+            'banner' => ['image' => 'svc-drain-banner-v3.jpg', 'title' => 'Wastewater, Kitchen and Dialysis Drain Services',
                 'lead' => 'Preventive, eco-conscious drain care that keeps systems clean, free-flowing and compliant.'],
             'overview' => [
                 'title' => 'Total Drain Care that protects your facility',
@@ -232,7 +232,7 @@ return [
                 'og_description' => 'Create a signature scent experience in lobbies, restrooms and breakrooms with turnkey installation and service.',
                 'schema_about' => 'Commercial air scenting services',
             ],
-            'banner' => ['image' => 'svc-scenting-banner-v2.jpg', 'title' => 'Enhance Your Facility’s Environment',
+            'banner' => ['image' => 'svc-scenting-banner-v3.jpg', 'title' => 'Enhance Your Facility’s Environment',
                 'lead' => 'Advanced air scenting that supports health, comfort and brand experience, with turnkey installation and service.'],
             'overview' => [
                 'title' => 'Air scenting that elevates the atmosphere of your facility',
@@ -304,7 +304,7 @@ return [
                 'og_description' => 'Eliminate odors at the source in the most challenging environments. Tell us where you need it.',
                 'schema_about' => 'Odor control solutions for institutional and industrial facilities',
             ],
-            'banner' => ['image' => 'svc-odor-banner-v2.jpg', 'title' => 'Targeted Odor Control for Essential Environments',
+            'banner' => ['image' => 'svc-odor-banner-v3.jpg', 'title' => 'Targeted Odor Control for Essential Environments',
                 'lead' => 'Eliminate odors at the source in schools, treatment plants, healthcare centers and commercial buildings.'],
             'overview' => [
                 'title' => 'Odor control that protects hygiene, safety and reputation',
@@ -377,7 +377,7 @@ return [
                 'og_description' => 'Streamlined service ticket management for facility managers, with real-time visibility and reporting.',
                 'schema_about' => 'Facility work order call center services',
             ],
-            'banner' => ['image' => 'svc-callcenter-banner-v2.jpg', 'title' => 'Streamlined Service Ticket Management',
+            'banner' => ['image' => 'svc-callcenter-banner-v3.jpg', 'title' => 'Streamlined Service Ticket Management',
                 'lead' => 'A dedicated call center that takes in, tracks and follows up on facility work orders so your staff can focus on core work.'],
             'overview' => [
                 'title' => 'A central hub for facility service requests',
@@ -448,7 +448,7 @@ return [
                 'og_description' => 'Reliable, compliant chemical supply for facilities, with the right products at the right time.',
                 'schema_about' => 'Facility chemical supply program',
             ],
-            'banner' => ['image' => 'svc-chemical-banner-v2.jpg', 'title' => 'A Chemical Supply Program Built Around Your Facility',
+            'banner' => ['image' => 'svc-chemical-banner-v3.jpg', 'title' => 'A Chemical Supply Program Built Around Your Facility',
                 'lead' => 'The right products, the right quantities and the right paperwork, delivered on a schedule so your teams never run short.'],
             'overview' => [
                 'title' => 'Dependable chemical supply, without the guesswork',
@@ -521,7 +521,7 @@ return [
                 'og_description' => 'Accurate dosing, safer handling and less waste with professionally installed dispensing systems.',
                 'schema_about' => 'Chemical dispensing system installation and service',
             ],
-            'banner' => ['image' => 'svc-dispensing-banner-v2.jpg', 'title' => 'Dispensing Systems That Dose It Right, Every Time',
+            'banner' => ['image' => 'svc-dispensing-banner-v3.jpg', 'title' => 'Dispensing Systems That Dose It Right, Every Time',
                 'lead' => 'Accurate dilution, safer handling and less waste, installed, calibrated and supported by our team.'],
             'overview' => [
                 'title' => 'Precise dosing that protects your people and your budget',
