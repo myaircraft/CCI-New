@@ -592,3 +592,7 @@ html { scroll-behavior: smooth; }
     .category-page .category-banner .category-actions { justify-content: center; align-items: center; }
     .category-page .category-banner .category-lead.is-boxed { display: inline-block; }
 }
+
+/* Contact banner line: no backdrop, deeper blue with a soft light halo for legibility */
+.category-banner.is-plain .category-lead.is-boxed { padding: 0; background: none; box-shadow: none; color: #1f7bff; text-shadow: 0 0 10px rgba(255, 255, 255, .85), 0 0 22px rgba(255, 255, 255, .6); }
+.category-banner.is-plain .category-lead.is-boxed .type-caret { background: #1f7bff; }
