@@ -272,3 +272,6 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-cards.is-icons .info-card-media { height: 50px; width: auto; max-width: 100%; aspect-ratio: auto; object-fit: contain; margin: 0 auto var(--text-gap-large); mix-blend-mode: multiply; }
 .info-cards.is-icons .info-card.has-media { padding: var(--topic-gap) var(--text-gap-large); overflow: visible; }
 .info-cards.is-icons .info-card.has-media > h3, .info-cards.is-icons .info-card.has-media > p { padding-inline: 0; }
+.info-centered .info-kicker { margin: 0 0 var(--text-gap); font-size: var(--fs-topic); font-weight: 900; line-height: var(--title-leading); letter-spacing: .04em; }
+.info-centered h2 { margin: 0 0 var(--text-gap-large); font-size: var(--fs-card-title); font-weight: 800; }
+@media (max-width: 720px) { .info-centered .info-kicker { font-size: var(--fs-subtitle); } }
