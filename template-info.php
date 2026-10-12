@@ -12,7 +12,7 @@ $title = cc_page('banner.title') ?: get_the_title();
 <main class="category-page info-page">
 
   <section class="category-banner<?php echo cc_page_has('banner.zoom') ? ' is-zoom' : ''; ?>" aria-labelledby="category-title">
-    <?php if (cc_page_has('banner.image')) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.image'))); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="high"><?php endif; ?>
+    <?php if (cc_page_has('banner.image')) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.image'))); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="high"<?php echo cc_page_has('banner.position') ? ' style="object-position:' . esc_attr(cc_page('banner.position')) . '"' : ''; ?>><?php endif; ?>
     <div class="site-container category-banner-content">
       <?php if (cc_page_has('banner.kicker')) : ?><p class="category-kicker"><?php cc_page_e('banner.kicker'); ?></p><?php endif; ?>
       <h1 id="category-title"><?php echo esc_html($title); ?></h1>

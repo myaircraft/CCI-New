@@ -71,7 +71,7 @@ return [
                 'og_description' => 'A high-performance organization with a purpose.',
                 'schema_about' => 'Culture and community involvement at Competitive Choice', 'page_type' => 'AboutPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Community & Culture', 'lead' => 'A collaborative, innovative culture built on high standards, service and giving back.', 'quote_label' => 'REQUEST A QUOTE'],
+            'banner' => ['zoom' => true, 'position' => 'center 64%', 'image' => 'wp-content/themes/competitive-choice/assets/images/about-culture-header.jpg', 'kicker' => 'ABOUT US', 'title' => 'Community & Culture', 'tagline' => "Empowering Cultures\nStrengthening Community Bonds", 'lead' => 'A collaborative, innovative culture built on high standards, service and giving back.'],
             'breadcrumb' => $crumb('Community & Culture'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
@@ -101,7 +101,7 @@ return [
                 'og_description' => 'National, state, local and federal certifications that support supplier diversity goals.',
                 'schema_about' => 'Business certifications held by Competitive Choice', 'page_type' => 'AboutPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Certifications', 'lead' => 'Recognized at the national, state, local and federal levels.', 'quote_label' => 'REQUEST A QUOTE', 'image' => $img('women6.jpg')],
+            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Certifications', 'lead' => 'Recognized at the national, state, local and federal levels.', 'image' => $img('women6.jpg')],
             'breadcrumb' => $crumb('Certifications'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
@@ -140,7 +140,7 @@ return [
                 'og_description' => 'Decades of expertise, operational discipline and a focus on the right customers.',
                 'schema_about' => 'Leadership and team of Competitive Choice', 'page_type' => 'AboutPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Leadership & Team', 'lead' => 'Decades of expertise, deep operational discipline and a focus on the right customers.', 'quote_label' => 'REQUEST A QUOTE', 'image' => $img('cci_team_new_background_20253.jpg')],
+            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Leadership & Team', 'lead' => 'Decades of expertise, deep operational discipline and a focus on the right customers.', 'image' => $img('cci_team_new_background_20253.jpg')],
             'breadcrumb' => $crumb('Leadership & Team'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
@@ -177,7 +177,7 @@ return [
                 'og_description' => 'Pre-negotiated cooperative contracts and federal schedules for public-sector buyers.',
                 'schema_about' => 'Cooperative purchasing contracts and federal schedules', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Co-Ops & Schedules', 'lead' => 'Multiple cooperative contracts give public-sector customers access to high-quality products and services with cost savings and efficiency.', 'quote_label' => 'REQUEST A QUOTE'],
+            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Co-Ops & Schedules', 'lead' => 'Multiple cooperative contracts give public-sector customers access to high-quality products and services with cost savings and efficiency.'],
             'breadcrumb' => $crumb('Co-Ops & Schedules'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
@@ -265,7 +265,7 @@ return [
                 'og_description' => 'Federal and construction projects supplied by Competitive Choice.',
                 'schema_about' => 'Past performance and project experience', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Past Performances', 'lead' => 'Federal contracts and major construction projects supplied by our team.', 'quote_label' => 'REQUEST A QUOTE'],
+            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Past Performances', 'lead' => 'Federal contracts and major construction projects supplied by our team.'],
             'breadcrumb' => $crumb('Past Performances'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
