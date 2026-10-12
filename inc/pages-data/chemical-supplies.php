@@ -49,7 +49,7 @@ return [
         'apps_title' => 'Where these products are used', 'apps_desc' => 'Facilities and operators who keep water moving.',
         'apps' => [['Water & wastewater plants', 'Maintenance chemicals for plants, lift stations and wet wells.'], ['Facilities & campuses', 'Floor drains, restrooms and utility lines across large buildings.'], ['Food service & healthcare', 'High-use drains that need dependable, preventive treatment.']],
         'faq' => [['What products do you supply for wastewater maintenance?', 'Grease digesters, odor neutralizers, drain cleaners, disinfectants and related treatment chemicals for facilities and plants.'], ['Can you support lift stations?', 'Yes. We supply products used in lift stations, wet wells and sewer lines. Share your application and we will recommend suitable options.'], ['Do you also offer drain care services?', 'Yes. Our Drain Maintenance service provides preventive treatment programs. See the Services menu.'], $quote],
-        'related' => [['Enzyme Treatment & Maintainers', $cc('enzyme-treatment-maintainers')], ['Water & Wastewater Treatment', $cc('water-wastewater-treatment')]],
+        'related' => [['Enzyme Treatment & Maintainers', $cc('enzyme-treatment-maintainers')], ['Drain & Wastewater Maintenance', $cc('drain-wastewater-maintenance')]],
     ]),
 
     'hvac-maintenance' => $build('hvac-maintenance', 23, [
@@ -94,7 +94,7 @@ return [
         'apps_title' => 'Where equipment maintenance products are used', 'apps_desc' => 'Operations that depend on uptime.',
         'apps' => [['Plants & utilities', 'Pumps, motors and mechanical equipment in continuous service.'], ['Facilities & campuses', 'Building systems and shop equipment.'], ['Fleets & workshops', 'Vehicles and tools that need dependable care.']],
         'faq' => [['What equipment maintenance chemicals do you supply?', 'Lubricants, greases, degreasers, rust and corrosion protection and electrical contact cleaners.'], ['Can you supply tools and MRO items too?', 'Yes. See Facility Maintenance, MRO & Tools.'], ['Do you carry specialty chemicals?', 'Yes. See Specialty Maintenance Chemicals for more options.'], $quote],
-        'related' => [['Facility Maintenance, MRO & Tools', $cc('facility-maintenance-mro-tools')], ['Specialty Maintenance Chemicals', $cc('specialty-maintenance-chemicals')]],
+        'related' => [['HVAC Maintenance', $cc('hvac-maintenance')], ['Package Units & HVAC', $cc('hvac-package-units')]],
     ]),
 
     'grounds-seasonal-maintenance' => $build('grounds-seasonal-maintenance', 27, [
@@ -109,7 +109,7 @@ return [
         'apps_title' => 'Where grounds supplies are used', 'apps_desc' => 'Properties that need to stay safe and presentable.',
         'apps' => [['Schools & universities', 'Large campuses with walkways, fields and entrances.'], ['Municipalities & parks', 'Public properties managed across seasons.'], ['Commercial properties', 'Lots, entrances and landscaped areas.']],
         'faq' => [['What seasonal supplies do you carry?', 'Weed and pest control, ice melt and winter products, fertilizers and application tools.'], ['Can you stock ahead of the season?', 'Tell us your timing and quantities. Availability and delivery are confirmed during quotation.'], ['Can you ship nationally?', 'Yes. We ship across the United States from Houston and through vendor channels.'], $quote],
-        'related' => [['Facility Maintenance, MRO & Tools', $cc('facility-maintenance-mro-tools')], ['Safety', $cc('safety-security')]],
+        'related' => [['Equipment Maintenance', $cc('equipment-maintenance')], ['Safety', $cc('safety-security')]],
     ]),
 
     'pool-water-treatment' => $build('pool-water-treatment', 28, [
@@ -124,6 +124,6 @@ return [
         'apps_title' => 'Where water treatment products are used', 'apps_desc' => 'Facilities responsible for safe water.',
         'apps' => [['Schools & recreation centers', 'Pools that serve students and the public.'], ['Hotels & hospitality', 'Guest pools, spas and water features.'], ['Municipal facilities', 'Public pools, splash pads and fountains.']],
         'faq' => [['What pool chemicals do you supply?', 'Sanitizers, pH and alkalinity balancers, algaecides, clarifiers and test kits.'], ['Do you supply water treatment for other systems?', 'Yes. See Water & Wastewater Treatment for plant and system products.'], ['Are safe-handling documents available?', 'Safety data sheets are available for products we supply. Ask for them with your inquiry.'], $quote],
-        'related' => [['Water & Wastewater Treatment', $cc('water-wastewater-treatment')], ['Specialty Maintenance Chemicals', $cc('specialty-maintenance-chemicals')]],
+        'related' => [['Drain & Wastewater Maintenance', $cc('drain-wastewater-maintenance')], ['Chemical Supply Program', '/services/chemical-supply-program/']],
     ]),
 ];

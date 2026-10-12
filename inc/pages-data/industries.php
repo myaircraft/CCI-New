@@ -396,7 +396,7 @@ return [
                 ['question' => 'How do I request a quote?', 'answer' => 'Contact our team with your facility, products or problem areas, and timing.'],
             ]],
             'related' => ['title' => 'Related industries and pages', 'links' => [
-                ['label' => 'Water & Wastewater Treatment Products', 'link' => '/products-and-materials/water-wastewater-treatment/'],
+                ['label' => 'Drain & Wastewater Maintenance Products', 'link' => '/products-and-materials/drain-wastewater-maintenance/'],
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
                 ['label' => 'Drain Services', 'link' => '/services/drain-services/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
@@ -556,7 +556,7 @@ return [
                 ['question' => 'How do I request a quote?', 'answer' => 'Contact our team with your items, quantities and locations.'],
             ]],
             'related' => ['title' => 'Related industries and pages', 'links' => [
-                ['label' => 'Facility Maintenance, MRO & Tools', 'link' => '/products-and-materials/facility-maintenance-mro-tools/'],
+                ['label' => 'Equipment Maintenance', 'link' => '/products-and-materials/equipment-maintenance/'],
                 ['label' => 'Safety & Security', 'link' => '/products-and-materials/safety-security/'],
                 ['label' => 'Logistics & Procurement', 'link' => '/services/logistics-procurement/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],

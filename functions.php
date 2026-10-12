@@ -97,6 +97,8 @@ add_action('wp_head', function () {
 // The product pages moved from /products/ to /products-and-materials/; old addresses redirect permanently.
 add_action('template_redirect', function () {
     $path = trim((string) wp_parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
+    $retired = ['products-and-materials/water-wastewater-treatment' => 'drain-wastewater-maintenance', 'products-and-materials/specialty-maintenance-chemicals' => 'equipment-maintenance', 'products-and-materials/facility-maintenance-mro-tools' => 'equipment-maintenance'];
+    if (isset($retired[$path])) { wp_safe_redirect(home_url('/products-and-materials/' . $retired[$path] . '/'), 301); exit; }
     if ($path === 'products' || strpos($path, 'products/') === 0) {
         wp_safe_redirect(home_url('/products-and-materials/' . ltrim(substr($path, strlen('products')), '/') . (strlen($path) > 8 ? '/' : '')), 301);
         exit;

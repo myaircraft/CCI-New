@@ -361,7 +361,7 @@ return [
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Air Scenting Services', 'link' => '/services/air-scenting-services/'],
                 ['label' => 'Drain Services', 'link' => '/services/drain-services/'],
-                ['label' => 'Specialty Maintenance Chemicals', 'link' => '/products-and-materials/specialty-maintenance-chemicals/'],
+                ['label' => 'Odor Control Supplies', 'link' => '/products-and-materials/odor-control-supplies/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -433,7 +433,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Logistics & Procurement Services', 'link' => '/services/logistics-procurement/'],
-                ['label' => 'Facility Maintenance, MRO & Tools', 'link' => '/products-and-materials/facility-maintenance-mro-tools/'],
+                ['label' => 'Equipment Maintenance', 'link' => '/products-and-materials/equipment-maintenance/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
