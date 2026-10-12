@@ -574,3 +574,7 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 .category-banner .category-tagline.is-sentence ~ .category-lead { max-width: 62ch; margin-inline: auto; text-align: center; }
+
+.category-banner .category-tagline.is-sentence ~ .category-lead { max-width: 52ch; font-size: var(--fs-card-title); font-weight: 800; line-height: var(--title-leading); }
+.category-banner .category-tagline.is-sentence ~ .category-actions { justify-content: center; margin-top: var(--text-gap-large); }
+.category-banner .banner-shop { border-radius: 999px; padding-inline: var(--text-gap-large); }
