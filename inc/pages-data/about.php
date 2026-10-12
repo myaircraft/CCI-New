@@ -140,7 +140,7 @@ return [
                 'og_description' => 'Decades of expertise, operational discipline and a focus on the right customers.',
                 'schema_about' => 'Leadership and team of Competitive Choice', 'page_type' => 'AboutPage',
             ],
-            'banner' => ['zoom' => 'tight', 'kicker' => 'ABOUT US', 'title' => 'Leadership & Team', 'lead' => 'Decades of expertise, deep operational discipline and a focus on the right customers.', 'image' => $img('team-header.jpg')],
+            'banner' => ['zoom' => 'tight', 'kicker' => 'ABOUT US', 'title' => 'Leadership & Team', 'tagline' => "Your Best Choice\nYour Competitive Choice", 'lead' => 'Decades of expertise, deep operational discipline and a focus on the right customers.', 'image' => $img('team-header.jpg')],
             'breadcrumb' => $crumb('Leadership & Team'),
             'blocks' => [
                 ['layout' => 'intro', 'id' => 'intro', 'paragraphs' => [
