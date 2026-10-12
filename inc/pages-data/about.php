@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) exit;
 $img = fn($file) => 'wp-content/themes/competitive-choice/assets/images/about/' . $file;
 $crumb = fn($current) => ['home' => 'Home', 'parent' => 'About Us', 'parent_link' => 'link:about', 'current' => $current];
 $related = ['title' => 'More about Competitive Choice', 'links' => [
-    ['label' => 'Mission & Values', 'link' => '/about-us/mission-values/'],
+    ['label' => 'About Us', 'link' => '/about-us/'],
     ['label' => 'Leadership & Team', 'link' => '/about-us/leadership-team/'],
     ['label' => 'Certifications', 'link' => '/about-us/certifications/'],
     ['label' => 'Co-Ops & Schedules', 'link' => '/about-us/co-ops-schedules/'],
@@ -20,40 +20,14 @@ return [
         'title' => 'About Us', 'parent' => '', 'template' => 'info', 'order' => 50,
         'content' => [
             'seo' => [
-                'title' => 'About Competitive Choice | Houston Woman-Owned MRO Supplier Since 2003',
-                'description' => 'Learn about Competitive Choice: our mission, leadership, culture, certifications, cooperative contracts and past performance.',
-                'og_title' => 'About Us | Competitive Choice',
-                'og_description' => 'A trusted supplier and logistics partner serving public institutions and infrastructure operators since 2003.',
-                'schema_about' => 'About Competitive Choice', 'page_type' => 'AboutPage',
-            ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Your Best Choice. Your Competitive Choice.', 'lead' => 'Since 2003, a trusted supplier and logistics partner for the people and institutions that power our communities.', 'quote_label' => 'REQUEST A QUOTE', 'image' => $img('cci_team_new_background_20253.jpg')],
-            'breadcrumb' => ['home' => 'Home', 'current' => 'About Us'],
-            'blocks' => [
-                ['layout' => 'cards', 'id' => 'about', 'title' => 'Get to know Competitive Choice', 'description' => 'Who we are, what we stand for and the credentials behind our work.', 'items' => [
-                    ['title' => 'Mission & Values', 'description' => 'Our mission, vision and story, and the commitments that guide us.', 'link' => '/about-us/mission-values/'],
-                    ['title' => 'Community & Culture', 'description' => 'The purpose, competitive spirit and giving that shape our culture.', 'link' => '/about-us/community-culture/'],
-                    ['title' => 'Certifications', 'description' => 'National, state, local and federal certifications.', 'link' => '/about-us/certifications/'],
-                    ['title' => 'Leadership & Team', 'description' => 'Meet our President & CEO and the people behind the work.', 'link' => '/about-us/leadership-team/'],
-                    ['title' => 'Co-Ops & Schedules', 'description' => 'Cooperative contracts and federal schedules available to our customers.', 'link' => '/about-us/co-ops-schedules/'],
-                    ['title' => 'Past Performances', 'description' => 'Federal and construction projects we have supplied.', 'link' => '/about-us/past-performances/'],
-                ]],
-            ],
-            'related' => ['title' => 'Related pages', 'links' => [['label' => 'Industries We Serve', 'link' => 'link:industries'], ['label' => 'Products & Supplies', 'link' => 'link:products'], ['label' => 'Contact Our Team', 'link' => 'link:contact']]],
-        ],
-    ],
-
-    'mission-values' => [
-        'title' => 'Mission & Values', 'parent' => 'about-us', 'template' => 'info', 'order' => 51,
-        'content' => [
-            'seo' => [
-                'title' => 'Mission, Vision & Values | Competitive Choice',
+                'title' => 'About Us | Mission, Vision & Values | Competitive Choice',
                 'description' => 'Since 2003, Competitive Choice has built long-term value for customers, employees and suppliers. Read our mission, vision, story and commitments.',
-                'og_title' => 'Mission & Values | Competitive Choice',
+                'og_title' => 'About Us | Competitive Choice',
                 'og_description' => 'Fostering long-term value for the people and institutions that power our communities.',
                 'schema_about' => 'Mission, vision and values of Competitive Choice', 'page_type' => 'AboutPage',
             ],
-            'banner' => ['kicker' => 'ABOUT US', 'title' => 'Mission & Values', 'lead' => 'Since 2003, a commitment to long-term value for our customers, employees and suppliers.', 'quote_label' => 'REQUEST A QUOTE', 'image' => $img('cciteam.jpg')],
-            'breadcrumb' => $crumb('Mission & Values'),
+            'banner' => ['title' => 'ABOUT US', 'lead' => 'People who deliver. Partners you can count on. Since 2003.', 'image' => 'wp-content/themes/competitive-choice/assets/images/about-header.jpg'],
+            'breadcrumb' => ['home' => 'Home', 'current' => 'About Us'],
             'blocks' => [
                 ['layout' => 'split', 'id' => 'mission', 'kicker' => 'OUR MISSION', 'title' => 'Long-term value for the people who power our communities', 'paragraphs' => [
                     'Since 2003, our mission has been rooted in fostering long-term value for the people and institutions that power our communities: our customers, employees and suppliers.',
