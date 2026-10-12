@@ -190,7 +190,6 @@ $title = cc_page('banner.title') ?: get_the_title();
       ?>
       <div class="contact-layout">
         <div class="contact-details">
-          <p class="info-kicker">Reach our team</p>
           <ul class="contact-tiles">
             <li><span class="contact-icon"><?php echo cc_icon('map-pin'); ?></span><div><h3>Visit us</h3><p><a href="https://www.google.com/maps/search/?api=1&amp;query=<?php echo $maps_q; ?>" target="_blank" rel="noopener"><?php echo esc_html(cc_content('company.legal_name')); ?><br><?php cc_e('company.address_line1'); ?><br><?php cc_e('company.address_line2'); ?></a></p></div></li>
             <li><span class="contact-icon"><?php echo cc_icon('phone'); ?></span><div><h3>Call us</h3><p><a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>"><?php cc_e('company.phone'); ?></a></p></div></li>

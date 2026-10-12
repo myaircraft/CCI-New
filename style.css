@@ -553,3 +553,13 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-layout-contact .contact-form .contact-submit { justify-self: center; border-radius: 999px; padding-inline: var(--text-gap-large); }
 .info-layout-centered#lets-source { border-top: 0; padding-top: 0; padding-bottom: 0; }
 .info-layout-contact#contact { border-top: 0; padding-top: 78px; }
+
+/* Contact details: larger, left-aligned, level with the form */
+.category-page .info-layout-contact .contact-details { text-align: left; align-self: start; margin-top: 0; }
+.category-page .info-layout-contact .contact-tiles { margin: 0; text-align: left; }
+.category-page .info-layout-contact .contact-tiles li { grid-template-columns: 46px minmax(0, 1fr); gap: 16px; padding-bottom: 16px; text-align: left; }
+.category-page .info-layout-contact .contact-tiles li:first-child { padding-top: 0; }
+.category-page .info-layout-contact .contact-tiles .contact-icon { width: 46px; height: 46px; }
+.category-page .info-layout-contact .contact-tiles .contact-icon svg { width: 20px; height: 20px; }
+.category-page .info-layout-contact .contact-tiles h3 { margin: 0 0 4px; font-size: 12.15px; justify-content: flex-start; text-align: left; min-height: 0; }
+.category-page .info-layout-contact .contact-tiles li p, .category-page .info-layout-contact .contact-tiles li a { font-size: 16px; line-height: 1.5; text-align: left; }
