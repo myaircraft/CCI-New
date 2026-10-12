@@ -4,7 +4,7 @@
 if (!defined('ABSPATH')) exit;
 
 return [
-    'products-and-materials' => [
+    'supplies' => [
         'title' => 'Products & Materials', 'parent' => '', 'template' => 'info', 'order' => 1,
         'content' => [
             'seo' => [
@@ -18,22 +18,22 @@ return [
             'breadcrumb' => ['home' => 'Home', 'current' => 'Products & Supplies'],
             'blocks' => [
                 ['layout' => 'cards', 'id' => 'chemical', 'title' => 'Chemical Supplies', 'description' => 'Maintenance chemicals and treatments that improve performance, maintain compliance and reduce downtime.', 'items' => [
-                    ['title' => 'Enzyme Treatment & Maintainers', 'description' => 'Bio-enzymatic maintainers that digest grease and organic buildup.', 'link' => '/products-and-materials/enzyme-treatment-maintainers/'],
-                    ['title' => 'Drain & Wastewater Maintenance', 'description' => 'Digesters, cleaners and treatments for drains, lift stations and sewer lines.', 'link' => '/products-and-materials/drain-wastewater-maintenance/'],
-                    ['title' => 'HVAC Maintenance', 'description' => 'Coil cleaners and treatments that protect HVAC efficiency.', 'link' => '/products-and-materials/hvac-maintenance/'],
-                    ['title' => 'Cleaning & Sanitation', 'description' => 'Cleaners, disinfectants, paper goods and dispensing for inspection-ready facilities.', 'link' => '/products-and-materials/custodial-janitorial-sanitation/'],
-                    ['title' => 'Odor Control', 'description' => 'Neutralizers and digesters that remove odors at the source.', 'link' => '/products-and-materials/odor-control-supplies/'],
-                    ['title' => 'Equipment Maintenance', 'description' => 'Lubricants, degreasers and protectants that cut downtime.', 'link' => '/products-and-materials/equipment-maintenance/'],
-                    ['title' => 'Grounds & Seasonal Maintenance', 'description' => 'Weed control, ice melt and seasonal supplies for every property.', 'link' => '/products-and-materials/grounds-seasonal-maintenance/'],
-                    ['title' => 'Pool & Water Treatment', 'description' => 'Sanitizers, balancers and testing supplies for safe, clear water.', 'link' => '/products-and-materials/pool-water-treatment/'],
+                    ['title' => 'Enzyme Treatment & Maintainers', 'description' => 'Bio-enzymatic maintainers that digest grease and organic buildup.', 'link' => '/supplies/enzyme-treatment-maintainers/'],
+                    ['title' => 'Drain & Wastewater Maintenance', 'description' => 'Digesters, cleaners and treatments for drains, lift stations and sewer lines.', 'link' => '/supplies/drain-wastewater-maintenance/'],
+                    ['title' => 'HVAC Maintenance', 'description' => 'Coil cleaners and treatments that protect HVAC efficiency.', 'link' => '/supplies/hvac-maintenance/'],
+                    ['title' => 'Cleaning & Sanitation', 'description' => 'Cleaners, disinfectants, paper goods and dispensing for inspection-ready facilities.', 'link' => '/supplies/custodial-janitorial-sanitation/'],
+                    ['title' => 'Odor Control', 'description' => 'Neutralizers and digesters that remove odors at the source.', 'link' => '/supplies/odor-control-supplies/'],
+                    ['title' => 'Equipment Maintenance', 'description' => 'Lubricants, degreasers and protectants that cut downtime.', 'link' => '/supplies/equipment-maintenance/'],
+                    ['title' => 'Grounds & Seasonal Maintenance', 'description' => 'Weed control, ice melt and seasonal supplies for every property.', 'link' => '/supplies/grounds-seasonal-maintenance/'],
+                    ['title' => 'Pool & Water Treatment', 'description' => 'Sanitizers, balancers and testing supplies for safe, clear water.', 'link' => '/supplies/pool-water-treatment/'],
                 ]],
                 ['layout' => 'cards', 'id' => 'systems', 'tint' => true, 'title' => 'Systems & Infrastructure Supplies', 'description' => 'Electrical, mechanical, plumbing and safety supplies for complex facilities and infrastructure projects.', 'items' => [
-                    ['title' => 'Power Distribution & Transformers', 'description' => 'Switchgear, panelboards, breakers, fuses and transformers for critical infrastructure.', 'link' => '/products-and-materials/power-distribution-transformers/'],
-                    ['title' => 'Electrical, Lighting & Cable Wire', 'description' => 'Cable, conduit, panels, controls and commercial lighting for complex projects.', 'link' => '/products-and-materials/electrical-lighting-cable/'],
-                    ['title' => 'Package Units & HVAC', 'description' => 'Package units, HVAC equipment and components for commercial buildings.', 'link' => '/products-and-materials/hvac-package-units/'],
-                    ['title' => 'Plumbing & PVF', 'description' => 'Pipe, valves, fittings and plumbing supplies for facilities and projects.', 'link' => '/products-and-materials/plumbing-supplies/'],
-                    ['title' => 'Fire Suppression', 'description' => 'Lithium-ion battery fire protection and added layers of safety for facilities.', 'link' => '/products-and-materials/fire-safety/'],
-                    ['title' => 'Safety', 'description' => 'PPE, first aid, spill control, locks, alarms and emergency communications.', 'link' => '/products-and-materials/safety-security/'],
+                    ['title' => 'Power Distribution & Transformers', 'description' => 'Switchgear, panelboards, breakers, fuses and transformers for critical infrastructure.', 'link' => '/supplies/power-distribution-transformers/'],
+                    ['title' => 'Electrical, Lighting & Cable Wire', 'description' => 'Cable, conduit, panels, controls and commercial lighting for complex projects.', 'link' => '/supplies/electrical-lighting-cable/'],
+                    ['title' => 'Package Units & HVAC', 'description' => 'Package units, HVAC equipment and components for commercial buildings.', 'link' => '/supplies/hvac-package-units/'],
+                    ['title' => 'Plumbing & PVF', 'description' => 'Pipe, valves, fittings and plumbing supplies for facilities and projects.', 'link' => '/supplies/plumbing-supplies/'],
+                    ['title' => 'Fire Suppression', 'description' => 'Lithium-ion battery fire protection and added layers of safety for facilities.', 'link' => '/supplies/fire-safety/'],
+                    ['title' => 'Safety', 'description' => 'PPE, first aid, spill control, locks, alarms and emergency communications.', 'link' => '/supplies/safety-security/'],
                 ]],
                 ['layout' => 'text', 'id' => 'about-supply', 'title' => 'Can’t find what you need?', 'paragraphs' => ['Tell us what your project or facility requires. Our team can source what you need, and we work with contract vehicles that make public-sector purchasing simple.']],
             ],

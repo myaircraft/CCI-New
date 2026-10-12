@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) exit;
 $build = function ($slug, $order, $d) {
     $pairs = fn($rows, $k1, $k2) => array_map(fn($r) => [$k1 => $r[0], $k2 => $r[1]], $rows);
     return [
-        'title' => $d['title'], 'parent' => 'products-and-materials', 'template' => 'category', 'group' => 'product', 'order' => (string) $order,
+        'title' => $d['title'], 'parent' => 'supplies', 'template' => 'category', 'group' => 'product', 'order' => (string) $order,
         'content' => [
             'seo' => ['title' => $d['title'] . ' | Competitive Choice', 'description' => $d['seo'], 'og_title' => $d['title'] . ' | Competitive Choice', 'og_description' => $d['og'], 'schema_about' => $d['title']],
             'banner' => ['image' => $d['image'], 'title' => $d['banner'], 'lead' => $d['lead']],
@@ -19,7 +19,7 @@ $build = function ($slug, $order, $d) {
     ];
 };
 $quote = ['How do I request a quote?', 'Send your product list with quantities, facility type and delivery location. Availability and delivery timing are confirmed during quotation.'];
-$cc = fn($slug) => '/products-and-materials/' . $slug . '/';
+$cc = fn($slug) => '/supplies/' . $slug . '/';
 
 return [
     'enzyme-treatment-maintainers' => $build('enzyme-treatment-maintainers', 21, [

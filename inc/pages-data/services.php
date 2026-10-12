@@ -143,7 +143,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Logistics & Procurement Services', 'link' => '/services/logistics-procurement/'],
-                ['label' => 'Electrical, Lighting & Cable', 'link' => '/products-and-materials/electrical-lighting-cable/'],
+                ['label' => 'Electrical, Lighting & Cable', 'link' => '/supplies/electrical-lighting-cable/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -216,7 +216,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
-                ['label' => 'Plumbing Supplies', 'link' => '/products-and-materials/plumbing-supplies/'],
+                ['label' => 'Plumbing Supplies', 'link' => '/supplies/plumbing-supplies/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -288,7 +288,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
-                ['label' => 'HVAC & HVAC Package Units', 'link' => '/products-and-materials/hvac-package-units/'],
+                ['label' => 'HVAC & HVAC Package Units', 'link' => '/supplies/hvac-package-units/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -361,7 +361,7 @@ return [
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Air Scenting Services', 'link' => '/services/air-scenting-services/'],
                 ['label' => 'Drain Services', 'link' => '/services/drain-services/'],
-                ['label' => 'Odor Control Supplies', 'link' => '/products-and-materials/odor-control-supplies/'],
+                ['label' => 'Odor Control Supplies', 'link' => '/supplies/odor-control-supplies/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -433,7 +433,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Logistics & Procurement Services', 'link' => '/services/logistics-procurement/'],
-                ['label' => 'Equipment Maintenance', 'link' => '/products-and-materials/equipment-maintenance/'],
+                ['label' => 'Equipment Maintenance', 'link' => '/supplies/equipment-maintenance/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],

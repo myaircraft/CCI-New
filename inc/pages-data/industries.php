@@ -238,7 +238,7 @@ return [
             'related' => ['title' => 'Related industries and pages', 'links' => [
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
                 ['label' => 'Work Order Request Call Center', 'link' => '/services/work-order-request-call-center/'],
-                ['label' => 'Custodial, Janitorial & Sanitation', 'link' => '/products-and-materials/custodial-janitorial-sanitation/'],
+                ['label' => 'Custodial, Janitorial & Sanitation', 'link' => '/supplies/custodial-janitorial-sanitation/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
             ]],
         ],
@@ -318,7 +318,7 @@ return [
             'related' => ['title' => 'Related industries and pages', 'links' => [
                 ['label' => 'Drain Services', 'link' => '/services/drain-services/'],
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
-                ['label' => 'Safety & Security', 'link' => '/products-and-materials/safety-security/'],
+                ['label' => 'Safety & Security', 'link' => '/supplies/safety-security/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
             ]],
         ],
@@ -396,7 +396,7 @@ return [
                 ['question' => 'How do I request a quote?', 'answer' => 'Contact our team with your facility, products or problem areas, and timing.'],
             ]],
             'related' => ['title' => 'Related industries and pages', 'links' => [
-                ['label' => 'Drain & Wastewater Maintenance Products', 'link' => '/products-and-materials/drain-wastewater-maintenance/'],
+                ['label' => 'Drain & Wastewater Maintenance Products', 'link' => '/supplies/drain-wastewater-maintenance/'],
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
                 ['label' => 'Drain Services', 'link' => '/services/drain-services/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
@@ -476,8 +476,8 @@ return [
                 ['question' => 'How do I request a quote?', 'answer' => 'Contact our team with your specification, quantities and delivery location.'],
             ]],
             'related' => ['title' => 'Related industries and pages', 'links' => [
-                ['label' => 'Power Distribution & Transformers', 'link' => '/products-and-materials/power-distribution-transformers/'],
-                ['label' => 'Electrical, Lighting & Cable', 'link' => '/products-and-materials/electrical-lighting-cable/'],
+                ['label' => 'Power Distribution & Transformers', 'link' => '/supplies/power-distribution-transformers/'],
+                ['label' => 'Electrical, Lighting & Cable', 'link' => '/supplies/electrical-lighting-cable/'],
                 ['label' => 'Logistics & Procurement', 'link' => '/services/logistics-procurement/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
             ]],
@@ -556,8 +556,8 @@ return [
                 ['question' => 'How do I request a quote?', 'answer' => 'Contact our team with your items, quantities and locations.'],
             ]],
             'related' => ['title' => 'Related industries and pages', 'links' => [
-                ['label' => 'Equipment Maintenance', 'link' => '/products-and-materials/equipment-maintenance/'],
-                ['label' => 'Safety & Security', 'link' => '/products-and-materials/safety-security/'],
+                ['label' => 'Equipment Maintenance', 'link' => '/supplies/equipment-maintenance/'],
+                ['label' => 'Safety & Security', 'link' => '/supplies/safety-security/'],
                 ['label' => 'Logistics & Procurement', 'link' => '/services/logistics-procurement/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
             ]],
@@ -637,8 +637,8 @@ return [
             ]],
             'related' => ['title' => 'Related industries and pages', 'links' => [
                 ['label' => 'Program & Scheduling Services', 'link' => '/services/program-scheduling/'],
-                ['label' => 'Electrical, Lighting & Cable', 'link' => '/products-and-materials/electrical-lighting-cable/'],
-                ['label' => 'Plumbing Supplies', 'link' => '/products-and-materials/plumbing-supplies/'],
+                ['label' => 'Electrical, Lighting & Cable', 'link' => '/supplies/electrical-lighting-cable/'],
+                ['label' => 'Plumbing Supplies', 'link' => '/supplies/plumbing-supplies/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
             ]],
         ],

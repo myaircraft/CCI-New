@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) exit;
 return [
     'fire-safety' => [
         'title' => 'Fire Suppression',
-        'parent' => 'products-and-materials',
+        'parent' => 'supplies',
         'template' => 'category',
         'group' => 'product',
         'order' => '12',
@@ -125,7 +125,7 @@ return [
     ],
     'hvac-package-units' => [
         'title' => 'Package Units & HVAC',
-        'parent' => 'products-and-materials',
+        'parent' => 'supplies',
         'template' => 'category',
         'group' => 'product',
         'order' => '13',
@@ -252,7 +252,7 @@ return [
     ],
     'plumbing-supplies' => [
         'title' => 'Plumbing & PVF',
-        'parent' => 'products-and-materials',
+        'parent' => 'supplies',
         'template' => 'category',
         'group' => 'product',
         'order' => '14',
@@ -375,7 +375,7 @@ return [
     ],
     'electrical-lighting-cable' => [
         'title' => 'Electrical, Lighting & Cable Wire',
-        'parent' => 'products-and-materials',
+        'parent' => 'supplies',
         'template' => 'category',
         'group' => 'product',
         'order' => '15',
@@ -494,7 +494,7 @@ return [
     ],
     'safety-security' => [
         'title' => 'Safety',
-        'parent' => 'products-and-materials',
+        'parent' => 'supplies',
         'template' => 'category',
         'group' => 'product',
         'order' => '16',
@@ -613,7 +613,7 @@ return [
     ],
     'custodial-janitorial-sanitation' => [
         'title' => 'Cleaning & Sanitation',
-        'parent' => 'products-and-materials',
+        'parent' => 'supplies',
         'template' => 'category',
         'group' => 'product',
         'order' => '19',

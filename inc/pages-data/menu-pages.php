@@ -66,7 +66,7 @@ return [
                     ['question' => 'How do I order, and how fast can it ship?', 'answer' => 'Use the SHOP NOW button on any product above to order online, or contact our team for quantity pricing, public-sector purchasing or a site consultation. Availability and delivery timing depend on the product and your location, so we confirm them with your order or quote.'],
                 ]],
             ],
-            'related' => ['title' => 'More from Competitive Choice', 'links' => [['label' => 'Fire & Safety Supplies', 'link' => '/products-and-materials/fire-safety/'], ['label' => 'Who We Serve', 'link' => 'link:industries'], ['label' => 'Contact Our Team', 'link' => 'link:contact']]],
+            'related' => ['title' => 'More from Competitive Choice', 'links' => [['label' => 'Fire & Safety Supplies', 'link' => '/supplies/fire-safety/'], ['label' => 'Who We Serve', 'link' => 'link:industries'], ['label' => 'Contact Our Team', 'link' => 'link:contact']]],
         ],
     ],
 

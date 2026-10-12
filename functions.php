@@ -94,13 +94,15 @@ add_action('wp_head', function () {
     if (cc_is_category_page()) cc_category_schema();
 }, 1);
 
-// The product pages moved from /products/ to /products-and-materials/; old addresses redirect permanently.
+// The supplies pages live under /supplies/; earlier addresses (/products/ and /products-and-materials/) redirect permanently.
 add_action('template_redirect', function () {
     $path = trim((string) wp_parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
-    $retired = ['products-and-materials/water-wastewater-treatment' => 'drain-wastewater-maintenance', 'products-and-materials/specialty-maintenance-chemicals' => 'equipment-maintenance', 'products-and-materials/facility-maintenance-mro-tools' => 'equipment-maintenance'];
-    if (isset($retired[$path])) { wp_safe_redirect(home_url('/products-and-materials/' . $retired[$path] . '/'), 301); exit; }
-    if ($path === 'products' || strpos($path, 'products/') === 0) {
-        wp_safe_redirect(home_url('/products-and-materials/' . ltrim(substr($path, strlen('products')), '/') . (strlen($path) > 8 ? '/' : '')), 301);
+    $retired = ['water-wastewater-treatment' => 'drain-wastewater-maintenance', 'specialty-maintenance-chemicals' => 'equipment-maintenance', 'facility-maintenance-mro-tools' => 'equipment-maintenance'];
+    foreach (['products-and-materials', 'products'] as $old) {
+        if ($path !== $old && strpos($path, $old . '/') !== 0) continue;
+        $rest = trim(substr($path, strlen($old)), '/');
+        if (isset($retired[$rest])) $rest = $retired[$rest];
+        wp_safe_redirect(home_url('/supplies/' . ($rest !== '' ? $rest . '/' : '')), 301);
         exit;
     }
 });
