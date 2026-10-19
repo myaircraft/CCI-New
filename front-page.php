@@ -37,7 +37,7 @@ $first = $products[0] ?? ['name' => '', 'hero_line' => ''];
   <section id="pillars" class="section-space"><div class="site-container">
     <?php cc_section_title(cc_page('pillars.topic'), cc_page('pillars.heading'), cc_page('pillars.description')); ?>
     <div class="pillar-grid"><?php foreach (cc_page_list('pillars.items') as $pillar) : ?>
-      <a class="pillar-card" href="<?php echo esc_url(cc_link($pillar['link'] ?? '')); ?>"><h3><?php echo esc_html(cc_tc($pillar['title'] ?? '')); ?></h3><p><?php echo esc_html($pillar['text'] ?? ''); ?></p><span class="pillar-link"><?php echo esc_html($pillar['label'] ?? 'LEARN MORE'); ?><?php echo cc_icon('arrow-right'); ?></span></a>
+      <a class="pillar-card" href="<?php echo esc_url(cc_link($pillar['link'] ?? '')); ?>"><?php if (!empty($pillar['image'])) : ?><img class="pillar-photo" src="<?php echo esc_url(cc_img($pillar['image'])); ?>" alt="<?php echo esc_attr($pillar['image_alt'] ?? ''); ?>" width="1200" height="800" loading="lazy" decoding="async"><?php endif; ?><h3><?php echo esc_html(cc_tc($pillar['title'] ?? '')); ?></h3><p><?php echo esc_html($pillar['text'] ?? ''); ?></p><span class="pillar-link"><?php echo esc_html($pillar['label'] ?? 'LEARN MORE'); ?><?php echo cc_icon('arrow-right'); ?></span></a>
     <?php endforeach; ?></div>
     <div class="section-actions"><a href="<?php echo esc_url(cc_url('products')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('products.button_label'); ?></a><a href="<?php echo esc_url(cc_url('services')); ?>" class="<?php echo cc_btn('outline'); ?>"><?php cc_page_e('services.button_label'); ?></a></div>
   </div></section>

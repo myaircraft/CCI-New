@@ -786,3 +786,8 @@ body { font-size: 16px; }
 .info-layout-centered#lets-source .info-centered p, .category-page .info-layout-contact .contact-tiles li p, .category-page .info-layout-contact .contact-tiles li a,
 #products-supplies .group-links a, #services .group-links a, .market-strip .market-label { font-size: 16px; }
 .category-page .info-layout-contact .contact-tiles h3 { font-size: 13px; }
+
+.pillar-card { padding: 0 0 2.2rem; gap: var(--text-gap); overflow: hidden; }
+.pillar-card > h3, .pillar-card > p, .pillar-card > .pillar-link { margin-inline: 2.2rem; }
+.pillar-photo { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: var(--text-gap-large); transition: transform .5s ease; }
+.pillar-card:hover .pillar-photo { transform: scale(1.04); }
