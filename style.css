@@ -800,3 +800,15 @@ body { font-size: 16px; }
 .pillar-card > .pillar-link svg { color: #FFC200; stroke: #FFC200; stroke-width: 3; }
 .pillar-card:hover > .pillar-link { background: #A9D8F8; }
 @media (max-width: 900px) { .pillar-card > h3 { min-height: 0; } }
+
+/* What We Do cards v3: centered content, plain CTA with yellow arrow, whole card turns yellow on hover */
+#pillars .pillar-card { text-align: center; align-items: center; transition: background-color .25s ease, transform .25s ease, box-shadow .25s ease; }
+#pillars .pillar-card > h3, #pillars .pillar-card > p { text-align: center; margin-inline: 2.2rem; }
+#pillars .pillar-card > h3 { display: block; min-height: 2.6em; }
+#pillars .pillar-card > .pillar-link { align-self: center; margin: auto 2.2rem 0; padding: 0; background: transparent; border-radius: 0; color: #0D173A; justify-content: center; }
+#pillars .pillar-card > .pillar-link svg { color: #FFC200; stroke: #FFC200; stroke-width: 3; transition: transform .25s ease, stroke .25s ease; }
+#pillars .pillar-card:hover, #pillars .pillar-card:focus-visible { background: #FFC200; border-color: #FFC200; }
+#pillars .pillar-card:hover > .pillar-link { background: transparent; }
+#pillars .pillar-card:hover > .pillar-link svg, #pillars .pillar-card:focus-visible > .pillar-link svg { color: #0D173A; stroke: #0D173A; transform: translateX(4px); }
+#pillars .pillar-card:hover .pillar-photo { transform: none; }
+@media (max-width: 900px) { #pillars .pillar-card > h3 { min-height: 0; } }
