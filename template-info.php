@@ -16,10 +16,10 @@ $title = cc_page('banner.title') ?: get_the_title();
     <?php elseif (cc_page_has('banner.image')) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.image'))); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="high"<?php echo cc_page_has('banner.position') ? ' style="object-position:' . esc_attr(cc_page('banner.position')) . '"' : ''; ?>><?php endif; ?>
     <div class="site-container category-banner-content">
       <?php if (cc_page_has('banner.kicker')) : ?><p class="category-kicker"><?php cc_page_e('banner.kicker'); ?></p><?php endif; ?>
-      <h1 id="category-title"><?php echo esc_html($title); ?></h1>
+      <h1 id="category-title"><?php echo esc_html(cc_tc($title)); ?></h1>
       <?php if (cc_page_has('banner.tagline')) : ?><p class="category-tagline<?php echo cc_page_has('banner.tagline_speed') ? ' is-sentence' : ''; ?>" data-typewriter<?php echo cc_page_has('banner.tagline_speed') ? ' data-speed="' . (int) cc_page('banner.tagline_speed') . '"' : ''; ?>><?php echo nl2br(esc_html(cc_page('banner.tagline'))); ?></p><?php endif; ?>
       <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead<?php echo cc_page_has('banner.type_lead') ? ' is-boxed' : ''; ?>"<?php echo cc_page_has('banner.type_lead') ? ' data-typewriter data-speed="' . (int) cc_page('banner.type_lead') . '"' : ''; ?>><?php cc_page_e('banner.lead'); ?></p><?php endif; ?>
-      <?php if (cc_page_has('banner.shop_url')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_page('banner.shop_url')); ?>" class="<?php echo cc_btn('shop', 'default', 'cc-shop-btn banner-shop'); ?>" target="_blank" rel="noopener"><?php echo cc_icon('shopping-cart'); ?><?php echo esc_html(cc_page('banner.shop_label') ?: 'SHOP NOW'); ?></a></div><?php endif; ?>
+      <?php if (cc_page_has('banner.shop_url')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_link(cc_page('banner.shop_url'))); ?>" class="<?php echo cc_btn('shop', 'default', 'cc-shop-btn banner-shop'); ?>" target="_blank" rel="noopener"><?php echo cc_icon('shopping-cart'); ?><?php echo esc_html(cc_page('banner.shop_label') ?: 'SHOP NOW'); ?></a></div><?php endif; ?>
       <?php if (cc_page_has('banner.quote_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a><?php if (cc_page_has('banner.call_label')) : ?><a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>" class="<?php echo cc_btn('outline', 'default', 'category-secondary'); ?>"><?php echo esc_html(trim(cc_page('banner.call_label') . ' ' . cc_content('company.phone'))); ?></a><?php endif; ?></div><?php endif; ?>
     </div>
   </section>
@@ -47,14 +47,14 @@ $title = cc_page('banner.title') ?: get_the_title();
 
       <?php if ($layout === 'cards' && $items) : ?>
       <div class="info-cards<?php echo !empty($b['icons']) ? ' is-icons' : ''; ?><?php echo !empty($b['wide']) ? ' is-wide' : ''; ?><?php echo !empty($b['size']) ? ' is-' . esc_attr($b['size']) : ''; ?><?php echo !empty($b['caps']) ? ' is-caps' : ''; ?><?php echo !empty($b['learn']) ? ' has-learn' : ''; ?>"><?php foreach ($items as $it) :
-        $link = ($it['link'] ?? '') !== '' ? cc_link($it['link']) : ''; $heading = esc_html($it['title'] ?? ''); ?>
+        $link = ($it['link'] ?? '') !== '' ? cc_link($it['link']) : ''; $heading = esc_html(cc_tc($it['title'] ?? '')); ?>
         <article class="info-card<?php echo $link ? ' is-link' : ''; ?><?php echo !empty($it['image']) ? ' has-media' : ''; ?>"<?php echo !empty($it['id']) ? ' id="' . esc_attr($it['id']) . '"' : ''; ?>>
           <?php if (!empty($it['image'])) : ?><img class="info-card-media" src="<?php echo esc_url(cc_img($it['image'])); ?>" alt="" width="540" height="334" loading="lazy" decoding="async"><?php endif; ?>
           <h3><?php echo $link ? '<a href="' . esc_url($link) . '">' . $heading . '</a>' : $heading; ?></h3>
           <?php if (($it['description'] ?? '') !== '') : ?><p><?php echo esc_html($it['description']); ?></p><?php endif; ?>
           <?php if (!empty($it['lines'])) : ?><ul><?php foreach ((array) $it['lines'] as $line) : ?><li><?php echo esc_html($line); ?></li><?php endforeach; ?></ul><?php endif; ?>
-          <?php if (!empty($b['learn']) && $link) : ?><span class="card-learn" aria-hidden="true">Learn More<?php echo cc_icon('arrow-right'); ?></span><?php endif; ?>
-          <?php if (!empty($it['url'])) : ?><a class="info-card-button <?php echo cc_btn(); ?>" href="<?php echo esc_url($it['url']); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($it['button_label'] ?? 'SHOP NOW'); ?></a><?php endif; ?>
+          <?php if (!empty($b['learn']) && $link) : ?><a class="card-learn" href="<?php echo esc_url($link); ?>" tabindex="-1">Learn More<?php echo cc_icon('arrow-right'); ?></a><?php endif; ?>
+          <?php if (!empty($it['url'])) : ?><a class="info-card-button <?php echo cc_btn(); ?>" href="<?php echo esc_url(cc_link($it['url'])); ?>"<?php echo empty($it['internal']) ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>><?php echo esc_html($it['button_label'] ?? 'SHOP NOW'); ?></a><?php endif; ?>
         </article>
       <?php endforeach; ?></div>
       <?php endif; ?>
@@ -62,7 +62,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php if ($layout === 'rows' && $items) : ?>
       <div class="info-rows"><?php foreach ($items as $it) : ?>
         <div class="info-row">
-          <h3><?php echo esc_html($it['title'] ?? ''); ?></h3>
+          <h3><?php echo esc_html(cc_tc($it['title'] ?? '')); ?></h3>
           <div>
             <?php if (($it['description'] ?? '') !== '') : ?><p><?php echo esc_html($it['description']); ?></p><?php endif; ?>
             <?php if (!empty($it['lines'])) : ?><ul<?php echo count((array) $it['lines']) > 6 ? ' class="is-columns"' : ''; ?>><?php foreach ((array) $it['lines'] as $line) : ?><li><?php echo esc_html($line); ?></li><?php endforeach; ?></ul><?php endif; ?>
@@ -103,7 +103,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <?php if ($layout === 'steps' && $items) : ?>
       <ol class="info-steps"><?php foreach ($items as $it) : ?>
         <li><?php if (!empty($it['image'])) : ?><img src="<?php echo esc_url(cc_img($it['image'])); ?>" alt="" width="167" height="167" loading="lazy" decoding="async"><?php endif; ?>
-          <h3><?php echo esc_html($it['title'] ?? ''); ?></h3>
+          <h3><?php echo esc_html(cc_tc($it['title'] ?? '')); ?></h3>
           <?php if (($it['description'] ?? '') !== '') : ?><p><?php echo esc_html($it['description']); ?></p><?php endif; ?></li>
       <?php endforeach; ?></ol>
       <?php endif; ?>
@@ -128,7 +128,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <div class="category-faq-list" data-orientation="vertical" data-accordion>
         <?php foreach ($items as $fi => $faq) : ?>
           <div data-state="closed" data-orientation="vertical" class="border-b">
-            <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-expanded="false" data-state="closed" data-orientation="vertical" id="<?php echo esc_attr($bid); ?>-trigger-<?php echo $fi; ?>" aria-controls="<?php echo esc_attr($bid); ?>-panel-<?php echo $fi; ?>" class="flex flex-1 items-center justify-between py-4 text-sm font-medium cursor-pointer transition-all hover:underline text-left [&amp;[data-state=open]&gt;svg]:rotate-180 category-faq-trigger"><span class="category-faq-question"><span class="category-faq-number"><?php echo $fi + 1; ?>.</span><span><?php echo esc_html($faq['question'] ?? ''); ?></span></span><?php echo cc_icon('chevron-down', 'h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200'); ?></button></h3>
+            <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-expanded="false" data-state="closed" data-orientation="vertical" id="<?php echo esc_attr($bid); ?>-trigger-<?php echo $fi; ?>" aria-controls="<?php echo esc_attr($bid); ?>-panel-<?php echo $fi; ?>" class="flex flex-1 items-center justify-between py-4 text-sm font-medium cursor-pointer transition-all hover:underline text-left [&amp;[data-state=open]&gt;svg]:rotate-180 category-faq-trigger"><span class="category-faq-question"><span class="category-faq-number"><?php echo $fi + 1; ?>. </span><span><?php echo esc_html($faq['question'] ?? ''); ?></span></span><?php echo cc_icon('chevron-down', 'h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200'); ?></button></h3>
             <div data-state="closed" id="<?php echo esc_attr($bid); ?>-panel-<?php echo $fi; ?>" hidden role="region" aria-labelledby="<?php echo esc_attr($bid); ?>-trigger-<?php echo $fi; ?>" data-orientation="vertical" class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"><div class="pb-4 pt-0 category-faq-answer"><p><?php echo esc_html($faq['answer'] ?? ''); ?></p></div></div>
           </div>
         <?php endforeach; ?>
@@ -179,7 +179,7 @@ $title = cc_page('banner.title') ?: get_the_title();
       <div class="info-coops"><?php foreach ($items as $it) : ?>
         <article class="info-coop">
           <span class="info-logo-frame"><img src="<?php echo esc_url(cc_img($it['image'] ?? '')); ?>" alt="" width="250" height="150" loading="lazy" decoding="async"></span>
-          <h3><?php echo esc_html($it['title'] ?? ''); ?></h3>
+          <h3><?php echo esc_html(cc_tc($it['title'] ?? '')); ?></h3>
           <?php if (($it['description'] ?? '') !== '') : ?><p><?php echo esc_html($it['description']); ?></p><?php endif; ?>
           <?php if (!empty($it['lines'])) : ?><details><summary>Contract numbers (<?php echo count((array) $it['lines']); ?>)</summary><ul><?php foreach ((array) $it['lines'] as $line) : ?><li><?php echo esc_html($line); ?></li><?php endforeach; ?></ul></details><?php endif; ?>
           <?php if (!empty($it['link'])) : ?><a class="info-coop-link" href="<?php echo esc_url($it['link']); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($it['link_label'] ?? 'LEARN MORE'); ?><?php echo cc_icon('arrow-up-right'); ?></a><?php endif; ?>
@@ -196,7 +196,7 @@ $title = cc_page('banner.title') ?: get_the_title();
             <li><span class="contact-icon"><?php echo cc_icon('map-pin'); ?></span><div><h3>Visit us</h3><p><a href="https://www.google.com/maps/search/?api=1&amp;query=<?php echo $maps_q; ?>" target="_blank" rel="noopener"><?php echo esc_html(cc_content('company.legal_name')); ?><br><?php cc_e('company.address_line1'); ?><br><?php cc_e('company.address_line2'); ?></a></p></div></li>
             <li><span class="contact-icon"><?php echo cc_icon('phone'); ?></span><div><h3>Call us</h3><p><a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>"><?php cc_e('company.phone'); ?></a></p></div></li>
             <li><span class="contact-icon"><?php echo cc_icon('mail'); ?></span><div><h3>Email us</h3><p><a href="mailto:<?php echo esc_attr(cc_content('company.email')); ?>"><?php cc_e('company.email'); ?></a></p></div></li>
-            <li><span class="contact-icon"><?php echo cc_icon('clock'); ?></span><div><h3>Business hours</h3><p><?php echo esc_html(cc_content('company.hours_days')); ?><br><?php echo esc_html(cc_content('company.hours_time')); ?> Central</p></div></li>
+            <li><span class="contact-icon"><?php echo cc_icon('clock'); ?></span><div><h3>Business hours</h3><p><?php echo esc_html(cc_content('company.hours_days')); ?><br><?php echo esc_html(cc_content('company.hours_time')); ?></p></div></li>
           </ul>
         </div>
         <form class="contact-form contact-form-card" id="contact-form" method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
@@ -206,6 +206,7 @@ $title = cc_page('banner.title') ?: get_the_title();
           <?php if (isset($_GET['error'])) : ?><p class="form-notice is-error" role="alert">Your message could not be sent. Please check the highlighted details and try again, or call us.</p><?php endif; ?>
           <input type="hidden" name="action" value="cc_contact">
           <?php wp_nonce_field('cc_contact', 'cc_contact_nonce'); ?>
+          <input type="hidden" name="cc_ts" value="<?php echo esc_attr(time()); ?>">
           <div class="form-trap" aria-hidden="true"><label>Website<input type="text" name="cc_website" tabindex="-1" autocomplete="off"></label></div>
           <div class="form-grid">
             <label><span class="sr-only">Name</span><input type="text" name="cc_name" required autocomplete="name" placeholder="Name"></label>
@@ -214,7 +215,8 @@ $title = cc_page('banner.title') ?: get_the_title();
             <label><span class="sr-only">Company or organization</span><input type="text" name="cc_company" autocomplete="organization" placeholder="Company or organization"></label>
           </div>
           <label><span class="sr-only">How can we help?</span><textarea name="cc_message" rows="5" required placeholder="How can we help? Tell us what you are looking for, such as products or services, quantities, delivery location and timing."></textarea></label>
-          <button type="submit" class="<?php echo cc_btn('shop', 'default', 'contact-submit'); ?>">REQUEST A CALL BACK<?php echo cc_icon('arrow-right'); ?></button>
+          <button type="submit" class="<?php echo cc_btn('shop', 'default', 'contact-submit'); ?>">SEND MY REQUEST<?php echo cc_icon('arrow-right'); ?></button>
+          <p class="contact-form-privacy">We’ll only use your information to respond to your request.</p>
         </form>
       </div>
       <?php if (!empty($b['map'])) : ?><div class="contact-map"><iframe title="Map to Competitive Choice, <?php echo esc_attr(cc_content('company.address_line1')); ?>" src="https://www.google.com/maps?q=<?php echo $maps_q; ?>&amp;output=embed" width="1060" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><?php endif; ?>
@@ -222,7 +224,7 @@ $title = cc_page('banner.title') ?: get_the_title();
 
       <?php if (($b['button_label'] ?? '') !== '') : ?><div class="category-actions info-block-actions"><a href="<?php echo esc_url(cc_link($b['button_link'] ?? 'link:contact')); ?>" class="<?php echo cc_btn(); ?>"><?php echo esc_html($b['button_label']); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
 
-      <?php if (!in_array($layout, ['text', 'split', 'statement', 'intro', 'centered', 'article', 'video', 'stat'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>
+      <?php if (!in_array($layout, ['text', 'split', 'statement', 'intro', 'centered', 'article', 'video', 'stat', 'trust', 'faq'], true) && $paragraphs) : ?><div class="info-after"><?php foreach ($paragraphs as $p) : ?><p><?php echo esc_html($p); ?></p><?php endforeach; ?></div><?php endif; ?>
     </section>
     <?php endforeach; ?>
 

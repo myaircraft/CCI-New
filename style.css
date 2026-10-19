@@ -80,7 +80,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 /* Sourcing steps. */
 .process-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--text-gap-large); max-width: 1060px; margin: 0 auto; padding: 0; list-style: none; counter-reset: ps; }
 .process-steps li { position: relative; padding: var(--topic-gap) var(--text-gap-large); border: 1px solid var(--border); border-top: 3px solid var(--primary); background: var(--background); counter-increment: ps; text-align: center; }
-.process-steps li::before { content: counter(ps); display: flex; align-items: center; justify-content: center; width: 47.1px; height: 47.1px; margin: 0 auto var(--text-gap); border-radius: 50%; background: var(--brand); color: var(--on-dark); font: 800 var(--fs-card-title)/1 Manrope, Inter, sans-serif; }
+.process-steps li::before { content: counter(ps); display: flex; align-items: center; justify-content: center; width: 47.1px; height: 47.1px; margin: 0 auto var(--text-gap); border-radius: 50%; background: var(--brand); color: var(--on-dark); font: 800 var(--fs-card-title)/1 Rajdhani, Roboto, sans-serif; }
 .process-steps h3 { margin: 0 0 var(--text-gap); color: var(--foreground); }
 .process-steps p { margin: 0; color: var(--muted-foreground); font-size: var(--fs-body); line-height: var(--text-leading); }
 @media (max-width: 900px) { .process-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -100,7 +100,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-card ul { margin: var(--text-gap) 0 0; padding: 0; list-style: none; color: var(--foreground); font-size: var(--fs-caption); font-weight: 700; line-height: var(--text-leading); }
 .info-card ul li + li { margin-top: var(--text-gap-small); }
 .info-person .info-role { margin-bottom: var(--text-gap); color: var(--brand); font-size: var(--fs-caption); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.info-monogram { display: flex; align-items: center; justify-content: center; width: 59.9px; height: 59.9px; margin: 0 auto var(--text-gap-large); border-radius: 50%; background: var(--brand); color: var(--on-dark); font: 800 var(--fs-card-title)/1 Manrope, Inter, sans-serif; }
+.info-monogram { display: flex; align-items: center; justify-content: center; width: 59.9px; height: 59.9px; margin: 0 auto var(--text-gap-large); border-radius: 50%; background: var(--brand); color: var(--on-dark); font: 800 var(--fs-card-title)/1 Rajdhani, Roboto, sans-serif; }
 .info-rows { max-width: 880px; margin: 0 auto; text-align: left; border-top: 1px solid var(--border); }
 .info-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.618fr); gap: var(--topic-gap); padding: var(--text-gap-large) 0; border-bottom: 1px solid var(--border); }
 .info-row h3 { margin: 0; color: var(--foreground); font-size: var(--fs-body); font-weight: 800; line-height: var(--text-leading); }
@@ -391,7 +391,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-card-button { align-self: center; }
 .info-steps { counter-reset: st; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--text-gap-large); max-width: 1060px; margin: 0 auto; padding: 0; list-style: none; }
 .info-steps li { position: relative; counter-increment: st; padding: var(--topic-gap) var(--text-gap-large); border: 1px solid var(--border); border-top: 3px solid var(--primary); background: var(--background); text-align: center; }
-.info-steps li::before { content: counter(st); position: absolute; top: var(--text-gap); left: var(--text-gap-large); display: flex; align-items: center; justify-content: center; width: 29.1px; height: 29.1px; border-radius: 50%; background: var(--brand); color: var(--on-dark); font: 800 var(--fs-caption)/1 Manrope, Inter, sans-serif; }
+.info-steps li::before { content: counter(st); position: absolute; top: var(--text-gap); left: var(--text-gap-large); display: flex; align-items: center; justify-content: center; width: 29.1px; height: 29.1px; border-radius: 50%; background: var(--brand); color: var(--on-dark); font: 800 var(--fs-caption)/1 Rajdhani, Roboto, sans-serif; }
 .info-steps img { display: block; width: 80.9px; height: 80.9px; margin: 0 auto var(--text-gap-large); object-fit: contain; }
 .info-steps h3 { margin: 0 0 var(--text-gap); text-transform: uppercase; letter-spacing: .06em; font-size: var(--fs-body); }
 .info-steps p { margin: 0; color: var(--muted-foreground); font-size: 14px; line-height: var(--text-leading); }
@@ -402,7 +402,7 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .info-split-media.is-demo::before { display: block; }
 .demo-play { position: relative; display: block; width: 100%; padding: 0; border: 0; background: #0d1b3a; cursor: pointer; line-height: 0; z-index: 1; }
 .demo-play img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
-.demo-play-label { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: var(--text-gap-small); padding: 14px 22.9px; background: var(--primary); color: var(--foreground); font: 800 var(--fs-caption)/1 Manrope, Inter, sans-serif; letter-spacing: .08em; transition: transform .25s ease, background .25s ease; }
+.demo-play-label { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: var(--text-gap-small); padding: 14px 22.9px; background: var(--primary); color: var(--foreground); font: 800 var(--fs-caption)/1 Rajdhani, Roboto, sans-serif; letter-spacing: .08em; transition: transform .25s ease, background .25s ease; }
 .demo-play:hover .demo-play-label { transform: translate(-50%, -50%) scale(1.06); }
 .demo-play-label svg { width: 16px; height: 16px; }
 .info-stat { max-width: 800px; margin: 0 auto; text-align: center; }
@@ -743,3 +743,46 @@ html { scroll-behavior: smooth; }
 
 /* Problem and application topics: yellow underline */
 .category-projects h3 { text-decoration: underline; text-decoration-color: var(--primary); text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-skip-ink: none; }
+
+/* Learn More is a real link inside a fully clickable card */
+.info-cards.has-learn .info-card a.card-learn { position: relative; z-index: 2; text-decoration: none; }
+
+.contact-form-privacy { margin: .75rem 0 0; font-size: 1rem; color: #303745; }
+.category-resources .category-actions { margin-top: 1.618rem; flex-wrap: wrap; gap: .618rem; }
+
+/* Home: proof bar, pillars, FCL-X moment, linked industry tiles, proof points */
+.proof-bar { background: var(--secondary, #0D173A); color: #fff; padding-block: var(--text-gap-large); }
+.proof-bar ul { display: flex; flex-wrap: wrap; justify-content: center; gap: .618rem 2.618rem; margin: 0; padding: 0; list-style: none; font: 700 1.125rem/1.3 Rajdhani, Roboto, sans-serif; letter-spacing: .04em; text-transform: uppercase; }
+.proof-bar li { position: relative; }
+.proof-bar li + li::before { content: ""; position: absolute; left: -1.309rem; top: 15%; height: 70%; width: 2px; background: #FFC200; }
+.proof-face { margin: var(--text-gap-large) auto 0; max-width: 62ch; text-align: center; font-size: 1.0625rem; color: #fff; }
+.pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--topic-gap); max-width: 1260px; margin: 0 auto; }
+.pillar-card { display: flex; flex-direction: column; gap: var(--text-gap-large); padding: 2.618rem 2.2rem; border: 1px solid var(--border); border-top: 4px solid #FFC200; background: #fff; color: inherit; text-decoration: none; transition: transform .25s ease, box-shadow .25s ease; }
+.pillar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(13,23,58,.12); }
+.pillar-card h3 { margin: 0; font-size: 1.618rem; }
+.pillar-card p { margin: 0; font-size: 1rem; line-height: 1.6; }
+.pillar-link { margin-top: auto; display: inline-flex; align-items: center; gap: .5rem; font-weight: 800; letter-spacing: .06em; font-size: .9375rem; }
+.fclx-feature { background: #f4f6fa; }
+.fclx-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.618rem; align-items: center; }
+.fclx-media { margin: 0; }
+.industry-list a.industry-item { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: .382rem; color: inherit; text-decoration: none; cursor: pointer; transition: border-color .2s ease, box-shadow .2s ease; }
+.industry-list a.industry-item:hover { border-color: #FFC200; box-shadow: 0 8px 20px rgba(13,23,58,.1); }
+.industry-list a.industry-item span { font-weight: 400; font-size: 1rem; line-height: 1.5; }
+.why-points p span { display: block; }
+.quote-slot { max-width: 62ch; margin: 2.618rem auto 0; text-align: center; color: #fff; font-size: 1.25rem; }
+.quote-slot cite { display: block; margin-top: .618rem; font-size: 1rem; font-style: normal; }
+@media (max-width: 900px) { .pillar-grid, .fclx-layout { grid-template-columns: 1fr; } .proof-bar li + li::before { display: none; } }
+
+/* Brand identity: Rajdhani Bold for titles and subtitles, Roboto for body. Navy #0D173A, Yellow #FFC200, Dark Grey #303745, Grey #747A87. */
+:root { --font-sans: "Roboto", Arial, sans-serif; --font-display: "Rajdhani", "Roboto", sans-serif; --brand-navy: #0D173A; --brand-yellow: #FFC200; --brand-dark: #303745; --brand-grey: #747A87; --primary: #FFC200; --primary-foreground: #0D173A; --secondary: #0D173A; --foreground: #0D173A; --muted-foreground: #303745; }
+body, button, input, select, textarea { font-family: var(--font-sans); }
+h1, h2, h3, h4, h5, h6, .section-topic, .section-heading, .info-kicker, .category-lead + *, .cc-btn, .demo-play-label, .pillar-link, .card-learn { font-family: var(--font-display); font-weight: 700; }
+h1, h2, h3, h4 { letter-spacing: .005em; }
+body { font-size: 16px; }
+
+/* Client request: body text at least 16px */
+.equipment-grid.is-four .equipment-item p, .info-cards.is-icons .info-card p, .info-cards.is-wide .info-card p, .info-person.has-photo p:not(.info-role), .info-coop p, .info-cards.is-product .info-card p, .info-steps p,
+.info-layout-contact .contact-tiles p, .info-layout-contact .contact-form-note, .info-layout-contact .contact-form input, .info-layout-contact .contact-form textarea,
+.info-layout-centered#lets-source .info-centered p, .category-page .info-layout-contact .contact-tiles li p, .category-page .info-layout-contact .contact-tiles li a,
+#products-supplies .group-links a, #services .group-links a, .market-strip .market-label { font-size: 16px; }
+.category-page .info-layout-contact .contact-tiles h3 { font-size: 13px; }

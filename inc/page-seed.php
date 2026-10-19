@@ -22,7 +22,7 @@ return [
             'explore_label' => 'EXPLORE CATEGORY',
         ],
         'markets' => [
-            'label' => 'Supporting the government, commercial, industrial, construction and facility organizations with supplies and services since 2003.',
+            'label' => 'Supporting government, commercial, industrial, construction and facility organizations with supplies and services since 2003.',
             'items' => [],
         ],
         'products' => [
@@ -58,9 +58,9 @@ return [
         'contracting' => [
             'topic'                => 'GOVERNMENT & CONTRACTING',
             'heading'              => 'Ready for complex procurement.',
-            'description'          => 'Established contract vehicles, cooperative purchasing options and verified business certifications.',
+            'description'          => 'Buy through our established contract vehicles, cooperative purchasing options, and verified certifications.',
             'credentials'          => ['GSA MAS', 'TIPS', 'BuyBoard', 'WOSB'],
-            'contracts_label'      => 'CO-OPS & CONTRACT VEHICLES',
+            'contracts_label'      => 'CO-OPS & SCHEDULES',
             'certifications_label' => 'VIEW OUR CERTIFICATIONS',
         ],
         'about' => [
@@ -89,7 +89,7 @@ return [
             'kicker' => 'PRODUCTS & SUPPLIES',
             'title' => 'Power Distribution Equipment & Transformers',
             'lead' => 'Reliable power starts with the right equipment. We supply power and distribution transformers, switchgear, panelboards, circuit breakers and fuses for the facilities that keep essential services running.',
-            'quote_label' => 'REQUEST A PROJECT QUOTE',
+            'quote_label' => 'REQUEST A QUOTE',
             'call_label' => 'CALL',
         ],
         'breadcrumb' => [
@@ -100,7 +100,7 @@ return [
         ],
         'overview' => [
             'title' => 'Power distribution equipment and transformers for critical infrastructure',
-            'paragraphs' => ['Competitive Choice supplies power distribution equipment, including distribution and power transformers, switchgear, panelboards, load centers, circuit breakers and fuses, for organizations that cannot afford unplanned downtime. Whether you are modernizing an electrical system, expanding capacity or equipping a new build, the equipment has to match your voltage, load and installation environment.', 'We serve utilities, hospitals, data centers, water plants, schools, government facilities and infrastructure contractors from Houston, Texas, and source for customers nationwide. Bring us your project specifications and we will help you move from an identified requirement to a clear procurement conversation, with product suitability, availability and delivery confirmed during your inquiry.'],
+            'paragraphs' => ['Competitive Choice supplies power distribution equipment, including distribution and power transformers, switchgear, panelboards, load centers, circuit breakers and fuses, for organizations that cannot afford unplanned downtime. Whether you are modernizing an electrical system, expanding capacity or equipping a new build, the equipment has to match your voltage, load and installation environment.', 'We serve utilities, hospitals, data centers, water plants, schools, government facilities and infrastructure contractors from Houston, TX, and source for customers nationwide. Bring us your project specifications and we will help you move from an identified requirement to a clear procurement conversation, with product suitability, availability and delivery confirmed during your inquiry.'],
             'image' => '',
             'image_alt' => '',
         ],
@@ -152,8 +152,8 @@ return [
         'trust' => [
             'title' => 'Why buyers source power equipment through Competitive Choice',
             'paragraphs' => ['Competitive Choice has supported government, commercial and institutional buyers since 2003. Our strategic sourcing and procurement experience helps you handle equipment requirements without chasing multiple suppliers.', 'Public-sector buyers can ask about our contract vehicles and certifications, including GSA MAS, TIPS, BuyBoard and WOSB, when they submit a requirement. We confirm which vehicles apply to each purchase.'],
-            'points' => ['Serving buyers since 2003', 'Based in Houston, Texas', 'Nationwide sourcing', 'GSA MAS, TIPS and BuyBoard contract vehicles', 'WOSB certification'],
-            'button_label' => 'CO-OPS & CONTRACT VEHICLES',
+            'points' => ['Serving buyers since 2003', 'Based in Houston, TX', 'Nationwide sourcing', 'GSA MAS, TIPS and BuyBoard contract vehicles', 'WOSB certification'],
+            'button_label' => 'CO-OPS & SCHEDULES',
         ],
         'process' => [
             'title' => 'How sourcing works with Competitive Choice',
@@ -178,7 +178,7 @@ return [
             ],
         ],
         'inquiry' => [
-            'title' => 'Let’s define the right supply requirement.',
+            'title' => 'Let’s define the right supply requirement',
             'paragraphs' => ['Send your equipment schedule, specification or bill of materials. Our team can discuss your power distribution needs and the next steps for sourcing.', 'Include the details below where available. Product suitability, availability and delivery requirements should be confirmed during your inquiry.'],
             'checklist_title' => 'Details to include with your inquiry',
             'items' => [
@@ -263,7 +263,7 @@ return [
                     'link' => 'link:products',
                 ],
                 [
-                    'label' => 'Co-Ops & Contract Vehicles',
+                    'label' => 'Co-Ops & Schedules',
                     'link' => 'link:contracts',
                 ],
                 [

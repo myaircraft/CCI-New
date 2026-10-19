@@ -14,12 +14,12 @@ return [
                 'og_description' => 'A nimble logistics and procurement partner for organizations that support critical infrastructure. Tell us what you need.',
                 'schema_about' => 'Logistics, warehousing and procurement services',
             ],
-            'banner' => ['image' => 'svc-logistics-banner-v4.jpg', 'title' => 'Strategic Logistics & Procurement for Infrastructure-Driven Operations',
+            'banner' => ['image' => 'svc-logistics-banner-v4.jpg', 'title' => 'Logistics & Procurement Services',
                 'lead' => 'When a part, a pump or a pallet of supplies arrives late, the whole operation feels it. We make sure it does not, with a hands-on team and a centrally located Houston warehouse.'],
             'overview' => [
                 'title' => 'A trusted logistics and procurement partner for critical infrastructure',
                 'paragraphs' => [
-                    'Competitive Choice is a woman-owned distributor based in Houston, Texas, serving government, commercial and institutional buyers since 2003. Our logistics and procurement services extend what we already do well, sourcing and supplying the products that keep facilities running, into a complete support service.',
+                    'Competitive Choice is a woman-owned distributor based in Houston, TX, serving government, commercial and institutional buyers since 2003. Our logistics and procurement services extend what we already do well, sourcing and supplying the products that keep facilities running, into a complete support service.',
                     'With a single, centrally located warehouse and a hands-on team, we offer responsive, dependable solutions built around facility operations, regulatory compliance and rapid response. We combine practical experience with scalable systems to help reduce risk, control costs and maintain operational readiness, even under pressure.',
                     'We may be small in footprint, but we work with a big-picture mindset. Our team delivers reliable, flexible solutions and scales alongside our strategic partners as their needs evolve.',
                 ],
@@ -70,8 +70,8 @@ return [
                 ['question' => 'How do I start?', 'answer' => 'Contact our team with your requirement, locations and timing. We will scope a plan that fits your operation and confirm scope, schedule and pricing in a proposal.'],
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
-                ['label' => 'Program & Scheduling Services', 'link' => '/services/program-scheduling/'],
-                ['label' => 'Co-Ops & Contract Vehicles', 'link' => 'link:contracts'],
+                ['label' => 'Program Scheduling & Management', 'link' => '/services/program-scheduling/'],
+                ['label' => 'Co-Ops & Schedules', 'link' => 'link:contracts'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -81,18 +81,18 @@ return [
         'title' => 'Program Scheduling & Management', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 22,
         'content' => [
             'seo' => [
-                'title' => 'Program & Scheduling Services for MEP Teams | Competitive Choice',
+                'title' => 'Program Scheduling & Management for MEP Contractors | Competitive Choice',
                 'description' => 'Program management and scheduling support that keeps materials and equipment on time for MEP and general contractor teams. Request a quote.',
-                'og_title' => 'Program & Scheduling Services | Competitive Choice',
+                'og_title' => 'Program Scheduling & Management | Competitive Choice',
                 'og_description' => 'Responsive scheduling and delivery coordination for MEP and general contractors. Tell us about your project.',
                 'schema_about' => 'Construction program management and scheduling services',
             ],
-            'banner' => ['image' => 'svc-program-banner-v4.jpg', 'title' => 'End-to-End Program Management',
-                'lead' => 'Personalized scheduling and delivery coordination that keeps MEP and general contractor teams on time, every time.'],
+            'banner' => ['image' => 'svc-program-banner-v4.jpg', 'title' => 'Program Scheduling & Management',
+                'lead' => 'Personalized scheduling and delivery coordination that keeps MEP (mechanical, electrical and plumbing) and general contractor teams on time.'],
             'overview' => [
                 'title' => 'Programs and scheduling built around your construction milestones',
                 'paragraphs' => [
-                    'Competitive Choice offers personalized, responsive Programs and Scheduling Services for MEP and General Contractor teams. We understand the fast pace of construction and the importance of having the right materials and equipment delivered on time, every time. Our hands-on team works closely with project leads to anticipate needs, manage timelines and stay aligned with changing site conditions.',
+                    'Competitive Choice offers personalized, responsive Program Scheduling & Management for MEP (mechanical, electrical and plumbing) and general contractor teams. We understand the fast pace of construction and the importance of having the right materials and equipment delivered on time. Our hands-on team works closely with project leads to anticipate needs, manage timelines and stay aligned with changing site conditions.',
                     'We use NetSuite Facility Services to track project schedules, manage procurement timelines and keep clear visibility across multiple job sites. This cloud-based platform lets us coordinate deliveries, monitor inventory and adapt quickly when plans change.',
                     'Whether we are staging materials for phased installation or expediting products for urgent repairs, our services stay in sync with your construction milestones and field operations. Our goal is to be an extension of your project team.',
                 ],
@@ -136,7 +136,7 @@ return [
                 'button_label' => 'REQUEST A QUOTE',
             ],
             'faq' => ['items' => [
-                ['question' => 'What are Programs and Scheduling Services?', 'answer' => 'Personalized support that tracks project schedules and procurement timelines and coordinates deliveries so materials and equipment arrive when your teams need them.'],
+                ['question' => 'What are Program Scheduling & Management?', 'answer' => 'Personalized support that tracks project schedules and procurement timelines and coordinates deliveries so materials and equipment arrive when your teams need them.'],
                 ['question' => 'Which teams do you serve?', 'answer' => 'We support MEP and general contractor teams on construction and infrastructure projects.'],
                 ['question' => 'What platform do you use?', 'answer' => 'We use NetSuite Facility Services to track schedules, procurement timelines and inventory across job sites.'],
                 ['question' => 'How do I get started?', 'answer' => 'Contact our team with your project, locations and timeline. We will discuss how we can support your milestones.'],
@@ -159,7 +159,7 @@ return [
                 'og_description' => 'Preventive, eco-conscious drain maintenance for healthcare, education, government and food service.',
                 'schema_about' => 'Drain care and wastewater maintenance services',
             ],
-            'banner' => ['image' => 'svc-drain-banner-v4.jpg', 'title' => 'Wastewater, Kitchen and Dialysis Drain Services',
+            'banner' => ['image' => 'svc-drain-banner-v4.jpg', 'title' => 'Drain Maintenance Services',
                 'lead' => 'Preventive, eco-conscious drain care that keeps systems clean, free-flowing and compliant.'],
             'overview' => [
                 'title' => 'Total Drain Care that protects your facility',
@@ -232,12 +232,12 @@ return [
                 'og_description' => 'Create a signature scent experience in lobbies, restrooms and breakrooms with turnkey installation and service.',
                 'schema_about' => 'Commercial air scenting services',
             ],
-            'banner' => ['image' => 'svc-scenting-banner-v4.jpg', 'title' => 'Enhance Your Facility’s Environment',
+            'banner' => ['image' => 'svc-scenting-banner-v4.jpg', 'title' => 'Air Scenting Services That Enhance Your Facility',
                 'lead' => 'Advanced air scenting that supports health, comfort and brand experience, with turnkey installation and service.'],
             'overview' => [
                 'title' => 'Air scenting that elevates the atmosphere of your facility',
                 'paragraphs' => [
-                    'Competitive Choice offers advanced air scenting solutions designed to elevate the atmosphere of your facility while supporting health, comfort and brand experience. Our systems integrate into your existing HVAC infrastructure or run as standalone units, delivering consistent, hypoallergenic fragrances throughout high-traffic areas such as lobbies, restrooms, breakrooms and executive suites.',
+                    'Competitive Choice offers advanced air scenting solutions designed to elevate the atmosphere of your facility while supporting health, comfort and brand experience. Our systems integrate into your existing HVAC infrastructure or run as standalone units, delivering consistent, allergy-tested fragrances throughout high-traffic areas such as lobbies, restrooms, breakrooms and executive suites.',
                     'Our scenting services suit environments that demand cleanliness, sophistication and memorability, from healthcare and education to government and hospitality.',
                     'Let us help you create a signature scent experience that welcomes, reassures and leaves a lasting impression.',
                 ],
@@ -288,7 +288,7 @@ return [
             ]],
             'related' => ['title' => 'Related services and pages', 'links' => [
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
-                ['label' => 'HVAC & HVAC Package Units', 'link' => '/supplies/hvac-package-units/'],
+                ['label' => 'HVAC & Package Units', 'link' => '/supplies/hvac-package-units/'],
                 ['label' => 'All Services', 'link' => 'link:services'],
             ]],
         ],
@@ -304,7 +304,7 @@ return [
                 'og_description' => 'Eliminate odors at the source in the most challenging environments. Tell us where you need it.',
                 'schema_about' => 'Odor control solutions for institutional and industrial facilities',
             ],
-            'banner' => ['image' => 'svc-odor-banner-v4.jpg', 'title' => 'Targeted Odor Control for Essential Environments',
+            'banner' => ['image' => 'svc-odor-banner-v4.jpg', 'title' => 'Odor Control Services',
                 'lead' => 'Eliminate odors at the source in schools, treatment plants, healthcare centers and commercial buildings.'],
             'overview' => [
                 'title' => 'Odor control that protects hygiene, safety and reputation',
@@ -368,27 +368,27 @@ return [
     ],
 
     'work-order-request-call-center' => [
-        'title' => 'Facility Call Center and Service Request', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 26,
+        'title' => 'Work Order Request and Call Center Service', 'parent' => 'services', 'template' => 'category', 'group' => 'service', 'order' => 26,
         'content' => [
             'seo' => [
-                'title' => 'Facility Work Order Request Call Center | Competitive Choice',
+                'title' => 'Work Order Request and Call Center Service | Competitive Choice',
                 'description' => 'A dedicated call center that takes in, logs, prioritizes and tracks facility work orders for custodial, electrical, plumbing and HVAC. Request a quote.',
-                'og_title' => 'Work Order Request Call Center | Competitive Choice',
+                'og_title' => 'Work Order Request and Call Center Service | Competitive Choice',
                 'og_description' => 'Streamlined service ticket management for facility managers, with real-time visibility and reporting.',
                 'schema_about' => 'Facility work order call center services',
             ],
-            'banner' => ['image' => 'svc-callcenter-banner-v4.jpg', 'title' => 'Streamlined Service Ticket Management',
+            'banner' => ['image' => 'svc-callcenter-banner-v4.jpg', 'title' => 'Work Order Request and Call Center Service',
                 'lead' => 'A dedicated call center that takes in, tracks and follows up on facility work orders so your staff can focus on core work.'],
             'overview' => [
                 'title' => 'A central hub for facility service requests',
                 'paragraphs' => [
-                    'Managing day-to-day facility operations takes more than quality products. It demands responsive, coordinated service. That is why Competitive Choice offers a dedicated Work Order Request Call Center that helps facility managers streamline maintenance and service needs.',
+                    'Managing day-to-day facility operations takes more than quality products. It demands responsive, coordinated service. That is why Competitive Choice offers a dedicated work order request and call center service that helps facility managers streamline maintenance and service needs.',
                     'The call center acts as a centralized hub, fielding and tracking requests related to custodial, electrical, plumbing, HVAC and general maintenance issues. Our trained team takes in, logs and prioritizes service tickets, dispatches work to the right teams and follows up to confirm resolution.',
                     'By capturing detailed information on each request and keeping real-time visibility into open issues, we reduce response times, increase accountability and provide reporting that supports preventive maintenance planning and regulatory compliance. We customize each program to your organization’s workflow, protocols and performance goals.',
                 ],
             ],
             'problems' => [
-                'title' => 'The problems our Work Order Request Call Center solves', 'description' => 'The challenges that slow down facility operations, and how we address each one.',
+                'title' => 'The problems our work order request and call center service solves', 'description' => 'The challenges that slow down facility operations, and how we address each one.',
                 'items' => [
                     ['title' => 'Requests lost in emails and phone calls', 'description' => 'Service needs scattered across inboxes and voicemails get missed. A central hub logs every request.'],
                     ['title' => 'No clear priority', 'description' => 'Without triage, urgent issues wait behind routine ones. Every ticket is prioritized and dispatched.'],
@@ -399,12 +399,20 @@ return [
                 ],
             ],
             'equipment' => [
-                'title' => 'What our {{work order request call center}} handles', 'description' => 'Every request captured, prioritized and followed to resolution.',
+                'title' => 'What our {{call center service}} handles', 'description' => 'Every request captured, prioritized and followed to resolution.',
                 'items' => [
                     ['title' => 'Intake & Logging', 'icon' => '', 'image' => '', 'description' => 'Trained staff capture detailed information on each request and log it as a service ticket.', 'items' => []],
                     ['title' => 'Prioritization & Dispatch', 'icon' => '', 'image' => '', 'description' => 'Tickets are prioritized and dispatched to the appropriate teams.', 'items' => []],
                     ['title' => 'Follow-Up & Reporting', 'icon' => '', 'image' => '', 'description' => 'Follow-up to confirm resolution, plus reporting that supports preventive maintenance planning.', 'items' => []],
                     ['title' => 'Custom Program Design', 'icon' => '', 'image' => '', 'description' => 'Each program is customized to your organization’s workflow, protocols and performance goals.', 'items' => []],
+                ],
+            ],
+            'trust' => [
+                'title' => 'Why organizations choose our call center service',
+                'paragraphs' => [
+                    'Since 2003, Competitive Choice has grown from a small Houston business selling specialty chemicals into a trusted partner for government, healthcare, education, utility and commercial organizations. We still work the way we started: with a team that answers the phone and follows through.',
+                    'Our call center service is built around intake, dispatch, response times and reporting. Every request is logged, prioritized and routed to the right team, then followed up until it is closed. You get one point of contact and a clear record of what was asked, who responded and how long it took.',
+                    'We are a certified woman-owned business with national, state, local and federal certification, and we hold cooperative and federal contract vehicles including GSA MAS, TIPS, BuyBoard, Good Buy, Choice Partners and AbilityOne. Our co-op contracts can simplify your procurement.',
                 ],
             ],
             'applications' => [
@@ -416,7 +424,7 @@ return [
                 ],
             ],
             'process' => [
-                'title' => 'How our work order call center works', 'description' => 'One point of contact from request to resolution.',
+                'title' => 'How our work order request and call center service works', 'description' => 'One point of contact from request to resolution.',
                 'items' => [
                     ['title' => 'Define your workflow', 'description' => 'Share your request types, priorities, escalation rules and reporting needs.'],
                     ['title' => 'We configure your program', 'description' => 'We customize intake, ticketing and dispatch protocols to your workflow and performance goals.'],
@@ -448,7 +456,7 @@ return [
                 'og_description' => 'Reliable, compliant chemical supply for facilities, with the right products at the right time.',
                 'schema_about' => 'Facility chemical supply program',
             ],
-            'banner' => ['image' => 'svc-chemical-banner-v4.jpg', 'title' => 'A Chemical Supply Program Built Around Your Facility',
+            'banner' => ['image' => 'svc-chemical-banner-v4.jpg', 'title' => 'Chemical Supply Program',
                 'lead' => 'The right products, the right quantities and the right paperwork, delivered on a schedule so your teams never run short.'],
             'overview' => [
                 'title' => 'Dependable chemical supply, without the guesswork',
@@ -521,7 +529,7 @@ return [
                 'og_description' => 'Accurate dosing, safer handling and less waste with professionally installed dispensing systems.',
                 'schema_about' => 'Chemical dispensing system installation and service',
             ],
-            'banner' => ['image' => 'svc-dispensing-banner-v4.jpg', 'title' => 'Dispensing Systems That Dose It Right, Every Time',
+            'banner' => ['image' => 'svc-dispensing-banner-v4.jpg', 'title' => 'Dispensing Systems That Dose It Right',
                 'lead' => 'Accurate dilution, safer handling and less waste, installed, calibrated and supported by our team.'],
             'overview' => [
                 'title' => 'Precise dosing that protects your people and your budget',

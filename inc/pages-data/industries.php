@@ -19,7 +19,7 @@ return [
             'overview' => [
                 'title' => 'A reliable supply partner for federal facilities and programs',
                 'paragraphs' => [
-                    'Federal facilities run on compliance, documentation and dependable delivery. Competitive Choice is a woman-owned distributor based in Houston, Texas, serving government, commercial and institutional buyers since 2003, and we understand the procurement rules federal buyers work within.',
+                    'Federal facilities run on compliance, documentation and dependable delivery. Competitive Choice is a woman-owned distributor based in Houston, TX, serving government, commercial and institutional buyers since 2003, and we understand the procurement rules federal buyers work within.',
                     'Through our partnerships with the General Services Administration and AbilityOne, we offer quality products through competitively bid contracts and streamlined procurement channels. That includes TAA-compliant safety supplies, material handling, tools, lighting and AbilityOne items.',
                     'Our team handles sourcing, quoting and delivery so contracting officers and facility managers can keep requirements moving and stay audit-ready.',
                 ],
@@ -77,7 +77,7 @@ return [
             ]],
             'related' => ['title' => 'Related industries and pages', 'links' => [
                 ['label' => 'State & Local Government', 'link' => '/industries/state-local-government/'],
-                ['label' => 'Co-Ops & Contract Vehicles', 'link' => 'link:contracts'],
+                ['label' => 'Co-Ops & Schedules', 'link' => 'link:contracts'],
                 ['label' => 'Certifications', 'link' => 'link:certifications'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
             ]],
@@ -99,7 +99,7 @@ return [
             'overview' => [
                 'title' => 'A dependable partner for the facilities that serve your community',
                 'paragraphs' => [
-                    'Public works yards, municipal buildings, courthouses and utility facilities all depend on a steady flow of supplies. Competitive Choice is a woman-owned distributor based in Houston, Texas, serving government, commercial and institutional buyers since 2003.',
+                    'Public works yards, municipal buildings, courthouses and utility facilities all depend on a steady flow of supplies. Competitive Choice is a woman-owned distributor based in Houston, TX, serving government, commercial and institutional buyers since 2003.',
                     'We have been awarded numerous contracts, from specific product awards and commodity contracts to full catalog agreements. We are your one-stop shop for maintenance, repair and operational needs for local and state facilities.',
                     'Our team works within public purchasing requirements and helps you get the right products, with clear quotes and dependable delivery.',
                 ],
@@ -158,7 +158,7 @@ return [
             'related' => ['title' => 'Related industries and pages', 'links' => [
                 ['label' => 'Education / SLED', 'link' => '/industries/education-sled/'],
                 ['label' => 'Water & Wastewater', 'link' => '/industries/water-wastewater/'],
-                ['label' => 'Co-Ops & Contract Vehicles', 'link' => 'link:contracts'],
+                ['label' => 'Co-Ops & Schedules', 'link' => 'link:contracts'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
             ]],
         ],
@@ -179,7 +179,7 @@ return [
             'overview' => [
                 'title' => 'Keeping campuses clean, safe and ready for learning',
                 'paragraphs' => [
-                    'School districts and education facilities manage large buildings, tight budgets and constant demand on restrooms, hallways and shared spaces. Competitive Choice is a woman-owned distributor based in Houston, Texas, serving public-sector and institutional buyers since 2003.',
+                    'School districts and education facilities manage large buildings, tight budgets and constant demand on restrooms, hallways and shared spaces. Competitive Choice is a woman-owned distributor based in Houston, TX, serving public-sector and institutional buyers since 2003.',
                     'We are your one-stop shop for maintenance, repair and operational needs for local, state and education facilities, with contract awards ranging from product awards to full catalog agreements.',
                     'Beyond products, our services help campuses stay fresh and responsive, including odor control for restrooms and shared spaces and a work order request call center that gives campuses one point of contact.',
                 ],
@@ -231,13 +231,13 @@ return [
             ],
             'faq' => ['items' => [
                 ['question' => 'Can you help with restroom odors in schools?', 'answer' => 'Yes. Our odor control solutions are designed to eliminate odors at the source in high-use restrooms and shared spaces.'],
-                ['question' => 'Do you offer a single point of contact for maintenance requests?', 'answer' => 'Our Work Order Request Call Center can serve as a centralized hub that logs, prioritizes and follows up on service tickets.'],
+                ['question' => 'Do you offer a single point of contact for maintenance requests?', 'answer' => 'Our Work Order Request and Call Center Service can serve as a centralized hub that logs, prioritizes and follows up on service tickets.'],
                 ['question' => 'Do you work with school districts through cooperative contracts?', 'answer' => 'Education buyers can ask about our TIPS and BuyBoard contract vehicles when they submit a requirement.'],
                 ['question' => 'How do I request a quote?', 'answer' => 'Contact our team with your products, campuses, quantities and contract details.'],
             ]],
             'related' => ['title' => 'Related industries and pages', 'links' => [
                 ['label' => 'Odor Control', 'link' => '/services/odor-control/'],
-                ['label' => 'Work Order Request Call Center', 'link' => '/services/work-order-request-call-center/'],
+                ['label' => 'Work Order Request and Call Center Service', 'link' => '/services/work-order-request-call-center/'],
                 ['label' => 'Custodial, Janitorial & Sanitation', 'link' => '/supplies/custodial-janitorial-sanitation/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],
             ]],
@@ -259,7 +259,7 @@ return [
             'overview' => [
                 'title' => 'A dependable partner for healthcare facilities',
                 'paragraphs' => [
-                    'In healthcare, a well-organized, fully stocked facility is vital. Competitive Choice is a woman-owned distributor based in Houston, Texas, serving government, commercial and institutional buyers since 2003.',
+                    'In healthcare, a well-organized, fully stocked facility is vital. Competitive Choice is a woman-owned distributor based in Houston, TX, serving government, commercial and institutional buyers since 2003.',
                     'We help solve day-to-day challenges with med/surge and safety products, wheelchairs and wheelchair repair parts, and thousands of other medical supplies.',
                     'Our services support the facility itself too, with drain care that supports infection control in dialysis centers, odor control for healthcare centers and air scenting suited to sensitive environments.',
                 ],
@@ -339,7 +339,7 @@ return [
             'overview' => [
                 'title' => 'A practical partner for water and wastewater operators',
                 'paragraphs' => [
-                    'Water and wastewater facilities run around the clock and have little room for supply gaps. Competitive Choice is a woman-owned distributor based in Houston, Texas, serving government, commercial and institutional buyers since 2003.',
+                    'Water and wastewater facilities run around the clock and have little room for supply gaps. Competitive Choice is a woman-owned distributor based in Houston, TX, serving government, commercial and institutional buyers since 2003.',
                     'We supply grease and odor control, disinfection and sanitizing products, and corrosion, scale and enzyme treatments, backed by a team that understands how plants buy.',
                     'Our services go further, with industrial-strength odor control for sewer gas and Total Drain Care that targets the biofilm and buildup at the heart of wastewater system health.',
                 ],
@@ -419,7 +419,7 @@ return [
             'overview' => [
                 'title' => 'A responsive supplier for energy producers and utilities',
                 'paragraphs' => [
-                    'Energy and utility operations depend on the right equipment arriving on time. Competitive Choice is a woman-owned distributor based in Houston, Texas, serving government, commercial and institutional buyers since 2003.',
+                    'Energy and utility operations depend on the right equipment arriving on time. Competitive Choice is a woman-owned distributor based in Houston, TX, serving government, commercial and institutional buyers since 2003.',
                     'Our chemicals help facilities worldwide get it clean and keep it green. We meet drilling, completion, production and midstream requirements with electrical, datacomm, valves, pipe, fittings, structural steel, tools, gauges, rod pumps, production equipment and safety supplies.',
                     'For utilities, our power distribution and transformer sourcing supports critical infrastructure with ratings and timing confirmed for each requirement.',
                 ],
@@ -499,7 +499,7 @@ return [
             'overview' => [
                 'title' => 'A single source for the products your facility runs on',
                 'paragraphs' => [
-                    'Commercial and industrial facilities cannot afford to wait on missing supplies. Competitive Choice is a woman-owned distributor based in Houston, Texas, serving government, commercial and institutional buyers since 2003.',
+                    'Commercial and industrial facilities cannot afford to wait on missing supplies. Competitive Choice is a woman-owned distributor based in Houston, TX, serving government, commercial and institutional buyers since 2003.',
                     'We are your source for commercial safety supplies, tools, equipment, shelving, lighting, vacuums, carpet cleaners and other items needed to complete commercial projects.',
                     'Our logistics and procurement services add warehousing, eProcurement and contract support, so purchasing runs smoothly across locations.',
                 ],
@@ -579,9 +579,9 @@ return [
             'overview' => [
                 'title' => 'A project partner for MEP and general contractors',
                 'paragraphs' => [
-                    'Construction schedules leave little room for late materials. Competitive Choice is a woman-owned distributor based in Houston, Texas, serving government, commercial and institutional buyers since 2003.',
+                    'Construction schedules leave little room for late materials. Competitive Choice is a woman-owned distributor based in Houston, TX, serving government, commercial and institutional buyers since 2003.',
                     'Choose us for your construction and MEP supply requirements. We can source what your project needs, from building wire, thermometers and smoke detectors to pipe supports, across mechanical, electrical and plumbing supplies.',
-                    'Our Program & Scheduling Services use NetSuite Facility Services to track schedules, manage procurement timelines and keep visibility across job sites.',
+                    'Our Program Scheduling & Management use NetSuite Facility Services to track schedules, manage procurement timelines and keep visibility across job sites.',
                 ],
             ],
             'problems' => [
@@ -631,12 +631,12 @@ return [
             ],
             'faq' => ['items' => [
                 ['question' => 'What MEP supplies can you source?', 'answer' => 'Mechanical, electrical and plumbing supplies, from building wire, thermometers and smoke detectors to pipe supports.'],
-                ['question' => 'Do you help with delivery scheduling?', 'answer' => 'Yes. Our Program & Scheduling Services track project schedules and procurement timelines and coordinate deliveries.'],
+                ['question' => 'Do you help with delivery scheduling?', 'answer' => 'Yes. Our Program Scheduling & Management track project schedules and procurement timelines and coordinate deliveries.'],
                 ['question' => 'Can you support urgent repairs?', 'answer' => 'Yes. We expedite products when the schedule demands it.'],
                 ['question' => 'How do I request a quote?', 'answer' => 'Contact our team with your bill of materials, milestones and job site locations.'],
             ]],
             'related' => ['title' => 'Related industries and pages', 'links' => [
-                ['label' => 'Program & Scheduling Services', 'link' => '/services/program-scheduling/'],
+                ['label' => 'Program Scheduling & Management', 'link' => '/services/program-scheduling/'],
                 ['label' => 'Electrical, Lighting & Cable', 'link' => '/supplies/electrical-lighting-cable/'],
                 ['label' => 'Plumbing Supplies', 'link' => '/supplies/plumbing-supplies/'],
                 ['label' => 'All Industries', 'link' => 'link:industries'],

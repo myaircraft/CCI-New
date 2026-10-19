@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo('charset'); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-<div class="flex min-h-screen items-center justify-center bg-background px-4">
-  <div class="max-w-md text-center">
-    <h1 class="text-7xl font-bold text-foreground"><?php cc_e('page404.code'); ?></h1>
-    <h2 class="mt-4 text-xl font-semibold text-foreground"><?php cc_e('page404.title'); ?></h2>
-    <p class="mt-2 text-sm text-muted-foreground"><?php cc_e('page404.text'); ?></p>
-    <div class="mt-6">
-      <a href="<?php echo esc_url(home_url('/')); ?>" class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"><?php cc_e('page404.button_label'); ?></a>
+<?php get_header(); ?>
+<main class="section-space">
+  <div class="site-container" style="text-align:center;max-width:640px;">
+    <p class="section-topic"><?php cc_e('page404.code'); ?></p>
+    <h1 class="section-heading"><?php cc_e('page404.title'); ?></h1>
+    <p class="section-description"><?php cc_e('page404.text'); ?></p>
+    <div class="section-actions">
+      <a href="<?php echo esc_url(home_url('/')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_e('page404.button_label'); ?></a>
+      <a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn('outline'); ?>">CONTACT US</a>
     </div>
   </div>
-</div>
-<?php wp_footer(); ?>
-</body>
-</html>
+</main>
+<?php get_footer();

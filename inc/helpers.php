@@ -78,7 +78,9 @@ function cc_icon($name, $class = '') {
 
 /** Title Case for section headings: small joining words stay lower case, everything else gets a capital. */
 function cc_tc($text) {
-    $text = (string) $text;
+    $text = trim(preg_replace('/\s+/u', ' ', (string) $text));
+    $text = preg_replace('/(?<!\.)\.$/u', '', $text);        // headings carry no closing period
+    $text = preg_replace('/\s+and\s+/iu', ' & ', $text);     // headings use "&" throughout
     $minor = ['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'nor', 'of', 'on', 'or', 'per', 'the', 'to', 'up', 'via', 'vs'];
     if (!preg_match_all('/[\p{L}\p{N}][\p{L}\p{N}\'’]*/u', $text, $m, PREG_OFFSET_CAPTURE)) return $text;
     $words = $m[0];

@@ -17,6 +17,7 @@ function cc_pages_data() {
         $pages = array_merge(
             require __DIR__ . '/pages-data/products.php',
             require __DIR__ . '/pages-data/chemical-supplies.php',
+            require __DIR__ . '/pages-data/supplies-systems.php',
             require __DIR__ . '/pages-data/services.php',
             require __DIR__ . '/pages-data/industries.php',
             require __DIR__ . '/pages-data/about.php',
@@ -29,19 +30,19 @@ function cc_pages_data() {
 
 /** Blocks every product or service page shows after its own content. */
 function cc_page_shared($group) {
-    $stats = [['2003', 'Serving buyers since'], ['50', 'States reached nationwide'], ['WOSB', 'Certified woman-owned business'], ['4', 'Levels of certification: national, state, local and federal']];
-    $points = ['GSA MAS, TIPS, BuyBoard, Good Buy and Choice Partners contract vehicles', 'SBA WOSB / EDWOSB, DBE, MBE, SBE and WBE certified', 'Centrally located Houston warehouse', 'Hands-on team that knows your account'];
+    $stats = [['2003', 'Serving buyers since'], ['50', 'states reached nationwide'], ['WOSB', 'Certified woman-owned business'], ['4', 'Levels of certification: national, state, local and federal']];
+    $points = ['GSA MAS, TIPS, BuyBoard, Good Buy, Choice Partners and AbilityOne contract vehicles', 'SBA WOSB / EDWOSB, DBE, MBE, SBE and WBE certified', 'Centrally located Houston warehouse', 'Hands-on team that knows your account'];
     if ($group === 'service') {
         $trust_paragraphs = [
             'Since 2003, Competitive Choice has grown from a small Houston business selling specialty chemicals into a trusted partner for government, healthcare, education, utility and commercial organizations. We still work the way we started: with a hands-on team that listens first, answers the phone and treats your facility like our own.',
-            'Our services are backed by credentials your procurement office can verify. We are a certified woman-owned business, recognized at the national, state, local and federal levels, and we hold cooperative and federal contract vehicles, so buying from us is already competitively vetted.',
-            'Behind every service is a centrally located Houston warehouse, an extensive vendor network and a team that has spent two decades earning repeat business one reliable delivery at a time.',
+            'Our services are backed by credentials your procurement office can verify. We are a certified woman-owned business with national, state, local and federal certification, and we hold cooperative and federal contract vehicles including GSA MAS, TIPS, BuyBoard, Good Buy, Choice Partners and AbilityOne. Our co-op contracts can simplify your procurement.',
+            'Every service is backed by a centrally located Houston warehouse, an extensive vendor network and a team with 23 years of earning repeat business one reliable delivery at a time.',
         ];
     } else {
         $trust_paragraphs = [
-            'Since 2003, Competitive Choice has grown from a small Houston business selling specialty chemicals into a comprehensive supplier trusted by government, healthcare, education, utility and commercial buyers. We still run it the way we started: with a team that answers the phone, knows your account and gets the details right.',
-            'That reliability is backed by credentials your procurement office can verify. We are a certified woman-owned business with national, state, local and federal recognition, and we hold contract vehicles including GSA MAS, TIPS, BuyBoard, Good Buy, Choice Partners and AbilityOne, so competitive purchasing is already done for you.',
-            'Behind every order is a centrally located Houston warehouse, vendor channels that reach all 50 states and a team that treats your deadline as its own.',
+            'Since 2003, Competitive Choice has grown from a small Houston business selling specialty chemicals into a supplier serving government, healthcare, education, utility and commercial buyers. We still run the business the way we started: with a team that answers the phone, knows your account and gets the details right.',
+            'That reliability is backed by credentials your procurement office can verify. We are a certified woman-owned business with national, state, local and federal certification, and we hold contract vehicles including GSA MAS, TIPS, BuyBoard, Good Buy, Choice Partners and AbilityOne. Our co-op contracts can simplify your procurement.',
+            'Every order is backed by a centrally located Houston warehouse, vendor channels that reach all 50 states and a team that treats your deadline as its own.',
         ];
     }
     $trust = [
@@ -49,7 +50,7 @@ function cc_page_shared($group) {
         'paragraphs'   => $trust_paragraphs,
         'stats'        => $stats,
         'points'       => $points,
-        'button_label' => 'CO-OPS & CONTRACT VEHICLES',
+        'button_label' => 'CO-OPS & SCHEDULES',
     ];
     if ($group === 'service') {
         $process = [
@@ -62,7 +63,7 @@ function cc_page_shared($group) {
             ],
         ];
         $inquiry = [
-            'title' => 'Let’s scope your service requirement.',
+            'title' => 'Let’s scope your service requirement',
             'paragraphs' => ['Tell us about your facility and what you need. Our team can discuss the right approach and the next steps.', 'Include the details below where available. Scope, schedule and pricing are confirmed during your inquiry.'],
             'checklist_title' => 'Details to include with your inquiry',
             'items' => [
@@ -84,7 +85,7 @@ function cc_page_shared($group) {
             ],
         ];
     }
-    $process['button_label'] = $group === 'product' ? 'REQUEST A PROJECT QUOTE' : 'REQUEST A QUOTE';
+    $process['button_label'] = 'REQUEST A QUOTE';
     $shared = ['trust' => $trust, 'process' => $process];
     if ($group === 'service') $shared['inquiry'] = $inquiry; // product pages have no inquiry checklist
     return $shared;
@@ -102,7 +103,7 @@ function cc_page_build($def, $slug = '') {
             // Page values win; shared values fill whatever the page leaves out.
             $c[$key] = isset($c[$key]) && is_array($c[$key]) ? $c[$key] + $shared_block : ($c[$key] ?? $shared_block);
         }
-        $c['banner'] = ($c['banner'] ?? []) + ['kicker' => ['service' => 'SERVICES', 'industry' => 'INDUSTRIES'][$group] ?? 'PRODUCTS & SUPPLIES', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'];
+        $c['banner'] = ($c['banner'] ?? []) + ['kicker' => ['service' => 'SERVICES', 'industry' => 'INDUSTRIES'][$group] ?? 'PRODUCTS & SUPPLIES', 'quote_label' => 'REQUEST A QUOTE', 'call_label' => 'CALL'];
         $c['breadcrumb'] = ($c['breadcrumb'] ?? []) + ['home' => 'Home', 'parent' => ['service' => 'Services', 'industry' => 'Industries'][$group] ?? 'Products & Supplies', 'parent_link' => ['service' => 'link:services', 'industry' => 'link:industries'][$group] ?? 'link:products', 'current' => $def['title']];
         $c['related'] = $c['related'] ?? ['title' => 'Related supply requirements', 'links' => [['label' => 'All Products & Supplies', 'link' => 'link:products']]];
         $c['faq'] = ($c['faq'] ?? []) + ['title' => $def['title'] . ' FAQs', 'description' => 'Answers to common selection, specification and sourcing questions.'];

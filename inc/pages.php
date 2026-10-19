@@ -36,7 +36,7 @@ function cc_page_defaults($kind, $slug = '') {
     if ($slug !== '' && isset($pages[$slug])) return cc_page_build($pages[$slug], $slug);
     if ($kind === 'info') return ['banner' => ['kicker' => '', 'quote_label' => ''], 'breadcrumb' => ['home' => 'Home'], 'blocks' => []];
     return [
-        'banner'     => ['kicker' => 'PRODUCTS & SUPPLIES', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
+        'banner'     => ['kicker' => 'PRODUCTS & SUPPLIES', 'quote_label' => 'REQUEST A QUOTE', 'call_label' => 'CALL'],
         'breadcrumb' => ['home' => 'Home', 'parent' => 'Products & Supplies', 'parent_link' => 'link:products'],
         'inquiry'    => ['checklist_title' => 'Details to include with your inquiry', 'button_label' => 'DISCUSS YOUR REQUIREMENT'],
         'faq'        => ['description' => 'Answers to common equipment selection, specification and sourcing questions.'],

@@ -11,7 +11,7 @@ $email = cc_content('company.email');
     <div class="site-container final-layout band-content">
       <h2 id="footer-cta-title"><?php echo cc_html(cc_content('footer.cta_title')); ?></h2>
       <p><?php cc_e('footer.cta_text'); ?></p>
-      <div class="final-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn('default', 'lg'); ?>"><?php cc_e('footer.cta_primary_label'); ?></a><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn('default', 'lg'); ?>"><?php cc_e('footer.cta_secondary_label'); ?></a></div>
+      <div class="final-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn('default', 'lg'); ?>"><?php cc_e('footer.cta_primary_label'); ?></a><a href="<?php echo esc_attr($phone_href); ?>" class="<?php echo cc_btn('default', 'lg'); ?>">CALL <?php echo esc_html($phone); ?></a></div>
       <div class="contact-details"><div><a href="<?php echo esc_attr($phone_href); ?>"><?php echo esc_html($phone); ?></a><p><?php echo esc_html(cc_content('company.hours_days') . ' · ' . cc_content('company.hours_time')); ?></p></div><a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a></div>
     </div>
     <?php endif; ?>

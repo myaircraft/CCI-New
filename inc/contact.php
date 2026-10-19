@@ -19,6 +19,9 @@ function cc_handle_contact() {
     if (!wp_verify_nonce($nonce, 'cc_contact')) cc_contact_redirect('error', '1');
     if (!empty($_POST['cc_website'])) cc_contact_redirect('sent'); // honeypot filled: pretend success
 
+    $ts = (int) ($_POST['cc_ts'] ?? 0);
+    if ($ts && time() - $ts < 3) cc_contact_redirect('error', '4'); // submitted faster than a person can type
+
     $name    = sanitize_text_field(wp_unslash($_POST['cc_name'] ?? ''));
     $email   = sanitize_email(wp_unslash($_POST['cc_email'] ?? ''));
     $phone   = sanitize_text_field(wp_unslash($_POST['cc_phone'] ?? ''));

@@ -32,32 +32,34 @@ $first = $products[0] ?? ['name' => '', 'hero_line' => ''];
     </nav>
   </section>
 
-  <section class="market-strip" aria-label="Markets served"><div class="site-container market-inner"><p class="market-label"><?php echo cc_html(cc_page('markets.label')); ?></p><?php if (cc_page_has('markets.items')) : ?><div class="market-names"><?php foreach (cc_page_list('markets.items') as $market) : ?><p class="market-name"><?php echo esc_html($market); ?></p><?php endforeach; ?></div><?php endif; ?></div></section>
+  <section class="proof-bar" aria-label="Why buyers choose Competitive Choice"><div class="site-container"><ul><?php foreach (cc_page_list('proof.items') as $item) : ?><li><?php echo esc_html($item); ?></li><?php endforeach; ?></ul><?php if (cc_page_has('face.text')) : ?><p class="proof-face"><?php cc_page_e('face.text'); ?></p><?php endif; ?></div></section>
 
-  <section id="products-supplies" class="section-space"><div class="site-container">
-    <?php cc_section_title(cc_page('products.topic'), cc_page('products.heading'), cc_page('products.description')); ?>
-    <?php cc_home_groups('products-supplies', cc_page_list('products.group_images')); ?>
-    <div class="section-actions"><a href="<?php echo esc_url(cc_url('products')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('products.button_label'); ?></a></div>
+  <section id="pillars" class="section-space"><div class="site-container">
+    <?php cc_section_title(cc_page('pillars.topic'), cc_page('pillars.heading'), cc_page('pillars.description')); ?>
+    <div class="pillar-grid"><?php foreach (cc_page_list('pillars.items') as $pillar) : ?>
+      <a class="pillar-card" href="<?php echo esc_url(cc_link($pillar['link'] ?? '')); ?>"><h3><?php echo esc_html(cc_tc($pillar['title'] ?? '')); ?></h3><p><?php echo esc_html($pillar['text'] ?? ''); ?></p><span class="pillar-link"><?php echo esc_html($pillar['label'] ?? 'LEARN MORE'); ?><?php echo cc_icon('arrow-right'); ?></span></a>
+    <?php endforeach; ?></div>
+    <div class="section-actions"><a href="<?php echo esc_url(cc_url('products')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('products.button_label'); ?></a><a href="<?php echo esc_url(cc_url('services')); ?>" class="<?php echo cc_btn('outline'); ?>"><?php cc_page_e('services.button_label'); ?></a></div>
   </div></section>
 
-  <section id="services" class="photo-band services-band section-space">
-    <img class="band-photo" src="<?php echo esc_url(cc_img(cc_page('services.image'))); ?>" alt="<?php echo esc_attr(cc_page('services.image_alt')); ?>" width="1920" height="768" loading="lazy">
-    <div class="site-container band-content">
-      <?php cc_section_title(cc_page('services.topic'), cc_page('services.heading'), cc_page('services.description')); ?>
-      <?php cc_home_groups('services', cc_page_list('services.group_images')); ?>
-      <div class="section-actions"><a href="<?php echo esc_url(cc_url('services')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('services.button_label'); ?></a></div>
-    </div>
-  </section>
+  <?php if (cc_page_has('fclx.heading')) : ?>
+  <section id="fclx" class="section-space fclx-feature"><div class="site-container fclx-layout">
+    <div class="fclx-copy"><h2 class="section-topic"><?php echo esc_html(cc_tc(cc_page('fclx.topic'))); ?></h2><p class="section-heading"><?php echo esc_html(cc_tc(cc_page('fclx.heading'))); ?></p><p class="section-description"><?php cc_page_e('fclx.hook'); ?></p>
+      <div class="section-actions"><a href="<?php echo esc_url(cc_link('/fire-suppression/')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('fclx.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a><a href="<?php echo esc_url(cc_link('link:fclx_specs')); ?>" class="<?php echo cc_btn('outline'); ?>" target="_blank" rel="noopener noreferrer"><?php cc_page_e('fclx.specs_label'); ?><?php echo cc_icon('arrow-up-right'); ?></a></div></div>
+    <figure class="fclx-media"><button type="button" class="demo-play" data-gif="<?php echo esc_url(cc_img(cc_page('fclx.gif'))); ?>" aria-label="Play the FCL-X demonstration"><img src="<?php echo esc_url(cc_img(cc_page('fclx.image'))); ?>" alt="<?php echo esc_attr(cc_page('fclx.image_alt')); ?>" width="640" height="360" loading="lazy" decoding="async"><span class="demo-play-label"><?php echo cc_icon('arrow-right'); ?>PLAY DEMO</span></button></figure>
+  </div></section>
+  <?php endif; ?>
 
   <section id="industries" class="section-space"><div class="site-container">
     <?php cc_section_title(cc_page('industries.topic'), cc_page('industries.heading'), cc_page('industries.description')); ?>
-    <div class="industry-list"><?php foreach (cc_industries() as $industry) : ?><p class="industry-item"><?php echo esc_html($industry); ?></p><?php endforeach; ?></div>
+    <div class="industry-list"><?php foreach (cc_page_list('industries.items') as $industry) : ?><a class="industry-item" href="<?php echo esc_url(cc_link($industry['link'] ?? 'link:industries')); ?>"><strong><?php echo esc_html(cc_tc($industry['title'] ?? '')); ?></strong><span><?php echo esc_html($industry['text'] ?? ''); ?></span></a><?php endforeach; ?></div>
     <div class="section-actions"><a href="<?php echo esc_url(cc_url('industries')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('industries.button_label'); ?></a></div>
   </div></section>
 
   <section class="photo-band difference-band section-space"><img class="band-photo" src="<?php echo esc_url(cc_img(cc_page('difference.image'))); ?>" alt="<?php echo esc_attr(cc_page('difference.image_alt')); ?>" width="1920" height="1024" loading="lazy"><div class="site-container band-content">
     <?php cc_section_title(cc_page('difference.topic'), cc_page('difference.heading')); ?>
-    <div class="why-points"><?php foreach (cc_page_list('difference.points') as $point) : ?><p><?php echo cc_icon('check'); ?><?php echo esc_html($point); ?></p><?php endforeach; ?></div>
+    <div class="why-points"><?php foreach (cc_page_list('difference.points') as $point) : ?><p><?php echo cc_icon('check'); ?><span><strong><?php echo esc_html($point['title'] ?? ''); ?></strong> <?php echo esc_html($point['text'] ?? ''); ?></span></p><?php endforeach; ?></div>
+    <?php if (cc_page_has('quote.text')) : ?><blockquote class="quote-slot"><p><?php cc_page_e('quote.text'); ?></p><cite><?php cc_page_e('quote.by'); ?></cite></blockquote><?php endif; ?>
   </div></section>
 
   <section id="contracting" class="section-space contract-band"><div class="site-container">

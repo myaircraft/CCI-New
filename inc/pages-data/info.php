@@ -14,7 +14,7 @@ return [
                 'og_description' => 'Fourteen product categories for facilities, utilities, healthcare, education and construction. Request a quote.',
                 'schema_about' => 'Industrial, facility maintenance and construction supplies', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['kicker' => 'PRODUCTS & SUPPLIES', 'title' => 'Products & Supplies', 'image' => 'banner-supplies-v4.jpg', 'lead' => 'From daily facility needs to complex infrastructure projects, we source the products that keep your operation running.', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
+            'banner' => ['kicker' => 'PRODUCTS & SUPPLIES', 'title' => 'Products & Supplies', 'image' => 'banner-supplies-v4.jpg', 'lead' => 'From daily facility needs to complex infrastructure projects, we source the products that keep your operation running.', 'quote_label' => 'REQUEST A QUOTE', 'call_label' => 'CALL'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Products & Supplies'],
             'blocks' => [
                 ['layout' => 'cards', 'id' => 'chemical', 'learn' => true, 'title' => 'Chemical Supplies', 'description' => 'Maintenance chemicals and treatments that improve performance, maintain compliance and reduce downtime.', 'items' => [
@@ -29,7 +29,7 @@ return [
                 ]],
                 ['layout' => 'cards', 'id' => 'systems', 'learn' => true, 'tint' => true, 'title' => 'Systems & Infrastructure Supplies', 'description' => 'Electrical, mechanical, plumbing and safety supplies for complex facilities and infrastructure projects.', 'items' => [
                     ['title' => 'Power Distribution & Transformers', 'description' => 'Switchgear, panelboards, breakers, fuses and transformers for critical infrastructure.', 'link' => '/supplies/power-distribution-transformers/'],
-                    ['title' => 'Electrical, Lighting & Cable Wire', 'description' => 'Cable, conduit, panels, controls and commercial lighting for complex projects.', 'link' => '/supplies/electrical-lighting-cable/'],
+                    ['title' => 'Electrical, Lighting, Cable & Wire', 'description' => 'Cable, conduit, panels, controls and commercial lighting for complex projects.', 'link' => '/supplies/electrical-lighting-cable/'],
                     ['title' => 'Package Units & HVAC', 'description' => 'Package units, HVAC equipment and components for commercial buildings.', 'link' => '/supplies/hvac-package-units/'],
                     ['title' => 'Plumbing & PVF', 'description' => 'Pipe, valves, fittings and plumbing supplies for facilities and projects.', 'link' => '/supplies/plumbing-supplies/'],
                     ['title' => 'Fire Suppression', 'description' => 'Lithium-ion battery fire protection and added layers of safety for facilities.', 'link' => '/supplies/fire-safety/'],
@@ -37,7 +37,7 @@ return [
                 ]],
                 ['layout' => 'text', 'id' => 'about-supply', 'button_label' => 'CONTACT US', 'button_link' => 'link:contact', 'title' => 'Can’t find what you need?', 'paragraphs' => ['Tell us what your project or facility requires. Our team can source what you need, and we work with contract vehicles that make public-sector purchasing simple.']],
             ],
-            'related' => ['title' => 'Related pages', 'links' => [['label' => 'Services', 'link' => 'link:services'], ['label' => 'Co-Ops & Contract Vehicles', 'link' => 'link:contracts'], ['label' => 'Contact Our Team', 'link' => 'link:contact']]],
+            'related' => ['title' => 'Related pages', 'links' => [['label' => 'Services', 'link' => 'link:services'], ['label' => 'Co-Ops & Schedules', 'link' => 'link:contracts'], ['label' => 'Contact Our Team', 'link' => 'link:contact']]],
         ],
     ],
 
@@ -51,20 +51,20 @@ return [
                 'og_description' => 'Value-added services that improve operational efficiency and continuity. Tell us what you need.',
                 'schema_about' => 'Logistics, procurement and facility support services', 'page_type' => 'CollectionPage',
             ],
-            'banner' => ['kicker' => 'SERVICES', 'title' => 'Services & Solutions', 'image' => 'banner-services-v4.jpg', 'lead' => 'Beyond product distribution, a suite of value-added services that enhance operational efficiency and continuity.', 'quote_label' => 'REQUEST A PROJECT QUOTE', 'call_label' => 'CALL'],
+            'banner' => ['kicker' => 'SERVICES', 'title' => 'Services & Solutions', 'image' => 'banner-services-v4.jpg', 'lead' => 'Beyond product distribution, we offer value-added services that keep your operation efficient and running.', 'quote_label' => 'REQUEST A QUOTE', 'call_label' => 'CALL'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Services'],
             'blocks' => [
                 ['layout' => 'cards', 'id' => 'product-services', 'learn' => true, 'title' => 'Product & Dispenser Services', 'description' => 'Programs and equipment that keep facilities clean, fresh and running.', 'items' => [
                     ['title' => 'Drain Maintenance', 'description' => 'Preventive drain care for wastewater, kitchen and dialysis drains.', 'link' => '/services/drain-services/'],
                     ['title' => 'Odor Control', 'description' => 'Targeted odor control for schools, plants, healthcare centers and commercial buildings.', 'link' => '/services/odor-control/'],
-                    ['title' => 'Air Scenting', 'description' => 'HVAC-integrated and standalone scenting with allergy-tested fragrances.', 'link' => '/services/air-scenting-services/'],
+                    ['title' => 'Air Scenting Services', 'description' => 'HVAC-integrated and standalone scenting with allergy-tested fragrances.', 'link' => '/services/air-scenting-services/'],
                     ['title' => 'Chemical Supply Program', 'description' => 'Right-sized, scheduled chemical supply with the documentation your team needs.', 'link' => '/services/chemical-supply-program/'],
                     ['title' => 'Dispensing Systems', 'description' => 'Installed, calibrated and supported dispensing for accurate dosing.', 'link' => '/services/dispensing-systems/'],
                 ]],
                 ['layout' => 'cards', 'id' => 'operations-services', 'learn' => true, 'tint' => true, 'title' => 'Facility Operations Support Services', 'description' => 'We help organizations source, manage, deliver and support critical operational requirements.', 'items' => [
                     ['title' => 'Logistics & Procurement', 'description' => 'Warehousing, distribution, strategic sourcing and eProcurement from our Houston warehouse.', 'link' => '/services/logistics-procurement/'],
                     ['title' => 'Program Scheduling & Management', 'description' => 'Delivery coordination and scheduling for MEP and general contractor teams.', 'link' => '/services/program-scheduling/'],
-                    ['title' => 'Facility Call Center and Service Request', 'description' => 'Centralized intake, tracking and follow-up for facility service tickets.', 'link' => '/services/work-order-request-call-center/'],
+                    ['title' => 'Work Order Request and Call Center Service', 'description' => 'Centralized intake, tracking and follow-up for facility service tickets.', 'link' => '/services/work-order-request-call-center/'],
                 ]],
             ],
             'related' => ['title' => 'Related pages', 'links' => [['label' => 'Products & Supplies', 'link' => 'link:products'], ['label' => 'Who We Serve', 'link' => 'link:industries'], ['label' => 'Contact Our Team', 'link' => 'link:contact']]],
@@ -109,10 +109,10 @@ return [
                 'og_description' => 'Want to know more? Reach out to our Houston team.',
                 'schema_about' => 'Contact and quote requests for Competitive Choice', 'page_type' => 'ContactPage',
             ],
-            'banner' => ['plain' => true, 'video' => 'wp-content/themes/competitive-choice/assets/video/contact-header.mp4', 'title' => 'CONTACT US', 'type_lead' => 45, 'lead' => 'One conversation is all it takes to put your operation back in motion.'],
+            'banner' => ['plain' => true, 'video' => 'wp-content/themes/competitive-choice/assets/video/contact-header.mp4', 'title' => 'Contact Us', 'type_lead' => 45, 'lead' => 'One conversation is all it takes to put your operation back in motion.'],
             'breadcrumb' => ['home' => 'Home', 'current' => 'Contact Us'],
             'blocks' => [
-                ['layout' => 'centered', 'id' => 'lets-source', 'raw_title' => true, 'title' => "Let’s source what\nyour operation needs.", 'paragraphs' => ['Tell us what you need. Our team will help identify the right products, services and procurement solution.']],
+                ['layout' => 'centered', 'id' => 'lets-source', 'title' => 'Let’s Source What Your Operation Needs', 'paragraphs' => ['Tell us what you need. Our team will help identify the right products, services and procurement solutions.']],
                 ['layout' => 'contact', 'id' => 'contact', 'map' => true, 'title' => '', 'description' => ''],
             ],
         ],

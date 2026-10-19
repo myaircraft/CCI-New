@@ -15,7 +15,7 @@ $banner_image = cc_page('banner.image');
     <?php if ($banner_image) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img($banner_image)); ?>" alt="" aria-hidden="true" width="1152" height="576" fetchpriority="high"><?php endif; ?>
     <div class="site-container category-banner-content">
       <?php if (cc_page_has('banner.kicker')) : ?><p class="category-kicker"><?php cc_page_e('banner.kicker'); ?></p><?php endif; ?>
-      <h1 id="category-title"><?php echo esc_html($title); ?></h1>
+      <h1 id="category-title"><?php echo esc_html(cc_tc($title)); ?></h1>
       <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead"><?php cc_page_e('banner.lead'); ?></p><?php endif; ?>
       <div class="category-actions">
         <a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a>
@@ -41,14 +41,14 @@ $banner_image = cc_page('banner.image');
     <?php if (cc_page_has('problems.items')) : ?>
     <section class="category-section" aria-labelledby="problems-title">
       <div class="category-section-heading"><h2 id="problems-title"><?php echo cc_hl(cc_tc(cc_page('problems.title'))); ?></h2><p><?php cc_page_e('problems.description'); ?></p></div>
-      <div class="category-projects"><?php foreach (cc_page_list('problems.items') as $a) : ?><div><h3><?php echo esc_html($a['title'] ?? ''); ?></h3><p><?php echo esc_html($a['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
+      <div class="category-projects"><?php foreach (cc_page_list('problems.items') as $a) : ?><div><h3><?php echo esc_html(cc_tc($a['title'] ?? '')); ?></h3><p><?php echo esc_html($a['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
     </section>
     <?php endif; ?>
 
     <?php if (cc_page_has('equipment.items')) : ?>
     <section class="category-section" aria-labelledby="equipment-title">
       <div class="category-section-heading"><h2 id="equipment-title"><?php echo cc_hl(cc_tc(cc_page('equipment.title'))); ?></h2><p><?php cc_page_e('equipment.description'); ?></p></div>
-      <div class="equipment-grid<?php echo count(cc_page_list('equipment.items')) === 4 ? ' is-four' : ''; ?>"><?php foreach (cc_page_list('equipment.items') as $e) : ?><article class="equipment-item"><?php if (!empty($e['image'])) : ?><img class="equipment-thumb" src="<?php echo esc_url(cc_img($e['image'])); ?>" alt="" width="280" height="120" loading="lazy" decoding="async"><?php else : echo cc_icon($e['icon'] ?? ''); endif; ?><h3><?php echo esc_html($e['title'] ?? ''); ?></h3><p><?php echo esc_html($e['description'] ?? ''); ?></p><ul><?php foreach ((array) ($e['items'] ?? []) as $item) : ?><li><?php echo esc_html($item); ?></li><?php endforeach; ?></ul></article><?php endforeach; ?></div>
+      <div class="equipment-grid<?php echo count(cc_page_list('equipment.items')) === 4 ? ' is-four' : ''; ?>"><?php foreach (cc_page_list('equipment.items') as $e) : ?><article class="equipment-item"><?php if (!empty($e['image'])) : ?><img class="equipment-thumb" src="<?php echo esc_url(cc_img($e['image'])); ?>" alt="" width="280" height="120" loading="lazy" decoding="async"><?php else : echo cc_icon($e['icon'] ?? ''); endif; ?><h3><?php echo esc_html(cc_tc($e['title'] ?? '')); ?></h3><p><?php echo esc_html($e['description'] ?? ''); ?></p><ul><?php foreach ((array) ($e['items'] ?? []) as $item) : ?><li><?php echo esc_html($item); ?></li><?php endforeach; ?></ul></article><?php endforeach; ?></div>
     </section>
     <?php endif; ?>
 
@@ -62,7 +62,7 @@ $banner_image = cc_page('banner.image');
     <?php if (cc_page_has('applications.items')) : ?>
     <section class="category-section" aria-labelledby="applications-title">
       <div class="category-section-heading"><h2 id="applications-title"><?php echo esc_html(cc_tc(cc_page('applications.title'))); ?></h2><p><?php cc_page_e('applications.description'); ?></p></div>
-      <div class="category-projects"><?php foreach (cc_page_list('applications.items') as $a) : ?><div><h3><?php echo esc_html($a['title'] ?? ''); ?></h3><p><?php echo esc_html($a['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
+      <div class="category-projects"><?php foreach (cc_page_list('applications.items') as $a) : ?><div><h3><?php echo esc_html(cc_tc($a['title'] ?? '')); ?></h3><p><?php echo esc_html($a['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
     </section>
     <?php endif; ?>
 
@@ -78,8 +78,15 @@ $banner_image = cc_page('banner.image');
     <?php if (cc_page_has('process.items')) : ?>
     <section class="category-section" aria-labelledby="process-title">
       <div class="category-section-heading"><h2 id="process-title"><?php echo esc_html(cc_tc(cc_page('process.title'))); ?></h2><p><?php cc_page_e('process.description'); ?></p></div>
-      <ol class="process-steps"><?php foreach (cc_page_list('process.items') as $step) : ?><li><h3><?php echo esc_html($step['title'] ?? ''); ?></h3><p><?php echo esc_html($step['description'] ?? ''); ?></p></li><?php endforeach; ?></ol>
+      <ol class="process-steps"><?php foreach (cc_page_list('process.items') as $step) : ?><li><h3><?php echo esc_html(cc_tc($step['title'] ?? '')); ?></h3><p><?php echo esc_html($step['description'] ?? ''); ?></p></li><?php endforeach; ?></ol>
       <?php if (cc_page_has('process.button_label')) : ?><div class="category-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('process.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
+    </section>
+    <?php endif; ?>
+
+    <?php if (cc_page_has('resources.links')) : ?>
+    <section class="category-section category-resources" aria-labelledby="resources-title">
+      <div class="category-section-heading"><h2 id="resources-title"><?php echo esc_html(cc_tc(cc_page('resources.title'))); ?></h2><p><?php cc_page_e('resources.description'); ?></p></div>
+      <div class="category-actions"><?php foreach (cc_page_list('resources.links') as $l) : $u = $l['url'] ?? ''; $ext = preg_match('#^https?://#', $u); ?><a href="<?php echo esc_url($ext ? $u : cc_link($u)); ?>" class="<?php echo cc_btn('outline'); ?>"<?php echo $ext ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>><?php echo esc_html($l['label'] ?? ''); ?><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?></div>
     </section>
     <?php endif; ?>
 
@@ -88,7 +95,7 @@ $banner_image = cc_page('banner.image');
       <div class="category-section-heading"><h2 id="quote-title"><?php echo esc_html(cc_tc(cc_page('inquiry.title'))); ?></h2><?php foreach (cc_page_list('inquiry.paragraphs') as $paragraph) : ?><p><?php echo esc_html($paragraph); ?></p><?php endforeach; ?></div>
       <?php if (cc_page_has('inquiry.items')) : ?>
       <h3><?php cc_page_e('inquiry.checklist_title'); ?></h3>
-      <div class="quote-checklist"><?php foreach (cc_page_list('inquiry.items') as $d) : ?><div><h4><?php echo esc_html($d['title'] ?? ''); ?></h4><p><?php echo esc_html($d['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
+      <div class="quote-checklist"><?php foreach (cc_page_list('inquiry.items') as $d) : ?><div><h4><?php echo esc_html(cc_tc($d['title'] ?? '')); ?></h4><p><?php echo esc_html($d['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
       <?php endif; ?>
       <div class="category-actions"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('inquiry.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div>
     </section>
@@ -100,7 +107,7 @@ $banner_image = cc_page('banner.image');
       <div class="category-faq-list" data-orientation="vertical" data-accordion>
         <?php foreach (cc_page_list('faq.items') as $i => $faq) : ?>
           <div data-state="closed" data-orientation="vertical" class="border-b">
-            <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-expanded="false" data-state="closed" data-orientation="vertical" id="faq-trigger-<?php echo $i; ?>" aria-controls="faq-panel-<?php echo $i; ?>" class="flex flex-1 items-center justify-between py-4 text-sm font-medium cursor-pointer transition-all hover:underline text-left [&amp;[data-state=open]&gt;svg]:rotate-180 category-faq-trigger"><span class="category-faq-question"><span class="category-faq-number"><?php echo $i + 1; ?>.</span><span><?php echo esc_html($faq['question'] ?? ''); ?></span></span><?php echo cc_icon('chevron-down', 'h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200'); ?></button></h3>
+            <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-expanded="false" data-state="closed" data-orientation="vertical" id="faq-trigger-<?php echo $i; ?>" aria-controls="faq-panel-<?php echo $i; ?>" class="flex flex-1 items-center justify-between py-4 text-sm font-medium cursor-pointer transition-all hover:underline text-left [&amp;[data-state=open]&gt;svg]:rotate-180 category-faq-trigger"><span class="category-faq-question"><span class="category-faq-number"><?php echo $i + 1; ?>. </span><span><?php echo esc_html($faq['question'] ?? ''); ?></span></span><?php echo cc_icon('chevron-down', 'h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200'); ?></button></h3>
             <div data-state="closed" id="faq-panel-<?php echo $i; ?>" hidden role="region" aria-labelledby="faq-trigger-<?php echo $i; ?>" data-orientation="vertical" class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"><div class="pb-4 pt-0 category-faq-answer"><p><?php echo esc_html($faq['answer'] ?? ''); ?></p></div></div>
           </div>
         <?php endforeach; ?>
