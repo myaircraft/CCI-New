@@ -78,7 +78,7 @@ return [
         'title' => 'Who We Serve', 'parent' => '', 'template' => 'info', 'order' => 40,
         'content' => [
             'seo' => [
-                'title' => 'Industries We Serve | Healthcare, Government, Energy & More | Competitive Choice',
+                'title' => 'Who We Serve | Healthcare, Government, Energy & More | Competitive Choice',
                 'description' => 'Competitive Choice serves healthcare, water and wastewater, energy, education, government, state and municipal, commercial, correctional and hospitality customers nationwide.',
                 'og_title' => 'Who We Serve | Competitive Choice',
                 'og_description' => 'Houston-based. National reach. Industries where infrastructure cannot fail.',

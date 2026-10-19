@@ -8,7 +8,7 @@ return [
         'title' => 'Products & Materials', 'parent' => '', 'template' => 'info', 'order' => 1,
         'content' => [
             'seo' => [
-                'title' => 'Products & Supplies for Critical Infrastructure | Competitive Choice',
+                'title' => 'Products & Supplies | Critical Infrastructure Supply | Competitive Choice',
                 'description' => 'Power distribution, water treatment, HVAC, plumbing, electrical, safety, chemicals, MRO and janitorial supplies from one trusted Houston source.',
                 'og_title' => 'Products & Supplies | Competitive Choice',
                 'og_description' => 'Fourteen product categories for facilities, utilities, healthcare, education and construction. Request a quote.',
@@ -45,7 +45,7 @@ return [
         'title' => 'Services', 'parent' => '', 'template' => 'info', 'order' => 2,
         'content' => [
             'seo' => [
-                'title' => 'Logistics, Procurement & Facility Support Services | Competitive Choice',
+                'title' => 'Services | Logistics, Procurement & Facility Support | Competitive Choice',
                 'description' => 'Logistics and warehousing, procurement, program scheduling, drain care, air scenting, odor control and a work order call center.',
                 'og_title' => 'Services | Competitive Choice',
                 'og_description' => 'Value-added services that improve operational efficiency and continuity. Tell us what you need.',
@@ -103,7 +103,7 @@ return [
         'title' => 'Contact Us', 'parent' => '', 'template' => 'info', 'order' => 38,
         'content' => [
             'seo' => [
-                'title' => 'Request a Quote | Contact Competitive Choice, Houston TX',
+                'title' => 'Contact Us | Request a Quote | Competitive Choice, Houston, TX',
                 'description' => 'Contact Competitive Choice in Houston, TX. Call 713-838-1144 or send a message and our team will help identify the right products and services.',
                 'og_title' => 'Contact Competitive Choice | Request a Quote',
                 'og_description' => 'Want to know more? Reach out to our Houston team.',

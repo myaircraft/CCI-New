@@ -12,9 +12,9 @@ return [
         'order' => '15',
         'content' => [
             'seo' => [
-                'title' => 'Electrical Supplies, Lighting & Cable | Competitive Choice',
+                'title' => 'Electrical, Lighting, Cable & Wire | Competitive Choice',
                 'description' => 'Cable, wire and datacomm, conduits, panels, raceways and LED commercial lighting for construction and facility projects. Request a quote.',
-                'og_title' => 'Electrical Supplies, Lighting & Cable | Competitive Choice',
+                'og_title' => 'Electrical, Lighting, Cable & Wire | Competitive Choice',
                 'og_description' => 'Electrical and lighting products for commercial and new construction projects, with responsive support. Send your requirement for a quote.',
                 'schema_about' => 'Electrical supplies, commercial lighting and cable',
             ],
