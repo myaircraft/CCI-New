@@ -791,3 +791,12 @@ body { font-size: 16px; }
 .pillar-card > h3, .pillar-card > p, .pillar-card > .pillar-link { margin-inline: 2.2rem; }
 .pillar-photo { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: var(--text-gap-large); transition: transform .5s ease; }
 .pillar-card:hover .pillar-photo { transform: scale(1.04); }
+
+/* What We Do cards: one left edge for title, text and button; light blue CTA with a yellow arrow */
+.pillar-card { align-items: stretch; text-align: left; }
+.pillar-card > h3, .pillar-card > p { margin: 0 2.2rem; padding: 0; text-align: left; text-wrap: pretty; }
+.pillar-card > h3 { min-height: 2.6em; display: flex; align-items: flex-end; }
+.pillar-card > .pillar-link { align-self: flex-start; margin: auto 2.2rem 0; padding: 12px 20px; background: #8EC9F5; color: #0D173A; border-radius: 6px; transition: background .2s ease, transform .2s ease; }
+.pillar-card > .pillar-link svg { color: #FFC200; stroke: #FFC200; stroke-width: 3; }
+.pillar-card:hover > .pillar-link { background: #A9D8F8; }
+@media (max-width: 900px) { .pillar-card > h3 { min-height: 0; } }
