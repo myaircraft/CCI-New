@@ -812,3 +812,8 @@ body { font-size: 16px; }
 #pillars .pillar-card:hover > .pillar-link svg, #pillars .pillar-card:focus-visible > .pillar-link svg { color: #0D173A; stroke: #0D173A; transform: translateX(4px); }
 #pillars .pillar-card:hover .pillar-photo { transform: none; }
 @media (max-width: 900px) { #pillars .pillar-card > h3 { min-height: 0; } }
+
+/* What We Do CTA: underlined label, more space above it */
+#pillars .pillar-card > .pillar-link { margin-top: auto; padding-top: 1.618rem; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+#pillars .pillar-card > .pillar-link svg { text-decoration: none; }
+#pillars .pillar-card > p { margin-bottom: 1.618rem; }
