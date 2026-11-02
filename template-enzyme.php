@@ -42,7 +42,7 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
   </div></section>
 
   <section class="ez-section ez-gray" aria-labelledby="ez-solutions-title"><div class="site-container">
-    <div class="ez-head"><p class="ez-kicker"><?php cc_page_e('solutions.kicker'); ?></p><h2 id="ez-solutions-title" class="ez-title"><?php echo cc_html(cc_page('solutions.title')); ?></h2><p class="ez-sub"><?php cc_page_e('solutions.description'); ?></p></div>
+    <div class="ez-head is-center"><p class="ez-kicker"><?php cc_page_e('solutions.kicker'); ?></p><h2 id="ez-solutions-title" class="ez-title"><?php echo cc_html(cc_page('solutions.title')); ?></h2><p class="ez-sub"><?php cc_page_e('solutions.description'); ?></p></div>
     <div class="ez-cards"><?php foreach (cc_page_list('solutions.items') as $it) : ?>
       <article class="ez-card"><img src="<?php echo esc_url(cc_img($it['image'] ?? '')); ?>" alt="<?php echo esc_attr($it['alt'] ?? ''); ?>" width="600" height="450" loading="lazy" decoding="async"><div><h3><?php echo esc_html($it['title'] ?? ''); ?></h3><p><?php echo esc_html($it['text'] ?? ''); ?></p></div></article>
     <?php endforeach; ?></div>
@@ -51,7 +51,7 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
   <section class="ez-fit" aria-labelledby="ez-fit-title">
     <?php if (cc_page_has('fit.image')) : ?><img class="ez-fit-photo" src="<?php echo esc_url(cc_img(cc_page('fit.image'))); ?>" alt="<?php echo esc_attr(cc_page('fit.image_alt')); ?>" width="1920" height="823" loading="lazy" decoding="async"><?php endif; ?>
     <div class="site-container ez-fit-content">
-      <p class="ez-kicker is-on-dark"><?php cc_page_e('fit.kicker'); ?></p><h2 id="ez-fit-title" class="ez-title is-on-dark"><?php echo cc_html(cc_page('fit.title')); ?></h2><p class="ez-sub is-on-dark"><?php cc_page_e('fit.description'); ?></p>
+      <div class="ez-head is-center"><p class="ez-kicker is-on-dark"><?php cc_page_e('fit.kicker'); ?></p><h2 id="ez-fit-title" class="ez-title is-on-dark"><?php echo cc_html(cc_page('fit.title')); ?></h2><p class="ez-sub is-on-dark"><?php cc_page_e('fit.description'); ?></p></div>
       <div class="ez-fit-grid"><div class="ez-fit-items"><?php foreach (cc_page_list('fit.items') as $it) : ?>
         <div><?php echo $svg($it['icon'] ?? ''); ?><h3><?php echo esc_html($it['title'] ?? ''); ?></h3><p><?php echo esc_html($it['text'] ?? ''); ?></p></div>
       <?php endforeach; ?></div>

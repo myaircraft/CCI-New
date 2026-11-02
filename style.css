@@ -871,3 +871,30 @@ body { font-size: 16px; }
 .ez-related { margin-top: 3rem; }
 @media (max-width: 1100px) { .ez-cards { grid-template-columns: repeat(3, 1fr); } .ez-steps4, .ez-why { grid-template-columns: repeat(2, 1fr); } .ez-steps4 li + li::before { display: none; } }
 @media (max-width: 800px) { .ez-intro-grid, .ez-faq-grid { grid-template-columns: 1fr; } .ez-steps3 { grid-template-columns: 1fr; gap: 2.5rem; } .ez-steps3 li + li::before { display: none; } .ez-cards { grid-template-columns: repeat(2, 1fr); } .ez-fit-items { grid-template-columns: 1fr; } .ez-section { padding-block: 3.5rem; } .ez-steps4, .ez-why { grid-template-columns: 1fr; } .ez-splash { display: none; } }
+
+/* Enzyme page v2: everything centered, no yellow rules, icons above titles */
+.ez-kicker::after { display: none; }
+.ez-kicker { padding-bottom: 0; text-align: center; }
+.ez-title, .ez-sub, .ez-text { text-align: center; margin-inline: auto; }
+.ez-intro-grid { grid-template-columns: 1fr; gap: 3rem; }
+.ez-intro-copy { max-width: 760px; margin-inline: auto; }
+.ez-steps3 { max-width: 960px; margin-inline: auto; width: 100%; }
+.ez-steps3 li { padding-top: 14px; }
+.ez-fit::before { background: rgba(13,23,58,.5); }
+.ez-fit-photo { object-position: right center; }
+.ez-fit-grid { display: block; margin-top: 0; }
+.ez-fit-items { max-width: 960px; margin: 0 auto; grid-template-columns: repeat(3, 1fr); text-align: center; }
+.ez-fit-items > div { display: flex; flex-direction: column; align-items: center; }
+.ez-fit-items .ez-icon { width: 48px; height: 48px; margin: 0 auto; }
+.ez-fit-items h3, .ez-fit-items p { text-align: center; }
+.ez-tagline { display: block; width: fit-content; max-width: 100%; margin: 2.5rem auto 0; text-align: center; }
+.ez-steps4 li { text-align: center; }
+.ez-dot { margin-inline: auto; }
+.ez-why > div { flex-direction: column; justify-content: flex-start; text-align: center; padding: 1.5rem 1rem 1.4rem; gap: .9rem; }
+.ez-why h3 { white-space: nowrap; font-size: 19px; text-align: center; }
+.ez-why p { text-align: center; }
+.ez-faq-grid { grid-template-columns: 1fr; gap: 2.5rem; max-width: 900px; }
+.ez-faq-intro { text-align: center; }
+.ez-related { text-align: center; }
+.ez-related .category-related-links { justify-content: center; }
+@media (max-width: 1100px) { .ez-why h3 { white-space: normal; } }
