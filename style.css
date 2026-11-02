@@ -911,3 +911,16 @@ body { font-size: 16px; }
 .ez-tagline { margin-top: 1.5rem; padding: .7rem 1.5rem; white-space: nowrap; font-size: clamp(18px, 1.8vw, 24px); }
 @media (max-width: 800px) { .ez-fit .ez-title, .ez-tagline { white-space: normal; } }
 .ez-fit-items .ez-icon-img { display: block; width: 48px; height: 48px; margin: 0 auto; object-fit: contain; }
+
+/* Footer call-to-action band: 15% shorter, with type, buttons and spacing scaled to match */
+.final-cta { min-height: 510px; margin-top: 31px; }
+.final-cta.section-space { padding-block: 47px; }
+.final-cta.is-photo-only { min-height: 357px; }
+.final-layout h2 { font-size: 23px; }
+.final-layout > p { margin-top: 12px; font-size: 16px; max-width: 520px; }
+.final-actions { gap: 19.5px; margin-top: 31px; }
+.final-actions a { min-width: 230px; min-height: 58px; font-size: 16px; padding-block: 10px; }
+.contact-details { gap: 19.5px; margin-top: 31px; }
+.contact-details a { font-size: 18px; }
+.contact-details p { margin-top: 7px; font-size: 16px; }
+@media (max-width: 767px) { .final-cta { min-height: 0; } .final-actions a { min-width: min(230px, 100%); } }
