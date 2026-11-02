@@ -817,3 +817,57 @@ body { font-size: 16px; }
 #pillars .pillar-card > .pillar-link { margin-top: auto; padding-top: 1.618rem; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
 #pillars .pillar-card > .pillar-link svg { text-decoration: none; }
 #pillars .pillar-card > p { margin-bottom: 1.618rem; }
+
+/* Enzyme Treatment & Maintainers page (client design). Headlines: Rajdhani Bold, all caps. Body: Roboto, dark gray. */
+.ez-page { --ez-navy: #0D173A; --ez-yellow: #FFC200; --ez-gray: #E7E8E8; --ez-ink: #414142; }
+.ez-page .category-banner h1 { font-family: Rajdhani, Roboto, sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(36px, 5.2vw, 64px); line-height: 1.05; letter-spacing: .01em; }
+.ez-page .category-banner .category-lead { font-size: clamp(19px, 1.9vw, 26px); line-height: 1.5; max-width: 38ch; font-weight: 400; }
+.ez-section { padding-block: 5.5rem; background: #fff; }
+.ez-gray { background: var(--ez-gray); }
+.ez-kicker { margin: 0 0 .75rem; font: 700 clamp(22px, 2.2vw, 30px)/1.1 Rajdhani, Roboto, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--ez-navy); position: relative; padding-bottom: .6rem; }
+.ez-kicker::after { content: ""; position: absolute; left: 0; bottom: 0; width: 56px; height: 4px; background: var(--ez-yellow); }
+.ez-kicker.is-on-dark { color: var(--ez-yellow); } .ez-kicker.is-on-dark::after { display: none; }
+.ez-head.is-center .ez-kicker::after { left: 50%; transform: translateX(-50%); }
+.ez-title { margin: 0 0 1rem; font: 700 clamp(34px, 4.4vw, 56px)/1.05 Rajdhani, Roboto, sans-serif; letter-spacing: .01em; text-transform: uppercase; color: var(--ez-navy); text-wrap: balance; }
+.ez-title.is-on-dark { color: #fff; } .ez-title.is-small { font-size: clamp(30px, 3vw, 40px); }
+.ez-sub, .ez-text { margin: 0 0 1rem; font: 400 18px/1.6 Roboto, Arial, sans-serif; color: var(--ez-ink); max-width: 60ch; }
+.ez-sub.is-on-dark { color: #fff; }
+.ez-head { margin-bottom: 3rem; } .ez-head.is-center { text-align: center; } .ez-head.is-center .ez-sub { margin-inline: auto; }
+.ez-intro-grid { display: grid; grid-template-columns: minmax(280px, 4fr) 7fr; gap: 3.5rem; align-items: center; }
+.ez-steps3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+.ez-steps3 li { position: relative; text-align: center; }
+.ez-steps3 li + li::before { content: "\2192"; position: absolute; left: -1.35rem; top: 28%; font-size: 24px; color: var(--ez-navy); }
+.ez-steps3 img { display: block; width: 100%; max-width: 210px; aspect-ratio: 1; margin: 0 auto 1rem; border-radius: 50%; object-fit: cover; border: 1px solid #d5d7da; }
+.ez-num { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); z-index: 1; width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: var(--ez-navy); color: #fff; font: 700 20px/1 Rajdhani, sans-serif; }
+.ez-steps3 h3, .ez-steps4 h3, .ez-why h3, .ez-card h3 { margin: 0 0 .4rem; font: 700 20px/1.2 Roboto, Arial, sans-serif; color: #000; text-transform: none; }
+.ez-steps3 p, .ez-steps4 p, .ez-why p, .ez-card p { margin: 0; font: 400 16px/1.55 Roboto, Arial, sans-serif; color: var(--ez-ink); }
+.ez-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; }
+.ez-card { background: #fff; border: 1px solid #c9cbcf; display: flex; flex-direction: column; }
+.ez-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.ez-card > div { padding: 1.1rem 1.1rem 1.4rem; }
+.ez-fit { position: relative; background: var(--ez-navy); color: #fff; padding-block: 5rem; overflow: hidden; }
+.ez-fit-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ez-fit::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(13,23,58,.94) 0%, rgba(13,23,58,.78) 45%, rgba(13,23,58,.25) 100%); }
+.ez-fit-content { position: relative; z-index: 2; }
+.ez-fit-grid { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; margin-top: 2.5rem; flex-wrap: wrap; }
+.ez-fit-items { display: grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap: 2rem; flex: 1 1 560px; max-width: 760px; }
+.ez-fit-items h3 { margin: .75rem 0 .35rem; font: 700 20px/1.2 Roboto, Arial, sans-serif; color: #fff; }
+.ez-fit-items p { margin: 0; font: 400 16px/1.55 Roboto, Arial, sans-serif; color: #e7e8e8; }
+.ez-icon { color: var(--ez-yellow); }
+.ez-tagline { margin: 0; padding: 1.5rem 1.75rem; background: var(--ez-yellow); color: var(--ez-navy); font: 700 clamp(22px, 2vw, 28px)/1.25 Rajdhani, Roboto, sans-serif; text-transform: uppercase; letter-spacing: .02em; }
+.ez-steps4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.25rem; margin: 0 auto; padding: 0; list-style: none; max-width: 1100px; }
+.ez-steps4 li { position: relative; padding: 1.5rem 1.4rem 1.7rem; background: #fff; border: 1px solid var(--ez-navy); }
+.ez-steps4 li + li::before { content: "\2192"; position: absolute; left: -1.7rem; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--ez-navy); }
+.ez-dot { display: grid; place-items: center; width: 36px; height: 36px; margin-bottom: .9rem; border-radius: 50%; background: var(--ez-yellow); color: var(--ez-navy); font: 700 20px/1 Rajdhani, sans-serif; }
+.ez-why { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
+.ez-why > div { display: flex; gap: .9rem; align-items: center; padding: 1rem 1.1rem; background: #fff; border: 1px solid var(--ez-navy); }
+.ez-chip { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--ez-navy); }
+.ez-chip .ez-icon { width: 26px; height: 26px; }
+.ez-faq { position: relative; overflow: hidden; }
+.ez-splash { position: absolute; left: 0; bottom: 0; width: min(520px, 45vw); height: auto; opacity: .95; pointer-events: none; }
+.ez-faq-grid { position: relative; display: grid; grid-template-columns: 5fr 7fr; gap: 3.5rem; align-items: start; }
+.ez-faq .category-faq-list { border: 1px solid var(--ez-navy); }
+.ez-faq .category-faq-trigger { font-size: 17px; }
+.ez-related { margin-top: 3rem; }
+@media (max-width: 1100px) { .ez-cards { grid-template-columns: repeat(3, 1fr); } .ez-steps4, .ez-why { grid-template-columns: repeat(2, 1fr); } .ez-steps4 li + li::before { display: none; } }
+@media (max-width: 800px) { .ez-intro-grid, .ez-faq-grid { grid-template-columns: 1fr; } .ez-steps3 { grid-template-columns: 1fr; gap: 2.5rem; } .ez-steps3 li + li::before { display: none; } .ez-cards { grid-template-columns: repeat(2, 1fr); } .ez-fit-items { grid-template-columns: 1fr; } .ez-section { padding-block: 3.5rem; } .ez-steps4, .ez-why { grid-template-columns: 1fr; } .ez-splash { display: none; } }

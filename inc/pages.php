@@ -10,6 +10,7 @@ if (!defined('ABSPATH')) exit;
 
 const CC_CATEGORY_TEMPLATE = 'template-category.php';
 const CC_INFO_TEMPLATE = 'template-info.php';
+const CC_ENZYME_TEMPLATE = 'template-enzyme.php';
 
 function cc_page_kind($post) {
     $post = get_post($post);
@@ -17,6 +18,7 @@ function cc_page_kind($post) {
     if ((int) get_option('page_on_front') === $post->ID) return 'home';
     if (get_page_template_slug($post) === CC_CATEGORY_TEMPLATE) return 'category';
     if (get_page_template_slug($post) === CC_INFO_TEMPLATE) return 'info';
+    if (get_page_template_slug($post) === CC_ENZYME_TEMPLATE) return 'enzyme';
     return null;
 }
 
@@ -30,7 +32,7 @@ function cc_page_seed() {
 function cc_page_defaults($kind, $slug = '') {
     $seed = cc_page_seed();
     if ($kind === 'home') return $seed['home'];
-    if ($kind !== 'category' && $kind !== 'info') return [];
+    if (!in_array($kind, ['category', 'info', 'enzyme'], true)) return [];
     if ($slug !== '' && $slug !== 'home' && isset($seed[$slug])) return $seed[$slug];
     $pages = cc_pages_data();
     if ($slug !== '' && isset($pages[$slug])) return cc_page_build($pages[$slug], $slug);

@@ -19,23 +19,56 @@ $build = function ($slug, $order, $d) {
     ];
 };
 $quote = ['How do I request a quote?', 'Send your product list with quantities, facility type and delivery location. Availability and delivery timing are confirmed during quotation.'];
+$enz = fn($f) => 'wp-content/themes/competitive-choice/assets/images/enzyme/' . $f;
 $cc = fn($slug) => '/supplies/' . $slug . '/';
 
 return [
-    'enzyme-treatment-maintainers' => $build('enzyme-treatment-maintainers', 21, [
-        'title' => 'Enzyme Treatment & Maintainers', 'image' => 'chem-enzyme-banner-v4.jpg',
-        'seo' => 'Bio-enzymatic drain, grease trap and odor maintainers for kitchens, restrooms and facilities. Eco-conscious products that digest organic buildup. Request a quote.',
-        'og' => 'Bio-enzymatic maintainers that keep drains and grease traps flowing.',
-        'banner' => 'Enzyme Treatment & Maintainers for Cleaner, Freer-Flowing Systems', 'lead' => 'Biological products that digest the grease and organic buildup behind clogs, odors and callouts.',
-        'overview_title' => 'Biology that does the heavy lifting',
-        'overview' => ['Enzyme and bacterial maintainers work with your plumbing instead of against it. They break down fats, oils, grease and organic residue where it collects, so lines stay clear and smells do not take hold.', 'Competitive Choice supplies a focused range of bio-enzymatic products for kitchens, restrooms, floor drains and grease traps, chosen to be effective, plumbing-friendly and practical for busy maintenance teams.'],
-        'equip_title' => 'Enzyme and maintainer products we supply', 'equip_desc' => 'Preventive products for the places where buildup starts.',
-        'equip' => [['Drain Maintainers', 'Liquid and gel bio-enzymatic products that keep floor drains, sinks and traps free of organic buildup.'], ['Grease Trap Treatments', 'Bacterial treatments that digest fats, oils and grease before they reach the trap outlet.'], ['Odor-Digesting Enzymes', 'Products that remove the source of odors rather than masking them.'], ['Application Equipment', 'Dosing tools and dispensers that make routine treatment simple and consistent.']],
-        'apps_title' => 'Where enzyme maintainers work best', 'apps_desc' => 'Facilities with heavy use and organic waste.',
-        'apps' => [['Kitchens & food service', 'Grease-heavy drains and traps that need regular preventive treatment.'], ['Healthcare & education', 'Restrooms, utility sinks and floor drains in high-use buildings.'], ['Municipal & commercial', 'Lift stations, restrooms and facilities managing odors and backups.']],
-        'faq' => [['What do enzyme maintainers do?', 'They use enzymes and beneficial bacteria to digest fats, oils, grease and organic matter in drains and traps, helping prevent clogs and odors.'], ['Are they safe for plumbing?', 'Biological maintainers are non-corrosive and plumbing-friendly. Review product labels and safety data for your application.'], ['How often should they be applied?', 'Frequency depends on usage and the system. Tell us about your facility and we will recommend a schedule.'], $quote],
-        'related' => [['Drain & Wastewater Maintenance', $cc('drain-wastewater-maintenance')], ['Drain Maintenance Service', '/services/drain-services/']],
-    ]),
+    'enzyme-treatment-maintainers' => [
+        'title' => 'Enzyme Treatment & Maintainers', 'parent' => 'supplies', 'template' => 'enzyme', 'group' => 'product', 'order' => '21',
+        'content' => [
+            'seo' => ['title' => 'Enzyme Treatment & Maintainers | Competitive Choice', 'description' => 'Bio-enzymatic drain maintainers, grease trap treatments, odor-digesting enzymes and dosing equipment for kitchens, restrooms and facilities. Request a quote.', 'og_title' => 'Enzyme Treatment & Maintainers | Competitive Choice', 'og_description' => 'Bio-enzymatic maintainers that keep drains and grease traps flowing.', 'schema_about' => 'Enzyme treatment and maintainer products'],
+            'banner' => ['image' => $enz('hero.jpg'), 'image_alt' => 'Stainless steel floor drain in a commercial kitchen', 'title' => 'Enzyme Treatments<br>for Cleaner Systems', 'lead' => 'Biological products that break down fats, oils, grease, and organic buildup to maintain clear drains, improve flow, and reduce odors.', 'quote_label' => 'REQUEST A QUOTE', 'call_label' => 'CALL'],
+            'breadcrumb' => ['home' => 'Home', 'parent' => 'Products & Supplies', 'parent_link' => 'link:products', 'current' => 'Enzyme Treatment & Maintainers'],
+            'intro' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Biology that does<br>the heavy lifting', 'paragraphs' => ['Competitive Choice supplies a focused range of bio-enzymatic products for kitchens, restrooms, floor drains and grease traps, chosen to be effective, plumbing-friendly and practical for busy maintenance teams.'],
+                'steps' => [
+                    ['title' => 'Organic Buildup Collects', 'text' => 'Fats, oils, grease and food waste accumulate in drains, traps and lift stations.', 'image' => $enz('step1.jpg'), 'alt' => 'Cutaway of a plumbing trap clogged with grease'],
+                    ['title' => 'Enzymes Break It Down', 'text' => 'Beneficial enzymes and bacteria break down organic material into water-soluble compounds.', 'image' => $enz('step2.jpg'), 'alt' => 'Beneficial bacteria and enzymes breaking down grease in water'],
+                    ['title' => 'Cleaner Systems', 'text' => 'Routine treatment controls buildup, prevents clogs, reduces odors and maintains flow.', 'image' => $enz('step3.jpg'), 'alt' => 'Clean plumbing trap with water flowing freely'],
+                ]],
+            'solutions' => ['kicker' => 'OUR SOLUTIONS', 'title' => 'Enzyme & Maintainer Products We Supply', 'description' => 'Proven bio-enzymatic products for the places where buildup starts.', 'items' => [
+                ['title' => 'Drain Maintainers', 'text' => 'Bio-enzymatic liquids and gels that prevent drain buildup.', 'image' => $enz('card1.jpg'), 'alt' => 'Pouring a bio-enzymatic drain maintainer into a floor drain'],
+                ['title' => 'Grease Trap Treatments', 'text' => 'Bacterial treatments that digest FOG before it reaches the outlet.', 'image' => $enz('card2.jpg'), 'alt' => 'Technician treating an outdoor grease trap'],
+                ['title' => 'Odor-Digesting Enzymes', 'text' => 'Products that eliminate odors at the source.', 'image' => $enz('card3.jpg'), 'alt' => 'Applying an odor-digesting enzyme spray in a restroom'],
+                ['title' => 'Application Equipment', 'text' => 'Dosing tools & dispensers for consistent treatment.', 'image' => $enz('card4.jpg'), 'alt' => 'Pump sprayer and wall-mounted dosing dispenser'],
+                ['title' => 'Related Chemicals', 'text' => 'Cleaners and maintainers for complete drain care.', 'image' => $enz('card5.jpg'), 'alt' => 'Shelf of facility cleaning chemicals'],
+            ]],
+            'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where Enzyme<br>Maintainers Work Best', 'description' => 'Facilities with heavy use and organic waste.', 'image' => $enz('band.jpg'), 'image_alt' => 'Pump sprayer applying enzyme foam to a floor drain in a commercial kitchen', 'tagline' => "Cleaner Systems.\nFewer Interruptions.\nHappier Facilities.", 'items' => [
+                ['icon' => 'fork', 'title' => 'Kitchens & Food Service', 'text' => 'Grease-heavy drains and traps that need regular preventive treatment.'],
+                ['icon' => 'plus', 'title' => 'Healthcare & Education', 'text' => 'Restrooms, utility sinks and floor drains in high-use buildings.'],
+                ['icon' => 'building', 'title' => 'Municipal & Commercial', 'text' => 'Lift stations, restrooms and facilities managing odors and blockages.'],
+            ]],
+            'process' => ['kicker' => 'A SIMPLE 4-STEP PROCESS', 'title' => 'Your Enzyme Treatment Plan, Made Simple', 'description' => 'From identifying problem drains to selecting the right products and maintaining a consistent treatment routine, Competitive Choice helps simplify every step.', 'items' => [
+                ['title' => 'Tell Us Where Problems Start', 'text' => 'Share the kitchens, restrooms, drains or traps causing odor or slow-flow issues.'],
+                ['title' => 'We Recommend a Treatment Plan', 'text' => 'We match products and dosing to your system and usage to maximize effectiveness.'],
+                ['title' => 'Receive Your Quote', 'text' => 'Clear pricing for products and any dosing equipment, with safety information included.'],
+                ['title' => 'Ongoing Replenishment', 'text' => 'We deliver on a schedule that follows your usage so treatment never lapses.'],
+            ]],
+            'why' => ['title' => 'Why Choose CCI for Enzyme Treatment?', 'description' => 'From grease traps to floor drains, we help facility teams source solutions that fit their maintenance challenges and day-to-day operations.', 'items' => [
+                ['icon' => 'sliders', 'title' => 'Product Selection', 'text' => 'Solutions matched to your application'],
+                ['icon' => 'shield', 'title' => 'Preventive Focus', 'text' => 'Help manage recurring buildup'],
+                ['icon' => 'box', 'title' => 'Convenient Sourcing', 'text' => 'Products for ongoing facility needs'],
+                ['icon' => 'calendar', 'title' => 'Routine Support', 'text' => 'Keep maintenance consistent'],
+            ]],
+            'faq' => ['title' => 'Enzyme Treatment & Maintainers FAQs', 'description' => 'Answers to common selection, specification and sourcing questions.', 'image' => $enz('splash.jpg'), 'items' => [
+                ['question' => 'What do enzyme maintainers do?', 'answer' => 'They use enzymes and beneficial bacteria to digest fats, oils, grease and organic matter in drains and traps, helping prevent clogs and odors.'],
+                ['question' => 'Are they safe for plumbing?', 'answer' => 'Biological maintainers are non-corrosive and plumbing-friendly. Review product labels and safety data for your application.'],
+                ['question' => 'How often should they be applied?', 'answer' => 'Frequency depends on usage and the system. Tell us about your facility and we will recommend a schedule.'],
+                ['question' => 'Can they eliminate existing odors?', 'answer' => 'They work on the source of many drain and trap odors by digesting the organic matter behind them. Severe or structural problems may need additional service, and we can help you decide.'],
+                ['question' => 'How do I request a quote?', 'answer' => 'Send your product list with quantities, facility type and delivery location. Availability and delivery timing are confirmed during quotation.'],
+            ]],
+            'related' => ['title' => 'Related Supplies', 'links' => [['label' => 'Drain & Wastewater Maintenance', 'link' => '/supplies/drain-wastewater-maintenance/'], ['label' => 'Drain Maintenance Service', 'link' => '/services/drain-services/'], ['label' => 'All Products & Supplies', 'link' => 'link:products']]],
+        ],
+    ],
 
     'drain-wastewater-maintenance' => $build('drain-wastewater-maintenance', 22, [
         'title' => 'Drain & Wastewater Maintenance', 'image' => 'chem-drain-banner-v4.jpg',

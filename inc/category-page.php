@@ -7,7 +7,7 @@
 if (!defined('ABSPATH')) exit;
 
 function cc_is_category_page() {
-    return is_page() && in_array(cc_page_kind(get_queried_object_id()), ['category', 'info'], true);
+    return is_page() && in_array(cc_page_kind(get_queried_object_id()), ['category', 'info', 'enzyme'], true);
 }
 
 /** Organization and WebSite nodes shared by the page's structured data. */

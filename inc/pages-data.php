@@ -135,7 +135,7 @@ function cc_install_pages($force = false, $only = null) {
         $page = get_page_by_path($path);
         $id = $page ? $page->ID : wp_insert_post(['post_type' => 'page', 'post_status' => 'publish', 'post_title' => $def['title'], 'post_name' => $slug, 'post_parent' => $parent_id, 'menu_order' => (int) ($def['order'] ?? 0)]);
         if (is_wp_error($id) || !$id) { $log[] = "fail {$slug}"; continue; }
-        update_post_meta($id, '_wp_page_template', ($def['template'] ?? 'category') === 'info' ? CC_INFO_TEMPLATE : CC_CATEGORY_TEMPLATE);
+        update_post_meta($id, '_wp_page_template', ['info' => CC_INFO_TEMPLATE, 'enzyme' => CC_ENZYME_TEMPLATE][$def['template'] ?? 'category'] ?? CC_CATEGORY_TEMPLATE);
         $existing = get_post_meta($id, '_cc_content', true);
         if ($force || !is_array($existing) || !$existing) {
             update_post_meta($id, '_cc_content', wp_slash(cc_page_build($def, $slug)));
