@@ -42,7 +42,7 @@ return [
                 ['title' => 'Application Equipment', 'text' => 'Dosing tools & dispensers for consistent treatment.', 'image' => $enz('card4.jpg'), 'alt' => 'Pump sprayer and wall-mounted dosing dispenser'],
                 ['title' => 'Related Chemicals', 'text' => 'Cleaners and maintainers for complete drain care.', 'image' => $enz('card5.jpg'), 'alt' => 'Shelf of facility cleaning chemicals'],
             ]],
-            'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where Enzyme<br>Maintainers Work Best', 'description' => 'Facilities with heavy use and organic waste.', 'image' => $enz('band.jpg'), 'image_alt' => 'Pump sprayer applying enzyme foam to a floor drain in a commercial kitchen', 'tagline' => "Cleaner Systems.\nFewer Interruptions.\nHappier Facilities.", 'items' => [
+            'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where Enzyme Maintainers Work Best', 'description' => 'Facilities with heavy use and organic waste.', 'image' => $enz('band.jpg'), 'image_alt' => 'Pump sprayer applying enzyme foam to a floor drain in a commercial kitchen', 'tagline' => 'Cleaner Systems. Fewer Interruptions. Happier Facilities.', 'items' => [
                 ['icon' => 'fork', 'title' => 'Kitchens & Food Service', 'text' => 'Grease-heavy drains and traps that need regular preventive treatment.'],
                 ['icon' => 'plus', 'title' => 'Healthcare & Education', 'text' => 'Restrooms, utility sinks and floor drains in high-use buildings.'],
                 ['icon' => 'building', 'title' => 'Municipal & Commercial', 'text' => 'Lift stations, restrooms and facilities managing odors and blockages.'],

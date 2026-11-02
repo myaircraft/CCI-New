@@ -898,3 +898,15 @@ body { font-size: 16px; }
 .ez-related { text-align: center; }
 .ez-related .category-related-links { justify-content: center; }
 @media (max-width: 1100px) { .ez-why h3 { white-space: normal; } }
+
+/* Enzyme page: compact "work best" band */
+.ez-fit { padding-block: 2.75rem; }
+.ez-fit .ez-head { margin-bottom: 1.5rem; }
+.ez-fit .ez-kicker { margin-bottom: .35rem; }
+.ez-fit .ez-title { font-size: clamp(28px, 3.4vw, 44px); white-space: nowrap; margin-bottom: .5rem; }
+.ez-fit .ez-sub { margin-bottom: 0; font-size: 17px; }
+.ez-fit-items { gap: 1.5rem; }
+.ez-fit-items .ez-icon { width: 38px; height: 38px; }
+.ez-fit-items h3 { margin: .5rem 0 .25rem; font-size: 19px; }
+.ez-tagline { margin-top: 1.5rem; padding: .7rem 1.5rem; white-space: nowrap; font-size: clamp(18px, 1.8vw, 24px); }
+@media (max-width: 800px) { .ez-fit .ez-title, .ez-tagline { white-space: normal; } }
