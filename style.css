@@ -930,3 +930,6 @@ body { font-size: 16px; }
 /* Enzyme FAQ splash stays in the empty margin beside the centered content */
 .ez-splash { width: clamp(0px, calc((100vw - 940px) / 2), 380px); max-width: none; -webkit-mask-image: linear-gradient(90deg, #000 70%, transparent 100%); mask-image: linear-gradient(90deg, #000 70%, transparent 100%); }
 @media (max-width: 1150px) { .ez-splash { display: none; } }
+/* Enzyme FAQ splash: larger, and sits flush on the blue band below */
+.ez-page + footer .final-cta { margin-top: 0; }
+.ez-splash { width: clamp(0px, calc((100vw - 900px) / 2 + 40px), 460px); bottom: -1px; -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent 100%); mask-image: linear-gradient(90deg, #000 60%, transparent 100%); }
