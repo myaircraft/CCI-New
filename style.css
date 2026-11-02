@@ -927,3 +927,6 @@ body { font-size: 16px; }
 .ez-fit { padding-block: 2.9rem; }
 .ez-tagline { margin-top: 2.1rem; }
 .ez-fit-items { margin-bottom: 0; }
+/* Enzyme FAQ splash stays in the empty margin beside the centered content */
+.ez-splash { width: clamp(0px, calc((100vw - 940px) / 2), 380px); max-width: none; -webkit-mask-image: linear-gradient(90deg, #000 70%, transparent 100%); mask-image: linear-gradient(90deg, #000 70%, transparent 100%); }
+@media (max-width: 1150px) { .ez-splash { display: none; } }
