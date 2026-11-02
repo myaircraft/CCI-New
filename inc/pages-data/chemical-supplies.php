@@ -43,9 +43,9 @@ return [
                 ['title' => 'Related Chemicals', 'text' => 'Cleaners and maintainers for complete drain care.', 'image' => $enz('card5.jpg'), 'alt' => 'Shelf of facility cleaning chemicals'],
             ]],
             'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where Enzyme Maintainers Work Best', 'description' => 'Facilities with heavy use and organic waste.', 'image' => $enz('band.jpg'), 'image_alt' => 'Pump sprayer applying enzyme foam to a floor drain in a commercial kitchen', 'tagline' => 'Cleaner Systems. Fewer Interruptions. Happier Facilities.', 'items' => [
-                ['icon' => 'fork', 'title' => 'Kitchens & Food Service', 'text' => 'Grease-heavy drains and traps that need regular preventive treatment.'],
-                ['icon' => 'plus', 'title' => 'Healthcare & Education', 'text' => 'Restrooms, utility sinks and floor drains in high-use buildings.'],
-                ['icon' => 'building', 'title' => 'Municipal & Commercial', 'text' => 'Lift stations, restrooms and facilities managing odors and blockages.'],
+                ['icon' => 'fork', 'icon_img' => $enz('icon-fork.png'), 'title' => 'Kitchens & Food Service', 'text' => 'Grease-heavy drains and traps that need regular preventive treatment.'],
+                ['icon' => 'plus', 'icon_img' => $enz('icon-plus.png'), 'title' => 'Healthcare & Education', 'text' => 'Restrooms, utility sinks and floor drains in high-use buildings.'],
+                ['icon' => 'building', 'icon_img' => $enz('icon-building.png'), 'title' => 'Municipal & Commercial', 'text' => 'Lift stations, restrooms and facilities managing odors and blockages.'],
             ]],
             'process' => ['kicker' => 'A SIMPLE 4-STEP PROCESS', 'title' => 'Your Enzyme Treatment Plan, Made Simple', 'description' => 'From identifying problem drains to selecting the right products and maintaining a consistent treatment routine, Competitive Choice helps simplify every step.', 'items' => [
                 ['title' => 'Tell Us Where Problems Start', 'text' => 'Share the kitchens, restrooms, drains or traps causing odor or slow-flow issues.'],
