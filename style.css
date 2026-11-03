@@ -947,3 +947,4 @@ body { font-size: 16px; }
 .ez-points svg { flex: none; width: 22px; height: 22px; margin-top: 2px; color: #0D173A; }
 .ez-cta { display: flex; justify-content: center; margin-top: 2.5rem; }
 @media (max-width: 800px) { .ez-stats { grid-template-columns: repeat(2, 1fr); } .ez-points { grid-template-columns: 1fr; } }
+.ez-actions { gap: 1rem; flex-wrap: wrap; align-items: center; }
