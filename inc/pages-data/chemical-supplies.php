@@ -22,8 +22,7 @@ $quote = ['How do I request a quote?', 'Send your product list with quantities, 
 $enz = fn($f) => 'wp-content/themes/competitive-choice/assets/images/enzyme/' . $f;
 $cc = fn($slug) => '/supplies/' . $slug . '/';
 
-return [
-    'enzyme-treatment-maintainers' => [
+$enz_def = [
         'title' => 'Enzyme Treatment & Maintainers', 'parent' => 'supplies', 'template' => 'enzyme', 'group' => 'product', 'order' => '21',
         'content' => [
             'seo' => ['title' => 'Enzyme Treatment & Maintainers | Competitive Choice', 'description' => 'Bio-enzymatic drain maintainers, grease trap treatments, odor-digesting enzymes and dosing equipment for kitchens, restrooms and facilities. Request a quote.', 'og_title' => 'Enzyme Treatment & Maintainers | Competitive Choice', 'og_description' => 'Bio-enzymatic maintainers that keep drains and grease traps flowing.', 'schema_about' => 'Enzyme treatment and maintainer products'],
@@ -68,7 +67,29 @@ return [
             ]],
             'related' => ['title' => 'Related Supplies', 'links' => [['label' => 'Drain & Wastewater Maintenance', 'link' => '/supplies/drain-wastewater-maintenance/'], ['label' => 'Drain Maintenance Service', 'link' => '/services/drain-services/'], ['label' => 'All Products & Supplies', 'link' => 'link:products']]],
         ],
+    ];
+$enz_def2 = array_replace_recursive($enz_def, [
+    'title' => 'Enzyme Treatment & Maintainers 2', 'order' => '21',
+    'content' => [
+        'seo' => ['title' => 'Enzyme Treatment & Maintainers 2 | Competitive Choice', 'og_title' => 'Enzyme Treatment & Maintainers 2 | Competitive Choice'],
+        'breadcrumb' => ['current' => 'Enzyme Treatment & Maintainers 2'],
+        'trust' => ['title' => 'Why Buyers Source Through Competitive Choice', 'paragraphs' => [
+            'Facility teams choose Competitive Choice for enzyme and maintainer products because we treat drain care as a routine, not an emergency. We help you match products to the kitchens, restrooms, traps and lift stations that give you the most trouble.',
+            'Our contracts and certifications make purchasing easier. As a certified woman-owned business holding GSA MAS, TIPS, BuyBoard, Good Buy, Choice Partners and AbilityOne contract vehicles, we can often fit an enzyme program into the purchasing channel you already use. Our co-op contracts can simplify your procurement.',
+        ], 'stats' => [['2003', 'Serving buyers since'], ['50', 'states reached nationwide'], ['WOSB', 'Certified woman-owned business'], ['4', 'Levels of certification: national, state, local and federal']],
+        'points' => ['Contract vehicles including GSA MAS, TIPS, BuyBoard, Good Buy, Choice Partners and AbilityOne', 'SBA WOSB / EDWOSB, DBE, MBE, SBE and WBE certified', 'Centrally located Houston warehouse for steady replenishment', 'Hands-on team that knows your account'], 'button_label' => 'CO-OPS & SCHEDULES'],
+        'sourcing' => ['kicker' => 'HOW SOURCING WORKS', 'title' => 'How Sourcing Works With Competitive Choice', 'description' => 'A clear path from problem drain to steady, scheduled treatment.', 'button_label' => 'REQUEST A QUOTE', 'items' => [
+            ['title' => 'Share Your Problem Areas', 'text' => 'Tell us about the kitchens, restrooms, drains, grease traps or lift stations that cause odors or slow flow, and how heavily they are used.'],
+            ['title' => 'We Review and Recommend', 'text' => 'We match enzyme products, dosing and application equipment to your system, and confirm what is available.'],
+            ['title' => 'Receive a Clear Quote', 'text' => 'You get itemized pricing for products and any dosing equipment, with safety information and delivery timing confirmed.'],
+            ['title' => 'Delivery and Replenishment', 'text' => 'We ship to your site and set up scheduled refills that follow your usage, so treatment does not lapse.'],
+        ]],
     ],
+]);
+
+return [
+    'enzyme-treatment-maintainers' => $enz_def,
+    'enzyme-treatment-maintainers-2' => $enz_def2,
 
     'drain-wastewater-maintenance' => $build('drain-wastewater-maintenance', 22, [
         'title' => 'Drain & Wastewater Maintenance', 'image' => 'chem-drain-banner-v4.jpg',

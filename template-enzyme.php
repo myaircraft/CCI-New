@@ -66,6 +66,25 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
     <?php endforeach; ?></ol>
   </div></section>
 
+  <?php if (cc_page_has('trust.title')) : ?>
+  <section class="ez-section ez-gray" aria-labelledby="ez-trust-title"><div class="site-container">
+    <div class="ez-head is-center"><h2 id="ez-trust-title" class="ez-title"><?php echo cc_html(cc_page('trust.title')); ?></h2><?php foreach (cc_page_list('trust.paragraphs') as $p) : ?><p class="ez-sub"><?php echo esc_html($p); ?></p><?php endforeach; ?></div>
+    <div class="ez-stats"><?php foreach (cc_page_list('trust.stats') as $st) : ?><div><strong><?php echo esc_html($st[0] ?? ''); ?></strong><span><?php echo esc_html($st[1] ?? ''); ?></span></div><?php endforeach; ?></div>
+    <ul class="ez-points"><?php foreach (cc_page_list('trust.points') as $pt) : ?><li><?php echo cc_icon('check'); ?><?php echo esc_html($pt); ?></li><?php endforeach; ?></ul>
+    <?php if (cc_page_has('trust.button_label')) : ?><div class="ez-cta"><a href="<?php echo esc_url(cc_url('contracts')); ?>" class="<?php echo cc_btn('outline'); ?>"><?php cc_page_e('trust.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
+  </div></section>
+  <?php endif; ?>
+
+  <?php if (cc_page_has('sourcing.title')) : ?>
+  <section class="ez-section" aria-labelledby="ez-sourcing-title"><div class="site-container">
+    <div class="ez-head is-center"><p class="ez-kicker"><?php cc_page_e('sourcing.kicker'); ?></p><h2 id="ez-sourcing-title" class="ez-title"><?php echo cc_html(cc_page('sourcing.title')); ?></h2><p class="ez-sub"><?php cc_page_e('sourcing.description'); ?></p></div>
+    <ol class="ez-steps4"><?php foreach (cc_page_list('sourcing.items') as $i => $s) : ?>
+      <li><span class="ez-dot"><?php echo $i + 1; ?></span><h3><?php echo esc_html($s['title'] ?? ''); ?></h3><p><?php echo esc_html($s['text'] ?? ''); ?></p></li>
+    <?php endforeach; ?></ol>
+    <?php if (cc_page_has('sourcing.button_label')) : ?><div class="ez-cta"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('sourcing.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div><?php endif; ?>
+  </div></section>
+  <?php endif; ?>
+
   <section class="ez-section ez-gray" aria-labelledby="ez-why-title"><div class="site-container">
     <div class="ez-head is-center"><h2 id="ez-why-title" class="ez-title"><?php echo cc_html(cc_page('why.title')); ?></h2><p class="ez-sub"><?php cc_page_e('why.description'); ?></p></div>
     <div class="ez-why"><?php foreach (cc_page_list('why.items') as $it) : ?>
