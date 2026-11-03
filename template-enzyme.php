@@ -64,6 +64,10 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
     <ol class="ez-steps4"><?php foreach (cc_page_list('process.items') as $i => $s) : ?>
       <li><span class="ez-dot"><?php echo $i + 1; ?></span><h3><?php echo esc_html($s['title'] ?? ''); ?></h3><p><?php echo esc_html($s['text'] ?? ''); ?></p></li>
     <?php endforeach; ?></ol>
+    <div class="ez-cta ez-actions">
+      <a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a>
+      <a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>" class="<?php echo cc_btn('outline', 'default', 'category-secondary'); ?>"><?php echo esc_html(trim(cc_page('banner.call_label') . ' ' . cc_content('company.phone'))); ?></a>
+    </div>
   </div></section>
 
   <?php if (cc_page_has('trust.title')) : ?>
