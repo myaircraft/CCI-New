@@ -935,3 +935,5 @@ body { font-size: 16px; }
 .ez-splash { width: clamp(0px, calc((100vw - 900px) / 2 + 40px), 460px); bottom: -1px; -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent 100%); mask-image: linear-gradient(90deg, #000 60%, transparent 100%); }
 .ez-tagline { margin-top: calc(2.1rem + 25px); }
 .ez-fit { padding-top: calc(2.9rem - 24px); padding-bottom: calc(2.9rem + 24px); }
+.ez-intro + .ez-gray { padding-top: calc(5.5rem - 24px); padding-bottom: calc(5.5rem + 24px); }
+.ez-intro + .ez-gray .ez-head { margin-bottom: calc(3rem + 24px); }
