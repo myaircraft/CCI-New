@@ -933,3 +933,4 @@ body { font-size: 16px; }
 /* Enzyme FAQ splash: larger, and sits flush on the blue band below */
 .ez-page + footer .final-cta { margin-top: 0; }
 .ez-splash { width: clamp(0px, calc((100vw - 900px) / 2 + 40px), 460px); bottom: -1px; -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent 100%); mask-image: linear-gradient(90deg, #000 60%, transparent 100%); }
+.ez-tagline { margin-top: calc(2.1rem + 25px); }
