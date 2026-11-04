@@ -1009,3 +1009,6 @@ body .ez-band .cc-b-secondary:hover { background: #fff; color: #0D173A; border-c
 
 /* Services hub cards: client icon above the title */
 .info-card-icon { display: block; width: 72px; height: 72px; margin: 0 auto var(--text-gap-large); object-fit: contain; }
+
+/* Client arrow: navy arrow in a yellow circle, used for every arrow icon (see cc_icon). Keep the circle round at any size. */
+svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { border-radius: 50%; stroke-width: 2.2; }
