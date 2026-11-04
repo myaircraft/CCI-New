@@ -1053,3 +1053,5 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .category-page.ez-page .ez-banner .category-lead { max-width: 40ch; margin: 2.2rem 0 0; text-align: left; color: #fff; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.55; }
 .category-page.ez-page .ez-banner .category-actions { justify-content: flex-start; align-items: center; margin-top: 2rem; }
 @media (max-width: 767px) { .category-page.ez-page .ez-banner { min-height: 0; } .category-page.ez-page .ez-banner::after { background: rgba(13,23,58,.82); } .category-page.ez-page .ez-banner h1 { max-width: none; } .category-page.ez-page .ez-banner .category-actions a { width: auto; } }
+.category-page.ez-page .ez-banner h1, .category-page.ez-page .ez-banner .category-lead { max-width: none; white-space: nowrap; }
+@media (max-width: 900px) { .category-page.ez-page .ez-banner h1, .category-page.ez-page .ez-banner .category-lead { white-space: normal; } }

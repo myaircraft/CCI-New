@@ -23,7 +23,7 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
     <?php if (cc_page_has('banner.image')) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.image'))); ?>" alt="<?php echo esc_attr(cc_page('banner.image_alt')); ?>" width="1920" height="823" fetchpriority="high"><?php endif; ?>
     <div class="site-container category-banner-content">
       <h1 id="category-title"><?php echo cc_html(cc_page('banner.title')); ?></h1>
-      <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead"><?php cc_page_e('banner.lead'); ?></p><?php endif; ?>
+      <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead"><?php echo cc_html(cc_page('banner.lead')); ?></p><?php endif; ?>
       <div class="category-actions">
         <a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a>
         <a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>" class="<?php echo cc_btn('outline', 'default', 'category-secondary'); ?>"><?php echo esc_html(trim(cc_page('banner.call_label') . ' ' . cc_content('company.phone'))); ?></a>
