@@ -10,7 +10,7 @@ $icons = [
     'fork'     => '<path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"></path><path d="M17 3c-2 2-3 5-3 8h3v10"></path>',
     'plus'     => '<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"></path>',
     'building' => '<path d="M5 21V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v17M15 9h4a1 1 0 0 1 1 1v11M3 21h18M9 7h2M9 11h2M9 15h2"></path>',
-    'sliders'  => '<path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"></path><circle cx="16" cy="6" r="2"></circle><circle cx="10" cy="12" r="2"></circle><circle cx="18" cy="18" r="2"></circle>',
+    'sliders'  => '<path d="M3 6h7M14 6h7M3 12h3M10 12h11M3 18h9M16 18h5"></path><circle cx="12" cy="6" r="2"></circle><circle cx="8" cy="12" r="2"></circle><circle cx="14" cy="18" r="2"></circle>',
     'shield'   => '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="m9 12 2 2 4-4"></path>',
     'box'      => '<path d="M21 8 12 3 3 8v8l9 5 9-5z"></path><path d="M3 8l9 5 9-5M12 13v8"></path>',
     'calendar' => '<rect x="4" y="5" width="16" height="16" rx="1"></rect><path d="M4 10h16M9 3v4M15 3v4M9 15l2 2 4-4"></path>',
