@@ -1044,3 +1044,12 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 /* Enzyme work-best photo: sized by the band's height and pinned so the whole sprayer (including its foam) stays in view with space on its right */
 .ez-fit .ez-fit-photo { left: auto; right: 0; top: 0; width: auto; max-width: none; height: 100%; object-fit: fill; object-position: initial; transform: translateX(calc(17% - 70px)); }
 @media (max-width: 1000px) { .ez-fit .ez-fit-photo { transform: translateX(calc(17% - 20px)); } }
+
+/* Enzyme page header (client design): navy layer fading to the right, left-aligned white copy, buttons underneath */
+.category-page.ez-page .ez-banner { min-height: 480px; text-align: left; }
+.category-page.ez-page .ez-banner::after { background: linear-gradient(90deg, rgba(13,23,58,.97) 0%, rgba(13,23,58,.9) 26%, rgba(13,23,58,.62) 48%, rgba(13,23,58,.2) 74%, rgba(13,23,58,0) 100%); }
+.category-page.ez-page .ez-banner .category-banner-content { text-align: left; padding-block: 64px; }
+.category-page.ez-page .ez-banner h1 { max-width: 14ch; margin: 0; text-align: left; line-height: 1.05; font-weight: 700; color: #fff; }
+.category-page.ez-page .ez-banner .category-lead { max-width: 40ch; margin: 2.2rem 0 0; text-align: left; color: #fff; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.55; }
+.category-page.ez-page .ez-banner .category-actions { justify-content: flex-start; align-items: center; margin-top: 2rem; }
+@media (max-width: 767px) { .category-page.ez-page .ez-banner { min-height: 0; } .category-page.ez-page .ez-banner::after { background: rgba(13,23,58,.82); } .category-page.ez-page .ez-banner h1 { max-width: none; } .category-page.ez-page .ez-banner .category-actions a { width: auto; } }
