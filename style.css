@@ -1084,3 +1084,10 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .ez-why h3, .ez-why p { text-align: left; margin-inline: 0; }
 .ez-why h3 { margin: 0 0 .5rem; }
 .ez-why p { line-height: 1.4; }
+
+/* Enzyme "Why choose" boxes (client design): icon at the left, vertically centred, text to its right */
+.ez-why > div { flex-direction: row; align-items: center; justify-content: flex-start; text-align: left; padding: 1.1rem 1.25rem; gap: 1rem; }
+.ez-why > div > div { width: auto; flex: 1; min-width: 0; }
+.ez-why h3 { margin: 0 0 .25rem; font-size: 19px; white-space: nowrap; }
+.ez-why p { margin: 0; line-height: 1.35; }
+@media (max-width: 1100px) { .ez-why h3 { white-space: normal; } }
