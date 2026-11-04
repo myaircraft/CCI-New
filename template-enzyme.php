@@ -4,6 +4,7 @@
  *
  * Designed layout for Enzyme Treatment & Maintainers (client mock-up). Content comes from the page's "Page content" box.
  */
+$GLOBALS["cc_hide_final_cta"] = true;
 get_header();
 $icons = [
     'fork'     => '<path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"></path><path d="M17 3c-2 2-3 5-3 8h3v10"></path>',
@@ -64,9 +65,16 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
     <ol class="ez-steps4"><?php foreach (cc_page_list('process.items') as $i => $s) : ?>
       <li><span class="ez-dot"><?php echo $i + 1; ?></span><h3><?php echo esc_html($s['title'] ?? ''); ?></h3><p><?php echo esc_html($s['text'] ?? ''); ?></p></li>
     <?php endforeach; ?></ol>
-    <div class="ez-cta ez-actions">
-      <a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('banner.quote_label'); ?><?php echo cc_icon('arrow-right'); ?></a>
-      <a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>" class="<?php echo cc_btn('outline', 'default', 'category-secondary'); ?>"><?php echo esc_html(trim(cc_page('banner.call_label') . ' ' . cc_content('company.phone'))); ?></a>
+    </div></section>
+
+  <section class="ez-band" aria-labelledby="ez-band-title"><div class="site-container ez-band-grid">
+    <div class="ez-band-copy"><h2 id="ez-band-title"><?php echo cc_html(cc_content('footer.cta_title')); ?></h2><p><?php cc_e('footer.cta_text'); ?></p></div>
+    <div class="ez-band-side">
+      <div class="ez-band-actions">
+        <a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_e('footer.cta_primary_label'); ?></a>
+        <a href="<?php echo esc_attr(cc_content('company.phone_href')); ?>" class="<?php echo cc_btn('outline'); ?>">CALL <?php cc_e('company.phone'); ?></a>
+      </div>
+      <p class="ez-band-meta"><?php echo esc_html(cc_content('company.hours_days') . ' · ' . cc_content('company.hours_time')); ?><br><a href="mailto:<?php echo esc_attr(cc_content('company.email')); ?>"><?php cc_e('company.email'); ?></a></p>
     </div>
   </div></section>
 

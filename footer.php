@@ -4,7 +4,8 @@ $phone_href = cc_content('company.phone_href');
 $email = cc_content('company.email');
 ?>
 <footer>
-  <?php $photo_only = is_page('contact-us'); ?>
+  <?php $photo_only = is_page('contact-us'); global $cc_hide_final_cta; ?>
+  <?php if (empty($cc_hide_final_cta)) : ?>
   <section class="final-cta photo-band section-space<?php echo $photo_only ? ' is-photo-only' : ''; ?>"<?php echo $photo_only ? ' aria-hidden="true"' : ' aria-labelledby="footer-cta-title"'; ?>>
     <img class="band-photo" src="<?php echo esc_url(cc_img(cc_content('footer.cta_image'))); ?>" alt="<?php echo esc_attr(cc_content('footer.cta_image_alt')); ?>" width="1920" height="1024" loading="lazy">
     <?php if (!$photo_only) : ?>
@@ -16,6 +17,7 @@ $email = cc_content('company.email');
     </div>
     <?php endif; ?>
   </section>
+  <?php endif; ?>
   <div class="site-footer"><div class="site-container">
     <div class="footer-top"><a href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php echo esc_attr(cc_content('company.name') . ' home'); ?>"><img class="brand-logo" src="<?php echo esc_url(cc_img(cc_content('assets.logo'))); ?>" alt="<?php echo esc_attr(cc_content('company.name')); ?>" width="1920" height="240" loading="lazy"></a><p class="footer-tagline"><?php cc_e('company.tagline'); ?></p></div>
     <div class="footer-grid">

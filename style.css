@@ -990,3 +990,19 @@ body :is(.hero, .category-banner, .photo-band, .ez-fit, .mobile-navigation, .sit
 .primary-nav .nav-control, .primary-nav .nav-control *, .mega-menu a, .mega-menu a * { cursor: default; }
 .primary-nav .nav-control, .primary-nav .nav-control:hover, .primary-nav .nav-control[data-active=true] { border-radius: 0; }
 .primary-nav { gap: calc(var(--nav-gap) + 6px); }
+
+/* Enzyme page: closing call-to-action band (client design), placed under the 4-step process */
+.ez-band { background: #0D173A; color: #fff; padding-block: 2.75rem; }
+.ez-band-grid { display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap; }
+.ez-band-copy { flex: 1 1 380px; max-width: 520px; }
+.ez-band-copy h2 { margin: 0 0 .6rem; font: 700 clamp(26px, 2.8vw, 34px)/1.15 Roboto, Arial, sans-serif; color: #fff; text-align: left; text-transform: none; }
+.ez-band-copy p { margin: 0; font: 400 16px/1.5 Roboto, Arial, sans-serif; color: #e7e8e8; }
+.ez-band-side { flex: 0 1 auto; display: flex; flex-direction: column; align-items: flex-end; gap: 1rem; }
+.ez-band-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-end; }
+.ez-band-meta { margin: 0; text-align: right; font: 400 16px/1.5 Roboto, Arial, sans-serif; color: #e7e8e8; }
+.ez-band-meta a { color: #e7e8e8; }
+body .ez-band .cc-b-primary { background: #FFC200; color: #0D173A; border-color: #FFC200; }
+body .ez-band .cc-b-primary:hover { background: #fff; color: #0D173A; border-color: #fff; }
+body .ez-band .cc-b-secondary { background: transparent; color: #fff; border-color: #fff; }
+body .ez-band .cc-b-secondary:hover { background: #fff; color: #0D173A; border-color: #fff; }
+@media (max-width: 800px) { .ez-band-side, .ez-band-meta { align-items: flex-start; text-align: left; } .ez-band-actions { justify-content: flex-start; } }
