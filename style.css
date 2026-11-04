@@ -1102,3 +1102,11 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .final-layout .contact-details > div > a { display: none; }
 .contact-details p { margin-top: 0; }
 @media (max-width: 767px) { .final-cta { min-height: 0; } }
+
+/* Closing photo band: whole photo shown from the top so the Competitive Choice sign is clear, with a slow zoom */
+.final-cta .band-photo { object-position: 50% 0%; transform-origin: 50% 8%; animation: cc-band-zoom 24s ease-in-out infinite alternate; will-change: transform; }
+.final-cta.section-space { padding-top: 112px; }
+.final-cta.is-photo-only { padding-top: 0; }
+@keyframes cc-band-zoom { from { transform: scale(1); } to { transform: scale(1.09); } }
+@media (prefers-reduced-motion: reduce) { .final-cta .band-photo { animation: none; } }
+@media (max-width: 767px) { .final-cta.section-space { padding-top: 64px; } }
