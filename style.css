@@ -1110,3 +1110,9 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 @keyframes cc-band-zoom { from { transform: scale(1); } to { transform: scale(1.09); } }
 @media (prefers-reduced-motion: reduce) { .final-cta .band-photo { animation: none; } }
 @media (max-width: 767px) { .final-cta.section-space { padding-top: 64px; } }
+
+/* Footer titles: brand navy, with a single-pixel grey rule instead of the yellow one */
+.site-footer .footer-grid h3, .site-footer .footer-grid .footer-sub { color: #0D173A; }
+.site-footer .footer-grid h3 { border-bottom: 1px solid #C4C7CC; }
+.site-footer .footer-grid h3 a { color: #0D173A; background: linear-gradient(#747A87, #747A87) left bottom / 0 1px no-repeat; }
+.site-footer .footer-grid h3 a:hover, .site-footer .footer-grid h3 a:focus-visible { background-size: 100% 1px; color: #0D173A; }
