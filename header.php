@@ -22,9 +22,9 @@
           <?php foreach (cc_navigation() as $item) : if (empty($item['items'])) continue; ?>
             <div class="mega-menu" id="desktop-navigation-menu-<?php echo esc_attr($item['id']); ?>" data-menu-panel="<?php echo esc_attr($item['id']); ?>" hidden><div class="mega-inner">
               <?php if (!empty($item['groups'])) : ?>
-              <div class="mega-columns"><?php foreach ($item['groups'] as $col) : ?><div class="mega-column"><p class="mega-column-title"><?php echo esc_html($col['title']); ?></p><div class="mega-links"><?php foreach ($col['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><span><?php echo esc_html($link['label']); ?></span><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?></div></div><?php endforeach; ?></div>
+              <div class="mega-columns"><?php foreach ($item['groups'] as $col) : ?><div class="mega-column"><p class="mega-column-title"><?php echo cc_menu_icon($col['title']); ?><span><?php echo esc_html($col['title']); ?></span></p><div class="mega-links"><?php foreach ($col['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><?php echo cc_menu_icon($link['label']); ?><span><?php echo esc_html($link['label']); ?></span><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?></div></div><?php endforeach; ?></div>
               <?php else : ?>
-              <div class="mega-links"><?php foreach ($item['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><span><?php echo esc_html($link['label']); ?></span><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?></div>
+              <div class="mega-links"><?php foreach ($item['items'] as $link) : ?><a href="<?php echo esc_url(cc_link($link['link'])); ?>"><?php echo cc_menu_icon($link['label']); ?><span><?php echo esc_html($link['label']); ?></span><?php echo cc_icon('arrow-right'); ?></a><?php endforeach; ?></div>
               <?php endif; ?>
             </div></div>
           <?php endforeach; ?>

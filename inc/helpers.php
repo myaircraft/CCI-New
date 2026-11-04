@@ -37,7 +37,10 @@ function cc_btn($variant = 'default', $size = 'default', $extra = '') {
         'icon'    => 'h-11 w-11',
     ];
     $base = 'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-none text-base font-bold cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0';
-    $rest = trim($variants[$variant] . ' ' . $sizes[$size] . ' ' . $extra);
+    // Brand button roles (CSS in style.css decides the look from the role and from a dark or white background).
+    $roles = ['default' => 'cc-b-primary', 'shop' => 'cc-b-primary', 'heroQuote' => 'cc-b-primary', 'outline' => 'cc-b-secondary', 'heroOutline' => 'cc-b-secondary', 'call' => 'cc-b-tertiary'];
+    $role = isset($roles[$variant]) ? 'cc-b ' . $roles[$variant] : '';
+    $rest = trim($variants[$variant] . ' ' . $sizes[$size] . ' ' . $role . ' ' . $extra);
     if (strpos(" $rest ", ' rounded-full ') !== false) $base = str_replace(' rounded-none', '', $base);
     if (strpos(" $rest ", ' text-lg ') !== false) $base = str_replace(' text-base', '', $base);
     return esc_attr($base . ' ' . $rest);
@@ -125,4 +128,57 @@ function cc_home_groups($menu_id, $images = []) {
         echo '</ul></article>';
     }
     echo '</div>';
+}
+
+
+/** Line icon for a menu link or menu column heading. Some icons come from the client's own icon set (PNG masks), the rest are inline SVG. */
+function cc_menu_icon($label) {
+    static $svg = null, $img = null;
+    if ($svg === null) {
+        $svg = [
+            'droplet' => '<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>',
+            'sparkles' => '<path d="M9.9 14.1 8.5 18l-1.4-3.9L3 12.5l4.1-1.6L8.5 7l1.4 3.9 4.1 1.6z"/><path d="M19 3v4M17 5h4M19 15v4M17 17h4"/>',
+            'flask' => '<path d="M10 2v7.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V2"/><path d="M8.5 2h7M7 16h10"/>',
+            'bottle' => '<rect x="7" y="10" width="10" height="12" rx="1.5"/><path d="M10 10V7h4v3M14 7h4l-1-2h-3"/>',
+            'truck' => '<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>',
+            'layers' => '<path d="m12 2 10 5-10 5L2 7z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/>',
+            'gear' => '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>',
+            'wind' => '<path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>',
+            'thermo' => '<path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/>',
+            'wrench' => '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/>',
+            'tree' => '<path d="M12 22v-6"/><path d="M12 16c-4 0-7-2.5-7-6 0-1.5.7-2.8 1.8-3.7C6.6 4.7 8.6 3 12 3s5.4 1.7 5.2 3.3C18.3 7.2 19 8.5 19 10c0 3.5-3 6-7 6z"/>',
+            'waves' => '<path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>',
+            'zap' => '<path d="M13 2 3 14h9l-1 8 10-12h-9z"/>',
+            'plug' => '<path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/>',
+            'pipe' => '<path d="M3 7h10a4 4 0 0 1 4 4v10"/><rect x="2" y="5" width="3" height="4"/><rect x="15" y="19" width="4" height="3"/>',
+            'flame' => '<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4.1 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.4 1-3 0 1.4 1 2.5 2.5 2.5z"/>',
+            'shield' => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+            'building' => '<path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"/>',
+            'heart' => '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/>',
+            'award' => '<circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/>',
+            'filecheck' => '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/>',
+            'briefcase' => '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+            'mail' => '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+        ];
+        // Client icon set (assets/images/icons/*.png), drawn as a colour mask so it follows the menu text colour.
+        $img = ['leaf' => 'leaf.png', 'jug' => 'jug.png', 'box' => 'box.png', 'headset' => 'headset.png', 'calendar' => 'calendar.png', 'org' => 'org.png'];
+    }
+    $map = [
+        'enzyme treatment & maintainers' => 'img:leaf', 'drain & wastewater maintenance' => 'droplet', 'hvac maintenance' => 'thermo', 'cleaning & sanitation' => 'img:jug',
+        'odor control' => 'wind', 'equipment maintenance' => 'wrench', 'grounds & seasonal maintenance' => 'tree', 'pool & water treatment' => 'waves',
+        'power distribution & transformers' => 'zap', 'electrical, lighting, cable & wire' => 'plug', 'package units & hvac' => 'img:box', 'plumbing & pvf' => 'pipe',
+        'fire & safety' => 'flame', 'safety' => 'shield',
+        'drain maintenance' => 'droplet', 'air scenting services' => 'sparkles', 'chemical supply program' => 'flask', 'dispensing systems' => 'bottle',
+        'logistics & procurement' => 'truck', 'program scheduling & management' => 'img:calendar', 'work order request and call center service' => 'img:headset',
+        'about us' => 'building', 'community & culture' => 'heart', 'certifications' => 'award', 'leadership & team' => 'img:org', 'co-ops & schedules' => 'filecheck', 'past performances' => 'briefcase', 'contact us' => 'mail',
+        'chemical supplies' => 'layers', 'systems and infrastructure supplies' => 'gear', 'product & dispenser services' => 'layers', 'facility operations support services' => 'gear',
+    ];
+    $key = strtolower(html_entity_decode(trim((string) $label), ENT_QUOTES));
+    $name = $map[$key] ?? 'layers';
+    if (strpos($name, 'img:') === 0) {
+        $file = $img[substr($name, 4)] ?? null;
+        if ($file) return '<i class="mi mi-img" aria-hidden="true" style="--m:url(' . esc_url(cc_img('icons/' . $file)) . ')"></i>';
+        $name = 'layers';
+    }
+    return '<i class="mi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' . $svg[$name] . '</svg></i>';
 }

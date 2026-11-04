@@ -92,7 +92,7 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
   <section class="ez-section ez-gray" aria-labelledby="ez-why-title"><div class="site-container">
     <div class="ez-head is-center"><h2 id="ez-why-title" class="ez-title"><?php echo cc_html(cc_page('why.title')); ?></h2><p class="ez-sub"><?php cc_page_e('why.description'); ?></p></div>
     <div class="ez-why"><?php foreach (cc_page_list('why.items') as $it) : ?>
-      <div><span class="ez-chip"><?php echo $svg($it['icon'] ?? ''); ?></span><div><h3><?php echo esc_html($it['title'] ?? ''); ?></h3><p><?php echo esc_html($it['text'] ?? ''); ?></p></div></div>
+      <div><span class="ez-chip"><?php if (!empty($it['icon_img'])) : ?><img class="ez-chip-img" src="<?php echo esc_url(cc_img($it['icon_img'])); ?>" alt="" aria-hidden="true" width="28" height="28" loading="lazy"><?php else : echo $svg($it['icon'] ?? ''); endif; ?></span><div><h3><?php echo esc_html($it['title'] ?? ''); ?></h3><p><?php echo esc_html($it['text'] ?? ''); ?></p></div></div>
     <?php endforeach; ?></div>
   </div></section>
 

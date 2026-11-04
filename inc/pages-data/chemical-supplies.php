@@ -20,6 +20,7 @@ $build = function ($slug, $order, $d) {
 };
 $quote = ['How do I request a quote?', 'Send your product list with quantities, facility type and delivery location. Availability and delivery timing are confirmed during quotation.'];
 $enz = fn($f) => 'wp-content/themes/competitive-choice/assets/images/enzyme/' . $f;
+$ico = fn($f) => 'wp-content/themes/competitive-choice/assets/images/icons/' . $f;
 $cc = fn($slug) => '/supplies/' . $slug . '/';
 
 $enz_def = [
@@ -53,10 +54,10 @@ $enz_def = [
                 ['title' => 'Ongoing Replenishment', 'text' => 'We deliver on a schedule that follows your usage so treatment never lapses.'],
             ]],
             'why' => ['title' => 'Why Choose CCI for Enzyme Treatment?', 'description' => 'From grease traps to floor drains, we help facility teams source solutions that fit their maintenance challenges and day-to-day operations.', 'items' => [
-                ['icon' => 'sliders', 'title' => 'Product Selection', 'text' => 'Solutions matched to your application'],
-                ['icon' => 'shield', 'title' => 'Preventive Focus', 'text' => 'Help manage recurring buildup'],
-                ['icon' => 'box', 'title' => 'Convenient Sourcing', 'text' => 'Products for ongoing facility needs'],
-                ['icon' => 'calendar', 'title' => 'Routine Support', 'text' => 'Keep maintenance consistent'],
+                ['icon' => 'sliders', 'icon_img' => $ico('jug.png'), 'title' => 'Product Selection', 'text' => 'Solutions matched to your application'],
+                ['icon' => 'shield', 'icon_img' => $ico('leaf.png'), 'title' => 'Preventive Focus', 'text' => 'Help manage recurring buildup'],
+                ['icon' => 'box', 'icon_img' => $ico('box.png'), 'title' => 'Convenient Sourcing', 'text' => 'Products for ongoing facility needs'],
+                ['icon' => 'calendar', 'icon_img' => $ico('calendar.png'), 'title' => 'Routine Support', 'text' => 'Keep maintenance consistent'],
             ]],
             'faq' => ['title' => 'Enzyme Treatment & Maintainers FAQs', 'description' => 'Answers to common selection, specification and sourcing questions.', 'image' => $enz('splash.jpg'), 'items' => [
                 ['question' => 'What do enzyme maintainers do?', 'answer' => 'They use enzymes and beneficial bacteria to digest fats, oils, grease and organic matter in drains and traps, helping prevent clogs and odors.'],
