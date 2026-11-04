@@ -1060,3 +1060,6 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .ez-card > div { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
 .ez-card h3 { min-height: 2.4em; margin: 0 0 .55rem; line-height: 1.2; display: flex; align-items: flex-start; text-align: left; }
 .ez-card p { margin: 0; text-align: left; }
+.ez-intro + .ez-gray .ez-kicker { font-size: calc(clamp(22px, 2.2vw, 30px) + 3px); }
+.ez-card h3 { font-size: 19px; }
+.ez-card p { font-size: 15px; }
