@@ -177,7 +177,7 @@ function cc_menu_icon($label) {
     $name = $map[$key] ?? 'layers';
     if (strpos($name, 'img:') === 0) {
         $file = $img[substr($name, 4)] ?? null;
-        if ($file) return '<i class="mi mi-img" aria-hidden="true" style="--m:url(' . esc_url(cc_img('icons/' . $file)) . ')"></i>';
+        if ($file) return '<i class="mi mi-img" aria-hidden="true" style="--m:url(' . esc_url(cc_img('wp-content/themes/competitive-choice/assets/images/icons/' . $file)) . ')"></i>';
         $name = 'layers';
     }
     return '<i class="mi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' . $svg[$name] . '</svg></i>';
