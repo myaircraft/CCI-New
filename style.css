@@ -1077,3 +1077,10 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .ez-band-copy, .ez-band-copy h2, .ez-band-copy p { text-align: left; }
 .ez-band-side { align-items: flex-end; }
 @media (max-width: 800px) { .ez-band .ez-band-grid { width: calc(100% - 40px); } .ez-band-side { align-items: flex-start; } }
+
+/* Enzyme "Why choose" boxes: icon top-left, title and description left-aligned on shared lines */
+.ez-why > div { align-items: flex-start; text-align: left; padding: 1.5rem 1.4rem 1.6rem; gap: 1rem; }
+.ez-why > div > div { width: 100%; }
+.ez-why h3, .ez-why p { text-align: left; margin-inline: 0; }
+.ez-why h3 { margin: 0 0 .5rem; }
+.ez-why p { line-height: 1.4; }
