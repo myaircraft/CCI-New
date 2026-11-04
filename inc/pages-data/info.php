@@ -62,7 +62,7 @@ return [
                     ['title' => 'Dispensing Systems', 'icon_img' => 'dispenser.png', 'description' => 'Installed, calibrated and supported dispensing for accurate dosing.', 'link' => '/services/dispensing-systems/'],
                 ]],
                 ['layout' => 'cards', 'id' => 'operations-services', 'learn' => true, 'tint' => true, 'title' => 'Facility Operations Support Services', 'description' => 'We help organizations source, manage, deliver and support critical operational requirements.', 'items' => [
-                    ['title' => 'Logistics & Procurement', 'icon_img' => 'box.png', 'description' => 'Warehousing, distribution, strategic sourcing and eProcurement from our Houston warehouse.', 'link' => '/services/logistics-procurement/'],
+                    ['title' => 'Logistics & Procurement', 'icon_img' => 'truck.png', 'description' => 'Warehousing, distribution, strategic sourcing and eProcurement from our Houston warehouse.', 'link' => '/services/logistics-procurement/'],
                     ['title' => 'Program Scheduling & Management', 'icon_img' => 'calendar.png', 'description' => 'Delivery coordination and scheduling for MEP and general contractor teams.', 'link' => '/services/program-scheduling/'],
                     ['title' => 'Work Order Request and Call Center Service', 'icon_img' => 'headset.png', 'description' => 'Centralized intake, tracking and follow-up for facility service tickets.', 'link' => '/services/work-order-request-call-center/'],
                 ]],
