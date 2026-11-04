@@ -178,8 +178,15 @@ function cc_menu_icon($label) {
     $name = $map[$key] ?? 'layers';
     if (strpos($name, 'img:') === 0) {
         $file = $img[substr($name, 4)] ?? null;
-        if ($file) return '<i class="mi mi-img" aria-hidden="true" style="--m:url(' . esc_url(cc_img('wp-content/themes/competitive-choice/assets/images/icons/' . $file)) . ')"></i>';
+        if ($file) return '<i class="mi mi-img" aria-hidden="true" style="--m:url(' . esc_url(cc_icon_url($file)) . ')"></i>';
         $name = 'layers';
     }
     return '<i class="mi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' . $svg[$name] . '</svg></i>';
+}
+
+
+/** URL of a client icon (assets/images/icons), versioned by file time so a replaced icon is never served from a stale browser cache. */
+function cc_icon_url($file) {
+    $path = get_template_directory() . '/assets/images/icons/' . $file;
+    return cc_img('wp-content/themes/competitive-choice/assets/images/icons/' . $file) . (file_exists($path) ? '?v=' . filemtime($path) : '');
 }
