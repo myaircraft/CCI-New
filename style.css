@@ -1069,3 +1069,6 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .ez-steps4 .ez-dot { margin: 0 0 1.1rem; }
 .ez-steps4 h3, .ez-steps4 p { text-align: left; margin-inline: 0; }
 .ez-steps4 h3 { margin-bottom: .45rem; }
+/* Enzyme 4-step boxes: titles on one shared line, tighter description lines, clear gap between them */
+.ez-steps4 h3 { min-height: 2.5em; line-height: 1.25; margin: 0 0 .75rem; display: block; }
+.ez-steps4 p { line-height: 1.38; }
