@@ -1124,3 +1124,12 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
   .site-footer .footer-grid h3 a { font-size: inherit; }
   .site-footer .footer-grid .footer-sub { font-size: calc(var(--fs-micro) + 1px); }
 }
+
+/* Header menu: larger, heavier type; SHOP NOW 6px narrower */
+.primary-nav .nav-control { font-size: calc(var(--fs-caption) + 3px); font-weight: 900; }
+@media (min-width: 901px) and (max-width: 1350px) { .primary-nav .nav-control { font-size: calc(var(--fs-caption) + 2px); } }
+@media (min-width: 768px) and (max-width: 900px) { .primary-nav .nav-control { font-size: calc(var(--fs-micro) + 3px); } }
+.desktop-quote { min-width: 179px; padding-inline: 21px; }
+@media (max-width: 1350px) { .desktop-quote { min-width: 159px; padding-inline: 15px; } }
+@media (max-width: 1100px) { .desktop-quote { min-width: 144px; padding-inline: 11px; } }
+@media (max-width: 900px) { .desktop-quote { min-width: 126px; padding-inline: 7px; } }

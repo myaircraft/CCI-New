@@ -21,7 +21,7 @@ add_action('after_setup_theme', function () {
 add_action('wp_enqueue_scripts', function () {
     $ver = wp_get_theme()->get('Version');
     $dir = get_template_directory();
-    wp_enqueue_style('cc-fonts', 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Roboto:wght@400;500;700&display=swap', [], null);
+    wp_enqueue_style('cc-fonts', 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Roboto:wght@400;500;700;900&display=swap', [], null);
     wp_enqueue_style('cc-app', get_template_directory_uri() . '/assets/css/app.css', [], $ver . '.' . filemtime($dir . '/assets/css/app.css'));
     wp_enqueue_style('cc-theme', get_stylesheet_uri(), ['cc-app'], $ver . '.' . filemtime(get_stylesheet_directory() . '/style.css'));
     wp_enqueue_script('cc-site', get_template_directory_uri() . '/assets/js/site.js', [], $ver . '.' . filemtime($dir . '/assets/js/site.js'), ['in_footer' => true, 'strategy' => 'defer']);
