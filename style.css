@@ -1030,3 +1030,12 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .ez-fit-items h3 { margin: 0 0 .4rem; font-size: 20px; }
 .ez-tagline { display: block; width: fit-content; max-width: 100%; margin: 2.75rem 0 0; text-align: center; padding: 1rem 1.75rem; }
 @media (max-width: 800px) { .ez-fit-items { grid-template-columns: 1fr; } .ez-fit::before { background: rgba(13,23,58,.85); } }
+
+/* Enzyme work-best band: tight title, sentence under it, and the product kept to the right of the copy */
+.ez-fit .ez-head .ez-title { line-height: .95; margin: 0 0 .5rem; }
+.ez-fit .ez-head .ez-sub { text-align: left; margin: 0; max-width: none; }
+.ez-fit .ez-head, .ez-fit .ez-head.is-center { margin-bottom: 3.1rem; }
+.ez-fit-photo { object-position: 47% center; }
+@media (min-width: 1700px) { .ez-fit-photo { object-position: 0% center; } }
+@media (max-width: 1250px) { .ez-fit-photo { object-position: 58% center; } }
+@media (max-width: 1000px) { .ez-fit-photo { object-position: 65% center; } }
