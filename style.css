@@ -1055,3 +1055,8 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 @media (max-width: 767px) { .category-page.ez-page .ez-banner { min-height: 0; } .category-page.ez-page .ez-banner::after { background: rgba(13,23,58,.82); } .category-page.ez-page .ez-banner h1 { max-width: none; } .category-page.ez-page .ez-banner .category-actions a { width: auto; } }
 .category-page.ez-page .ez-banner h1, .category-page.ez-page .ez-banner .category-lead { max-width: none; white-space: nowrap; }
 @media (max-width: 900px) { .category-page.ez-page .ez-banner h1, .category-page.ez-page .ez-banner .category-lead { white-space: normal; } }
+
+/* Enzyme product cards: every title takes two lines of height, so all descriptions start at the same distance from the title */
+.ez-card > div { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.ez-card h3 { min-height: 2.4em; margin: 0 0 .55rem; line-height: 1.2; display: flex; align-items: flex-start; text-align: left; }
+.ez-card p { margin: 0; text-align: left; }
