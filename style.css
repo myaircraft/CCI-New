@@ -1039,3 +1039,4 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 @media (min-width: 1700px) { .ez-fit-photo { object-position: 0% center; } }
 @media (max-width: 1250px) { .ez-fit-photo { object-position: 58% center; } }
 @media (max-width: 1000px) { .ez-fit-photo { object-position: 65% center; } }
+.ez-fit .ez-head .ez-title { line-height: .84; }
