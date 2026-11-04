@@ -162,13 +162,13 @@ function cc_menu_icon($label) {
             'users' => '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>',
         ];
         // Client icon set (assets/images/icons/*.png), drawn as a colour mask so it follows the menu text colour.
-        $img = ['leaf' => 'leaf.png', 'jug' => 'jug.png', 'box' => 'box.png', 'headset' => 'headset.png', 'calendar' => 'calendar.png', 'dispenser' => 'dispenser.png', 'waves' => 'waves.png', 'pipe' => 'pipe.png'];
+        $img = ['leaf' => 'leaf.png', 'jug' => 'jug.png', 'box' => 'box.png', 'headset' => 'headset.png', 'calendar' => 'calendar.png', 'dispenser' => 'dispenser.png', 'waves' => 'waves.png', 'pipe' => 'pipe.png', 'transformer' => 'transformer.png', 'fire' => 'fire.png', 'plumbing' => 'plumbing.png', 'hvac' => 'hvac.png', 'safety' => 'safety.png', 'pool' => 'pool.png', 'grounds' => 'grounds.png', 'equipment' => 'equipment.png', 'odor' => 'odor.png', 'drain' => 'drain.png', 'enzymes' => 'enzymes.png', 'electrical' => 'electrical.png'];
     }
     $map = [
-        'enzyme treatment & maintainers' => 'img:leaf', 'drain & wastewater maintenance' => 'droplet', 'hvac maintenance' => 'thermo', 'cleaning & sanitation' => 'bottle',
-        'odor control' => 'img:waves', 'equipment maintenance' => 'wrench', 'grounds & seasonal maintenance' => 'tree', 'pool & water treatment' => 'waves',
-        'power distribution & transformers' => 'zap', 'electrical, lighting, cable & wire' => 'plug', 'package units & hvac' => 'wind', 'plumbing & pvf' => 'img:pipe',
-        'fire & safety' => 'flame', 'safety' => 'shield',
+        'enzyme treatment & maintainers' => 'img:enzymes', 'drain & wastewater maintenance' => 'img:drain', 'hvac maintenance' => 'img:hvac', 'cleaning & sanitation' => 'bottle',
+        'odor control' => 'img:odor', 'equipment maintenance' => 'img:equipment', 'grounds & seasonal maintenance' => 'img:grounds', 'pool & water treatment' => 'img:pool',
+        'power distribution & transformers' => 'img:transformer', 'electrical, lighting, cable & wire' => 'img:electrical', 'package units & hvac' => 'img:box', 'plumbing & pvf' => 'img:plumbing',
+        'fire & safety' => 'img:fire', 'safety' => 'img:safety',
         'drain maintenance' => 'img:pipe', 'air scenting services' => 'sparkles', 'chemical supply program' => 'img:jug', 'dispensing systems' => 'img:dispenser',
         'logistics & procurement' => 'img:box', 'program scheduling & management' => 'img:calendar', 'work order request and call center service' => 'img:headset',
         'about us' => 'building', 'community & culture' => 'heart', 'certifications' => 'award', 'leadership & team' => 'users', 'co-ops & schedules' => 'filecheck', 'past performances' => 'briefcase', 'contact us' => 'mail',
