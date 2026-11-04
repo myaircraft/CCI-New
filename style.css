@@ -1072,3 +1072,8 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 /* Enzyme 4-step boxes: titles on one shared line, tighter description lines, clear gap between them */
 .ez-steps4 h3 { min-height: 2.5em; line-height: 1.25; margin: 0 0 .75rem; display: block; }
 .ez-steps4 p { line-height: 1.38; }
+/* Enzyme CTA band: copy starts under the first process box, buttons and details end under the last one */
+.ez-band .ez-band-grid { width: min(1100px, 100% - 56px); max-width: 1100px; margin-inline: auto; }
+.ez-band-copy, .ez-band-copy h2, .ez-band-copy p { text-align: left; }
+.ez-band-side { align-items: flex-end; }
+@media (max-width: 800px) { .ez-band .ez-band-grid { width: calc(100% - 40px); } .ez-band-side { align-items: flex-start; } }
