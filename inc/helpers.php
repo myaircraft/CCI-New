@@ -159,18 +159,19 @@ function cc_menu_icon($label) {
             'filecheck' => '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/>',
             'briefcase' => '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
             'mail' => '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+            'users' => '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>',
         ];
         // Client icon set (assets/images/icons/*.png), drawn as a colour mask so it follows the menu text colour.
-        $img = ['leaf' => 'leaf.png', 'jug' => 'jug.png', 'box' => 'box.png', 'headset' => 'headset.png', 'calendar' => 'calendar.png', 'org' => 'org.png'];
+        $img = ['leaf' => 'leaf.png', 'jug' => 'jug.png', 'box' => 'box.png', 'headset' => 'headset.png', 'calendar' => 'calendar.png', 'dispenser' => 'dispenser.png', 'waves' => 'waves.png', 'pipe' => 'pipe.png'];
     }
     $map = [
-        'enzyme treatment & maintainers' => 'img:leaf', 'drain & wastewater maintenance' => 'droplet', 'hvac maintenance' => 'thermo', 'cleaning & sanitation' => 'img:jug',
-        'odor control' => 'wind', 'equipment maintenance' => 'wrench', 'grounds & seasonal maintenance' => 'tree', 'pool & water treatment' => 'waves',
-        'power distribution & transformers' => 'zap', 'electrical, lighting, cable & wire' => 'plug', 'package units & hvac' => 'img:box', 'plumbing & pvf' => 'pipe',
+        'enzyme treatment & maintainers' => 'img:leaf', 'drain & wastewater maintenance' => 'droplet', 'hvac maintenance' => 'thermo', 'cleaning & sanitation' => 'bottle',
+        'odor control' => 'img:waves', 'equipment maintenance' => 'wrench', 'grounds & seasonal maintenance' => 'tree', 'pool & water treatment' => 'waves',
+        'power distribution & transformers' => 'zap', 'electrical, lighting, cable & wire' => 'plug', 'package units & hvac' => 'wind', 'plumbing & pvf' => 'img:pipe',
         'fire & safety' => 'flame', 'safety' => 'shield',
-        'drain maintenance' => 'droplet', 'air scenting services' => 'sparkles', 'chemical supply program' => 'flask', 'dispensing systems' => 'bottle',
-        'logistics & procurement' => 'truck', 'program scheduling & management' => 'img:calendar', 'work order request and call center service' => 'img:headset',
-        'about us' => 'building', 'community & culture' => 'heart', 'certifications' => 'award', 'leadership & team' => 'img:org', 'co-ops & schedules' => 'filecheck', 'past performances' => 'briefcase', 'contact us' => 'mail',
+        'drain maintenance' => 'img:pipe', 'air scenting services' => 'sparkles', 'chemical supply program' => 'img:jug', 'dispensing systems' => 'img:dispenser',
+        'logistics & procurement' => 'img:box', 'program scheduling & management' => 'img:calendar', 'work order request and call center service' => 'img:headset',
+        'about us' => 'building', 'community & culture' => 'heart', 'certifications' => 'award', 'leadership & team' => 'users', 'co-ops & schedules' => 'filecheck', 'past performances' => 'briefcase', 'contact us' => 'mail',
         'chemical supplies' => 'layers', 'systems and infrastructure supplies' => 'gear', 'product & dispenser services' => 'layers', 'facility operations support services' => 'gear',
     ];
     $key = strtolower(html_entity_decode(trim((string) $label), ENT_QUOTES));

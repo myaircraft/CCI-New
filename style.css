@@ -1006,3 +1006,6 @@ body .ez-band .cc-b-primary:hover { background: #fff; color: #0D173A; border-col
 body .ez-band .cc-b-secondary { background: transparent; color: #fff; border-color: #fff; }
 body .ez-band .cc-b-secondary:hover { background: #fff; color: #0D173A; border-color: #fff; }
 @media (max-width: 800px) { .ez-band-side, .ez-band-meta { align-items: flex-start; text-align: left; } .ez-band-actions { justify-content: flex-start; } }
+
+/* Services hub cards: client icon above the title */
+.info-card-icon { display: block; width: 72px; height: 72px; margin: 0 auto var(--text-gap-large); object-fit: contain; }
