@@ -985,3 +985,8 @@ body :is(.hero, .category-banner, .photo-band, .ez-fit, .mobile-navigation, .sit
 .mega-column-title span { font-weight: 800; letter-spacing: .02em; color: #0D173A; }
 .mega-links a { font-size: 14px; }
 .ez-chip-img { width: 28px; height: 28px; object-fit: contain; }
+
+/* Header menu: no pointer cursor, sharp hover edges, a little more space between items */
+.primary-nav .nav-control, .primary-nav .nav-control *, .mega-menu a, .mega-menu a * { cursor: default; }
+.primary-nav .nav-control, .primary-nav .nav-control:hover, .primary-nav .nav-control[data-active=true] { border-radius: 0; }
+.primary-nav { gap: calc(var(--nav-gap) + 6px); }
