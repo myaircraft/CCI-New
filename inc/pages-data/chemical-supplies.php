@@ -59,7 +59,7 @@ $enz_def = [
                 ['icon' => 'box', 'title' => 'Convenient Sourcing', 'text' => 'Products for ongoing facility needs'],
                 ['icon' => 'calendar', 'title' => 'Routine Support', 'text' => 'Keep maintenance consistent'],
             ]],
-            'faq' => ['title' => 'Enzyme Treatment & Maintainers FAQs', 'description' => 'Answers to common selection, specification and sourcing questions.', 'image' => $enz('splash.jpg'), 'items' => [
+            'faq' => ['title' => 'Enzyme Treatment & Maintainers FAQs', 'description' => 'Answers to common selection, specification and sourcing questions.', 'items' => [
                 ['question' => 'What do enzyme maintainers do?', 'answer' => 'They use enzymes and beneficial bacteria to digest fats, oils, grease and organic matter in drains and traps, helping prevent clogs and odors.'],
                 ['question' => 'Are they safe for plumbing?', 'answer' => 'Biological maintainers are non-corrosive and plumbing-friendly. Review product labels and safety data for your application.'],
                 ['question' => 'How often should they be applied?', 'answer' => 'Frequency depends on usage and the system. Tell us about your facility and we will recommend a schedule.'],

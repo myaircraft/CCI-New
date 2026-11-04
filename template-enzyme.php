@@ -4,7 +4,6 @@
  *
  * Designed layout for Enzyme Treatment & Maintainers (client mock-up). Content comes from the page's "Page content" box.
  */
-$GLOBALS["cc_hide_final_cta"] = true;
 get_header();
 $icons = [
     'fork'     => '<path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10"></path><path d="M17 3c-2 2-3 5-3 8h3v10"></path>',
