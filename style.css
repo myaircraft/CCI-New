@@ -1040,3 +1040,7 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 @media (max-width: 1250px) { .ez-fit-photo { object-position: 58% center; } }
 @media (max-width: 1000px) { .ez-fit-photo { object-position: 65% center; } }
 .ez-fit .ez-head .ez-title { line-height: .84; }
+
+/* Enzyme work-best photo: sized by the band's height and pinned so the whole sprayer (including its foam) stays in view with space on its right */
+.ez-fit .ez-fit-photo { left: auto; right: 0; top: 0; width: auto; max-width: none; height: 100%; object-fit: fill; object-position: initial; transform: translateX(calc(17% - 70px)); }
+@media (max-width: 1000px) { .ez-fit .ez-fit-photo { transform: translateX(calc(17% - 20px)); } }
