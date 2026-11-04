@@ -1134,3 +1134,10 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 @media (max-width: 1100px) { .desktop-quote { min-width: 144px; padding-inline: 11px; } }
 @media (max-width: 900px) { .desktop-quote { min-width: 126px; padding-inline: 7px; } }
 .ez-fit .ez-head .ez-title { line-height: calc(.84em - 6px); }
+
+/* Footer links: bold on hover only, no colour change or movement; titles +1px more */
+.site-footer .footer-grid a:hover, .site-footer .footer-grid a:focus-visible,
+.site-footer .footer-col > a:hover, .site-footer .footer-subcols a:hover, .site-footer .footer-substack a:hover,
+.site-footer .footer-bottom a:hover { color: var(--muted-foreground); font-weight: 800; transform: none; }
+.site-footer .footer-grid h3 a:hover, .site-footer .footer-grid h3 a:focus-visible { color: #0D173A; transform: none; }
+@media (min-width: 768px) { .site-footer .footer-grid h3 { font-size: calc(var(--fs-caption) + 2.5px); } }
