@@ -69,23 +69,58 @@ $enz_def = [
             'related' => ['title' => 'Related Supplies', 'links' => [['label' => 'Drain & Wastewater Maintenance', 'link' => '/supplies/drain-wastewater-maintenance/'], ['label' => 'Drain Maintenance Service', 'link' => '/services/drain-services/'], ['label' => 'All Products & Supplies', 'link' => 'link:products']]],
         ],
     ];
+$drn = fn($f) => 'wp-content/themes/competitive-choice/assets/images/drain/' . $f;
+$drain_def = [
+    'title' => 'Drain & Wastewater Maintenance', 'parent' => 'supplies', 'template' => 'enzyme', 'group' => 'product', 'order' => '22',
+    'content' => [
+        'seo' => ['title' => 'Drain & Wastewater Maintenance | Competitive Choice', 'description' => 'Drain cleaners, digesters, odor neutralizers and treatment chemicals for drains, lift stations, wet wells and sewer lines. Request a quote.', 'og_title' => 'Drain & Wastewater Maintenance | Competitive Choice', 'og_description' => 'Chemicals and maintenance products for drains and wastewater systems.', 'schema_about' => 'Drain and wastewater maintenance supplies'],
+        'banner' => ['image' => $drn('hero.jpg'), 'image_alt' => 'Wastewater treatment plant channel with clear flowing water', 'title' => 'Drain & Wastewater<br>Maintenance Supplies', 'lead' => 'Products that keep drains, lift stations and collection systems<br>flowing, safe and compliant.', 'quote_label' => 'REQUEST A QUOTE', 'call_label' => 'CALL'],
+        'breadcrumb' => ['home' => 'Home', 'parent' => 'Products & Supplies', 'parent_link' => 'link:products', 'current' => 'Drain & Wastewater Maintenance'],
+        'intro' => ['kicker' => 'KEEP WATER MOVING', 'title' => 'Supplies for systems<br>that cannot back up', 'paragraphs' => ['From a single floor drain to a municipal lift station, wastewater systems need regular maintenance to stay reliable. The right products reduce buildup, control odors and cut down on emergency work.', 'Competitive Choice supplies drain and wastewater maintenance chemicals for facility teams and treatment operators, sourced for performance and ready to ship from Houston.'],
+            'steps' => [
+                ['title' => 'Buildup and Odors Develop', 'text' => 'Fats, oils, grease and organic matter collect in lines, traps and wet wells.', 'image' => $drn('step1.jpg'), 'alt' => 'Cutaway of a sewer pipe clogged with grease'],
+                ['title' => 'Treatment Goes to Work', 'text' => 'Digesters, cleaners and neutralizers break down buildup and control odors at the source.', 'image' => $drn('step2.jpg'), 'alt' => 'Pouring treatment into a wet well'],
+                ['title' => 'Systems Keep Flowing', 'text' => 'Routine maintenance keeps lines clear, cuts callouts and avoids emergency work.', 'image' => $drn('step3.jpg'), 'alt' => 'Clean sewer pipe with water flowing freely'],
+            ]],
+        'solutions' => ['kicker' => 'OUR SOLUTIONS', 'title' => 'Drain & Wastewater Products We Supply', 'description' => 'A focused range for facilities and treatment operations.', 'items' => [
+            ['title' => 'Grease Digesters', 'text' => 'Products that break down fats, oils and grease in lines, traps and wet wells.', 'image' => $drn('card1.jpg'), 'alt' => 'Grease digester treatment at an outdoor grease interceptor'],
+            ['title' => 'Drain Openers & Cleaners', 'text' => 'Formulations for clearing and maintaining drain lines in routine and urgent situations.', 'image' => $drn('card2.jpg'), 'alt' => 'Pouring drain cleaner into a floor drain'],
+            ['title' => 'Odor Neutralizers', 'text' => 'Neutralizers for lift stations, sewer lines and pump stations.', 'image' => $drn('card3.jpg'), 'alt' => 'Worker applying odor neutralizer at a lift station'],
+            ['title' => 'Disinfectants & Treatments', 'text' => 'Disinfectants and treatment chemicals for plants and collection systems.', 'image' => $drn('card4.jpg'), 'alt' => 'Chemical room at a water treatment plant'],
+            ['title' => 'Dosing Equipment', 'text' => 'Feed pumps, sprayers and dispensers for consistent treatment.', 'image' => $drn('card5.jpg'), 'alt' => 'Chemical dosing pump and sprayer'],
+        ]],
+        'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where These Products<br>Are Used', 'description' => 'Facilities and operators who keep water moving.', 'image' => $drn('band.jpg'), 'image_alt' => 'Sewer lift station with an open manhole and a pump sprayer', 'tagline' => 'Clear Lines. Fewer Callouts. Safer Systems.', 'items' => [
+            ['icon' => 'building', 'icon_img' => $ico('drain.png'), 'title' => 'Water & Wastewater Plants', 'text' => 'Maintenance chemicals for plants, lift stations and wet wells.'],
+            ['icon' => 'building', 'icon_img' => $enz('icon-building.png'), 'title' => 'Facilities & Campuses', 'text' => 'Floor drains, restrooms and utility lines across large buildings.'],
+            ['icon' => 'fork', 'icon_img' => $enz('icon-fork.png'), 'title' => 'Food Service & Healthcare', 'text' => 'High-use drains that need dependable, preventive treatment.'],
+        ]],
+        'process' => ['kicker' => 'A SIMPLE 4-STEP PROCESS', 'title' => 'Your Drain Maintenance Plan, Made Simple', 'description' => 'From identifying problem lines to selecting the right products and keeping a steady maintenance routine, Competitive Choice helps simplify every step.', 'items' => [
+            ['title' => 'Tell Us Where Problems Start', 'text' => 'Share the drains, lift stations, traps or sewer lines causing backups or odors.'],
+            ['title' => 'We Recommend Products', 'text' => 'We match digesters, cleaners and neutralizers to your system and usage.'],
+            ['title' => 'Receive Your Quote', 'text' => 'Clear pricing for products and any dosing equipment, with safety information included.'],
+            ['title' => 'Ongoing Replenishment', 'text' => 'We deliver on a schedule that follows your usage so treatment never lapses.'],
+        ]],
+        'why' => ['title' => 'Why Choose CCI for Drain & Wastewater Maintenance?', 'description' => 'From floor drains to lift stations, we help facility teams and operators source products that fit their systems and day-to-day operations.', 'items' => [
+            ['icon' => 'sliders', 'title' => 'Product Selection', 'text' => 'Solutions matched to your system'],
+            ['icon' => 'shield', 'title' => 'Preventive Focus', 'text' => 'Help cut emergency callouts'],
+            ['icon' => 'box', 'title' => 'Convenient Sourcing', 'text' => 'Products for ongoing needs'],
+            ['icon' => 'calendar', 'title' => 'Routine Support', 'text' => 'Keep maintenance consistent'],
+        ]],
+        'faq' => ['title' => 'Drain & Wastewater Maintenance FAQs', 'description' => 'Answers to common selection, specification and sourcing questions.', 'items' => [
+            ['question' => 'What products do you supply for wastewater maintenance?', 'answer' => 'Grease digesters, odor neutralizers, drain cleaners, disinfectants and related treatment chemicals for facilities and plants.'],
+            ['question' => 'Can you support lift stations?', 'answer' => 'Yes. We supply products used in lift stations, wet wells and sewer lines. Share your application and we will recommend suitable options.'],
+            ['question' => 'Do you also offer drain care services?', 'answer' => 'Yes. Our Drain Maintenance service provides preventive treatment programs. See the Services menu.'],
+            ['question' => 'How do I choose between a digester and a cleaner?', 'answer' => 'Digesters work on buildup over time, while cleaners clear active blockages. Tell us the problem and we will recommend the right product.'],
+            ['question' => 'How do I request a quote?', 'answer' => 'Send your product list with quantities, facility type and delivery location. Availability and delivery timing are confirmed during quotation.'],
+        ]],
+        'related' => ['title' => 'Related Supplies', 'links' => [['label' => 'Enzyme Treatment & Maintainers', 'link' => '/supplies/enzyme-treatment-maintainers/'], ['label' => 'Drain Maintenance Service', 'link' => '/services/drain-services/'], ['label' => 'All Products & Supplies', 'link' => 'link:products']]],
+    ],
+];
+
 return [
     'enzyme-treatment-maintainers' => $enz_def,
 
-    'drain-wastewater-maintenance' => $build('drain-wastewater-maintenance', 22, [
-        'title' => 'Drain & Wastewater Maintenance', 'image' => 'chem-drain-banner-v4.jpg',
-        'seo' => 'Drain cleaners, digesters, odor neutralizers and treatment chemicals for drains, lift stations, wet wells and sewer lines. Request a quote.',
-        'og' => 'Chemicals and maintenance products for drains and wastewater systems.',
-        'banner' => 'Drain & Wastewater Maintenance Supplies', 'lead' => 'Products that keep drains, lift stations and collection systems flowing, safe and compliant.',
-        'overview_title' => 'Supplies for systems that cannot afford to back up',
-        'overview' => ['From a single floor drain to a municipal lift station, wastewater systems need regular maintenance to stay reliable. The right products reduce buildup, control odors and cut down on emergency work.', 'Competitive Choice supplies drain and wastewater maintenance chemicals for facility teams and treatment operators, sourced for performance and ready to ship from Houston.'],
-        'equip_title' => 'Drain and wastewater products we supply', 'equip_desc' => 'A focused range for facilities and treatment operations.',
-        'equip' => [['Grease Digesters', 'Products that break down fats, oils and grease in lines, traps and wet wells.'], ['Drain Openers & Cleaners', 'Formulations for clearing and maintaining drain lines in routine and urgent situations.'], ['Odor Neutralizers', 'Neutralizers for lift stations, sewer lines and pump stations.'], ['Disinfectants & Treatments', 'Disinfectants and treatment chemicals for plants and collection systems.']],
-        'apps_title' => 'Where these products are used', 'apps_desc' => 'Facilities and operators who keep water moving.',
-        'apps' => [['Water & wastewater plants', 'Maintenance chemicals for plants, lift stations and wet wells.'], ['Facilities & campuses', 'Floor drains, restrooms and utility lines across large buildings.'], ['Food service & healthcare', 'High-use drains that need dependable, preventive treatment.']],
-        'faq' => [['What products do you supply for wastewater maintenance?', 'Grease digesters, odor neutralizers, drain cleaners, disinfectants and related treatment chemicals for facilities and plants.'], ['Can you support lift stations?', 'Yes. We supply products used in lift stations, wet wells and sewer lines. Share your application and we will recommend suitable options.'], ['Do you also offer drain care services?', 'Yes. Our Drain Maintenance service provides preventive treatment programs. See the Services menu.'], $quote],
-        'related' => [['Enzyme Treatment & Maintainers', $cc('enzyme-treatment-maintainers')], ['Drain & Wastewater Maintenance', $cc('drain-wastewater-maintenance')]],
-    ]),
+    'drain-wastewater-maintenance' => $drain_def,
 
     'hvac-maintenance' => $build('hvac-maintenance', 23, [
         'title' => 'HVAC Maintenance', 'image' => 'chem-hvac-banner-v4.jpg',
