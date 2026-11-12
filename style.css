@@ -1157,3 +1157,6 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .ez-steps3 li + li::before { left: -1.9rem; }
 @media (max-width: 800px) { .ez-steps3 h3, .ez-steps3 p { min-height: 0; } }
 .ez-steps3 h3 { min-height: 2.2em; margin-bottom: .1rem; }
+/* Intro block sits closer to the header banner */
+.ez-section.ez-intro { padding-top: 2.75rem; }
+@media (max-width: 800px) { .ez-section.ez-intro { padding-top: 2rem; } }
