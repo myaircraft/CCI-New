@@ -49,7 +49,7 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
   </div></section>
 
   <section class="ez-fit" aria-labelledby="ez-fit-title">
-    <?php if (cc_page_has('fit.image')) : ?><img class="ez-fit-photo" src="<?php echo esc_url(cc_img(cc_page('fit.image'))); ?>" alt="<?php echo esc_attr(cc_page('fit.image_alt')); ?>" width="1920" height="823" loading="lazy" decoding="async"><?php endif; ?>
+    <?php if (cc_page_has('fit.image')) : ?><img class="ez-fit-photo" <?php if (cc_page_has('fit.shift')) : ?>style="transform:translateX(<?php echo esc_attr(cc_page('fit.shift')); ?>)" <?php endif; ?>src="<?php echo esc_url(cc_img(cc_page('fit.image'))); ?>" alt="<?php echo esc_attr(cc_page('fit.image_alt')); ?>" width="1920" height="823" loading="lazy" decoding="async"><?php endif; ?>
     <div class="site-container ez-fit-content">
       <div class="ez-head is-center"><p class="ez-kicker is-on-dark"><?php cc_page_e('fit.kicker'); ?></p><h2 id="ez-fit-title" class="ez-title is-on-dark"><?php echo cc_html(cc_page('fit.title')); ?></h2><p class="ez-sub is-on-dark"><?php cc_page_e('fit.description'); ?></p></div>
       <div class="ez-fit-grid"><div class="ez-fit-items"><?php foreach (cc_page_list('fit.items') as $it) : ?>

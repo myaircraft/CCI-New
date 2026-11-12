@@ -89,7 +89,7 @@ $drain_def = [
             ['title' => 'Disinfectants & Treatments', 'text' => 'Disinfectants and treatment chemicals for plants and collection systems.', 'image' => $drn('card4.jpg'), 'alt' => 'Chemical room at a water treatment plant'],
             ['title' => 'Dosing Equipment', 'text' => 'Feed pumps, sprayers and dispensers for consistent treatment.', 'image' => $drn('card5.jpg'), 'alt' => 'Chemical dosing pump and sprayer'],
         ]],
-        'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where These Products<br>Are Used', 'description' => 'Facilities and operators who keep water moving.', 'image' => $drn('band.jpg'), 'image_alt' => 'Sewer lift station with an open manhole and a pump sprayer', 'tagline' => 'Clear Lines. Fewer Callouts. Safer Systems.', 'items' => [
+        'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where These Products<br>Are Used', 'description' => 'Facilities and operators who keep water moving.', 'image' => $drn('band.jpg'), 'shift' => '0px', 'image_alt' => 'Sewer lift station with an open manhole and a pump sprayer', 'tagline' => 'Clear Lines. Fewer Callouts. Safer Systems.', 'items' => [
             ['icon' => 'building', 'icon_img' => $ico('drain.png'), 'title' => 'Water & Wastewater Plants', 'text' => 'Maintenance chemicals for plants, lift stations and wet wells.'],
             ['icon' => 'building', 'icon_img' => $enz('icon-building.png'), 'title' => 'Facilities & Campuses', 'text' => 'Floor drains, restrooms and utility lines across large buildings.'],
             ['icon' => 'fork', 'icon_img' => $enz('icon-fork.png'), 'title' => 'Food Service & Healthcare', 'text' => 'High-use drains that need dependable, preventive treatment.'],
