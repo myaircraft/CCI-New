@@ -1145,3 +1145,6 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .ez-fit-items.has-4 { grid-template-columns: repeat(4, 1fr); max-width: 980px; gap: 1.75rem; }
 @media (max-width: 1000px) { .ez-fit-items.has-4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 800px) { .ez-fit-items.has-4 { grid-template-columns: 1fr; } }
+/* Related links on the designed pages use the brand navy */
+.ez-page .ez-related .category-related-links a, .ez-page .ez-related .category-related-links a:hover { color: #0D173A; }
+.ez-page .ez-related .ez-title, .ez-page .ez-related .ez-kicker { color: #0D173A; }
