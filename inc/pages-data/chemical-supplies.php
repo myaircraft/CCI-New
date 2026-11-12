@@ -39,7 +39,7 @@ $enz_def = [
                 ['title' => 'Drain Maintainers', 'text' => 'Bio-enzymatic liquids and gels that prevent drain buildup.', 'image' => $enz('card1.jpg'), 'alt' => 'Pouring a bio-enzymatic drain maintainer into a floor drain'],
                 ['title' => 'Grease Trap Treatments', 'text' => 'Bacterial treatments that digest FOG before it reaches the outlet.', 'image' => $enz('card2.jpg'), 'alt' => 'Technician treating an outdoor grease trap'],
                 ['title' => 'Odor-Digesting Enzymes', 'text' => 'Products that eliminate odors at the source.', 'image' => $enz('card3.jpg'), 'alt' => 'Applying an odor-digesting enzyme spray in a restroom'],
-                ['title' => 'Application Equipment', 'text' => 'Dosing tools & dispensers for consistent treatment.', 'image' => $enz('card4-use.jpg'), 'alt' => 'Worker applying enzyme treatment around a kitchen floor drain with a pump sprayer'],
+                ['title' => 'Application Equipment', 'text' => 'Dosing tools & dispensers for consistent treatment.', 'image' => $enz('card4-prod.jpg'), 'alt' => 'Pump sprayer and wall-mounted two-bottle dispenser'],
                 ['title' => 'Related Chemicals', 'text' => 'Cleaners and maintainers for complete drain care.', 'image' => $enz('card5.jpg'), 'alt' => 'Shelf of facility cleaning chemicals'],
             ]],
             'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where Enzyme<br>Maintainers Work Best', 'description' => 'Facilities with heavy use and organic waste.', 'image' => $enz('band.jpg'), 'image_alt' => 'Pump sprayer applying enzyme foam to a floor drain in a commercial kitchen', 'tagline' => 'Cleaner Systems. Fewer Interruptions. Happier Facilities.', 'items' => [
@@ -87,7 +87,7 @@ $drain_def = [
             ['title' => 'Drain Openers & Cleaners', 'text' => 'Formulations for clearing and maintaining drain lines in routine and urgent situations.', 'image' => $drn('card2.jpg'), 'alt' => 'Pouring drain cleaner into a floor drain'],
             ['title' => 'Odor Neutralizers', 'text' => 'Neutralizers for lift stations, sewer lines and pump stations.', 'image' => $drn('card3.jpg'), 'alt' => 'Worker applying odor neutralizer at a lift station'],
             ['title' => 'Disinfectants & Treatments', 'text' => 'Disinfectants and treatment chemicals for plants and collection systems.', 'image' => $drn('card4.jpg'), 'alt' => 'Chemical room at a water treatment plant'],
-            ['title' => 'Dosing Equipment', 'text' => 'Feed pumps, sprayers and dispensers for consistent treatment.', 'image' => $drn('card5.jpg'), 'alt' => 'Chemical dosing pump and sprayer'],
+            ['title' => 'Dosing Equipment', 'text' => 'Feed pumps, sprayers and dispensers for consistent treatment.', 'image' => $drn('card5-prod.jpg'), 'alt' => 'Chemical dosing pump, feed controller and pump sprayer'],
         ]],
         'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where These Products<br>Are Used', 'description' => 'Facilities and operators who keep water moving.', 'image' => $drn('band.jpg'), 'shift' => '0px', 'image_alt' => 'Sewer lift station with an open manhole and a pump sprayer', 'tagline' => 'Clear Lines. Fewer Callouts. Safer Systems.', 'items' => [
             ['icon' => 'building', 'icon_img' => $ico('drain.png'), 'title' => 'Water & Wastewater Plants', 'text' => 'Maintenance chemicals for plants, lift stations and wet wells.'],
@@ -136,7 +136,7 @@ $hvac_def = [
             ['title' => 'Condensate & Drain Pan Treatments', 'text' => 'Tablets and liquids that help prevent slime, odors and clogged lines.', 'image' => $hv('card2.jpg'), 'alt' => 'Condensate pan treatment tablet in a drain pan'],
             ['title' => 'Corrosion Inhibitors', 'text' => 'Protective treatments that help extend the life of coils and metal parts.', 'image' => $hv('card3.jpg'), 'alt' => 'Applying a protective coating to HVAC coil fins'],
             ['title' => 'Deodorizers & Sanitizers', 'text' => 'Products that freshen and sanitize air-handling components.', 'image' => $hv('card4.jpg'), 'alt' => 'Sanitizing the inside of an air handler'],
-            ['title' => 'Application Equipment', 'text' => 'Sprayers and tools for consistent coil and pan treatment.', 'image' => $hv('card5-use.jpg'), 'alt' => 'Technician applying treatment to a rooftop HVAC coil with a pump sprayer'],
+            ['title' => 'Application Equipment', 'text' => 'Sprayers and tools for consistent coil and pan treatment.', 'image' => $hv('card5-prod.jpg'), 'alt' => 'Pump sprayer, foaming spray gun and coil fin comb'],
         ]],
         'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where HVAC Maintenance<br>Supplies Matter', 'description' => 'Buildings that rely on dependable airflow and comfort.', 'image' => $hv('band.jpg'), 'image_alt' => 'Rooftop HVAC units with a pump sprayer', 'shift' => '0px', 'tagline' => 'Cleaner Coils. Clear Drains. Longer Equipment Life.', 'items' => [
             ['icon' => 'plus', 'icon_img' => $enz('icon-plus.png'), 'title' => 'Hospitals & Schools', 'text' => 'Large systems where air quality and uptime are critical.'],
