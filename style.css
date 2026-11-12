@@ -1141,3 +1141,7 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .site-footer .footer-bottom a:hover { color: var(--muted-foreground); font-weight: 800; transform: none; }
 .site-footer .footer-grid h3 a:hover, .site-footer .footer-grid h3 a:focus-visible { color: #0D173A; transform: none; }
 @media (min-width: 768px) { .site-footer .footer-grid h3 { font-size: calc(var(--fs-caption) + 2.5px); } }
+/* "Where used" band with four items */
+.ez-fit-items.has-4 { grid-template-columns: repeat(4, 1fr); max-width: 980px; gap: 1.75rem; }
+@media (max-width: 1000px) { .ez-fit-items.has-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 800px) { .ez-fit-items.has-4 { grid-template-columns: 1fr; } }
