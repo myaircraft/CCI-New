@@ -1148,3 +1148,11 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 /* Related links on the designed pages use the brand navy */
 .ez-page .ez-related .category-related-links a, .ez-page .ez-related .category-related-links a:hover { color: #0D173A; }
 .ez-page .ez-related .ez-title, .ez-page .ez-related .ez-kicker { color: #0D173A; }
+
+/* Intro steps: three equal columns with even gaps, matching text widths and balanced line breaks */
+.ez-steps3 { gap: 2.75rem; max-width: 1000px; align-items: start; }
+.ez-steps3 li { padding-inline: .5rem; }
+.ez-steps3 h3 { min-height: 2.5em; display: flex; align-items: flex-start; justify-content: center; text-align: center; text-wrap: balance; margin-bottom: .6rem; }
+.ez-steps3 p { max-width: 25ch; margin-inline: auto; text-align: center; text-wrap: balance; line-height: 1.45; min-height: 4.4em; }
+.ez-steps3 li + li::before { left: -1.9rem; }
+@media (max-width: 800px) { .ez-steps3 h3, .ez-steps3 p { min-height: 0; } }
