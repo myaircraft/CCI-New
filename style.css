@@ -1156,3 +1156,4 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .ez-steps3 p { max-width: 25ch; margin-inline: auto; text-align: center; text-wrap: balance; line-height: 1.45; min-height: 4.4em; }
 .ez-steps3 li + li::before { left: -1.9rem; }
 @media (max-width: 800px) { .ez-steps3 h3, .ez-steps3 p { min-height: 0; } }
+.ez-steps3 h3 { min-height: 2.2em; margin-bottom: .1rem; }
