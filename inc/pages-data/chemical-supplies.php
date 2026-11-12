@@ -118,25 +118,60 @@ $drain_def = [
     ],
 ];
 
+$hv = fn($f) => 'wp-content/themes/competitive-choice/assets/images/hvac/' . $f;
+$hvac_def = [
+    'title' => 'HVAC Maintenance', 'parent' => 'supplies', 'template' => 'enzyme', 'group' => 'product', 'order' => '23',
+    'content' => [
+        'seo' => ['title' => 'HVAC Maintenance | Competitive Choice', 'description' => 'Coil cleaners, condensate treatments, corrosion inhibitors and deodorizers that protect HVAC efficiency and extend equipment life. Request a quote.', 'og_title' => 'HVAC Maintenance | Competitive Choice', 'og_description' => 'HVAC maintenance chemicals that protect performance and equipment life.', 'schema_about' => 'HVAC maintenance chemicals and supplies'],
+        'banner' => ['image' => $hv('hero.jpg'), 'image_alt' => 'Rooftop HVAC package units on a commercial building', 'title' => 'HVAC Maintenance<br>Chemicals & Supplies', 'lead' => 'Cleaners and treatments that keep coils, drain pans<br>and systems running efficiently.', 'quote_label' => 'REQUEST A QUOTE', 'call_label' => 'CALL'],
+        'breadcrumb' => ['home' => 'Home', 'parent' => 'Products & Supplies', 'parent_link' => 'link:products', 'current' => 'HVAC Maintenance'],
+        'intro' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Protect efficiency<br>where it starts', 'paragraphs' => ['Dirty coils, slimy drain pans and corrosion quietly raise energy costs and shorten equipment life. Regular maintenance with the right chemistry keeps systems running as designed.', 'Competitive Choice supplies HVAC maintenance chemicals for facility teams and mechanical contractors, selected for performance on commercial equipment and for safe, practical handling.'],
+            'steps' => [
+                ['title' => 'Buildup Slows the System', 'text' => 'Dust, slime and corrosion collect on coils and in drain pans.', 'image' => $hv('step1.jpg'), 'alt' => 'Dirty HVAC coil clogged with dust and buildup'],
+                ['title' => 'Treatment Restores Flow', 'text' => 'Coil cleaners and pan treatments remove buildup and protect metal surfaces.', 'image' => $hv('step2.jpg'), 'alt' => 'Applying foaming coil cleaner to a condenser coil'],
+                ['title' => 'Systems Run Efficiently', 'text' => 'Clean coils and clear drains support airflow, comfort and equipment life.', 'image' => $hv('step3.jpg'), 'alt' => 'Clean HVAC coil and condensate pan'],
+            ]],
+        'solutions' => ['kicker' => 'OUR SOLUTIONS', 'title' => 'HVAC Maintenance Products We Supply', 'description' => 'Chemistry for the components that matter most.', 'items' => [
+            ['title' => 'Coil Cleaners', 'text' => 'Foaming and no-rinse cleaners that remove dirt and buildup from coils.', 'image' => $hv('card1.jpg'), 'alt' => 'Foaming coil cleaner on a rooftop condenser coil'],
+            ['title' => 'Condensate & Drain Pan Treatments', 'text' => 'Tablets and liquids that help prevent slime, odors and clogged lines.', 'image' => $hv('card2.jpg'), 'alt' => 'Condensate pan treatment tablet in a drain pan'],
+            ['title' => 'Corrosion Inhibitors', 'text' => 'Protective treatments that help extend the life of coils and metal parts.', 'image' => $hv('card3.jpg'), 'alt' => 'Applying a protective coating to HVAC coil fins'],
+            ['title' => 'Deodorizers & Sanitizers', 'text' => 'Products that freshen and sanitize air-handling components.', 'image' => $hv('card4.jpg'), 'alt' => 'Sanitizing the inside of an air handler'],
+            ['title' => 'Application Equipment', 'text' => 'Sprayers and tools for consistent coil and pan treatment.', 'image' => $hv('card5.jpg'), 'alt' => 'Pump sprayer and coil maintenance tools'],
+        ]],
+        'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where HVAC Maintenance<br>Supplies Matter', 'description' => 'Buildings that rely on dependable airflow and comfort.', 'image' => $hv('band.jpg'), 'image_alt' => 'Rooftop HVAC units with a pump sprayer', 'shift' => '0px', 'tagline' => 'Cleaner Coils. Clear Drains. Longer Equipment Life.', 'items' => [
+            ['icon' => 'plus', 'icon_img' => $enz('icon-plus.png'), 'title' => 'Hospitals & Schools', 'text' => 'Large systems where air quality and uptime are critical.'],
+            ['icon' => 'building', 'icon_img' => $enz('icon-building.png'), 'title' => 'Government & Commercial Buildings', 'text' => 'Rooftop and package units that need routine care.'],
+            ['icon' => 'building', 'icon_img' => $ico('equipment.png'), 'title' => 'Mechanical Contractors', 'text' => 'Reliable supplies for scheduled preventive maintenance.'],
+        ]],
+        'process' => ['kicker' => 'A SIMPLE 4-STEP PROCESS', 'title' => 'Your HVAC Maintenance Plan, Made Simple', 'description' => 'From identifying problem units to selecting the right products and keeping a steady maintenance routine, Competitive Choice helps simplify every step.', 'items' => [
+            ['title' => 'Tell Us About Your Equipment', 'text' => 'Share the unit types, coils or drain pans that need attention and how often they run.'],
+            ['title' => 'We Recommend Products', 'text' => 'We match cleaners, treatments and inhibitors to your equipment and usage.'],
+            ['title' => 'Receive Your Quote', 'text' => 'Clear pricing for products and any application equipment, with safety information included.'],
+            ['title' => 'Ongoing Replenishment', 'text' => 'We deliver on a schedule that follows your maintenance calendar so supplies never run out.'],
+        ]],
+        'why' => ['title' => 'Why Choose CCI for HVAC Maintenance?', 'description' => 'From rooftop units to air handlers, we help facility teams and contractors source products that fit their equipment and day-to-day operations.', 'items' => [
+            ['icon' => 'sliders', 'title' => 'Product Selection', 'text' => 'Solutions matched to your equipment'],
+            ['icon' => 'shield', 'title' => 'Preventive Focus', 'text' => 'Protect coils and metal surfaces'],
+            ['icon' => 'box', 'title' => 'Convenient Sourcing', 'text' => 'Products for ongoing needs'],
+            ['icon' => 'calendar', 'title' => 'Routine Support', 'text' => 'Keep maintenance consistent'],
+        ]],
+        'faq' => ['title' => 'HVAC Maintenance FAQs', 'description' => 'Answers to common selection, specification and sourcing questions.', 'items' => [
+            ['question' => 'What HVAC maintenance products do you supply?', 'answer' => 'Coil cleaners, drain pan and condensate treatments, corrosion inhibitors and deodorizers for commercial HVAC equipment.'],
+            ['question' => 'Can you supply equipment as well?', 'answer' => 'Yes. See our Package Units & HVAC category for equipment sourcing.'],
+            ['question' => 'Are products safe for coils?', 'answer' => 'Products are selected for use on commercial coils. Confirm compatibility with your equipment manufacturer.'],
+            ['question' => 'How often should coils and drain pans be treated?', 'answer' => 'It depends on the equipment, the environment and how heavily it runs. Tell us about your facility and we will recommend a schedule.'],
+            ['question' => 'How do I request a quote?', 'answer' => 'Send your product list with quantities, facility type and delivery location. Availability and delivery timing are confirmed during quotation.'],
+        ]],
+        'related' => ['title' => 'Related Supplies', 'links' => [['label' => 'Package Units & HVAC', 'link' => '/supplies/hvac-package-units/'], ['label' => 'Odor Control', 'link' => '/supplies/odor-control-supplies/'], ['label' => 'All Products & Supplies', 'link' => 'link:products']]],
+    ],
+];
+
 return [
     'enzyme-treatment-maintainers' => $enz_def,
 
     'drain-wastewater-maintenance' => $drain_def,
 
-    'hvac-maintenance' => $build('hvac-maintenance', 23, [
-        'title' => 'HVAC Maintenance', 'image' => 'chem-hvac-banner-v4.jpg',
-        'seo' => 'Coil cleaners, condensate treatments, corrosion inhibitors and filters-care chemicals that protect HVAC efficiency and extend equipment life. Request a quote.',
-        'og' => 'HVAC maintenance chemicals that protect performance and equipment life.',
-        'banner' => 'HVAC Maintenance Chemicals & Supplies', 'lead' => 'Cleaners and treatments that keep coils, drain pans and systems running efficiently.',
-        'overview_title' => 'Protect efficiency where it starts',
-        'overview' => ['Dirty coils, slimy drain pans and corrosion quietly raise energy costs and shorten equipment life. Regular maintenance with the right chemistry keeps systems running as designed.', 'Competitive Choice supplies HVAC maintenance chemicals for facility teams and mechanical contractors, selected for performance on commercial equipment and for safe, practical handling.'],
-        'equip_title' => 'HVAC maintenance products we supply', 'equip_desc' => 'Chemistry for the components that matter most.',
-        'equip' => [['Coil Cleaners', 'Foaming and no-rinse cleaners that remove dirt and buildup from evaporator and condenser coils.'], ['Condensate & Drain Pan Treatments', 'Tablets and liquids that help prevent slime, odors and clogged condensate lines.'], ['Corrosion Inhibitors', 'Protective treatments that help extend the life of coils and metal components.'], ['Deodorizers & Sanitizers', 'Products that freshen and sanitize air-handling components.']],
-        'apps_title' => 'Where HVAC maintenance supplies matter', 'apps_desc' => 'Buildings that rely on dependable airflow and comfort.',
-        'apps' => [['Hospitals & schools', 'Large systems where air quality and uptime are critical.'], ['Government & commercial buildings', 'Rooftop and package units that need routine care.'], ['Mechanical contractors', 'Reliable supplies for scheduled preventive maintenance.']],
-        'faq' => [['What HVAC maintenance products do you supply?', 'Coil cleaners, drain pan and condensate treatments, corrosion inhibitors and deodorizers for commercial HVAC equipment.'], ['Can you supply equipment as well?', 'Yes. See our HVAC & Package Units category for equipment sourcing.'], ['Are products safe for coils?', 'Products are selected for use on commercial coils. Confirm compatibility with your equipment manufacturer.'], $quote],
-        'related' => [['Package Units & HVAC', $cc('hvac-package-units')], ['Odor Control', $cc('odor-control-supplies')]],
-    ]),
+    'hvac-maintenance' => $hvac_def,
 
     'odor-control-supplies' => $build('odor-control-supplies', 25, [
         'title' => 'Odor Control', 'image' => 'chem-odor-banner-v4.jpg',
