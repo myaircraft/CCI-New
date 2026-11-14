@@ -1160,3 +1160,6 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 /* Intro block sits closer to the header banner */
 .ez-section.ez-intro { padding-top: 2.75rem; }
 @media (max-width: 800px) { .ez-section.ez-intro { padding-top: 2rem; } }
+/* Intro step arrows sit at a fixed height beside the circle images, so they line up whatever the text length */
+.ez-steps3 li + li::before { top: 118px; }
+@media (max-width: 800px) { .ez-steps3 li + li::before { display: none; } }
