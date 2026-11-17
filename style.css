@@ -1195,3 +1195,6 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 .ez-section.ez-inquiry { padding-top: 2.2rem; }
 .ez-section:has(+ .ez-inquiry) { padding-bottom: 2.2rem; }
 .ez-section.ez-intro:has(.is-text-only) { padding-bottom: 2.75rem; }
+/* Less empty space between the inquiry block and the FAQ */
+.ez-section.ez-inquiry:has(+ .ez-faq) { padding-bottom: 2.75rem; }
+.ez-section.ez-inquiry + .ez-faq { padding-top: 2.75rem; }
