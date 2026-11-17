@@ -44,7 +44,8 @@ $enz_def = [
             ]],
             'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where Enzyme<br>Maintainers Work Best', 'description' => 'Facilities with heavy use and organic waste.', 'image' => $enz('band.jpg'), 'image_alt' => 'Pump sprayer applying enzyme foam to a floor drain in a commercial kitchen', 'tagline' => 'Cleaner Systems. Fewer Interruptions. Happier Facilities.', 'items' => [
                 ['icon' => 'fork', 'icon_img' => $enz('icon-fork.png'), 'title' => 'Kitchens & Food Service', 'text' => 'Grease-heavy drains and traps that need regular preventive treatment.'],
-                ['icon' => 'plus', 'icon_img' => $enz('icon-plus.png'), 'title' => 'Healthcare & Education', 'text' => 'Restrooms, utility sinks and floor drains in high-use buildings.'],
+                ['icon' => 'plus', 'icon_img' => $enz('icon-plus.png'), 'title' => 'Healthcare', 'text' => 'Restrooms, utility sinks and floor drains in clinics and hospitals.'],
+                ['icon' => 'building', 'icon_img' => $ico('school.png'), 'title' => 'Education', 'text' => 'Restrooms, utility sinks and floor drains across busy campuses.'],
                 ['icon' => 'building', 'icon_img' => $enz('icon-building.png'), 'title' => 'Municipal & Commercial', 'text' => 'Lift stations, restrooms and facilities managing odors and blockages.'],
             ]],
             'process' => ['kicker' => 'A SIMPLE 4-STEP PROCESS', 'title' => 'Your Enzyme Treatment Plan, Made Simple', 'description' => 'From identifying problem drains to selecting the right products and maintaining a consistent treatment routine, Competitive Choice helps simplify every step.', 'items' => [
@@ -139,7 +140,8 @@ $hvac_def = [
             ['title' => 'Application Equipment', 'text' => 'Sprayers and tools for consistent coil and pan treatment.', 'image' => $hv('card5-prod.jpg'), 'alt' => 'Pump sprayer, foaming spray gun and coil fin comb'],
         ]],
         'fit' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Where HVAC Maintenance<br>Supplies Matter', 'description' => 'Buildings that rely on dependable airflow and comfort.', 'image' => $hv('band.jpg'), 'image_alt' => 'Rooftop HVAC units with a pump sprayer', 'shift' => '0px', 'tagline' => 'Cleaner Coils. Clear Drains. Longer Equipment Life.', 'items' => [
-            ['icon' => 'plus', 'icon_img' => $enz('icon-plus.png'), 'title' => 'Hospitals & Schools', 'text' => 'Large systems where air quality and uptime are critical.'],
+            ['icon' => 'plus', 'icon_img' => $enz('icon-plus.png'), 'title' => 'Hospitals', 'text' => 'Large systems where air quality and uptime are critical.'],
+            ['icon' => 'building', 'icon_img' => $ico('school.png'), 'title' => 'Schools', 'text' => 'Classroom and campus systems that need steady airflow and comfort.'],
             ['icon' => 'building', 'icon_img' => $enz('icon-building.png'), 'title' => 'Government & Commercial Buildings', 'text' => 'Rooftop and package units that need routine care.'],
             ['icon' => 'building', 'icon_img' => $ico('equipment.png'), 'title' => 'Mechanical Contractors', 'text' => 'Reliable supplies for scheduled preventive maintenance.'],
         ]],
