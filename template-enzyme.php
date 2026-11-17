@@ -70,14 +70,6 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
     <?php endforeach; ?></ol>
     </div></section>
 
-  <?php if (cc_page_has('inquiry.title')) : ?>
-  <section class="ez-section ez-inquiry" aria-labelledby="ez-inquiry-title"><div class="site-container">
-    <div class="ez-head is-center"><h2 id="ez-inquiry-title" class="ez-title"><?php echo esc_html(cc_page('inquiry.title')); ?></h2><?php foreach (cc_page_list('inquiry.paragraphs') as $p) : ?><p class="ez-sub"><?php echo esc_html($p); ?></p><?php endforeach; ?></div>
-    <p class="ez-kicker ez-checklist-title"><?php cc_page_e('inquiry.checklist_title'); ?></p>
-    <div class="ez-checklist"><?php foreach (cc_page_list('inquiry.items') as $d) : ?><div><h3><?php echo esc_html($d['title'] ?? ''); ?></h3><p><?php echo esc_html($d['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
-    <div class="ez-cta"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('inquiry.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div>
-  </div></section>
-  <?php else : ?>
   <section class="ez-band" aria-labelledby="ez-band-title"><div class="site-container ez-band-grid">
     <div class="ez-band-copy"><h2 id="ez-band-title"><?php echo cc_html(cc_content('footer.cta_title')); ?></h2><p><?php cc_e('footer.cta_text'); ?></p></div>
     <div class="ez-band-side">
@@ -87,6 +79,14 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
       </div>
       <p class="ez-band-meta"><?php echo esc_html(cc_content('company.hours_days') . ' · ' . cc_content('company.hours_time')); ?><br><a href="mailto:<?php echo esc_attr(cc_content('company.email')); ?>"><?php cc_e('company.email'); ?></a></p>
     </div>
+  </div></section>
+
+  <?php if (cc_page_has('inquiry.title')) : ?>
+  <section class="ez-section ez-inquiry" aria-labelledby="ez-inquiry-title"><div class="site-container">
+    <div class="ez-head is-center"><h2 id="ez-inquiry-title" class="ez-title"><?php echo esc_html(cc_page('inquiry.title')); ?></h2><?php foreach (cc_page_list('inquiry.paragraphs') as $p) : ?><p class="ez-sub"><?php echo esc_html($p); ?></p><?php endforeach; ?></div>
+    <p class="ez-kicker ez-checklist-title"><?php cc_page_e('inquiry.checklist_title'); ?></p>
+    <div class="ez-checklist"><?php foreach (cc_page_list('inquiry.items') as $d) : ?><div><h3><?php echo esc_html($d['title'] ?? ''); ?></h3><p><?php echo esc_html($d['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
+    <div class="ez-cta"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('inquiry.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div>
   </div></section>
   <?php endif; ?>
 
