@@ -20,14 +20,40 @@ $build = function ($order, $d) {
 $quote = ['How do I request a quote?', 'Send your product list with quantities, the application and your delivery location and date. Availability and delivery timing are confirmed during quotation.'];
 
 $seed = require __DIR__ . '/../page-seed.php';
-$power = $seed['power-distribution-transformers'];
-unset($power['trust'], $power['process']);
-$power['banner']['quote_label'] = 'REQUEST A QUOTE';
-$power['applications']['title'] = 'Power Distribution Equipment for Essential Operations';
-$power['related']['links'][0] = ['label' => 'Electrical, Lighting, Cable & Wire', 'link' => '/supplies/electrical-lighting-cable/'];
+$ps = $seed['power-distribution-transformers'];
+$pw = fn($f) => 'wp-content/themes/competitive-choice/assets/images/power/' . $f;
+$ico_t = fn($f) => 'wp-content/themes/competitive-choice/assets/images/icons/' . $f;
+$enz_t = fn($f) => 'wp-content/themes/competitive-choice/assets/images/enzyme/' . $f;
+$power = [
+    'seo' => $ps['seo'],
+    'banner' => ['image' => $pw('hero.jpg'), 'image_alt' => 'Electrical substation yard with power transformers at dusk', 'kicker' => 'PRODUCTS & SUPPLIES', 'title' => 'Power Distribution Equipment<br>& Transformers', 'lead' => 'Reliable power starts with the right equipment. We supply power and<br>distribution transformers, switchgear, panelboards, circuit breakers<br>and fuses for the facilities that keep essential services running.', 'quote_label' => 'REQUEST A QUOTE', 'call_label' => 'CALL'],
+    'breadcrumb' => $ps['breadcrumb'],
+    'intro' => ['title' => 'Power Distribution Equipment & Transformers for Critical Infrastructure', 'paragraphs' => [
+        'Competitive Choice supplies power distribution equipment, including distribution and power transformers, switchgear, panelboards, load centers, circuit breakers and fuses, for organizations that cannot afford unplanned downtime. Whether you are modernizing an electrical system, expanding capacity or equipping a new build, the equipment has to match your voltage, load and installation environment.',
+        'We serve utilities, hospitals, data centers, water plants, schools, government facilities and infrastructure contractors from Houston, TX, and source for customers nationwide.']],
+    'solutions' => ['kicker' => 'OUR SOLUTIONS', 'title' => 'Power Distribution Products We Supply', 'description' => 'A focused range of power distribution equipment for facility upgrades, infrastructure projects and essential operations.', 'items' => [
+        ['title' => 'Distribution & Power Transformers', 'text' => 'Transformer products for electrical distribution and power infrastructure. Discuss your voltage, kVA capacity and installation requirements with our team.', 'image' => $pw('card1.jpg'), 'alt' => 'Pad-mounted distribution transformer'],
+        ['title' => 'Switchgear & Distribution Equipment', 'text' => 'Equipment to distribute electrical power across facilities and critical systems, supporting modernization and capacity expansion projects.', 'image' => $pw('card2.jpg'), 'alt' => 'Low-voltage switchgear lineup'],
+        ['title' => 'Circuit Protection', 'text' => 'Protective components for electrical distribution systems. Share the specified ratings and application so we can review your requirement.', 'image' => $pw('card3.jpg'), 'alt' => 'Circuit breakers and fuses'],
+    ]],
+    'fit' => ['title' => 'Power Distribution Equipment<br>for Essential Operations', 'description' => 'Different facilities have different electrical demands. Start with the application, then define the equipment your project requires.', 'image' => $pw('band.jpg'), 'image_alt' => 'Power transformer in a substation yard', 'shift' => '0px', 'tagline' => 'Reliable Power. Matched Ratings. Delivered On Time.', 'items' => [
+        ['icon' => 'building', 'icon_img' => $ico_t('transformer.png'), 'title' => 'Utilities & Water Infrastructure', 'text' => 'Distribution equipment and transformers for utilities and water plants, including system modernization and capacity expansion requirements.'],
+        ['icon' => 'plus', 'icon_img' => $enz_t('icon-plus.png'), 'title' => 'Healthcare, Education & Data Centers', 'text' => 'Power distribution products for hospitals, schools and data centers where electrical infrastructure supports essential day-to-day operations.'],
+        ['icon' => 'building', 'icon_img' => $ico_t('equipment.png'), 'title' => 'Infrastructure Contractors', 'text' => 'Equipment sourcing for contractors working on electrical infrastructure projects, with requirements guided by the project specification.'],
+    ]],
+    'process' => ['title' => 'How Power Distribution & Transformers Sourcing Works With Competitive Choice', 'description' => 'From a one-line diagram to energized equipment, with clear lead times.', 'items' => [
+        ['title' => 'Send the one-line, spec or equipment list', 'text' => 'Share voltage, kVA, enclosure, ratings and standards such as UL, ANSI or NEMA, plus your project or outage date.'],
+        ['title' => 'We check ratings and lead times', 'text' => 'We match each item to your specification and confirm availability, since switchgear and transformer lead times can make or break a schedule.'],
+        ['title' => 'Receive a clear, itemized quote', 'text' => 'Pricing, submittal documents and delivery windows are laid out so your engineer and purchasing team can approve quickly.'],
+        ['title' => 'Coordinated delivery to site', 'text' => 'We stage and ship to your yard, plant or job site on the date you need it, and stay on the line until it is received.'],
+    ]],
+    'inquiry' => $ps['inquiry'],
+    'faq' => $ps['faq'],
+    'related' => ['title' => 'Related Supplies', 'links' => [['label' => 'Electrical, Lighting, Cable & Wire', 'link' => '/supplies/electrical-lighting-cable/'], ['label' => 'All Products & Supplies', 'link' => 'link:products']]],
+];
 
 return [
-    'power-distribution-transformers' => ['title' => 'Power Distribution & Transformers', 'parent' => 'supplies', 'template' => 'category', 'group' => 'product', 'order' => '11', 'content' => $power],
+    'power-distribution-transformers' => ['title' => 'Power Distribution & Transformers', 'parent' => 'supplies', 'template' => 'enzyme', 'group' => 'product', 'order' => '11', 'content' => $power],
 
     'fire-safety' => $build(12, [
         'title' => 'Fire & Safety', 'image' => 'product-fire.jpg',
