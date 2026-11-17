@@ -21,6 +21,7 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
   <section class="category-banner ez-banner" aria-labelledby="category-title">
     <?php if (cc_page_has('banner.image')) : ?><img class="category-banner-photo" src="<?php echo esc_url(cc_img(cc_page('banner.image'))); ?>" alt="<?php echo esc_attr(cc_page('banner.image_alt')); ?>" width="1920" height="823" fetchpriority="high"><?php endif; ?>
     <div class="site-container category-banner-content">
+      <?php if (cc_page_has('banner.kicker')) : ?><p class="ez-banner-kicker"><?php cc_page_e('banner.kicker'); ?></p><?php endif; ?>
       <h1 id="category-title"><?php echo cc_html(cc_page('banner.title')); ?></h1>
       <?php if (cc_page_has('banner.lead')) : ?><p class="category-lead"><?php echo cc_html(cc_page('banner.lead')); ?></p><?php endif; ?>
       <div class="category-actions">
@@ -30,20 +31,20 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
     </div>
   </section>
 
-  <section class="ez-section ez-intro" aria-labelledby="ez-intro-title"><div class="site-container ez-intro-grid">
+  <section class="ez-section ez-intro" aria-labelledby="ez-intro-title"><div class="site-container ez-intro-grid<?php echo cc_page_has('intro.steps') ? '' : ' is-text-only'; ?>">
     <div class="ez-intro-copy">
-      <p class="ez-kicker"><?php cc_page_e('intro.kicker'); ?></p>
+      <?php if (cc_page_has('intro.kicker')) : ?><p class="ez-kicker"><?php cc_page_e('intro.kicker'); ?></p><?php endif; ?>
       <h2 id="ez-intro-title" class="ez-title"><?php echo cc_html(cc_page('intro.title')); ?></h2>
       <?php foreach (cc_page_list('intro.paragraphs') as $p) : ?><p class="ez-text"><?php echo esc_html($p); ?></p><?php endforeach; ?>
     </div>
-    <ol class="ez-steps3"><?php foreach (cc_page_list('intro.steps') as $i => $s) : ?>
+    <?php if (cc_page_has('intro.steps')) : ?><ol class="ez-steps3"><?php foreach (cc_page_list('intro.steps') as $i => $s) : ?>
       <li><span class="ez-num"><?php echo $i + 1; ?></span><img src="<?php echo esc_url(cc_img($s['image'] ?? '')); ?>" alt="<?php echo esc_attr($s['alt'] ?? ''); ?>" width="400" height="400" loading="lazy" decoding="async"><h3><?php echo esc_html($s['title'] ?? ''); ?></h3><p><?php echo esc_html($s['text'] ?? ''); ?></p></li>
-    <?php endforeach; ?></ol>
+    <?php endforeach; ?></ol><?php endif; ?>
   </div></section>
 
   <section class="ez-section ez-gray" aria-labelledby="ez-solutions-title"><div class="site-container">
     <div class="ez-head is-center"><p class="ez-kicker"><?php cc_page_e('solutions.kicker'); ?></p><h2 id="ez-solutions-title" class="ez-title"><?php echo cc_html(cc_page('solutions.title')); ?></h2><p class="ez-sub"><?php cc_page_e('solutions.description'); ?></p></div>
-    <div class="ez-cards"><?php foreach (cc_page_list('solutions.items') as $it) : ?>
+    <div class="ez-cards has-<?php echo count(cc_page_list('solutions.items')); ?>"><?php foreach (cc_page_list('solutions.items') as $it) : ?>
       <article class="ez-card"><img src="<?php echo esc_url(cc_img($it['image'] ?? '')); ?>" alt="<?php echo esc_attr($it['alt'] ?? ''); ?>" width="600" height="450" loading="lazy" decoding="async"><div><h3><?php echo esc_html($it['title'] ?? ''); ?></h3><p><?php echo esc_html($it['text'] ?? ''); ?></p></div></article>
     <?php endforeach; ?></div>
   </div></section>
@@ -54,7 +55,7 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
     if (!$fit_imgs && cc_page_has('fit.image')) $fit_imgs = [['image' => cc_page('fit.image'), 'alt' => cc_page('fit.image_alt')]];
     foreach ($fit_imgs as $fi => $fimg) : ?><img class="ez-fit-photo<?php echo count($fit_imgs) > 1 ? ' is-slide' : ''; ?>" <?php if (cc_page_has('fit.shift')) : ?>style="transform:translateX(<?php echo esc_attr(cc_page('fit.shift')); ?>)" <?php endif; ?>src="<?php echo esc_url(cc_img($fimg['image'] ?? '')); ?>" alt="<?php echo esc_attr($fimg['alt'] ?? ''); ?>" width="1920" height="823" loading="lazy" decoding="async"<?php echo $fi > 0 ? ' aria-hidden="true"' : ''; ?>><?php endforeach; ?>
     <div class="site-container ez-fit-content">
-      <div class="ez-head is-center"><p class="ez-kicker is-on-dark"><?php cc_page_e('fit.kicker'); ?></p><h2 id="ez-fit-title" class="ez-title is-on-dark"><?php echo cc_html(cc_page('fit.title')); ?></h2><p class="ez-sub is-on-dark"><?php cc_page_e('fit.description'); ?></p></div>
+      <div class="ez-head is-center"><?php if (cc_page_has('fit.kicker')) : ?><p class="ez-kicker is-on-dark"><?php cc_page_e('fit.kicker'); ?></p><?php endif; ?><h2 id="ez-fit-title" class="ez-title is-on-dark"><?php echo cc_html(cc_page('fit.title')); ?></h2><p class="ez-sub is-on-dark"><?php cc_page_e('fit.description'); ?></p></div>
       <div class="ez-fit-grid"><div class="ez-fit-items<?php echo count(cc_page_list('fit.items')) > 3 ? ' has-4' : ''; ?>"><?php foreach (cc_page_list('fit.items') as $it) : ?>
         <div><?php if (!empty($it['icon_img'])) : ?><img class="ez-icon-img" src="<?php echo esc_url(cc_img($it['icon_img'])); ?>" alt="" aria-hidden="true" width="48" height="48" loading="lazy"><?php else : echo $svg($it['icon'] ?? ''); endif; ?><h3><?php echo esc_html($it['title'] ?? ''); ?></h3><p><?php echo esc_html($it['text'] ?? ''); ?></p></div>
       <?php endforeach; ?></div>
@@ -63,12 +64,20 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
   </section>
 
   <section class="ez-section" aria-labelledby="ez-process-title"><div class="site-container">
-    <div class="ez-head is-center"><p class="ez-kicker"><?php cc_page_e('process.kicker'); ?></p><h2 id="ez-process-title" class="ez-title"><?php echo cc_html(cc_page('process.title')); ?></h2><p class="ez-sub"><?php cc_page_e('process.description'); ?></p></div>
+    <div class="ez-head is-center"><?php if (cc_page_has('process.kicker')) : ?><p class="ez-kicker"><?php cc_page_e('process.kicker'); ?></p><?php endif; ?><h2 id="ez-process-title" class="ez-title"><?php echo cc_html(cc_page('process.title')); ?></h2><p class="ez-sub"><?php cc_page_e('process.description'); ?></p></div>
     <ol class="ez-steps4"><?php foreach (cc_page_list('process.items') as $i => $s) : ?>
       <li><span class="ez-dot"><?php echo $i + 1; ?></span><h3><?php echo esc_html($s['title'] ?? ''); ?></h3><p><?php echo esc_html($s['text'] ?? ''); ?></p></li>
     <?php endforeach; ?></ol>
     </div></section>
 
+  <?php if (cc_page_has('inquiry.title')) : ?>
+  <section class="ez-section ez-inquiry" aria-labelledby="ez-inquiry-title"><div class="site-container">
+    <div class="ez-head is-center"><h2 id="ez-inquiry-title" class="ez-title"><?php echo esc_html(cc_page('inquiry.title')); ?></h2><?php foreach (cc_page_list('inquiry.paragraphs') as $p) : ?><p class="ez-sub"><?php echo esc_html($p); ?></p><?php endforeach; ?></div>
+    <p class="ez-kicker ez-checklist-title"><?php cc_page_e('inquiry.checklist_title'); ?></p>
+    <div class="ez-checklist"><?php foreach (cc_page_list('inquiry.items') as $d) : ?><div><h3><?php echo esc_html($d['title'] ?? ''); ?></h3><p><?php echo esc_html($d['description'] ?? ''); ?></p></div><?php endforeach; ?></div>
+    <div class="ez-cta"><a href="<?php echo esc_url(cc_url('contact')); ?>" class="<?php echo cc_btn(); ?>"><?php cc_page_e('inquiry.button_label'); ?><?php echo cc_icon('arrow-right'); ?></a></div>
+  </div></section>
+  <?php else : ?>
   <section class="ez-band" aria-labelledby="ez-band-title"><div class="site-container ez-band-grid">
     <div class="ez-band-copy"><h2 id="ez-band-title"><?php echo cc_html(cc_content('footer.cta_title')); ?></h2><p><?php cc_e('footer.cta_text'); ?></p></div>
     <div class="ez-band-side">
@@ -79,6 +88,7 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
       <p class="ez-band-meta"><?php echo esc_html(cc_content('company.hours_days') . ' · ' . cc_content('company.hours_time')); ?><br><a href="mailto:<?php echo esc_attr(cc_content('company.email')); ?>"><?php cc_e('company.email'); ?></a></p>
     </div>
   </div></section>
+  <?php endif; ?>
 
   <?php if (cc_page_has('trust.title')) : ?>
   <section class="ez-section ez-gray" aria-labelledby="ez-trust-title"><div class="site-container">
@@ -99,12 +109,14 @@ $svg = fn($name) => '<svg class="ez-icon" viewBox="0 0 24 24" width="40" height=
   </div></section>
   <?php endif; ?>
 
+  <?php if (cc_page_has('why.items')) : ?>
   <section class="ez-section ez-gray" aria-labelledby="ez-why-title"><div class="site-container">
     <div class="ez-head is-center"><h2 id="ez-why-title" class="ez-title"><?php echo cc_html(cc_page('why.title')); ?></h2><p class="ez-sub"><?php cc_page_e('why.description'); ?></p></div>
     <div class="ez-why"><?php foreach (cc_page_list('why.items') as $it) : ?>
       <div><span class="ez-chip"><?php if (!empty($it['icon_img'])) : ?><img class="ez-chip-img" src="<?php echo esc_url(cc_img($it['icon_img'])); ?>" alt="" aria-hidden="true" width="28" height="28" loading="lazy"><?php else : echo $svg($it['icon'] ?? ''); endif; ?></span><div><h3><?php echo esc_html($it['title'] ?? ''); ?></h3><p><?php echo esc_html($it['text'] ?? ''); ?></p></div></div>
     <?php endforeach; ?></div>
   </div></section>
+  <?php endif; ?>
 
   <?php if (cc_page_has('faq.items')) : ?>
   <section class="ez-section ez-faq" aria-labelledby="faq-title" id="faq">
