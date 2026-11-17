@@ -1191,3 +1191,7 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 @media (max-width: 600px) { .ez-checklist { grid-template-columns: 1fr; } }
 .ez-page .category-faq-number, .ez-page .category-faq-question, .ez-page .category-faq-trigger, .ez-page .ez-faq a { color: #0D173A; }
 .ez-page .category-faq-answer p { color: #414142; }
+/* Power Distribution page rhythm: less empty space above the inquiry block and below the text-only intro */
+.ez-section.ez-inquiry { padding-top: 2.2rem; }
+.ez-section:has(+ .ez-inquiry) { padding-bottom: 2.2rem; }
+.ez-section.ez-intro:has(.is-text-only) { padding-bottom: 2.75rem; }
