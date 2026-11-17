@@ -75,7 +75,7 @@ $ez_make = function ($slug, $order, $folder, $d) use ($ico, $enz) {
     $img = fn($f) => 'wp-content/themes/competitive-choice/assets/images/' . $folder . '/' . $f;
     $steps = []; foreach ($d['steps'] as $i => $st) $steps[] = ['title' => $st[0], 'text' => $st[1], 'image' => $img('step' . ($i + 1) . '.jpg'), 'alt' => $st[2]];
     $cards = []; foreach ($d['cards'] as $i => $c) $cards[] = ['title' => $c[0], 'text' => $c[1], 'image' => $img('card' . ($i + 1) . '.jpg'), 'alt' => $c[2]];
-    $fit = []; foreach ($d['fit'] as $x) $fit[] = ['icon' => 'building', 'icon_img' => $ico($x[0]), 'title' => $x[1], 'text' => $x[2]];
+    $fit = []; foreach ($d['fit'] as $x) $fit[] = ['icon' => 'building', 'icon_img' => (strpos($x[0], 'icon-') === 0 ? $enz($x[0]) : $ico($x[0])), 'title' => $x[1], 'text' => $x[2]];
     $why = []; $wi = [['sliders', 'Product Selection'], ['shield', 'Preventive Focus'], ['box', 'Convenient Sourcing'], ['calendar', 'Routine Support']];
     foreach ($wi as $i => $w) $why[] = ['icon' => $w[0], 'title' => $w[1], 'text' => $d['why'][$i]];
     $proc = []; foreach ($d['proc'] as $p) $proc[] = ['title' => $p[0], 'text' => $p[1]];
