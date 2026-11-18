@@ -38,7 +38,9 @@ $power = [
     ]],
     'fit' => ['title' => 'Power Distribution Equipment<br>for Essential Operations', 'description' => 'Different facilities have different electrical demands. Start with the application, then define the equipment your project requires.', 'image' => $pw('band.jpg'), 'image_alt' => 'Power transformer in a substation yard', 'shift' => '0px', 'tagline' => 'Reliable Power. Matched Ratings. Delivered On Time.', 'items' => [
         ['icon' => 'building', 'icon_img' => $ico_t('transformer.png'), 'title' => 'Utilities & Water Infrastructure', 'text' => 'Distribution equipment and transformers for utilities and water plants, including system modernization and capacity expansion requirements.'],
-        ['icon' => 'plus', 'icon_img' => $enz_t('icon-plus.png'), 'title' => 'Healthcare, Education & Data Centers', 'text' => 'Power distribution products for hospitals, schools and data centers where electrical infrastructure supports essential day-to-day operations.'],
+        ['icon' => 'plus', 'icon_img' => $enz_t('icon-plus.png'), 'title' => 'Healthcare', 'text' => 'Power distribution products for hospitals, where electrical infrastructure supports essential day-to-day operations.'],
+        ['icon' => 'building', 'icon_img' => $ico_t('school.png'), 'title' => 'Education', 'text' => 'Power distribution products for schools and campuses, where electrical infrastructure supports essential day-to-day operations.'],
+        ['icon' => 'building', 'icon_img' => $ico_t('server.png'), 'title' => 'Data Centers', 'text' => 'Power distribution products for data centers, where electrical infrastructure supports essential day-to-day operations.'],
         ['icon' => 'building', 'icon_img' => $ico_t('equipment.png'), 'title' => 'Infrastructure Contractors', 'text' => 'Equipment sourcing for contractors working on electrical infrastructure projects, with requirements guided by the project specification.'],
     ]],
     'process' => ['title' => 'How Power Distribution & Transformers Sourcing Works With Competitive Choice', 'description' => 'From a one-line diagram to energized equipment, with clear lead times.', 'items' => [
