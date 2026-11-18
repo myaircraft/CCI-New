@@ -52,7 +52,57 @@ $power = [
     'related' => ['title' => 'Related Supplies', 'links' => [['label' => 'Electrical, Lighting, Cable & Wire', 'link' => '/supplies/electrical-lighting-cable/'], ['label' => 'All Products & Supplies', 'link' => 'link:products']]],
 ];
 
+$el = fn($f) => 'wp-content/themes/competitive-choice/assets/images/electrical/' . $f;
+$elec = [
+    'seo' => ['title' => 'Electrical, Lighting, Cable & Wire | Competitive Choice', 'description' => 'Cable, wire and datacomm, conduits, panels, raceways and LED commercial lighting for construction and facility projects. Request a quote.', 'og_title' => 'Electrical, Lighting, Cable & Wire | Competitive Choice', 'og_description' => 'Electrical and lighting products for commercial and new construction projects, with responsive support. Send your requirement for a quote.', 'schema_about' => 'Electrical supplies, commercial lighting and cable'],
+    'banner' => ['image' => $el('hero.jpg'), 'image_alt' => 'Commercial electrical room with cable trays, conduit and panels', 'kicker' => 'PRODUCTS & SUPPLIES', 'title' => 'Electrical, Lighting,<br>Cable & Wire', 'lead' => 'Cable, conduit, panels, controls and commercial lighting<br>for the technical demands of critical infrastructure projects.', 'quote_label' => 'REQUEST A QUOTE', 'call_label' => 'CALL'],
+    'breadcrumb' => ['home' => 'Home', 'parent' => 'Products & Supplies', 'parent_link' => 'link:products', 'current' => 'Electrical, Lighting, Cable & Wire'],
+    'intro' => ['kicker' => 'BUILT FOR REAL FACILITIES', 'title' => 'Electrical and lighting supply<br>for commercial and construction projects', 'paragraphs' => [
+        'Competitive Choice is a trusted partner in the commercial and new construction sectors, delivering a full range of electrical and lighting products for the technical demands of critical infrastructure projects.',
+        'From schools and hospitals to industrial campuses and energy facilities, we help make sure every wire, light and panel supports both function and compliance. Our team works directly with contractors, engineers and facilities teams to provide tailored product guidance and responsive support.'],
+        'steps' => [
+            ['title' => 'Requirements Take Shape', 'text' => 'Drawings, schedules and specifications define the cable, panels and lighting a project needs.', 'image' => $el('step1.jpg'), 'alt' => 'Electrical drawings and a bill of materials beside a hard hat'],
+            ['title' => 'Products Are Sourced', 'text' => 'We check ratings and standards, identify alternates for long-lead items and confirm availability.', 'image' => $el('step2.jpg'), 'alt' => 'Electrician pulling wire into conduit'],
+            ['title' => 'Projects Stay on Schedule', 'text' => 'Materials arrive in step with your schedule, whether in one drop or phased releases.', 'image' => $el('step3.jpg'), 'alt' => 'Finished corridor with recessed LED lighting'],
+        ]],
+    'solutions' => ['kicker' => 'OUR SOLUTIONS', 'title' => 'Electrical & Lighting Products We Supply', 'description' => 'A broad range for contractors, engineers and facility teams.', 'items' => [
+        ['title' => 'Cable, Wire & Datacomm', 'text' => 'Cable, wire and datacomm products for power, controls and communications on commercial and new construction projects.', 'image' => $el('card1.jpg'), 'alt' => 'Spools of building wire and data cable'],
+        ['title' => 'Conduits, Panels & Raceways', 'text' => 'Conduits, panels and raceways to route and distribute power safely, plus controls, protection and testing tools.', 'image' => $el('card2.jpg'), 'alt' => 'Conduit, raceway, junction boxes and a panelboard'],
+        ['title' => 'LED & Commercial Lighting', 'text' => 'LED and high-performance commercial lighting for new construction, retrofits and critical infrastructure.', 'image' => $el('card3.jpg'), 'alt' => 'LED troffer, high bay fixture and tube lamps'],
+    ]],
+    'fit' => ['title' => 'Supporting Projects<br>of Every Size', 'description' => 'Start with the application, then define the products your project requires.', 'image' => $el('band.jpg'), 'image_alt' => 'Cable spool and conduit on a construction site', 'shift' => '0px', 'tagline' => 'Reliable Wiring. Right Lighting. Projects On Schedule.', 'items' => [
+        ['icon' => 'building', 'icon_img' => $ico_t('school.png'), 'title' => 'Schools', 'text' => 'Wiring, lighting and panels for campuses where reliability and compliance come first.'],
+        ['icon' => 'plus', 'icon_img' => $enz_t('icon-plus.png'), 'title' => 'Hospitals', 'text' => 'Wiring, lighting and panels for facilities where reliability and compliance come first.'],
+        ['icon' => 'building', 'icon_img' => $ico_t('factory.png'), 'title' => 'Industrial Campuses & Energy', 'text' => 'Electrical components and controls for demanding industrial and energy environments.'],
+        ['icon' => 'building', 'icon_img' => $ico_t('equipment.png'), 'title' => 'New Construction & Upgrades', 'text' => 'Materials for contractors and engineers lighting new builds or wiring vital upgrades.'],
+    ]],
+    'process' => ['kicker' => 'A SIMPLE 4-STEP PROCESS', 'title' => 'Your Electrical Sourcing Plan, Made Simple', 'description' => 'Cable, conduit, panels and lighting, sourced for the project you are actually running.', 'items' => [
+        ['title' => 'Send Your Bill of Materials', 'text' => 'Share cable types and lengths, conduit, panels, controls and lighting schedules, along with any Trade Agreements Act (TAA) or spec requirements.'],
+        ['title' => 'We Review and Source', 'text' => 'We check ratings and standards, identify alternates for long-lead items and confirm availability.'],
+        ['title' => 'Receive a Consolidated Quote', 'text' => 'One clear quotation across categories, so you are not managing several suppliers.'],
+        ['title' => 'Phased Delivery to Your Site', 'text' => 'We coordinate shipments with your schedule, whether it is a single drop or phased releases.'],
+    ]],
+    'why' => ['title' => 'Why Choose CCI for Electrical & Lighting?', 'description' => 'From wire and conduit to lighting and panels, we help contractors, engineers and facility teams source products that fit their projects.', 'items' => [
+        ['icon' => 'sliders', 'title' => 'Product Selection', 'text' => 'Solutions matched to your project'],
+        ['icon' => 'shield', 'title' => 'Preventive Focus', 'text' => 'Alternates for long-lead items'],
+        ['icon' => 'box', 'title' => 'Convenient Sourcing', 'text' => 'One consolidated quote'],
+        ['icon' => 'calendar', 'title' => 'Routine Support', 'text' => 'Deliveries that follow your schedule'],
+    ]],
+    'faq' => ['title' => 'Electrical, Lighting, Cable & Wire FAQs', 'description' => 'Answers to common selection, specification and sourcing questions.', 'items' => [
+        ['question' => 'What electrical products does Competitive Choice supply?', 'answer' => 'We supply cable, wire and datacomm, conduits, panels and raceways, LED and commercial lighting, power protection, controls and testing tools, and HVAC, automation and utility-grade components.'],
+        ['question' => 'Can you help specify products for a project?', 'answer' => 'Our team works directly with contractors, engineers and facilities teams to provide product guidance. Final specification should be confirmed by your project engineer.'],
+        ['question' => 'Do you supply power distribution equipment?', 'answer' => 'Yes. See our Power Distribution & Transformers page for switchgear, panelboards, breakers, fuses and transformers.'],
+        ['question' => 'How do I request a quote?', 'answer' => 'Send your bill of materials or specification with quantities, drawings if available, and delivery location and date. Availability and timing are confirmed during quotation.'],
+        ['question' => 'Do you work with contractors and engineers?', 'answer' => 'Yes. Our team works directly with contractors, engineers and facilities teams to provide product guidance and responsive support.'],
+        ['question' => 'Which lighting do you supply?', 'answer' => 'LED and high-performance commercial lighting for new construction, retrofits and critical infrastructure.'],
+        ['question' => 'Are cooperative contracts available for electrical supplies?', 'answer' => 'Electrical categories appear on several cooperative contracts, including Good Buy and regional cooperatives. Tell us which vehicle you use and we will confirm.'],
+        ['question' => 'Can you supply datacomm and low-voltage cabling?', 'answer' => 'Yes. Cable, wire and datacomm products are part of our electrical range. Share your specification for a quote.'],
+    ]],
+    'related' => ['title' => 'Related Supplies', 'links' => [['label' => 'Power Distribution & Transformers', 'link' => '/supplies/power-distribution-transformers/'], ['label' => 'All Products & Supplies', 'link' => 'link:products']]],
+];
+
 return [
+    'electrical-lighting-cable' => ['title' => 'Electrical, Lighting, Cable & Wire', 'parent' => 'supplies', 'template' => 'enzyme', 'group' => 'product', 'order' => '15', 'content' => $elec],
     'power-distribution-transformers' => ['title' => 'Power Distribution & Transformers', 'parent' => 'supplies', 'template' => 'enzyme', 'group' => 'product', 'order' => '11', 'content' => $power],
 
     'fire-safety' => $build(12, [
