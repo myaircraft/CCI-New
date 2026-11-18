@@ -1198,7 +1198,10 @@ svg.lucide-arrow-right, svg.lucide-arrow-left, svg.lucide-arrow-up-right { borde
 /* Less empty space between the inquiry block and the FAQ */
 .ez-section.ez-inquiry:has(+ .ez-faq) { padding-bottom: 2.75rem; }
 .ez-section.ez-inquiry + .ez-faq { padding-top: 2.75rem; }
-/* Five items: three columns over two rows, so the photo on the right stays visible */
-.ez-fit-items.has-5 { grid-template-columns: repeat(3, 1fr); max-width: 900px; gap: 1.75rem 2rem; }
-@media (max-width: 1000px) { .ez-fit-items.has-5 { grid-template-columns: repeat(2, 1fr); } }
+/* Five items: one row, smaller type */
+.ez-fit-items.has-5 { grid-template-columns: repeat(5, 1fr); max-width: 1120px; gap: 1.25rem; }
+.ez-fit-items.has-5 .ez-icon-img, .ez-fit-items.has-5 .ez-icon { width: 40px; height: 40px; margin-bottom: .7rem; }
+.ez-fit-items.has-5 h3 { font-size: 16px; margin-bottom: .3rem; }
+.ez-fit-items.has-5 p { font-size: 13px; line-height: 1.5; }
+@media (max-width: 1000px) { .ez-fit-items.has-5 { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 800px) { .ez-fit-items.has-5 { grid-template-columns: 1fr; } }
